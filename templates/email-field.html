@@ -1,0 +1,14 @@
+<div id="emailField" class="o-forms o-forms--wide su-field js-field" data-validate="required,email">
+
+	<label for="email" class="o-forms__label">Email address</label>
+	<small id="email-description" class="o-forms__additional-info">
+		{{#> description}}
+		Please enter an email address
+		{{/description}}
+	</small>
+
+	<input type="email" id="email" name="email" value="{{value}}" placeholder="Enter your email address" class="no-mouseflow o-forms__text  js-field__input js-item__value" data-trackable="field-email" aria-describedby="email-description" aria-required="true" required{{#if disabled}} disabled{{/if}}>
+
+	<div class="o-forms__errortext">This email address is not valid</div>
+
+</div>

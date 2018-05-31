@@ -1,0 +1,40 @@
+{
+  "name": "n-swg",
+  "homepage": "https://github.com/Financial-Times/n-swg",
+  "description": "JS, Styles, Templates and utils for FT.com",
+  "ignore": [
+    "**/.*",
+    "*env*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demos",
+    "pa11y_screenCapture",
+    "public",
+    ".babelrc",
+    ".DS_Store",
+    ".editorconfig",
+    ".eslintrc.js",
+    ".gitignore",
+    ".scss-lint.yml",
+    ".pa11yci.js",
+    ".stylelintrc",
+    "package.json",
+    "package-lock.json",
+    "circle.yml",
+    "ft.yml",
+    "Makefile",
+    "secret-squirrel.js",
+    "src/server/*",
+    "main.js"
+  ],
+  "main": [
+    "main.scss",
+    "main-client.js"
+  ],
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}

@@ -1,0 +1,13 @@
+<div id="industryField" class="o-forms o-forms--wide su-field js-field" data-ui-item="select" data-ui-item-name="industry" data-validate="required">
+
+	<label for="industry" class="o-forms__label">In which industry do you work?</label>
+
+	<select id="industry" name="industry" class="o-forms__select js-field__input js-item__value" data-trackable="field-industry" aria-required="true" required>
+		{{#each options as |option|}}
+		<option value="{{option.value}}"{{#if ../value}}{{#ifEquals option.value ../value }} selected{{/ifEquals}}{{else}}{{#if option.isSelected}} selected{{/if}}{{/if}}>{{option.label}}</option>
+		{{/each}}
+	</select>
+
+	<div class="o-forms__errortext">Please select your company‘s industry</div>
+
+</div>

@@ -1,0 +1,12 @@
+<div id="primaryTelephoneField" class="o-forms o-forms--wide su-field js-field"  data-ui-item="form-field" data-ui-item-name="primaryTelephone" data-validate="required,number">
+
+	<label for="primaryTelephone" class="o-forms__label">Phone number</label>
+	<small class="o-forms__additional-info" id="phone-description">
+		5 to 15 characters (numbers only)
+	</small>
+
+	<input type="tel" id="primaryTelephone" name="primaryTelephone" value="{{value}}" class="o-forms__text js-field__input js-item__value" placeholder="Enter your phone number" data-min="5" data-max="15" data-trackable="field-phone" aria-describedby="phone-description" aria-required="true" required>
+
+	<div class="o-forms__errortext">This phone number is not valid</div>
+
+</div>
