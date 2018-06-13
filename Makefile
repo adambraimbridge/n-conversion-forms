@@ -4,22 +4,19 @@ node_modules/@financial-times/n-gage/index.mk:
 
 -include node_modules/@financial-times/n-gage/index.mk
 
-demo-build: link-views
+demo-build:
 	webpack --config demos/webpack.config.js
+	node-sass demos/main.scss public/main.css --include-path bower_components
 	@$(DONE)
 
-demo-build-watch: link-views
-	webpack --watch --config demos/webpack.config.js &
-	@$(DONE)
-
-demo: demo-build-watch
-	@DEMO_MODE=true nodemon --ext html,css --watch public --watch views demos/start.js
+demo: demo-build
+	@DEMO_MODE=true nodemon --ext html,css --watch public --watch views demos/app.js
 
 run:
-	@DEMO_MODE=true HTTP_MODE=true node demos/app
+	@DEMO_MODE=true node demos/app
 
 a11y: demo-build
-	@PA11Y=true DEMO_MODE=true node demos/app
+	@PA11Y=true node demos/app
 	@$(DONE)
 
 test: verify
@@ -30,8 +27,8 @@ unit-test:
 	mocha --recursive --reporter spec tests
 
 a11y-demo:
-	export TEST_URL=http://localhost:5050; \
+	export TEST_URL=http://localhost:5005; \
 	make a11y
 
 smoke:
-	n-test smoke --host http://localhost:5050
+	n-test smoke --host http://localhost:5005
