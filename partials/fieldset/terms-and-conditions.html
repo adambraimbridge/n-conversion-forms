@@ -1,0 +1,17 @@
+<fieldset name="terms-and-conditions" id="termsFieldset" class="ncf__fieldset js-unknown-user-field" data-ui-item="" data-ui-item-name="termsFieldset">
+
+	<legend class="ncf__header">Terms and conditions</legend>
+
+	{{> field/accept-terms
+		isRegister=isRegister
+		isSignup=isSignup
+		hasConsent=hasConsent
+		requestedTerm=requestedTerm
+		offer=offer
+	}}
+
+	{{#unless hasConsent}}
+	{{> field/marketing }}
+	{{/unless}}
+
+</fieldset>

@@ -1,1 +1,34 @@
+@import 'o-normalise/main';
+@import 'o-typography/main';
 @import 'o-forms/main';
+
+@include oFormsBaseFeatures();
+@include oFormsRadioCheckboxFeatures();
+@include oFormsSuffixFeature();
+@include oFormsWideFeature();
+
+// Custom styles
+.ncf {
+	@include oTypographySans($scale: 0);
+
+	&__fieldset {
+		padding: 0;
+		border: 0;
+	}
+
+	&__terms {
+		@include oTypographySans($scale: 0);
+		color: getColor('black-80');
+	}
+
+	&__header {
+		@include oTypographyProductHeadingLevel5;
+		> * {
+			margin-top: 10px;
+		}
+	}
+
+	&__link--external {
+		@include oTypographyLinkExternal;
+	}
+}
