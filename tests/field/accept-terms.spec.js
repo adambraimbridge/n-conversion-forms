@@ -47,11 +47,9 @@ describe('field/accept-terms template', () => {
 			const $ = context.template(params);
 
 			expect($('label p#terms-default').length).to.equal(1);
-			expect($('label p#terms-register').length).to.equal(0);
 			expect($('label p#terms-print').length).to.equal(0);
 			expect($('label p#terms-signup').length).to.equal(0);
 			expect($('label p#terms-cancellation').length).to.equal(0);
-			expect($('label p#terms-marketing').length).to.equal(0);
 			expect($('label p#terms-special').length).to.equal(0);
 		});
 	});
@@ -67,15 +65,12 @@ describe('field/accept-terms template', () => {
 			expect($('#acceptTermsField').data('trackable')).to.equal('register-up-terms');
 		});
 
-		it('should have default and register terms', () => {
+		it('should have default terms', () => {
 			const $ = context.template(params);
-
 			expect($('label p#terms-default').length).to.equal(1);
-			expect($('label p#terms-register').length).to.equal(1);
 			expect($('label p#terms-print').length).to.equal(0);
 			expect($('label p#terms-signup').length).to.equal(0);
 			expect($('label p#terms-cancellation').length).to.equal(0);
-			expect($('label p#terms-marketing').length).to.equal(0);
 			expect($('label p#terms-special').length).to.equal(0);
 		});
 	});
@@ -96,23 +91,9 @@ describe('field/accept-terms template', () => {
 			const $ = context.template(params);
 
 			expect($('label p#terms-default').length).to.equal(1);
-			expect($('label p#terms-register').length).to.equal(0);
 			expect($('label p#terms-print').length).to.equal(0);
 			expect($('label p#terms-signup').length).to.equal(1);
 			expect($('label p#terms-cancellation').length).to.equal(1);
-			expect($('label p#terms-marketing').length).to.equal(1);
-			expect($('label p#terms-special').length).to.equal(0);
-		});
-
-		it('should have default, signup and cancellation if marketing consent', () => {
-			const $ = context.template({...params, hasConsent: true});
-
-			expect($('label p#terms-default').length).to.equal(1);
-			expect($('label p#terms-register').length).to.equal(0);
-			expect($('label p#terms-print').length).to.equal(0);
-			expect($('label p#terms-signup').length).to.equal(1);
-			expect($('label p#terms-cancellation').length).to.equal(1);
-			expect($('label p#terms-marketing').length).to.equal(0);
 			expect($('label p#terms-special').length).to.equal(0);
 		});
 
@@ -121,11 +102,9 @@ describe('field/accept-terms template', () => {
 
 			expect($('label').text().trim()).to.contain('hand-delivered subscriptions');
 			expect($('label p#terms-default').length).to.equal(1);
-			expect($('label p#terms-register').length).to.equal(0);
 			expect($('label p#terms-print').length).to.equal(1);
 			expect($('label p#terms-signup').length).to.equal(0);
 			expect($('label p#terms-cancellation').length).to.equal(1);
-			expect($('label p#terms-marketing').length).to.equal(1);
 			expect($('label p#terms-special').length).to.equal(0);
 		});
 
@@ -135,11 +114,9 @@ describe('field/accept-terms template', () => {
 
 			expect($('label').text().trim()).to.contain(specialTerms);
 			expect($('label p#terms-default').length).to.equal(1);
-			expect($('label p#terms-register').length).to.equal(0);
 			expect($('label p#terms-print').length).to.equal(0);
 			expect($('label p#terms-signup').length).to.equal(1);
 			expect($('label p#terms-cancellation').length).to.equal(1);
-			expect($('label p#terms-marketing').length).to.equal(1);
 			expect($('label p#terms-special').length).to.equal(1);
 		});
 	});
