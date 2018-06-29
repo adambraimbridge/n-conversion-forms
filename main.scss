@@ -14,6 +14,7 @@
 
 	&__fieldset {
 		padding: 0;
+		margin: 0;
 		border: 0;
 	}
 
@@ -34,5 +35,13 @@
 		@include oButtons;
 		@include oButtonsSize('big');
 		@include oButtonsTheme('primary');
+	}
+
+	// Override o-forms padding set at certain screen sizes
+	// This should be removed when Origami remove this from o-forms
+	.o-forms {
+		@include oGridRespondTo(S) {
+			padding: 0;
+		}
 	}
 }
