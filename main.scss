@@ -6,6 +6,7 @@
 @include oFormsBaseFeatures();
 @include oFormsRadioCheckboxFeatures();
 @include oFormsSuffixFeature();
+@include oFormsSectionFeature();
 @include oFormsWideFeature();
 
 // Custom styles
@@ -16,6 +17,12 @@
 		padding: 0;
 		margin: 0;
 		border: 0;
+	}
+
+	&__field {
+		&--center {
+			text-align: center;
+		}
 	}
 
 	&__terms {

@@ -22,4 +22,18 @@ describe('submit template', () => {
 
 		expect($('button').text()).to.equal(label);
 	});
+
+	it('should not be centered by default', () => {
+		const $ = context.template({});
+
+		expect($('.ncf__field--center').length).to.equal(0);
+	});
+
+	it('should be centered if set', () => {
+		const $ = context.template({
+			isCentered: true
+		});
+
+		expect($('.ncf__field--center').length).to.equal(1);
+	});
 });
