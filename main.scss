@@ -85,6 +85,7 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 20px;
+		position: relative;
 
 		&:before {
 			background: oColorsGetPaletteColor('black-40');
@@ -93,7 +94,7 @@
 			height: 2px;
 			left: 33px;
 			position: absolute;
-			top: 20px;
+			top: 12px;
 			width: calc(100% - 70px);
 		}
 
