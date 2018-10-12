@@ -1,51 +1,6 @@
 {
-  "industry": {
-    "options": [{
-        "value": "ACC",
-        "label": "Accountancy & tax advisory"
-      }, {
-        "value": "DEF",
-        "label": "Aerospace & defence"
-      }, {
-        "value": "CAR",
-        "label": "Automobiles"
-      }
-    ]},
-  "position": {
-    "options": [{
-        "value": "AN",
-        "label": "Analyst"
-      }, {
-        "value": "AS",
-        "label": "Associate"
-      }, {
-        "value": "BR",
-        "label": "Broker/Trader/Advisor"
-      }
-    ]},
-  "responsibility": {
-    "options": [{
-        "value": "FIN",
-        "label": "Accounting/finance"
-      }, {
-        "value": "ADL",
-        "label": "Administration"
-      }, {
-        "value": "RES",
-        "label": "Broker/trader"
-      }
-    ]},
   "country": {
-    "options": [{
-      "value": "ABW",
-      "label": "Aruba"
-    }, {
-      "value": "AFG",
-      "label": "Afghanistan"
-    }, {
-      "value": "AGO",
-      "label": "Angola"
-    }]
+    "filterList": ["GBR", "JPN", "USA", "FRA"]
   },
   "message": {
     "isError": true,
