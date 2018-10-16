@@ -4,6 +4,7 @@ const {
 	fetchPartial,
 	registerHelper,
 	unregisterHelper,
+	shouldBeDisableable,
 	shouldBeRequired,
 	shouldError
 } = require('../helpers');
@@ -76,4 +77,6 @@ describe('delivery country template', () => {
 	shouldBeRequired(context, 'select');
 
 	shouldError(context);
+
+	shouldBeDisableable(context, 'select');
 });
