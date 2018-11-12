@@ -1,5 +1,6 @@
 const FAILURE = 'failure';
 const SUCCESS = 'success';
+
 const METHOD_APPLE_PAY = 'apple';
 const SELECTOR_APPLE_PAY = '.apple-pay-button';
 const CLASS_HIDDEN = 'o-normalise-visually-hidden';
@@ -53,6 +54,7 @@ class Payment {
 	 * @param {number} value Decimal price
 	 * @param {string} currency ISO 3 digit currency code
 	 * @param {string} label Name for what's being sold
+	 * @throws If the brower doesn't support Payment Request API
 	 * @throws If the payment button is not found
 	 */
 	constructor (window, method, {value, currency, label}) {
@@ -139,13 +141,16 @@ class Payment {
 
 	/**
 	 * Return the requested payment method
+	 * Payment Request API expects this to an array of payment methods but we want this only
+	 * to be a single payment method as the user will select this upfront on the signup form.
 	 * @param {string} name `apple` is only supported currently
+	 * @return {array<object>}
 	 */
 	static getPaymentMethod (name) {
 		if (name !== METHOD_APPLE_PAY) {
 			throw new Error('Only Apple Pay is supported currently');
 		}
-		return {
+		return [{
 			supportedMethods: 'https://apple.com/apple-pay',
 			data: {
 				version: 3,
@@ -154,7 +159,7 @@ class Payment {
 				supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
 				countryCode: 'US',
 			}
-		};
+		}];
 	}
 
 	/**
