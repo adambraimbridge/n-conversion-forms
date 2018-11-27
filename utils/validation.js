@@ -44,6 +44,8 @@ class Validation {
 				return this.formChanged && !this.formSubmit || null;
 			};
 		}
+
+		this.checkFormValidity();
 	}
 
 	/**

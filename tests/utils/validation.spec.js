@@ -60,6 +60,10 @@ describe('Validation', () => {
 		it('should have a $form property exposing the form element', () => {
 			expect(validation.$form).to.deep.eq(formElement);
 		});
+
+		it('should check validation status on init', () => {
+			expect(checkValidityStub.called).to.be.true;
+		});
 	});
 
 	describe('init', () => {
