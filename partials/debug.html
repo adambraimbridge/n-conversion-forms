@@ -32,6 +32,7 @@
 		lastName: 'Test',
 		primaryTelephone: '0987654321',
 		country: 'GBR',
+		billingCountry: 'GBR',
 		industry: 'DEF',
 		responsibility: 'ADL',
 		position: 'AS'
@@ -42,6 +43,10 @@
 		inputs.forEach(function (input) {
 			var value = debugData[input.name];
 			input.value = value;
+		});
+		var checkboxes = document.querySelectorAll(FORM_SELECTOR + ' input[type="checkbox"]');
+		checkboxes.forEach(function (checkbox) {
+			checkbox.checked = true;
 		});
 	}
 
