@@ -33,12 +33,12 @@
 
   &__paragraph {
 	@include oTypographySans(1);
-	padding: oTypographySpacingSize(5) 0;
+	padding: oTypographySpacingSize(4) 0;
 	margin: 0;
 
 	&--reduced-padding {
 	  @include oTypographySans(1);
-	  padding: oTypographySpacingSize(-2) 0;
+	  padding: oTypographySpacingSize(0) 0;
 	}
   }
 
@@ -69,19 +69,27 @@
 		@include oTypographyProductHeadingLevel5;
 
 		&--confirmation {
-			@include oTypographySerif($scale: 4);
+		  @include oTypographySerif($scale: 4);
+		  margin-top: -8px;
 		}
 	}
 
-  &__header2--afterline {
-	@include oTypographyProductHeadingLevel5;
+  &__header2 {
+	&--reduced-size {
+	  @include oTypographySerif($scale: 0);
+	  padding: oTypographySpacingSize(0) 0;
+	  margin: 22px 0 -10px;
+	}
 
-	&:after {
-	  @include oTypographyPadding($top: 3, $bottom: 0);
-	  content: '';
-	  display: block;
-	  width: 110px;
-	  border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+	&--afterline {
+	  @include oTypographySerif($scale: 1);
+	  &:after {
+		@include oTypographyPadding($top: 3, $bottom: 0);
+		content: '';
+		display: block;
+		width: 110px;
+		border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+	  }
 	}
   }
 
@@ -172,7 +180,7 @@
 	}
 
 	&__list {
-	  @include oTypographySans($scale: 0);
+
 		&-title,
 		&-data {
 			width: calc(50% - 10px);
