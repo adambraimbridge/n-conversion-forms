@@ -39,9 +39,9 @@ describe('confirmation template', () => {
 	});
 
 	it('should display dd mandate link', () => {
-		const ddMandateUrl = 'www.ft.com';
+		const directDebitMandateUrl = 'www.ft.com';
 		const $ = context.template({
-			ddMandateUrl
+			directDebitMandateUrl
 		});
 
 		expect($('dl dt').length).to.equal(0);
