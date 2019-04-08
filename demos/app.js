@@ -7,7 +7,7 @@ const handlebars = require('@financial-times/n-handlebars').handlebars;
 const data = require('./data.json');
 
 const PORT = process.env.PORT || 5005;
-const PARIALS_DIR = resolve(__dirname, '../partials');
+const PARTIALS_DIR = resolve(__dirname, '../partials');
 const HELPERS = require('../helpers');
 
 const app = express({
@@ -19,7 +19,7 @@ const app = express({
 	withAnonMiddleware: false,
 	hasHeadCss: false,
 	viewsDirectory: '/demos/views',
-	partialsDirectory: PARIALS_DIR,
+	partialsDirectory: PARTIALS_DIR,
 	directory: process.cwd(),
 	demo: true,
 	s3o: false,
@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 		layout: 'vanilla',
 		title: 'Demo',
 		data: data,
-		partials: fetchPartials(PARIALS_DIR)
+		partials: fetchPartials(PARTIALS_DIR)
 	});
 });
 
@@ -76,26 +76,41 @@ function fetchPartials (dir) {
 
 function compilePartial (partial) {
 	let parameters = '';
-	let exampleParams = '';
+	let examplePartials = '';
 	const partialData = data[partial];
 
 	if (partialData) {
-		parameters = Object.keys(partialData).map(key => {
-			if (typeof partialData[key] === 'string') {
-				exampleParams += ` ${key}="${partialData[key]}"`;
-			} else {
-				exampleParams += ` ${key}=${JSON.stringify(partialData[key])}`;
-			}
-
-			return `${key}=${key}`;
-		}).join(' ');
+		if (partialData.params) {
+			parameters = Object.keys(partialData.params).map(key => {
+				return `${key}='${JSON.stringify(partialData.params[key])}'`;
+			}).join(' ');
+		}
+		if (partialData.partials) {
+			// Register external partials for the demo if needed by the partial.
+			Object.keys(partialData.partials).map((key, i) => {
+				handlebars().registerPartial(key, partialData.partials[key]);
+				examplePartials += `${i > 0 ? '\n' : ''}  {{#*inline "${key}"}}`;
+				examplePartials += `\n    ${partialData.partials[key]}`;
+				examplePartials += '\n  {{/inline}}';
+			});
+		}
 	}
 
-	const template = `{{> ${partial} ${parameters} }}`;
+	let template;
+
+	if (partialData && partialData.partials) {
+		template = `{{#> ${partial} ${parameters} }}`;
+		template += `\n${examplePartials}`;
+		template += `\n{{/${partial}}}`;
+	} else {
+		template = `{{> ${partial} ${parameters} }}`;
+	}
+
 	const rendered = handlebars().compile(template)(partialData);
 	const html = `<!doctype html>
 <html>
 	<head>
+		<link rel="stylesheet" href="/public/main.css">
 		<link rel="stylesheet" href="/public/component.css">
 	</head>
 	<body style="background-color:#fff1e5;">
@@ -104,7 +119,7 @@ function compilePartial (partial) {
 			${rendered}
 		</div>
 
-		<textarea style="width:100%" readonly>{{> ${partial}${exampleParams} }}</textarea>
+		<textarea style="width:100%" readonly>${template}</textarea>
 	</body>
 </html>
 	`;

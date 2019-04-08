@@ -1,95 +1,123 @@
 {
   "country": {
-    "filterList": ["GBR", "JPN", "USA", "FRA"],
-    "value": "USA"
+    "params": {
+      "filterList": ["GBR", "JPN", "USA", "FRA"],
+      "value": "USA"
+    }
+  },
+  "fieldset": {
+    "partials": {
+      "fields": "Inline content here."
+    }
+  },
+  "form": {
+    "partials": {
+      "fields": "Inline content here."
+    }
   },
   "message": {
-    "isError": true,
-    "message": "The quick brown fox jumped over the lazy dog!",
-    "title": "Hooray!",
-    "additional": ["You can specify additional messages."],
-    "actions": [
-      { "link": "#", "text": "Button" },
-      { "link": "#", "text": "Text link", "isSecondary": true }
-    ]
+    "params": {
+      "isError": true,
+      "message": "The quick brown fox jumped over the lazy dog!",
+      "title": "Hooray!",
+      "additional": ["You can specify additional messages."],
+      "actions": [
+        { "link": "#", "text": "Button" },
+        { "link": "#", "text": "Text link", "isSecondary": true }
+      ]
+    }
   },
   "package-change": {
-    "changePackageUrl": "/foo",
-    "currentPackage": "Digital",
-    "class": "extra-css-classes-here space-separated",
-    "formData": [{
-      "name": "foo",
-      "value": "bar"
-    }]
+    "params": {
+      "changePackageUrl": "/foo",
+      "currentPackage": "Digital",
+      "class": "extra-css-classes-here space-separated",
+      "formData": [{
+        "name": "foo",
+        "value": "bar"
+      }]
+    }
   },
   "payment-term": {
-    "options": [
-      {
-        "name": "Test",
-        "value": "Test",
-        "description": "The quick brown fox jumped over the lazy hare."
-      }, {
-        "name": "Test 1",
-        "value": "Test 1",
-        "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>.",
-        "selected": true
-      }
-    ]
+    "params": {
+      "options": [
+        {
+          "name": "Test",
+          "value": "Test",
+          "description": "The quick brown fox jumped over the lazy hare."
+        }, {
+          "name": "Test 1",
+          "value": "Test 1",
+          "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>.",
+          "selected": true
+        }
+      ]
+    }
   },
   "payment-type": {
-    "enableCreditcard": true,
-    "enableDirectdebit": true,
-    "enablePaypal": true,
-    "enableApplepay": true
+    "params": {
+      "enableCreditcard": true,
+      "enableDirectdebit": true,
+      "enablePaypal": true,
+      "enableApplepay": true
+    }
   },
   "email": {
-    "showConfirm": true
+    "params": {
+      "showConfirm": true
+    }
   },
   "progress-indicator": {
-    "formData": [{
-      "name": "foo",
-      "value": "bar"
-    }],
-    "items": [{
-      "name": "Details",
-      "isComplete": true,
-      "url": "#details"
-    }, {
-      "name": "Preferences",
-      "isComplete": true,
-      "url": "#preferences"
-    }, {
-      "name": "Print",
-      "isCurrent": true,
-      "url": "#print"
-    }, {
-      "name": "Payment",
-      "url": "#payment"
-    }]
+    "params": {
+      "formData": [{
+        "name": "foo",
+        "value": "bar"
+      }],
+      "items": [{
+        "name": "Details",
+        "isComplete": true,
+        "url": "#details"
+      }, {
+        "name": "Preferences",
+        "isComplete": true,
+        "url": "#preferences"
+      }, {
+        "name": "Print",
+        "isCurrent": true,
+        "url": "#print"
+      }, {
+        "name": "Payment",
+        "url": "#payment"
+      }]
+    }
   },
   "confirmation": {
-    "offer": "Premium Digital & Print",
-    "email": "test@example.com",
-    "details": [
-      {
-        "title": "Annual payment",
-        "data": "£XXXX"
-      },
-      {
-        "title": "Renewal date",
-        "data": "June 11th, 2019"
-      },
-      {
-        "title": "Payment method",
-        "data": "Credit Card"
-      }
-    ]
+    "params": {
+      "offer": "Premium Digital & Print",
+      "email": "test@example.com",
+      "details": [
+        {
+          "title": "Annual payment",
+          "data": "£XXXX"
+        },
+        {
+          "title": "Renewal date",
+          "data": "June 11th, 2019"
+        },
+        {
+          "title": "Payment method",
+          "data": "Credit Card"
+        }
+      ]
+    }
   },
   "debug": {
-    "isTest": true,
-    "showHelpers": true,
-    "links": {
-      "Google": "https://www.google.com"
+    "params": {
+      "isTest": true,
+      "showHelpers": true,
+      "links": {
+        "Google": "https://www.google.com"
+      }
     }
   }
 }
