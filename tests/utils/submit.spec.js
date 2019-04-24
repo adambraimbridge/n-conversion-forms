@@ -37,7 +37,7 @@ describe('Submit', () => {
 		});
 	});
 
-	describe('constructed', () => {
+	context('constructed', () => {
 		beforeEach(() => {
 			newString = ('test');
 			documentStub.querySelector.returns(elementStub);
@@ -55,6 +55,21 @@ describe('Submit', () => {
 			it('should update the innerHTML of the button', () => {
 				submit.updateText(newString);
 				expect(elementStub.innerHTML).to.equal('test');
+			});
+		});
+
+		describe('enable', () => {
+			it('should enable the button', () => {
+				submit.disable();
+				submit.enable();
+				expect(submit.$submit.disabled).to.be.false;
+			});
+		});
+
+		describe('disable', () => {
+			it('should disable the button', () => {
+				submit.disable();
+				expect(submit.$submit.disabled).to.be.true;
 			});
 		});
 	});
