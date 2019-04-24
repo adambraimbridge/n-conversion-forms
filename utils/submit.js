@@ -37,6 +37,20 @@ class Submit {
 		if (!newText) throw new Error('Please supply a new text value');
 		return this.$submit.innerHTML = newText;
 	}
+
+	/**
+	 * Enables the submit button
+	 */
+	enable () {
+		this.$submit.disabled = false;
+	}
+
+	/**
+	 * Disables the submit button
+	 */
+	disable () {
+		this.$submit.disabled = true;
+	}
 }
 
 module.exports = Submit;
