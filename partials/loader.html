@@ -1,0 +1,14 @@
+<div class="ncf__loader n-ui-hide">
+	<div class="ncf__loader__content">
+		{{#if title}}
+			<div class="ncf__loader__content__title">
+				{{ title }}
+			</div>
+		{{/if}}
+		{{#if @partial-block}}
+		<div class="ncf__loader__content__main">
+			{{> @partial-block }}
+		</div>
+		{{/if}}
+	</div>
+</div>
