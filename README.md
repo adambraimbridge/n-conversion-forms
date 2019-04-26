@@ -241,7 +241,7 @@ const zuora = new Zuora(window);
 
 // Will render the 3rd party Zuora iframe with client side validation and custom error messages.
 // Returns a Promise that resolves ONLY once the form has loaded.
-zuora.render({ params, prePopulatedFields, hostedPaymentPageCallback });
+zuora.render({ params, prePopulatedFields, renderCallback });
 
 // Will attempt to submit the 3rd party Zuora iframe form and reject if there are client side
 // validation errors or if the user refuses the Direct Debit mandate confirmation.
