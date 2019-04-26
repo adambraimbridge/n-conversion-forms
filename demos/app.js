@@ -3,7 +3,7 @@ const resolve = require('path').resolve;
 const fs = require('fs');
 const chalk = require('chalk');
 const express = require('@financial-times/n-internal-tool');
-const handlebars = require('@financial-times/n-handlebars').handlebars;
+const Handlebars = require('@financial-times/n-handlebars').handlebars;
 const data = require('./data.json');
 
 const PORT = process.env.PORT || 5005;
@@ -78,6 +78,7 @@ function compilePartial (partial) {
 	let parameters = '';
 	let examplePartials = '';
 	const partialData = data[partial];
+	const handlebars = Handlebars();
 
 	if (partialData) {
 		if (partialData.params) {
@@ -88,10 +89,15 @@ function compilePartial (partial) {
 		if (partialData.partials) {
 			// Register external partials for the demo if needed by the partial.
 			Object.keys(partialData.partials).map((key, i) => {
-				handlebars().registerPartial(key, partialData.partials[key]);
-				examplePartials += `${i > 0 ? '\n' : ''}  {{#*inline "${key}"}}`;
-				examplePartials += `\n    ${partialData.partials[key]}`;
-				examplePartials += '\n  {{/inline}}';
+				handlebars.registerPartial(key, partialData.partials[key]);
+
+				if (key === '@partial-block') {
+					examplePartials += `${i > 0 ? '\n' : ''}  ${partialData.partials[key]}`;
+				} else {
+					examplePartials += `${i > 0 ? '\n' : ''}  {{#*inline "${key}"}}`;
+					examplePartials += `\n    ${partialData.partials[key]}`;
+					examplePartials += '\n  {{/inline}}';
+				}
 			});
 		}
 	}
@@ -106,20 +112,24 @@ function compilePartial (partial) {
 		template = `{{> ${partial} ${parameters} }}`;
 	}
 
-	const rendered = handlebars().compile(template)(partialData);
+	const rendered = handlebars.compile(template)(partialData);
+
 	const html = `<!doctype html>
 <html>
 	<head>
 		<link rel="stylesheet" href="/public/main.css">
 		<link rel="stylesheet" href="/public/component.css">
+		<link rel="stylesheet" href="/public/main.css">
 	</head>
-	<body style="background-color:#fff1e5;">
+	<body style="background-color:#fff1e5;" id="demo-page-${partial}">
 
 		<div class="ncf">
 			${rendered}
 		</div>
 
-		<textarea style="width:100%" readonly>${template}</textarea>
+		<textarea id="example-code" style="width:100%" readonly>${template}</textarea>
+
+		<script type="text/javascript" src="/public/main.js"></script>
 	</body>
 </html>
 	`;

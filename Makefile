@@ -11,7 +11,7 @@ build:
 	postcss public/component.css -u autoprefixer -r
 	@$(DONE)
 
-run:
+run: build
 	@DEMO_MODE=true nodemon --ext html,css --watch public --watch views demos/app.js
 
 a11y: build

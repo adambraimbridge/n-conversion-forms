@@ -43,7 +43,8 @@
     "o-colors": "^4.7.10",
     "o-icons": "^5.9.0",
     "o-stepped-progress": "^1.0.0",
-    "o-expander": "^4.7.0"
+    "o-expander": "^4.7.0",
+    "o-loading": "^2.3.0"
   },
   "resolutions": {
     "ftdomdelegate": "^3.0.0"

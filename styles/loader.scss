@@ -1,0 +1,44 @@
+/* stylelint-disable selector-no-qualifying-type */
+@import 'o-loading/main';
+
+@mixin ncfLoader() {
+	&__loader {
+		background-color: rgba(0, 0, 0, 0.75);
+		bottom: 0;
+		height: 100vh;
+		left: 0;
+		position: fixed;
+		right: 0;
+		text-align: center;
+		top: 0;
+		z-index: 1000;
+		align-items: center;
+		justify-content: center;
+
+		&.is-visible {
+			display: flex;
+		}
+
+		&__content {
+			@include oTypographySans();
+			color: oColorsGetPaletteColor('white');
+
+			&::before {
+				@include oLoadingColor('light');
+				@include oLoadingSize('large');
+				@include oLoading();
+
+				content: '';
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&__title {
+				@include oTypographySans($scale: 2);
+				// No semi-bold so doing it manually.
+				font-weight: 500;
+			}
+		}
+	}
+}

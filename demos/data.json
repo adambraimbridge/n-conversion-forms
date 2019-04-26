@@ -15,6 +15,14 @@
       "fields": "Inline content here."
     }
   },
+  "loader": {
+    "params": {
+      "title": "Hooray!"
+    },
+    "partials": {
+      "@partial-block": "<p>Your content is busy loading! <sup>(not really, this is just a demo)</sup></p>"
+    }
+  },
   "message": {
     "params": {
       "isError": true,

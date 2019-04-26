@@ -10,6 +10,7 @@
 @import './styles/payment';
 @import './styles/payment-term';
 @import './styles/payment-type';
+@import './styles/loader';
 @import './styles/message';
 @import 'o-fonts/main';
 
@@ -211,6 +212,7 @@
 	@include ncfMessage();
 	@include ncfPaymentTerm();
 	@include ncfPaymentType();
+	@include ncfLoader();
 
 	@include ncfPaymentApplePay();
 

@@ -60,6 +60,7 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 * [Country](#country)
 * [Email](#email)
 * [Event Notifier](#event-notifier)
+* [Loader](#loader)
 * [Password](#password)
 * [Payment Term](#payment-term)
 * [Payment Type](#payment-type)
@@ -104,6 +105,50 @@ This utility provides the following:
 ### Event Notifier
 
 TBD
+
+### Loader
+
+```js
+const loader = new Loader(document);
+```
+
+Requirements:
+
++ `{{> n-conversion-forms/partials/loader }}` - The element containing the overlay and loading message/spinner. Place this somewhere near the bottom of your document.
+
+If you want to define some content, this can be done as follows:
+
+```handlebars
+{{#> n-conversion-forms/partials/loader title="Hooray!" }}
+  <p>Main content for the message can be defined in here</p>
+{{/ n-conversion-forms/partials/loader }}
+```
+
+#### Showing/Hiding
+
+The loader is hidden by default on page load.
+
+```js
+loader.show();
+loader.hide();
+```
+
+#### Loading Message
+
+To dynamically set the messsage to be displayed (either of the properties are optional):
+
+```js
+loader.setContent({
+  content: '<p>Main content for the message can be defined in here</p>',
+  title: 'Hooray!'
+});
+```
+
+To clear the message entirely:
+
+```js
+loader.clearContent();
+```
 
 ### Password
 
