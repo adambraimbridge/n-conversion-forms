@@ -34,13 +34,15 @@
 	}
 
 	&__paragraph {
-		@include oTypographySans(1);
 		padding: oTypographySpacingSize(4) 0;
 		margin: 0;
 
 		&--reduced-padding {
-			@include oTypographySans(1);
-			padding: oTypographySpacingSize(0) 0;
+			padding: 0;
+		}
+
+		&--subscription-confirmation {
+			margin: oTypographySpacingSize(4) 0 oTypographySpacingSize(2);
 		}
 	}
 
@@ -71,25 +73,30 @@
 		@include oTypographyProductHeadingLevel5;
 
 		&--confirmation {
-			@include oTypographySerif($scale: 4);
-			margin-top: -8px;
+			@include oTypographySerif($scale: 3);
+		}
+	}
+
+	&__headed-paragraph {
+		.ncf__header {
+			@include oTypographySize(2);
+			padding: 0;
+			margin: 0 0 oTypographySpacingSize(1);
+		}
+
+		.ncf__paragraph {
+			padding: 0;
 		}
 	}
 
 	&__header2 {
-		&--reduced-size {
-			@include oTypographySerif($scale: 0);
-			padding: oTypographySpacingSize(0) 0;
-			margin: 22px 0 -10px;
-		}
-
 		&--afterline {
-			@include oTypographySerif($scale: 1);
+			@include oTypographySize(1);
 			&:after {
 				@include oTypographyPadding($top: 3, $bottom: 0);
 				content: '';
 				display: block;
-				width: 110px;
+				width: 90px;
 				border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
 			}
 		}
@@ -179,6 +186,12 @@
 			width: 40px;
 			height: 40px;
 		}
+	}
+
+	&__icon-download {
+		@include oIconsGetIcon('download', oColorsGetPaletteColor('cold-1'), 32);
+		border: 0;
+		vertical-align: middle;
 	}
 
 	&__list {
