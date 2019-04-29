@@ -25,6 +25,7 @@ describe('Zuora', () => {
 		window = {
 			Z: {
 				prepopulate: sinon.stub(),
+				runAfterRender: sinon.stub(),
 				renderWithErrorHandler: sinon.stub(),
 				sendErrorMessageToHpm: sinon.stub(),
 				setEventHandler: sinon.stub(),
@@ -54,16 +55,16 @@ describe('Zuora', () => {
 	context('render', () => {
 		const params = { foo: 'bar' };
 		const prepopulatedFields = { firstName: 'John' };
-		const hostedPaymentPageCallback = () => { };
+		const renderCallback = () => { };
 
 		it('calls relevant Zuora functions', async () => {
-			await zuora.render({ params, prepopulatedFields, hostedPaymentPageCallback });
+			await zuora.render({ params, prepopulatedFields, renderCallback });
 
 			expect(window.Z.renderWithErrorHandler.called).to.be.true;
 		});
 
 		it('sets up error handler that calls sendErrorMessageToHpm', async () => {
-			await zuora.render({ params, prepopulatedFields, hostedPaymentPageCallback });
+			await zuora.render({ params, prepopulatedFields, renderCallback });
 			const handler = window.Z.renderWithErrorHandler.getCall(0).args[3];
 
 			handler();
@@ -71,11 +72,17 @@ describe('Zuora', () => {
 		});
 
 		it('sets up error handler that calls sendErrorMessageToHpm with correct error', async () => {
-			await zuora.render({ params, prepopulatedFields, hostedPaymentPageCallback });
+			await zuora.render({ params, prepopulatedFields, renderCallback });
 			const handler = window.Z.renderWithErrorHandler.getCall(0).args[3];
 
 			handler(fixtures.render.key, fixtures.render.code, fixtures.render.message);
 			expect(window.Z.sendErrorMessageToHpm.getCall(0).args).to.deep.equal(['firstName', 'First Name is invalid']);
+		});
+
+		it('binds the renderCallback to Zuora\'s runAfterRender function', async () => {
+			await zuora.render({ params, prepopulatedFields, renderCallback });
+
+			expect(window.Z.runAfterRender.called).to.be.true;
 		});
 	});
 

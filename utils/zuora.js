@@ -33,20 +33,23 @@ class Zuora {
 	 * error messages.
 	 * @param {Object} params Parameters for customizing this Payment Pages 2.0 form
 	 * @param {Object} prePopulatedFields Parameters with field ids and values to be pre-populated on the form
-	 * @param {Function} hostedPaymentPageCallback Handles only the error responses in Payment Page request from the Z.renderWithErrorHandler function
+	 * @param {Function} renderCallback A function that gets called after the form is rendered.
 	 */
-	render ({ params, prePopulatedFields={}, hostedPaymentPageCallback=()=>{} }) {
+	render ({ params, prePopulatedFields = {}, renderCallback=()=>{} }) {
+		// This will be called from within the iframe after it has been rendered. For some reason, this seemingly
+		//  breaks their normal convention of using post message.
+		this.Z.runAfterRender(renderCallback.bind(this));
 		/**
 		 * Z.renderWithErrorHandler - Zuora 3rd party method
 		 * @param {Object}    params - see parent function
 		 * @param {Object}    prePopulatedFields - see parent function
-		 * @param {Function}  hostedPaymentPageCallback - see parent function
-		 * @param {Function}  anonymous - Zuora Custom Error Message Callback
+		 * @param {Function}  anonymous - Meant to run after init, but it doesn't seem to work ¯\_(ツ)_/¯
+		 * @param {Function}  anonymous - Handles only the error responses in Payment Page request from the Z.renderWithErrorHandler function.
 		 */
 		this.Z.renderWithErrorHandler(
 			params,
 			prePopulatedFields,
-			hostedPaymentPageCallback,
+			()=>{},
 			(key, code, message) => {
 				// Generate our custom error messages and send them to the HPM
 				const errorMessage = customiseZuoraError.generateCustomErrorMessage(key, code, message);

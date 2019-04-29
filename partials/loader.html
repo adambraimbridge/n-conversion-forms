@@ -5,10 +5,10 @@
 				{{ title }}
 			</div>
 		{{/if}}
-		{{#if @partial-block}}
 		<div class="ncf__loader__content__main">
-			{{> @partial-block }}
+			{{#if @partial-block}}
+				{{> @partial-block }}
+			{{/if}}
 		</div>
-		{{/if}}
 	</div>
 </div>
