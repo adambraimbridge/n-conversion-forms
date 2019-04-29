@@ -206,6 +206,16 @@ const submit = new Submit(document);
 
 // Update the button text
 submit.updateText('Pay with Apple Pay');
+
+// Enable the button
+submit.enable();
+
+// Disable the button
+submit.disable();
+
+// Whether or not the button is disabled.
+submit.isDisabled();
+
 ```
 ### Tracking
 
