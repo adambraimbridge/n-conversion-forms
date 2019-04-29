@@ -55,8 +55,13 @@ class Loader {
 
 	/**
 	 * Show the loader
+	 *
+	 * @param {object} content The optional content to set *before* showing the loader.
 	 */
-	show () {
+	show (content) {
+		if (content) {
+			this.setContent(content);
+		}
 		this.$loader.classList.add(this.VISIBLE_CLASS);
 		this.$loader.classList.remove(this.HIDDEN_CLASS);
 	}
