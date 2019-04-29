@@ -72,6 +72,13 @@ describe('Loader', () => {
 				expect(addClassStub.getCall(0).args[0]).to.equal(loader.VISIBLE_CLASS);
 				expect(removeClassStub.getCall(0).args[0]).to.equal(loader.HIDDEN_CLASS);
 			});
+			it('should call setContent if content is passed', () => {
+				const content = { title: 'foo' };
+				sandbox.stub(loader, 'setContent');
+
+				loader.show(content);
+				expect(loader.setContent.getCall(0).args[0]).to.equal(content);
+			});
 		});
 
 		describe('hide', () => {

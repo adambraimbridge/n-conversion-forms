@@ -133,6 +133,12 @@ loader.show();
 loader.hide();
 ```
 
+You can optionally pass in content when showing the loader:
+
+```js
+loader.show({ title: 'Hello World!' });
+```
+
 #### Loading Message
 
 To dynamically set the messsage to be displayed (either of the properties are optional):
