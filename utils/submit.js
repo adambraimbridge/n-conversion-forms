@@ -51,6 +51,13 @@ class Submit {
 	disable () {
 		this.$submit.disabled = true;
 	}
+
+	/**
+	 * Whether or not the button is disabled.
+	 */
+	isDisabled () {
+		return !!this.$submit.disabled;
+	}
 }
 
 module.exports = Submit;

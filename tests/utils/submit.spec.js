@@ -72,5 +72,13 @@ describe('Submit', () => {
 				expect(submit.$submit.disabled).to.be.true;
 			});
 		});
+
+		describe('isDisabled', () => {
+			it('should indicate the disabled state of the button', () => {
+				expect(submit.isDisabled()).to.be.false;
+				submit.disable();
+				expect(submit.isDisabled()).to.be.true;
+			});
+		});
 	});
 });
