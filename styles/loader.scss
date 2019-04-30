@@ -20,7 +20,7 @@
 		}
 
 		&__content {
-			@include oTypographySans();
+			@include oTypographySans($scale: -1);
 			color: oColorsGetPaletteColor('white');
 
 			&::before {
@@ -35,7 +35,7 @@
 			}
 
 			&__title {
-				@include oTypographySans($scale: 2);
+				@include oTypographySize($scale: 2);
 				// No semi-bold so doing it manually.
 				font-weight: 500;
 			}
