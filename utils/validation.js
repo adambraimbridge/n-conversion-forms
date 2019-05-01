@@ -24,7 +24,11 @@ class Validation {
 		if (!this.$form.length) return;
 
 		for (const $el of this.$requiredEls) {
-			$el.addEventListener('blur', this.checkFormValidity.bind(this), false);
+			if (/(checkbox)/gi.test($el.type)) {
+				$el.addEventListener('change', this.checkElementValidity.bind(this, $el), false);
+			} else {
+				$el.addEventListener('blur', this.checkFormValidity.bind(this), false);
+			}
 		}
 
 		this.$form.addEventListener('change', () => {
@@ -51,6 +55,14 @@ class Validation {
 	 */
 	validateForm (event) {
 		this.oForms.validateForm(event);
+	}
+
+	/**
+	 * Checks a single elements validity.
+	 */
+	checkElementValidity ($el) {
+		// Make sure the input element has been updated (for example if this is from a label click for a checkbox).
+		this.oForms.validateInput($el);
 	}
 
 	/**
