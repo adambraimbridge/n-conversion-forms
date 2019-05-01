@@ -36,6 +36,7 @@
 		}
 
 		&__label--title {
+			font-weight: oFontsWeight('semibold');
 			@include oTypographySans($scale: 2);
 		}
 
