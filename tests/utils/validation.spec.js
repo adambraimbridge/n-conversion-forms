@@ -3,8 +3,10 @@ const proxyquire = require('proxyquire').noCallThru();
 const sinon = require('sinon');
 
 let findInputsStub = sinon.stub();
+let validateInputStub = sinon.stub();
 let OFormsStub = sinon.stub().returns({
-	findInputs: findInputsStub
+	findInputs: findInputsStub,
+	validateInput: validateInputStub
 });
 
 const Validation = proxyquire('../../utils/validation', {
@@ -18,26 +20,30 @@ describe('Validation', () => {
 	let document;
 	let formElement;
 	let requiredElListener;
+	let checkboxAddEventListener;
 	let sandbox;
 	let checkValidityStub;
 	let validation;
 
 	beforeEach(() => {
+		sandbox = sinon.createSandbox();
+		checkboxAddEventListener = sandbox.stub();
 		formElement = {
 			length: 1,
-			addEventListener: () => {}
+			addEventListener: () => {},
+			querySelector: () => {}
 		};
 		global.document.querySelector = () => formElement;
-		requiredElListener = sinon.stub();
-		checkValidityStub = sinon.stub();
-		sandbox = sinon.createSandbox();
+		requiredElListener = sandbox.stub();
+		checkValidityStub = sandbox.stub();
 		sandbox.spy(formElement, 'addEventListener');
 		sandbox.spy(OFormsStub, 'constructor');
 		findInputsStub.returns([
 			{ name: 'foo', type: 'hidden' },
 			{ name: 'bar' },
 			{ name: 'baz', required: true, addEventListener: requiredElListener, checkValidity: checkValidityStub },
-			{ name: 'qoo', required: true, addEventListener: requiredElListener, checkValidity: checkValidityStub }
+			{ name: 'qoo', required: true, addEventListener: requiredElListener, checkValidity: checkValidityStub },
+			{ name: 'checkbox', type: 'checkbox', addEventListener: checkboxAddEventListener, required: true, checkValidity: checkValidityStub }
 		]);
 
 		validation = new Validation(document);
@@ -64,7 +70,6 @@ describe('Validation', () => {
 	});
 
 	describe('init', () => {
-
 		it('should add an event listener to all required elements', () => {
 			expect(requiredElListener.calledTwice).to.be.true;
 		});
@@ -81,6 +86,12 @@ describe('Validation', () => {
 
 			expect(global.window.onbeforeunload).to.be.undefined;
 		});
+
+		it('should call checkElementValidity when changing a checkbox', () => {
+			expect(checkboxAddEventListener.getCalls().length).to.equal(1);
+			// we have to check `bound ` because we pass it with `.bind(this)`
+			expect(checkboxAddEventListener.getCall(0).args[1].name).to.equal('bound checkElementValidity');
+		});
 	});
 
 	describe('onbeforeunload', () => {
@@ -92,6 +103,15 @@ describe('Validation', () => {
 			validation.formChanged = true;
 
 			expect(global.window.onbeforeunload()).to.be.true;
+		});
+	});
+
+	describe('checkElementValidity', () => {
+		it('should call oForms.validateInput for the element.', () => {
+			const $el = { foo: true };
+			validation.checkElementValidity($el);
+
+			expect(validateInputStub.getCall(0).args[0]).to.equal($el);
 		});
 	});
 
