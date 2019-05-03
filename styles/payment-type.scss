@@ -26,25 +26,25 @@
 
 		&--paypal {
 			.o-forms__label {
-				background-image: url(https://www.ft.com/__assets/creatives/third-party/pp-logo-100px.png);
 				@include buttonImageOverriding();
+				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fpp-logo-100px.png?width=300&source=next&fit=scale-down);
 			}
 
 			.o-forms__radio-button:checked + .o-forms__label {
-				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fdirect-debit-transparent.png?width=300&source=next&fit=scale-down);
 				@include buttonImageOverriding();
+				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fpp-logo-white.png?width=300&source=next&fit=scale-down);
 			}
 		}
 
 		&--directdebit {
 			.o-forms__label {
-				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fdirect-debit-transparent.png?width=300&source=next&fit=scale-down);
 				@include buttonImageOverriding();
+				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fdirect_debit.png?width=300&source=next&fit=scale-down);
 			}
 
 			.o-forms__radio-button:checked + .o-forms__label {
-				background-image: url(https://www.ft.com/__assets/creatives/third-party/pp-logo-100px.png);
 				@include buttonImageOverriding();
+				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fdirect_debit-white.png?width=300&source=next&fit=scale-down);
 			}
 		}
 	}
