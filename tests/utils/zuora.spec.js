@@ -42,9 +42,14 @@ describe('Zuora', () => {
 	});
 
 	context('constructor', () => {
-		it('Sets up global listeners', () => {
+		it('sets up global listeners', () => {
 			expect(window.Z.setEventHandler.getCall(0).args[0]).to.equal('blur_mode_enabled');
 			expect(window.Z.setEventHandler.getCall(1).args[0]).to.equal('blur_mode_disabled');
+		});
+
+		it('sets up dom elements', () => {
+			expect(zuora.iframe).to.exist;
+			expect(zuora.overlay).to.exist;
 		});
 
 		it('gets Z from window and adds to class scope', () => {

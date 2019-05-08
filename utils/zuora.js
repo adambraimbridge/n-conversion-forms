@@ -22,8 +22,9 @@ class Zuora {
 	constructor (window) {
 		this.Z = window.Z;
 
-		// `blur_mode_(enabled|disabled)` are for the DD confirmation dialog.
+		this.iframe = new FormElement(window.document, '.ncf__zuora-payment');
 		this.overlay = new FormElement(window.document, '.ncf__zuora-payment-overlay');
+		// `blur_mode_(enabled|disabled)` are for the DD confirmation dialog.
 		this.Z.setEventHandler('blur_mode_enabled', () => { this.overlay.show(); });
 		this.Z.setEventHandler('blur_mode_disabled', () => { this.overlay.hide(); });
 	}
