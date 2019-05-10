@@ -11,12 +11,14 @@ const SELECTOR_LEGEND = 'legend';
 const SELECTOR_FIELDSET = 'fieldset';
 const TEST_LEGEND = 'testing';
 const TEST_FIELDS_ID = 'testing';
+const TEST_HEADER_ID = 'header_test';
 
 let context = {};
 
 describe('fieldset template', () => {
 	before(async () => {
 		context.template = await fetchPartial('fieldset.html');
+		registerPartial('header', `<div id="${TEST_HEADER_ID}"></div>`);
 		registerPartial('fields', `<div id="${TEST_FIELDS_ID}"></div>`);
 	});
 
@@ -72,16 +74,22 @@ describe('fieldset template', () => {
 		expect($(SELECTOR_LEGEND).attr('class')).to.not.contain(CLASS_HEADER);
 	});
 
-	it('should add heaing class when "isHeader" is passed', () => {
+	it('should add a header when a headingLevel is passed', () => {
 		const $ = context.template({
 			legend: TEST_LEGEND,
-			isHeader: true
+			headingLevel: 'h1'
 		});
 
-		expect($(SELECTOR_LEGEND).attr('class')).to.contain(CLASS_HEADER);
+		expect($('h1').attr('class')).to.contain(CLASS_HEADER);
 	});
 
-	it('should have feilds inner partial', () => {
+	it('should have a header inner partial', () => {
+		const $ = context.template({ headingLevel: 'h1' });
+
+		expect($(`#${TEST_HEADER_ID}`).length).to.equal(1);
+	});
+
+	it('should have a fields inner partial', () => {
 		const $ = context.template({});
 
 		expect($(`#${TEST_FIELDS_ID}`).length).to.equal(1);

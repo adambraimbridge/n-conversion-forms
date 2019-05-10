@@ -2,7 +2,68 @@
 
 ## Content
 
+* [Fieldset](#fieldset)
+* [Loader](#loader)
 * [Message](#message)
+
+## Fieldset
+
+Renders a fieldset.
+
+### Options
+
++ `descriptor`: string - Text used to describe this set of fields.
++ `legend`: string - Text to display in the `fieldset`'s `legend` element. Not passing this in won't render this element.
++ `hideLegend`: boolean - Whether to visibly show the `legend` or not.
++ `headingLevel`: string - The heading level to use when the `header` inline partial (see below) is used.
++ `name`: string - The value for the `fieldset`'s `name` attribute.
+
+### Inline Partials
+
+#### fields
+
+The form fields to be displayed in this fieldset.
+
+```handlebars
+{{#> n-conversion-forms/partials/fieldset }}
+  {{#*inline "fields"}}
+    {{> n-conversion-forms/partials/email value='test@example.com' }}
+  {{/inline}}
+{{/ n-conversion-forms/partials/fieldset }}
+```
+
+#### header
+
+This is useful for cases where you'd want to pass in markup to use within the header element. For example, you may want to specify a more accessibility friendly header as follows:
+
+```handlebars
+{{#> n-conversion-forms/partials/fieldset headingLevel="h1" legend="Details" hideLegend="true" }}
+  {{#*inline "header"}}
+    <span class="o-normalise-visually-hidden"></span>Details<span class="o-normalise-visually-hidden"> (page 1 of 3)</span>
+  {{/inline}}
+{{/ n-conversion-forms/partials/fieldset }}
+```
+
+*NB*: The `headingLevel` option is required in order for this to work.
+
+## Loader
+
+A full screen loading overlay.
+
+### Options
+
++ `showLoader`: boolean - Whether to show the loader by default/on page load.
++ `title`: string - The title of the message shown underneath the loading spinner.
+
+### Inline Partials
+
+You can pass in HTML (additional to the `title`) using [partial block syntax](https://handlebarsjs.com/partials.html#partial-block) as follows:
+
+```handlebars
+{{> n-conversion-forms/partials/loader}}
+  <p>Some additional content<p>
+{{/ n-conversion-forms/partials/loader}}
+```
 
 ## Message
 
@@ -12,41 +73,17 @@ i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message 
 
 ### Options
 
-#### Type:
++ `isHidden`: boolean - Whether the message is hidden by default/on page load.
++ `name`: string - The name for this message that gets added to the `data-message-name` attribute.
++ `isError`: boolean - Use the `Error` origami styles for this message.
++ `isInform`: boolean - Use the `Success` origami styles for this message.
++ `isNotice`: boolean - Use the `Notice` origami styles for this message.
++ `isSuccess`: boolean - Use the `Success` origami styles for this message.
++ `title`: string - The title for this message.
++ `message`: string - The main content for this message.
++ `additional`: Array - An array of strings containing additional information.
++ `actions`: Array - An array containing the below config for the action buttons:
+  + `link`: string - The link to go to when clicking the button.
+  + `isSecondary`: boolean - Whether to render this button using secondary styling from [o-buttons](https://registry.origami.ft.com/components/o-buttons).
+  + `text`: string - The text the user will see on the button.
 
-* Notice: boolean - isNotice=true
-* Alert: default
-
-### Status:
-
-* Error: boolean - isError=true
-* Success: boolean - isSuccess=true
-* Inform: boolean - isInform=true - default
-
-### Title:
-
-* messageTitle: string - messageTitle="The title of the message". Optional.
-
-### Message:
-
-* message: string - message. Required.
-
-### Additional message:
-
-`{ additional: ['Allows an additional message'] }`
-
-* additional: array of strings - additional=additional. Optional.
-
-### Actions
-
-Allows for two types of styles:
-
-* button-style: o-message__actions__primary
-* link-style: o-message__actions__secondary
-
-* actions: Optional. Array of objects containing the following properties:
-
-Required if you have actions.
-* link: url=https://ft.com.
-* text: string=FT.com.
-* isSecondary: boolean.
