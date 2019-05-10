@@ -131,12 +131,13 @@ The loader is hidden by default on page load.
 
 ```js
 loader.show();
+loader.showAndPreventTabbing();
 loader.hide();
 ```
 
 or
 
-To show loader:
+To show loader on page load/render:
 
 ```handlebars
 {{> n-conversion-forms/partials/loader showLoader=true title="Hooray!" }}
@@ -146,6 +147,7 @@ You can optionally pass in content when showing the loader:
 
 ```js
 loader.show({ title: 'Hello World!' });
+loader.showAndPreventTabbing({ title: 'Hello World!' });
 ```
 
 #### Loading Message
