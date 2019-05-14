@@ -59,11 +59,27 @@ class Loader {
 	 * @param {object} content The optional content to set *before* showing the loader.
 	 */
 	show (content) {
+		this._previouslyFocused = document.activeElement;
+
 		if (content) {
 			this.setContent(content);
 		}
 		this.$loader.classList.add(this.VISIBLE_CLASS);
 		this.$loader.classList.remove(this.HIDDEN_CLASS);
+
+		this.$loader.tabIndex = 1;
+		this.$loader.focus();
+	}
+
+	/**
+	 * Show the loader and stop the user from being able to tab away from it or to what's underneath it.
+	 *
+	 * @param {object} content The optional content to set *before* showing the loader.
+	 */
+	showAndPreventTabbing (content) {
+		this.show(content);
+
+		this.element.addEventListener('keydown', this.interceptTab);
 	}
 
 	/**
@@ -72,6 +88,24 @@ class Loader {
 	hide () {
 		this.$loader.classList.add(this.HIDDEN_CLASS);
 		this.$loader.classList.remove(this.VISIBLE_CLASS);
+		this.$loader.removeAttribute('tabindex');
+
+		this.element.removeEventListener('keydown', this.interceptTab);
+
+		if (this._previouslyFocused) {
+			this._previouslyFocused.focus();
+			delete this._previouslyFocused;
+		}
+	}
+
+	/**
+	 * Intercepts Tab key events that normally navigate through the content on the page.
+	 * @param {object} event The event object for the keypress.
+	 */
+	interceptTab (event) {
+		if (event.keyCode === 9) {
+			event.preventDefault();
+		}
 	}
 };
 
