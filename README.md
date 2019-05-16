@@ -255,6 +255,22 @@ This utility will set up the form for client side validation using [`o-forms`](h
 
 One useful property made available is the main form DOM element via `validation.$form`. Use this for scoping `querySelector` calls to find elements within your form.
 
+#### Custom Validation
+
+You can add some custom validation functionality as follows:
+
+```js
+validation.addCustomValidation({
+  errorMessage: 'Custom error message here.',
+  field: domElementToValidate,
+  validator: () => {
+    // Custom validation code here. *Must* return truthy or falsey.
+  }
+});
+```
+
+If the validation fails, the field will look like it usually does when validation fails with your specified message displayed underneath.
+
 ### Zuora
 
 The Zuora utility aims to wrap the Zuora client side library to make it more user friendly.
