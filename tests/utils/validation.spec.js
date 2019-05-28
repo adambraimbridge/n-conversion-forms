@@ -2,6 +2,8 @@ const expect = require('chai').expect;
 const proxyquire = require('proxyquire').noCallThru();
 const sinon = require('sinon');
 
+const DomHelper = require('../helpers/dom');
+
 let findInputsStub = sinon.stub();
 let validateInputStub = sinon.stub();
 let OFormsStub = sinon.stub().returns({
@@ -13,45 +15,64 @@ const Validation = proxyquire('../../utils/validation', {
 	'o-forms': OFormsStub
 });
 
-global.document = {};
 global.window = {};
 
+let $form;
+let checkboxAddEventListener;
+let checkValidityStub;
+let cleanupJSDom;
+let insertBeforeStub;
+let removeChildStub;
+let requiredElListener;
+let sandbox;
+let validation;
+
+const createElement = (config) => {
+	let el = DomHelper.createElement(config, sandbox);
+	let parentNode = document.createElement('div');
+
+	sandbox.stub(parentNode, 'insertBefore').value(insertBeforeStub);
+	sandbox.stub(parentNode, 'removeChild').value(removeChildStub);
+	sandbox.stub(el, 'parentNode').value(parentNode);
+
+	return el;
+};
+
 describe('Validation', () => {
-	let document;
-	let formElement;
-	let requiredElListener;
-	let checkboxAddEventListener;
-	let sandbox;
-	let checkValidityStub;
-	let validation;
 
 	beforeEach(() => {
+		cleanupJSDom = require('jsdom-global')();
+		$form = document.createElement('form');
 		sandbox = sinon.createSandbox();
+
 		checkboxAddEventListener = sandbox.stub();
-		formElement = {
-			length: 1,
-			addEventListener: () => {},
-			querySelector: () => {}
-		};
-		global.document.querySelector = () => formElement;
-		requiredElListener = sandbox.stub();
 		checkValidityStub = sandbox.stub();
-		sandbox.spy(formElement, 'addEventListener');
+		insertBeforeStub = sandbox.stub();
+		removeChildStub = sandbox.stub();
+		requiredElListener = sandbox.stub();
+
+		sandbox.spy(document, 'addEventListener');
 		sandbox.spy(OFormsStub, 'constructor');
+		sandbox.stub(document, 'querySelector');
+
+		document.querySelector.withArgs('form.ncf').returns($form);
+
 		findInputsStub.returns([
-			{ name: 'foo', type: 'hidden' },
-			{ name: 'bar' },
-			{ name: 'baz', required: true, addEventListener: requiredElListener, checkValidity: checkValidityStub },
-			{ name: 'qoo', required: true, addEventListener: requiredElListener, checkValidity: checkValidityStub },
-			{ name: 'checkbox', type: 'checkbox', addEventListener: checkboxAddEventListener, required: true, checkValidity: checkValidityStub }
+			createElement({ name: 'foo', type: 'hidden', checkValidity: checkValidityStub }),
+			createElement({ name: 'bar', checkValidity: checkValidityStub }),
+			createElement({ name: 'baz', required: true, addEventListener: requiredElListener, checkValidity: checkValidityStub }),
+			createElement({ name: 'qoo', required: true, addEventListener: requiredElListener, checkValidity: checkValidityStub }),
+			createElement({ name: 'checkbox', type: 'checkbox', addEventListener: checkboxAddEventListener, required: true, checkValidity: checkValidityStub })
 		]);
 
 		validation = new Validation(document);
+		sandbox.spy(validation, 'checkFormValidity');
+
 		validation.init();
 	});
 
 	afterEach(() => {
-		delete global.window.onbeforeunload;
+		cleanupJSDom();
 		sandbox.restore();
 	});
 
@@ -61,17 +82,17 @@ describe('Validation', () => {
 		});
 
 		it('should have a $form property exposing the form element', () => {
-			expect(validation.$form).to.deep.eq(formElement);
+			expect(validation.$form).to.deep.eq($form);
 		});
 
 		it('should check validation status on init', () => {
-			expect(checkValidityStub.called).to.be.true;
+			expect(validation.checkFormValidity.called).to.be.true;
 		});
 	});
 
 	describe('init', () => {
 		it('should add an event listener to all required elements', () => {
-			expect(requiredElListener.calledTwice).to.be.true;
+			expect(requiredElListener.getCalls().length).to.equal(2);
 		});
 
 		it('should bind to onbeforeunload by default', () => {
@@ -107,8 +128,20 @@ describe('Validation', () => {
 	});
 
 	describe('checkElementValidity', () => {
+		let $el;
+
+		beforeEach(() => {
+			$el = { foo: true };
+		});
+
+		it('should not call validateInput if custom validation fails', () => {
+			sandbox.stub(validation, 'checkCustomValidation').returns(false);
+			validation.checkElementValidity($el);
+
+			expect(validateInputStub.called).to.be.false;
+		});
+
 		it('should call oForms.validateInput for the element.', () => {
-			const $el = { foo: true };
 			validation.checkElementValidity($el);
 
 			expect(validateInputStub.getCall(0).args[0]).to.equal($el);
@@ -132,6 +165,107 @@ describe('Validation', () => {
 			validation.checkFormValidity();
 
 			expect(validation.formValid).to.be.true;
+		});
+	});
+
+	context('Custom Validation', () => {
+		let field;
+
+		beforeEach(() => {
+			field = createElement({ name: 'foo' });
+		});
+
+		describe('addCustomValidation', () => {
+			it('should store a custom validation function', () => {
+				validation.addCustomValidation({
+					errorMessage: 'Oops, something custom went wrong!',
+					field,
+					validator: sandbox.stub()
+				});
+				expect(validation.customValidation.size).to.equal(1);
+			});
+
+			it('should throw if a custom validation function has already been specified for a particular field', () => {
+				validation.addCustomValidation({
+					errorMessage: 'Oops, something custom went wrong!',
+					field,
+					validator: sandbox.stub()
+				});
+
+				expect(() => {
+					validation.addCustomValidation({
+						errorMessage: 'Oops, something else custom went wrong!',
+						field
+					});
+				}).to.throw();
+			});
+
+			it('should store a custom validation function that will show a custom validation message when validation fails', () => {
+				sandbox.stub(validation, 'showCustomFieldValidationError');
+				sandbox.stub(validation, 'clearCustomFieldValidationError');
+
+				validation.addCustomValidation({
+					errorMessage: 'Oops, something custom went wrong!',
+					field,
+					validator: sandbox.stub().returns(false)
+				});
+
+				// Run the stored custom validation function
+				validation.customValidation.get('foo')();
+
+				expect(validation.showCustomFieldValidationError.called).to.be.true;
+				expect(validation.clearCustomFieldValidationError.called).to.be.false;
+			});
+
+			it('should store a custom validation function that will clear a custom validation message when validation passes', () => {
+				sandbox.stub(validation, 'showCustomFieldValidationError');
+				sandbox.stub(validation, 'clearCustomFieldValidationError');
+
+				validation.addCustomValidation({
+					errorMessage: 'Oops, something custom went wrong!',
+					field,
+					validator: sandbox.stub().returns(true)
+				});
+
+				// Run the stored custom validation function
+				validation.customValidation.get('foo')();
+
+				expect(validation.clearCustomFieldValidationError.called).to.be.true;
+			});
+		});
+
+		describe('showCustomFieldValidationError', () => {
+			let messageStub = { foo: 'bar' };
+
+			it('adds the o-form--error class to the parent', () => {
+				sandbox.spy(field.parentNode.classList, 'add');
+				validation.showCustomFieldValidationError(field, messageStub);
+
+				expect(field.parentNode.classList.add.getCall(0).args[0]).to.equal('o-forms--error');
+			});
+			it('adds the message to the parent', () => {
+				global.document.querySelector.returns(null);
+				validation.showCustomFieldValidationError(field, messageStub);
+
+				expect(insertBeforeStub.getCall(0).args[0]).to.equal(messageStub);
+			});
+		});
+
+		describe('clearCustomFieldValidationError', () => {
+			it('removes the message from the page', () => {
+				let fieldToRemove = createElement({ name: 'foo' });
+
+				sandbox.stub(validation.$form, 'querySelector').returns(fieldToRemove);
+				validation.clearCustomFieldValidationError(fieldToRemove);
+
+				expect(removeChildStub.getCall(0).args[0].outerHTML).to.equal(field.outerHTML);
+			});
+			it('re-checks the element validity for standard validation rules', () => {
+				sandbox.spy(validation, 'checkElementValidity');
+				validation.clearCustomFieldValidationError(field);
+
+				expect(validation.checkElementValidity.getCall(0).args[0]).to.equal(field);
+			});
 		});
 	});
 

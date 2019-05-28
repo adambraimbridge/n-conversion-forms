@@ -3,6 +3,8 @@ const expect = require('chai').expect;
 const sinon = require('sinon');
 const sandbox = sinon.createSandbox();
 
+global.document = {};
+
 describe('Loader', () => {
 	let loader;
 	let documentStub;
