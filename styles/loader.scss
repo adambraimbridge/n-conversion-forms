@@ -24,9 +24,11 @@
 			color: oColorsGetPaletteColor('white');
 
 			&::before {
-				@include oLoadingColor('light');
-				@include oLoadingSize('large');
-				@include oLoading();
+				@include oLoadingContent($opts: (
+					'theme': 'light',
+					'size': 'large'
+				));
+
 
 				content: '';
 				position: relative;
