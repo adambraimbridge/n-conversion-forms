@@ -1,13 +1,12 @@
-<div id="firstNameField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="form-field" data-ui-item-name="firstName" data-validate="required">
+<label id="firstNameField" class="o-forms-field">
 
-	<label for="firstName" class="o-forms__label">First name</label>
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">First name</span>
+	</span>
 
-	<input type="text" id="firstName" name="firstName" value="{{value}}" placeholder="Enter your first name"
-				class="o-forms__text js-field__input js-item__value"
-				data-trackable="field-name"
-				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+	<span class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<input type="text" id="firstName" name="firstName" value="{{value}}" placeholder="Enter your first name" required{{#if isDisabled}} disabled{{/if}}>
+		<span class="o-forms-input__error">Please enter your first name</span>
+	</span>
 
-	<div class="o-forms__errortext">Please enter your first name</div>
-
-</div>
+</label>

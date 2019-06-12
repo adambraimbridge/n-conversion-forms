@@ -1,26 +1,23 @@
-<div id="primaryTelephoneField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}"  data-ui-item="form-field" data-ui-item-name="primaryTelephone" data-validate="required,number">
+<label id="primaryTelephoneField" class="o-forms-field" data-validate="required,number">
 
-	<label for="primaryTelephone" class="o-forms__label">
+	<span class="o-forms-title">
 		{{#if isB2b}}
-		Work phone number
+		<span class="o-forms-title__main">Phone number</span>
 		{{else}}
-		Phone number
+		<span class="o-forms-title__main">Work phone number</span>
 		{{/if}}
-	</label>
-	<small class="o-forms__additional-info" id="phone-description">
-		5 to 15 characters (numbers only)
-	</small>
+		<span class="o-forms-title__prompt">5 to 15 characters (numbers only)</span>
+	</span>
 
-	<input type="tel" id="primaryTelephone" name="primaryTelephone" value="{{value}}" placeholder="Enter your phone number"
-				class="o-forms__text js-field__input js-item__value"
-				minLength="5"
-				maxLength="15"
-				data-trackable="field-phone"
-				aria-describedby="phone-description"
-				aria-required="true" required
-				{{#if pattern}}pattern="{{pattern}}"{{/if}}
-				{{#if isDisabled}}disabled{{/if}}>
+	<span class="o-forms-input o-forms-input--tel{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<input type="tel" id="primaryTelephone" name="primaryTelephone" value="{{value}}" placeholder="Enter your phone number"
+			minLength="5"
+			maxLength="15"
+			aria-required="true" required
+			{{#if pattern}}pattern="{{pattern}}"{{/if}}
+			{{#if isDisabled}}disabled{{/if}}>
 
-	<div class="o-forms__errortext">This phone number is not valid</div>
+		<span class="o-forms-input__error">This phone number is not valid</span>
+	</span>
 
-</div>
+</label>
