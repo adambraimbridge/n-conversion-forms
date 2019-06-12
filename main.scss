@@ -18,15 +18,15 @@
 @import './styles/banner';
 
 @include oFonts();
-@include oFormsBaseFeatures();
-@include oFormsRadioCheckboxFeatures();
-@include oFormsRadioButtonsStyledFeature();
-@include oFormsSuffixFeature();
-@include oFormsSectionFeature();
-@include oFormsInlineFeature();
-@include oFormsWideFeature();
+@include oForms($opts: (
+	'elements': (
+		'text'
+	),
+	'features': (
+		'disabled'
+	)
+));
 @include oMessage();
-@include oFormsRadioCheckboxRightModifier();
 @include oSteppedProgress();
 
 // Custom styles
