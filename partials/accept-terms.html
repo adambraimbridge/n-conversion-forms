@@ -8,9 +8,9 @@
 			By submitting this form, you indicate your consent to also being contacted by Financial Times by email, post, or phone about our other products, services or special offers unless you untick this box.
 		</p>
 		{{else}}
-		<p id="terms-default">
+		<p id="terms-default" style="margin-right: 20px; border: solid 1px red;">
 			I confirm I am {{#if ageRestriction}}{{ageRestriction}}{{else}}16{{/if}} years or older and have read and agree to the
-			<a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener" data-trackable="terms-and-conditions">Terms &amp; Conditions</a>.
+			<a class="ncf__link--external"  href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener" data-trackable="terms-and-conditions">Terms &amp; Conditions</a>.
 		</p>
 		{{/if}}
 
