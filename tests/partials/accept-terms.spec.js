@@ -132,6 +132,30 @@ describe('accept-terms template', () => {
 			const $ = context.template(params);
 			expectTerms($, { standard: 1, corp: 3 });
 		});
+
+		describe('isTrial', () => {
+			it('should have disclaimer if isTrial is TRUE', () => {
+				const params = {
+					isCorpSignup: true,
+					isTrial: true
+				};
+
+				const $ = context.template(params);
+
+				expectTerms($, { standard: 1, corp: 4 });
+			});
+
+			it('should have NOT have disclaimer if isTrial is FALSE', () => {
+				const params = {
+					isCorpSignup: true,
+					isTrial: false
+				};
+
+				const $ = context.template(params);
+
+				expectTerms($, { standard: 1, corp: 3 });
+			});
+		});
 	});
 
 	it('should be required by default', () => {
