@@ -6,13 +6,16 @@ const Handlebars = require('@financial-times/n-handlebars').handlebars;
 
 const readFile = promisify(fs.readFile);
 const PARTIAL_DIR = __dirname + '/../partials/';
-const ERROR_CLASS = 'o-forms--error';
+const ERROR_CLASS = 'o-forms-input--invalid';
 const options = [
-	{value: 'testValue1', label: 'testLabel1'},
-	{value: 'testValue2', label: 'testValue2'},
-	{value: 'testValue3', label: 'testLabel3'}
+	{ value: 'testValue1', label: 'testLabel1' },
+	{ value: 'testValue2', label: 'testValue2' },
+	{ value: 'testValue3', label: 'testLabel3' }
 ];
-const optionsWithDefault = options.map((option, index) => ({...option, isSelected: index === 1}));
+const optionsWithDefault = options.map((option, index) => ({
+	...option,
+	isSelected: index === 1
+}));
 const selectedOption = optionsWithDefault.find(option => option.isSelected);
 const handlebars = Handlebars();
 
@@ -41,7 +44,7 @@ const fetchPartial = async name => {
 	file = file.replace(/{{#if @partial-block}}([\s\S]*){{\/if}}/gm, '$1');
 	const template = handlebars.compile(file);
 
-	return (context) => cheerio.load(template(context));
+	return context => cheerio.load(template(context));
 };
 
 const shouldPopulateOptions = function (context) {
@@ -63,13 +66,20 @@ const shouldPopulateOptions = function (context) {
 			options
 		});
 
-		expect($('select option').first().attr('value')).to.equal('testValue1');
-		expect($('select option').first().text()).to.equal('testLabel1');
+		expect(
+			$('select option')
+				.first()
+				.attr('value')
+		).to.equal('testValue1');
+		expect(
+			$('select option')
+				.first()
+				.text()
+		).to.equal('testLabel1');
 	});
 };
 
 const shouldSelectOption = function (context) {
-
 	it('should select the correct option if value passed', () => {
 		const value = options[1].value;
 		const $ = context.template({
@@ -95,7 +105,9 @@ const shouldSelectOption = function (context) {
 			options: optionsWithDefault
 		});
 
-		expect($('select option[selected]').attr('value')).to.equal(selectedOption.value);
+		expect($('select option[selected]').attr('value')).to.equal(
+			selectedOption.value
+		);
 	});
 
 	it('should not select default if actual value is set', () => {
@@ -105,7 +117,9 @@ const shouldSelectOption = function (context) {
 			value
 		});
 
-		expect($('select option[selected]').attr('value')).not.to.equal(selectedOption.value);
+		expect($('select option[selected]').attr('value')).not.to.equal(
+			selectedOption.value
+		);
 		expect($('select option[selected]').attr('value')).to.equal(value);
 	});
 
@@ -148,7 +162,7 @@ const shouldBeDisableable = function (context, selector, options) {
 
 const shouldBeHiddable = function (context, selector, options) {
 	it('should be displayed by default', () => {
-		const $ = context.template(Object.assign({ }, options));
+		const $ = context.template(Object.assign({}, options));
 
 		expect($(selector).attr('class')).to.not.contain('n-ui-hide');
 	});
@@ -186,11 +200,13 @@ const shouldAllowPattern = function (context, selector) {
 
 const shouldContainPartials = function (context, partials) {
 	it('should contain partials', () => {
-		partials.forEach(({id, partial}) => registerPartial(partial, `<div id="${id}"></div>`));
+		partials.forEach(({ id, partial }) =>
+			registerPartial(partial, `<div id="${id}"></div>`)
+		);
 
 		const $ = context.template({});
 
-		partials.forEach(({id, partial}) => {
+		partials.forEach(({ id, partial }) => {
 			unregisterPartial(partial);
 			expect($(`#${id}`).length).to.equal(1);
 		});

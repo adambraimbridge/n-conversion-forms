@@ -1,7 +1,6 @@
 const OForms = require('o-forms');
 
 class Validation {
-
 	/**
 	 * Set up the Validation utility
 	 * @param {Boolean} mutePromptBeforeLeaving (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
@@ -9,7 +8,9 @@ class Validation {
 	constructor ({ mutePromptBeforeLeaving } = {}) {
 		this.$form = document.querySelector('form.ncf');
 		this.oForms = new OForms(this.$form);
-		this.$formFields = this.oForms.findInputs().filter($el => $el.type !== 'hidden');
+		this.$formFields = this.oForms
+			.findInputs()
+			.filter($el => $el.type !== 'hidden');
 		this.$requiredEls = this.$formFields.filter($el => $el.required);
 		this.formValid = false;
 		this.formChanged = false;
@@ -25,7 +26,11 @@ class Validation {
 		if (!this.$form) return;
 		for (const $el of this.$requiredEls) {
 			if (/(checkbox)/gi.test($el.type)) {
-				$el.addEventListener('change', this.checkElementValidity.bind(this, $el), false);
+				$el.addEventListener(
+					'change',
+					this.checkElementValidity.bind(this, $el),
+					false
+				);
 			} else {
 				$el.addEventListener('blur', this.checkFormValidity.bind(this), false);
 			}
@@ -42,7 +47,7 @@ class Validation {
 		if (!this.mutePromptBeforeLeaving) {
 			window.onbeforeunload = () => {
 				// Prompt the user about leaving in case they have changes they might lose.
-				return this.formChanged && !this.formSubmit || null;
+				return (this.formChanged && !this.formSubmit) || null;
 			};
 		}
 		this.checkFormValidity();
@@ -63,7 +68,7 @@ class Validation {
 	 * @param {Function} validator The function that will be run to determine whether the field is valid (needs to return `true` or `false`).
 	 * @param {String} errorMessage The error message to display to the user should the validation fail.
 	 */
-	addCustomValidation ({ field, validator, errorMessage}) {
+	addCustomValidation ({ field, validator, errorMessage }) {
 		if (this.customValidation.get(field.name)) {
 			throw new Error(`Custom validation for ${field.name} already exists.`);
 		}
@@ -73,7 +78,7 @@ class Validation {
 			const $message = document.createElement('div');
 
 			$message.id = id;
-			$message.className = 'o-forms__errortext ncf__custom-validation-error';
+			$message.className = 'o-forms-input__error ncf__custom-validation-error';
 			$message.innerText = errorMessage;
 
 			const isValid = validator();
@@ -93,7 +98,7 @@ class Validation {
 	 */
 	showCustomFieldValidationError ($field, $message) {
 		const $parent = $field.parentNode;
-		const $oFormsErrorText = $parent.querySelector('.o-forms__errortext');
+		const $oFormsErrorText = $parent.querySelector('.o-forms-input__error');
 
 		$parent.classList.add('o-forms--error');
 
@@ -103,7 +108,12 @@ class Validation {
 			$parent.insertBefore($message, $field.nextSibling);
 		}
 
-		if ($oFormsErrorText && $oFormsErrorText.parentNode.className.indexOf('ncf__custom-validation-error') === -1) {
+		if (
+			$oFormsErrorText &&
+			$oFormsErrorText.parentNode.className.indexOf(
+				'ncf__custom-validation-error'
+			) === -1
+		) {
 			// If there's an oForms error we need to hide it so that we can use the `o-forms--error` class
 			//  on the container to highlight the field as invalid.
 			$oFormsErrorText.style.display = 'none';
@@ -116,8 +126,12 @@ class Validation {
 	 * @param {DOMElement} $field The field related to the error that now needs to be cleared.
 	 */
 	clearCustomFieldValidationError ($field) {
-		const $message = this.$form.querySelector(`#custom-validation-for-${$field.name}`);
-		const $oFormsErrorText = $field.parentNode.querySelector('.o-forms__errortext');
+		const $message = this.$form.querySelector(
+			`#custom-validation-for-${$field.name}`
+		);
+		const $oFormsErrorText = $field.parentNode.querySelector(
+			'.o-forms-input__error'
+		);
 
 		if ($message) {
 			$message.parentNode.removeChild($message);
@@ -135,7 +149,7 @@ class Validation {
 	 * @returns {Boolean} whether or not the custom validation passed.
 	 */
 	checkCustomValidation () {
-		this.customValidation.forEach((validator) => {
+		this.customValidation.forEach(validator => {
 			validator();
 		});
 
@@ -175,7 +189,6 @@ class Validation {
 	getInvalidEls () {
 		return this.$requiredEls.filter($el => !$el.checkValidity());
 	}
-
 }
 
 module.exports = Validation;
