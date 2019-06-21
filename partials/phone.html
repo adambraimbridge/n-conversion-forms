@@ -1,23 +1,26 @@
-<label id="primaryTelephoneField" class="o-forms-field" data-validate="required,number">
-
+<label
+	id="primaryTelephoneField"
+	class="o-forms-field"
+	data-validate="required,number"
+>
 	<span class="o-forms-title">
 		{{#if isB2b}}
-		<span class="o-forms-title__main">Phone number</span>
-		{{else}}
 		<span class="o-forms-title__main">Work phone number</span>
+		{{else}}
+		<span class="o-forms-title__main">Phone number</span>
 		{{/if}}
 		<span class="o-forms-title__prompt">5 to 15 characters (numbers only)</span>
 	</span>
 
-	<span class="o-forms-input o-forms-input--tel{{#if hasError}} o-forms-input--invalid{{/if}}">
-		<input type="tel" id="primaryTelephone" name="primaryTelephone" value="{{value}}" placeholder="Enter your phone number"
-			minLength="5"
-			maxLength="15"
-			aria-required="true" required
-			{{#if pattern}}pattern="{{pattern}}"{{/if}}
-			{{#if isDisabled}}disabled{{/if}}>
+	<span
+		class="o-forms-input o-forms-input--tel{{#if hasError}} o-forms-input--invalid{{/if}}"
+	>
+		<input type="tel" id="primaryTelephone" name="primaryTelephone" value="{{
+			value
+		}}" placeholder="Enter your phone number" minLength="5" maxLength="15"
+		aria-required="true" required {{#if pattern}}pattern="{{ pattern }}"{{/if}}
+		{{#if isDisabled}}disabled{{/if}}>
 
 		<span class="o-forms-input__error">This phone number is not valid</span>
 	</span>
-
 </label>
