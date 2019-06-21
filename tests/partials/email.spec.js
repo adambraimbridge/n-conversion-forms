@@ -27,7 +27,7 @@ describe('email template', () => {
 		const $ = context.template({});
 
 		expect(
-			$('label .o-forms-title')
+			$('label .o-forms-title__main')
 				.text()
 				.trim()
 		).to.equal(label);
@@ -40,7 +40,7 @@ describe('email template', () => {
 		});
 
 		expect(
-			$('label .o-forms-title')
+			$('label .o-forms-title__main')
 				.text()
 				.trim()
 		).to.equal(label);
