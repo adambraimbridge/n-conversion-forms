@@ -1,21 +1,27 @@
-<div id="responsibilityField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="responsibility" data-validate="required">
-
-	<label for="responsibility" class="o-forms__label">Which best describes your job responsibility?</label>
+<label id="responsibilityField" class="o-forms-field o-forms-field--wide" data-validate="required">
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">Which best describes your job responsibility?</span>
+	</span>
 
 	{{#ncf-common-data import="demographics.responsibilities.responsibilities" export="options"}}
 
-	<select id="responsibility" name="responsibility" class="o-forms__select js-field__input js-item__value"
-					data-trackable="field-responsibility"
-					aria-required="true" required
-					{{#if isDisabled}}disabled{{/if}}>
-		<option value>Please select a job responsibility</option>
-		{{#each options as |option|}}
-		<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}}>{{option.description}}</option>
-		{{/each}}
-	</select>
+	<span class="o-forms-input o-forms-input--select{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<select
+			id="responsibility"
+			name="responsibility"
+			data-trackable="field-responsibility"
+			aria-required="true"
+			required
+			{{#if isDisabled}}disabled{{/if}}
+		>
+			<option value>Please select a job responsibility</option>
+			{{#each options as |option|}}
+			<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}}>{{option.description}}</option>
+			{{/each}}
+		</select>
+	</span>
 
 	{{/ncf-common-data}}
 
-	<div class="o-forms__errortext">Please select your responsibility</div>
-
-</div>
+	<span class="o-forms-input__error">Please select your responsibility</span>
+</label>
