@@ -1,31 +1,38 @@
-@import 'o-icons/main';
-@import 'o-colors/main';
-@import 'o-normalise/main';
-@import 'o-typography/main';
-@import 'o-forms/main';
-@import 'o-buttons/main';
-@import 'o-message/main';
-@import 'o-icons/main';
-@import 'o-stepped-progress/main';
-@import 'o-fonts/main';
-@import './styles/package-change';
-@import './styles/payment';
-@import './styles/payment-term';
-@import './styles/payment-type';
-@import './styles/loader';
-@import './styles/message';
-@import './styles/continue-reading';
-@import './styles/banner';
+@import "o-icons/main";
+@import "o-colors/main";
+@import "o-normalise/main";
+@import "o-typography/main";
+@import "o-forms/main";
+@import "o-buttons/main";
+@import "o-message/main";
+@import "o-icons/main";
+@import "o-stepped-progress/main";
+@import "o-fonts/main";
+@import "./styles/package-change";
+@import "./styles/payment";
+@import "./styles/payment-term";
+@import "./styles/payment-type";
+@import "./styles/loader";
+@import "./styles/message";
+@import "./styles/continue-reading";
+@import "./styles/banner";
 
 @include oFonts();
-@include oForms($opts: (
-	'elements': (
-		'text'
-	),
-	'features': (
-		'disabled'
+@include oForms(
+	$opts: (
+		"elements": (
+			"text",
+			"password",
+			"checkbox"
+		),
+		"features": (
+			"disabled",
+			"inline",
+			"right",
+			"suffix"
+		)
 	)
-));
+);
 @include oMessage();
 @include oSteppedProgress();
 
@@ -34,7 +41,7 @@
 	@include oTypographySans($scale: 0);
 
 	&__wrapper {
-		background: oColorsGetPaletteColor('white');
+		background: oColorsGetPaletteColor("white");
 		padding: 20px;
 
 		@include oGridRespondTo($from: S) {
@@ -96,7 +103,7 @@
 
 	&__terms {
 		@include oTypographySans($scale: 0);
-		color: oColorsGetPaletteColor('black-80');
+		color: oColorsGetPaletteColor("black-80");
 	}
 
 	&__header {
@@ -122,14 +129,15 @@
 	&__header2 {
 		&--afterline {
 			@include oTypographySize(1);
-			font-weight: oFontsWeight('semibold');
+			font-weight: oFontsWeight("semibold");
 
 			&:after {
 				@include oTypographyPadding($top: 3, $bottom: 0);
-				content: '';
+				content: "";
 				display: block;
 				width: 90px;
-				border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+				border-bottom: oTypographySpacingSize(1) solid
+					oColorsGetPaletteColor("black");
 			}
 		}
 	}
@@ -144,23 +152,23 @@
 
 	&__button {
 		@include oButtons;
-		@include oButtonsSize('big');
+		@include oButtonsSize("big");
 
 		&--submit {
-			@include oButtonsTheme('primary');
+			@include oButtonsTheme("primary");
 		}
 
 		&--mono {
-			@include oButtonsSize('default');
-			@include oButtonsTheme('mono');
+			@include oButtonsSize("default");
+			@include oButtonsTheme("mono");
 		}
 
 		&--inverse {
-			@include oButtonsTheme('inverse');
+			@include oButtonsTheme("inverse");
 		}
 
 		&--secondary {
-			@include oButtonsTheme('secondary');
+			@include oButtonsTheme("secondary");
 		}
 
 		&--full-width {
@@ -174,13 +182,15 @@
 		}
 
 		&--google {
-			@include oButtonsTheme('secondary');
-			background-color: oColorsGetPaletteColor('white');
+			@include oButtonsTheme("secondary");
+			background-color: oColorsGetPaletteColor("white");
 			padding-left: 40px;
 
 			&::before {
-				content: '';
-				background: transparent url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2FG_active_focused_pressed.svg?source=m-login&width=20&height=20&format=svg') no-repeat;
+				content: "";
+				background: transparent
+					url("https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2FG_active_focused_pressed.svg?source=m-login&width=20&height=20&format=svg")
+					no-repeat;
 				position: absolute;
 				left: 10px;
 				width: 18px;
@@ -194,12 +204,12 @@
 	}
 
 	&__strong {
-		font-weight: oFontsWeight('semibold');
+		font-weight: oFontsWeight("semibold");
 	}
 
 	&__icon {
-		background: oColorsGetPaletteColor('paper');
-		border: 2px solid oColorsGetPaletteColor('black-40');
+		background: oColorsGetPaletteColor("paper");
+		border: 2px solid oColorsGetPaletteColor("black-40");
 		border-radius: 9999px;
 		display: block;
 		height: 20px;
@@ -208,17 +218,17 @@
 	}
 
 	&__icon--tick {
-		background: oColorsGetPaletteColor('teal');
-		border-color: oColorsGetPaletteColor('teal');
+		background: oColorsGetPaletteColor("teal");
+		border-color: oColorsGetPaletteColor("teal");
 		&::before {
-			@include oIconsGetIcon('tick', oColorsGetPaletteColor('white'), 20);
-			content: '';
-			color: oColorsGetPaletteColor('white');
+			@include oIconsGetIcon("tick", oColorsGetPaletteColor("white"), 20);
+			content: "";
+			color: oColorsGetPaletteColor("white");
 		}
 	}
 
 	&__icon--inline-edit {
-		@include oIconsGetIcon('edit', oColorsGetPaletteColor('black'), 20);
+		@include oIconsGetIcon("edit", oColorsGetPaletteColor("black"), 20);
 		border: 0;
 		vertical-align: middle;
 	}
@@ -233,7 +243,7 @@
 	}
 
 	&__icon-download {
-		@include oIconsGetIcon('download', oColorsGetPaletteColor('cold-1'), 32);
+		@include oIconsGetIcon("download", oColorsGetPaletteColor("cold-1"), 32);
 		border: 0;
 		vertical-align: middle;
 	}
@@ -252,7 +262,7 @@
 		}
 
 		&-title {
-			font-weight: oFontsWeight('semibold');
+			font-weight: oFontsWeight("semibold");
 		}
 	}
 
