@@ -1,44 +1,52 @@
-<div id="emailField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-validate="required,email">
-
-	<label for="email" class="o-forms__label">
+<label
+	id="emailField"
+	class="o-forms-field o-forms-field--wide"
+	data-validate="required,email"
+>
+	<span for="email" class="o-forms-title">
 		{{#if isB2b}}
 		Work email address
 		{{else}}
 		Email address
 		{{/if}}
-	</label>
-	<small id="email-description" class="o-forms__additional-info">
+	</span>
+	<span class="o-forms-title__prompt">
 		{{#if description}}
-		{{description}}
+		{{ description }}
 		{{else}}
 		Please enter an email address
 		{{/if}}
-	</small>
+	</span>
 
-	<input type="email" id="email" name="email" value="{{value}}" placeholder="Enter your email address"
-				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
-				data-trackable="field-email"
-				aria-describedby="email-description"
-				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+	<span
+		class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}"
+	>
+		<input type="email" id="email" name="email" value="{{ value }}"
+		placeholder="Enter your email address" aria-describedby="email-description"
+		aria-required="true" required {{#if isDisabled}}disabled{{/if}}>
+	</span>
 
-	<div class="o-forms__errortext">This email address is not valid</div>
+	<span class="o-forms-input__error">This email address is not valid</span>
+</label>
 
-</div>
 {{#if showConfirm}}
-<div id="emailConfirmField" class="o-forms o-forms--wide ncf__field js-field{{#if hasConfirmError}} o-forms--error{{/if}}" data-validate="required,email">
-
-	<label for="email" class="o-forms__label">
+<label
+	id="emailConfirmField"
+	class="o-forms-field o-forms-field--wide"
+	data-validate="required,email"
+>
+	<span for="email" class="o-forms-title">
 		Confirm email address
-	</label>
+	</span>
 
-	<input type="email" id="emailConfirm" name="emailConfirm" placeholder="Confirm your email address"
-				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
-				data-trackable="field-emailConfrm"
-				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+	<span
+		class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}"
+	>
+		<input type="email" id="emailConfirm" name="emailConfirm"
+		placeholder="Confirm your email address" aria-required="true" required
+		{{#if isDisabled}}disabled{{/if}}>
+	</span>
 
-	<div class="o-forms__errortext">This email address does not match</div>
-
-</div>
+	<span class="o-forms-input__error">This email address does not match</span>
+</label>
 {{/if}}
