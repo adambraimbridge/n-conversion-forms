@@ -27,12 +27,20 @@ describe('province template', () => {
 
 	describe('options', () => {
 		it('should show only default option if no provinces', () => {
-			registerHelper('ncf-common-data', ({fn}) => fn(this));
+			registerHelper('ncf-common-data', ({ fn }) => fn(this));
 			const $ = context.template({});
 
 			expect($('select').find('option').length).to.equal(1);
-			expect($('select option').first().attr('value')).to.equal('');
-			expect($('select option').first().text()).to.equal('Please select a province');
+			expect(
+				$('select option')
+					.first()
+					.attr('value')
+			).to.equal('');
+			expect(
+				$('select option')
+					.first()
+					.text()
+			).to.equal('Please select a province');
 		});
 
 		it('should generate options if passed', () => {
@@ -42,8 +50,10 @@ describe('province template', () => {
 		});
 
 		it('should generate options with the correct label and value', () => {
-			const provinces = [{ code: 'test', name: 'test'}];
-			registerHelper('ncf-common-data', ({fn}) => fn(Object.assign({}, { provinces }, this)));
+			const provinces = [{ code: 'test', name: 'test' }];
+			registerHelper('ncf-common-data', ({ fn }) =>
+				fn(Object.assign({}, { provinces }, this))
+			);
 			const $ = context.template({});
 			const secondOption = $('select option').get(1);
 
@@ -70,5 +80,5 @@ describe('province template', () => {
 
 	shouldBeDisableable(context, 'select');
 
-	shouldBeHiddable(context, '#provinceField');
+	shouldBeHiddable(context, '.o-forms-field');
 });

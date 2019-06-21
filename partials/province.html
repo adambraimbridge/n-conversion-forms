@@ -1,24 +1,28 @@
-<div id="provinceField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}{{#if isHidden}} n-ui-hide{{/if}}" data-ui-item="form-field" data-ui-item-name="province" data-validate="required">
-
-	<label for="province" class="o-forms__label">{{#if isBillingProvince}}Billing {{/if}}Province</label>
+<label class="o-forms-field{{#if isHidden}} n-ui-hide{{/if}}" data-validate="required">
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">
+			{{#if isBillingProvince}}Billing {{/if}}Province
+		</span>
+	</span>
 
 	{{#ncf-common-data export='provinces' import='canadianProvinces.provinces' }}
-	<select id="province" class="o-forms__select js-field__input js-item__value" aria-required="true" required
-		{{#if isBillingProvince}}
-		name="billingProvince"
-		{{else}}
-		name="province"
-		{{/if}}
-		data-trackable="field-province"
-		{{#if isDisabled}}disabled{{/if}}>
+	<span class="o-forms-input o-forms-input--select{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<select id="province" aria-required="true" required
+			{{#if isBillingProvince}}
+			name="billingProvince"
+			{{else}}
+			name="province"
+			{{/if}}
+			data-trackable="field-province"
+			{{#if isDisabled}}disabled{{/if}}>
 
-		<option disabled selected value>Please select a province</option>
-		{{#each provinces as |option|}}
-		<option value="{{option.code}}"{{#ifEquals value option.code}} selected{{/ifEquals}}>{{option.name}}</option>
-		{{/each}}
-	</select>
+			<option disabled selected value>Please select a province</option>
+			{{#each provinces as |option|}}
+			<option value="{{option.code}}"{{#ifEquals value option.code}} selected{{/ifEquals}}>{{option.name}}</option>
+			{{/each}}
+		</select>
+	</span>
 	{{/ncf-common-data}}
 
-	<div class="o-forms__errortext">Please select your province.</div>
-
-</div>
+	<span class="o-forms-input__error">Please select your province.</span>
+</label>
