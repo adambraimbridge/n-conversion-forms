@@ -3,19 +3,21 @@
 	class="o-forms-field o-forms-field--wide"
 	data-validate="required,email"
 >
-	<span for="email" class="o-forms-title">
-		{{#if isB2b}}
-		Work email address
-		{{else}}
-		Email address
-		{{/if}}
-	</span>
-	<span class="o-forms-title__prompt">
-		{{#if description}}
-		{{ description }}
-		{{else}}
-		Please enter an email address
-		{{/if}}
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">
+			{{#if isB2b}}
+			Work email address
+			{{else}}
+			Email address
+			{{/if}}
+		</span>
+		<span class="o-forms-title__prompt">
+			{{#if description}}
+			{{ description }}
+			{{else}}
+			Please enter an email address
+			{{/if}}
+		</span>
 	</span>
 
 	<span
