@@ -9,8 +9,7 @@ const {
 
 let context = {};
 
-/* eslint-disable */
-describe.only('email template', () => {
+describe('email template', () => {
 	before(async () => {
 		context.template = await fetchPartial('email.html');
 	});
