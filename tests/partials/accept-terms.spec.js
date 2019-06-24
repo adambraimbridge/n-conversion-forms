@@ -178,7 +178,7 @@ describe('accept-terms template', () => {
 	shouldError(context);
 });
 
-function expectTerms(
+function expectTerms (
 	$,
 	{ standard = 0, print = 0, signup = 0, special = 0, b2b = 0, corp = 0 }
 ) {
