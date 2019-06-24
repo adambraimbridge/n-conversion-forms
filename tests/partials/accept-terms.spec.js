@@ -13,8 +13,7 @@ const SELECTOR_ANCHOR = 'a';
 
 let context = {};
 
-/* eslint-disable */
-describe.only('accept-terms template', () => {
+describe('accept-terms template', () => {
 	before(async () => {
 		context.template = await fetchPartial('accept-terms.html');
 	});
