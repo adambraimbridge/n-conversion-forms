@@ -1,33 +1,40 @@
-<div id="countryField" class="o-forms o-forms--wide ncf__field js-field js-unknown-user-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="{{#if isBillingCountry}}billingCountry{{else}}country{{/if}}" data-ui-item-store-previous="true" data-validate="required">
+<label id="countryField" class="o-forms-field o-forms-field--wide ncf__field js-field js-unknown-user-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="{{#if isBillingCountry}}billingCountry{{else}}country{{/if}}" data-ui-item-store-previous="true" data-validate="required">
 
-	<label for="country" class="o-forms__label">{{#if isBillingCountry}}Billing Country{{else}}Country{{/if}}</label>
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">
+			{{#if isBillingCountry}}Billing Country{{else}}Country{{/if}}
+		</span>
+	</span>
 
+	<span class="o-forms-input o-forms-input--select{{#if hasError}} o-forms-input--invalid{{/if}}">
 	{{#ncf-countries value=value filterList=filterList}}
-	<select id="country" class="o-forms__select js-field__input js-item__value" aria-required="true" required
-		{{#if isBillingCountry}}
-		name="billingCountry"
-		data-trackable="field-billing-country"
-		{{else}}
-		name="country"
-		data-trackable="field-country"
-		{{/if}}
-		{{#if isDisabled}}disabled{{/if}}>
-
-		<option value>Please select a country</option>
-		{{#each countries as |country|}}
-			{{#if this.label}}
-			<optgroup label="{{country.label}}">
-				{{#each country.countries as |country|}}
-				<option value="{{country.code}}"{{#if selected}} selected{{/if}}>{{country.name}}</option>
-				{{/each}}
-			</optgroup>
+		<select id="country" class="js-field__input js-item__value" aria-required="true" required
+			{{#if isBillingCountry}}
+			name="billingCountry"
+			data-trackable="field-billing-country"
 			{{else}}
-			<option value="{{country.code}}"{{#if selected}} selected{{/if}}>{{country.name}}</option>
+			name="country"
+			data-trackable="field-country"
 			{{/if}}
-		{{/each}}
-	</select>
+			{{#if isDisabled}}disabled{{/if}}
+		>
+
+			<option value>Please select a country</option>
+			{{#each countries as |country|}}
+				{{#if this.label}}
+				<optgroup label="{{country.label}}">
+					{{#each country.countries as |country|}}
+					<option value="{{country.code}}"{{#if selected}} selected{{/if}}>{{country.name}}</option>
+					{{/each}}
+				</optgroup>
+				{{else}}
+				<option value="{{country.code}}"{{#if selected}} selected{{/if}}>{{country.name}}</option>
+				{{/if}}
+			{{/each}}
+		</select>
 	{{/ncf-countries}}
+	</span>
 
-	<div class="o-forms__errortext">Please select your country</div>
+	<span class="o-forms-input__error">Please select your country</span>
 
-</div>
+</label>
