@@ -1,14 +1,11 @@
 const { expect } = require('chai');
-const {
-	fetchPartial,
-	shouldError
-} = require('../helpers');
+const { fetchPartial, shouldError } = require('../helpers');
 
-const SELECTOR_STANDARD_TERMS = 'label p#terms-default';
+const SELECTOR_STANDARD_TERMS = 'label #terms-default';
 const SELECTOR_PRINT_TERMS = 'label p.terms-print';
 const SELECTOR_SIGNUP_TERMS = 'label p.terms-signup';
-const SELECTOR_SPECIAL_TERMS = 'label p#terms-special';
-const SELECTOR_B2B_TERMS = 'label p#terms-b2b';
+const SELECTOR_SPECIAL_TERMS = 'label #terms-special';
+const SELECTOR_B2B_TERMS = 'label #terms-b2b';
 const SELECTOR_CORP_TERMS = 'label p.terms-corp-signup';
 const SELECTOR_ACCEPT_TERMS_FIELD = '#acceptTermsField';
 const SELECTOR_CHECKBOX = 'input';
@@ -16,7 +13,8 @@ const SELECTOR_ANCHOR = 'a';
 
 let context = {};
 
-describe('accept-terms template', () => {
+/* eslint-disable */
+describe.only('accept-terms template', () => {
 	before(async () => {
 		context.template = await fetchPartial('accept-terms.html');
 	});
@@ -25,7 +23,11 @@ describe('accept-terms template', () => {
 		const ageRestrictionText = '16 years';
 		const $ = context.template({});
 
-		expect($(SELECTOR_STANDARD_TERMS).text().trim()).to.contain(ageRestrictionText);
+		expect(
+			$(SELECTOR_STANDARD_TERMS)
+				.text()
+				.trim()
+		).to.contain(ageRestrictionText);
 	});
 
 	it('should use the given restricted age in the copy', () => {
@@ -36,7 +38,11 @@ describe('accept-terms template', () => {
 			ageRestriction
 		});
 
-		expect($(SELECTOR_STANDARD_TERMS).text().trim()).to.contain(ageRestrictionText);
+		expect(
+			$(SELECTOR_STANDARD_TERMS)
+				.text()
+				.trim()
+		).to.contain(ageRestrictionText);
 	});
 
 	describe('not register or signup', () => {
@@ -51,7 +57,7 @@ describe('accept-terms template', () => {
 		it('should have default terms and nothing else', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard: 1});
+			expectTerms($, { standard: 1 });
 		});
 	});
 
@@ -63,13 +69,15 @@ describe('accept-terms template', () => {
 		it('should use the register data tracking if isRegister is true', () => {
 			const $ = context.template(params);
 
-			expect($(SELECTOR_ACCEPT_TERMS_FIELD).data('trackable')).to.equal('register-up-terms');
+			expect($(SELECTOR_ACCEPT_TERMS_FIELD).data('trackable')).to.equal(
+				'register-up-terms'
+			);
 		});
 
 		it('should have default terms', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard: 1});
+			expectTerms($, { standard: 1 });
 		});
 	});
 
@@ -81,13 +89,15 @@ describe('accept-terms template', () => {
 		it('should use the signup data tracking if the isSignup is true', () => {
 			const $ = context.template(params);
 
-			expect($(SELECTOR_ACCEPT_TERMS_FIELD).data('trackable')).to.equal('sign-up-terms');
+			expect($(SELECTOR_ACCEPT_TERMS_FIELD).data('trackable')).to.equal(
+				'sign-up-terms'
+			);
 		});
 
 		it('should have default and signup terms by default', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard:1, signup:3});
+			expectTerms($, { standard: 1, signup: 3 });
 		});
 
 		it('should have print related copy if a print product', () => {
@@ -96,7 +106,7 @@ describe('accept-terms template', () => {
 				isPrintProduct: true
 			});
 
-			expectTerms($, {standard:1, print:2});
+			expectTerms($, { standard: 1, print: 2 });
 		});
 
 		it('should have special terms copy if supplied', () => {
@@ -106,8 +116,12 @@ describe('accept-terms template', () => {
 				specialTerms
 			});
 
-			expect($(SELECTOR_SPECIAL_TERMS).text().trim()).to.contain(specialTerms);
-			expectTerms($, {standard:1, signup:3, special:1});
+			expect(
+				$(SELECTOR_SPECIAL_TERMS)
+					.text()
+					.trim()
+			).to.contain(specialTerms);
+			expectTerms($, { standard: 1, signup: 3, special: 1 });
 		});
 	});
 
@@ -119,7 +133,7 @@ describe('accept-terms template', () => {
 		it('should have just the b2b terms', () => {
 			const $ = context.template(params);
 
-			expectTerms($, { b2b:1 });
+			expectTerms($, { b2b: 1 });
 		});
 	});
 
@@ -165,7 +179,10 @@ describe('accept-terms template', () => {
 	shouldError(context);
 });
 
-function expectTerms ($, { standard=0, print=0, signup=0, special=0, b2b=0, corp=0 }) {
+function expectTerms(
+	$,
+	{ standard = 0, print = 0, signup = 0, special = 0, b2b = 0, corp = 0 }
+) {
 	expect($(SELECTOR_STANDARD_TERMS).length).to.equal(standard);
 	expect($(SELECTOR_PRINT_TERMS).length).to.equal(print);
 	expect($(SELECTOR_SIGNUP_TERMS).length).to.equal(signup);
