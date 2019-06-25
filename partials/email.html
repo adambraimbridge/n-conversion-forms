@@ -26,9 +26,9 @@
 		<input type="email" id="email" name="email" value="{{ value }}"
 		placeholder="Enter your email address" aria-describedby="email-description"
 		aria-required="true" required {{#if isDisabled}}disabled{{/if}}>
-	</span>
 
-	<span class="o-forms-input__error">This email address is not valid</span>
+		<span class="o-forms-input__error">This email address is not valid</span>
+	</span>
 </label>
 
 {{#if showConfirm}}
@@ -47,8 +47,8 @@
 		<input type="email" id="emailConfirm" name="emailConfirm"
 		placeholder="Confirm your email address" aria-required="true" required
 		{{#if isDisabled}}disabled{{/if}}>
-	</span>
 
-	<span class="o-forms-input__error">This email address does not match</span>
+		<span class="o-forms-input__error">This email address does not match</span>
+	</span>
 </label>
 {{/if}}

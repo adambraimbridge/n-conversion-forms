@@ -10,9 +10,9 @@
 			{{/if}} value="{{ value }}" placeholder="{{#if isZipCode}}Zip code{{else}}Post code{{/if}}"
 			aria-required="true" required {{#if pattern}}pattern="{{pattern}}" {{/if}}
 			{{#if isDisabled}}disabled{{/if}}>
-	</span>
 
-	<span class="o-forms-input__error">
-		Please enter a valid {{#if isZipCode}}zip code{{else}}post code{{/if}}.
+		<span class="o-forms-input__error">
+			Please enter a valid {{#if isZipCode}}zip code{{else}}post code{{/if}}.
+		</span>
 	</span>
 </label>
