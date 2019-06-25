@@ -59,8 +59,10 @@
 	function fillForm () {
 		var inputs = document.querySelectorAll(FORM_SELECTOR + ' input, ' + FORM_SELECTOR + ' select');
 		inputs.forEach(function (input) {
-			var value = debugData[input.name];
-			input.value = value;
+			if (!/hidden/i.test(input.type)) {
+				var value = debugData[input.name];
+				input.value = value;
+			}
 		});
 		var checkboxes = document.querySelectorAll(FORM_SELECTOR + ' input[type="checkbox"]');
 		checkboxes.forEach(function (checkbox) {
