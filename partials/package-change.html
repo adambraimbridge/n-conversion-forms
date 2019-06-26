@@ -14,7 +14,11 @@
 					<div class="ncf__package-change__term">
 						{{#ifEquals this.name 'trial'}}
 						<span class="ncf__package-change__title">Try the FT</span>
-						<span class="ncf__package-change__discount">{{#if this.discount}}Save {{this.discount}}{{/if}}</span>
+						<span>
+							{{#if this.discount}}
+							<span class="ncf__package-change__discount">Save {{this.discount}}</span>
+							{{/if}}
+						</span>
 						<div class="ncf__package-change__description">
 							4 weeks for <span class="ncf__package-change__trial-price">{{trialPrice}}</span>
 						</div>
@@ -22,7 +26,11 @@
 
 						{{#ifEquals this.name 'annual'}}
 						<span class="ncf__package-change__title">Annually</span>
-						<span class="ncf__package-change__discount">{{#if this.discount}}Save {{this.discount}}{{/if}}</span>
+						<span>
+							{{#if this.discount}}
+							<span class="ncf__package-change__discount">Save {{this.discount}}</span>
+							{{/if}}
+						</span>
 						<div class="ncf__package-change__description">
 							Single <span class="ncf__package-change__price">{{price}}</span> payment*
 						</div>
@@ -35,7 +43,11 @@
 
 						{{#ifEquals this.name 'quarterly'}}
 						<span class="ncf__package-change__title">Quarterly</span>
-						<span class="ncf__package-change__discount">{{#if this.discount}}Save {{this.discount}}{{/if}}</span>
+						<span>
+							{{#if this.discount}}
+							<span class="ncf__package-change__discount">Save {{this.discount}}</span>
+							{{/if}}
+						</span>
 						<div class="ncf__package-change__description">
 							<span class="ncf__package-change__price">{{price}}</span> per quarter
 						</div>
@@ -43,7 +55,11 @@
 
 						{{#ifEquals this.name 'monthly'}}
 						<span class="ncf__package-change__title">Monthly</span>
-						<span class="ncf__package-change__discount">{{#if this.discount}}Save {{this.discount}}{{/if}}</span>
+						<span>
+							{{#if this.discount}}
+							<span class="ncf__package-change__discount">Save {{this.discount}}</span>
+							{{/if}}
+						</span>
 						<div class="ncf__package-change__description">
 							<span class="ncf__package-change__price">{{price}}</span> per month
 						</div>
