@@ -38,6 +38,18 @@ class PaymentTerm {
 		if (!this.$paymentTerm) {
 			throw new Error('Please include the payment term partial on the page');
 		}
+
+		this.onChange(event => {
+			this.$paymentTerm
+				.querySelector('.ncf__payment-term__item--is-selected')
+				.classList.remove('ncf__payment-term__item--is-selected');
+
+			if (event.target.checked) {
+				event.target
+					.closest('.ncf__payment-term__item')
+					.classList.add('ncf__payment-term__item--is-selected');
+			}
+		});
 	}
 
 	/**
@@ -57,7 +69,7 @@ class PaymentTerm {
 	 * Register on change an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback=()=>{}) {
+	onChange (callback = () => {}) {
 		return this.$paymentTerm.addEventListener('change', callback);
 	}
 

@@ -1,50 +1,58 @@
 @mixin ncfPaymentTerm() {
 	&__payment-term {
-
-		.o-forms__radio + .o-forms__label {
-			padding: 14px 20px;
-			min-height: 110px;
-			border: 2px solid oColorsGetPaletteColor('teal');
-			text-align: left;
-			margin: 8px 0;
-
-			// radio button styling
-			&::before {
-				border: 2px solid oColorsGetPaletteColor('teal');
-				top: 43px;
-				right: 14px;
-			}
-
-			&::after {
-				top: 43px;
-				right: 14px;
-			}
-		}
-
-		.o-forms__radio:checked + .o-forms__label {
-			background-color: oColorsGetPaletteColor('teal');
-			color: oColorsGetPaletteColor('white');
-
-			// radio button styling
-			&::before {
-				border: 2px solid oColorsGetPaletteColor('white');
-			}
-
-			&::after {
-				background-color: oColorsGetPaletteColor('white');
-			}
-		}
-
 		&__item {
-			margin-bottom: 10px;
+			cursor: pointer;
+			display: block;
+			min-height: 110px;
+			border: 2px solid oColorsGetPaletteColor("teal");
+			text-align: left;
+			margin: 10px 0;
+			position: relative;
+			padding: 14px 20px;
+			box-sizing: border-box;
 
 			&--discount {
 				margin-top: 26px;
 			}
+
+			&--is-selected {
+				background-color: oColorsGetPaletteColor("teal");
+				color: oColorsGetPaletteColor("white");
+
+				input[type="radio"] + .o-forms-input__label {
+					// radio button styling
+					&::before {
+						border: 2px solid oColorsGetPaletteColor("white") !important;
+					}
+
+					&::after {
+						background-color: oColorsGetPaletteColor("white") !important;
+					}
+				}
+			}
+		}
+
+		input[type="radio"] + .o-forms-input__label {
+			position: absolute;
+			right: 0;
+
+			// radio button styling
+			&::before {
+				border: 2px solid oColorsGetPaletteColor("teal");
+				top: 33px;
+				left: auto;
+				right: 14px;
+			}
+
+			&::after {
+				top: 33px;
+				left: auto;
+				right: 14px;
+			}
 		}
 
 		&__title {
-			font-weight: oFontsWeight('semibold');
+			font-weight: oFontsWeight("semibold");
 			@include oTypographySans($scale: 2);
 		}
 
@@ -53,8 +61,8 @@
 		}
 
 		&__discount {
-			background-color: oColorsGetPaletteColor('black');
-			color: oColorsGetPaletteColor('white');
+			background-color: oColorsGetPaletteColor("black");
+			color: oColorsGetPaletteColor("white");
 			position: absolute;
 			padding: 6px 16px;
 			right: -11px;
@@ -62,12 +70,12 @@
 			@include oTypographySize($scale: -1);
 
 			&::after {
-				content: '';
+				content: "";
 				width: 0;
 				height: 0;
 				border-top: 6px solid transparent;
 				border-bottom: 6px solid transparent;
-				border-right: 6px solid oColorsGetPaletteColor('black-70');
+				border-right: 6px solid oColorsGetPaletteColor("black-70");
 				transform: rotate(45deg);
 				position: absolute;
 				bottom: -8px;
