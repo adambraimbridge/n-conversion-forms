@@ -41,14 +41,14 @@ describe('loader template', () => {
 		const $ = context.template({ showLoader: true });
 
 		expect($('.ncf__loader.is-visible').length).to.equal(1);
-		expect($('.ncf__loader.n-ui-hide').length).to.equal(0);
+		expect($('.ncf__loader.ncf__is-hidden').length).to.equal(0);
 	});
 
 	it('should hide loader when showLoader is not set', () => {
 		const $ = context.template();
 
 		expect($('.ncf__loader.is-visible').length).to.equal(0);
-		expect($('.ncf__loader.n-ui-hide').length).to.equal(1);
+		expect($('.ncf__loader.ncf__is-hidden').length).to.equal(1);
 	});
 
 	describe('a11y', () => {

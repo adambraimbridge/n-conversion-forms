@@ -31,7 +31,8 @@
 			"disabled",
 			"inline",
 			"right",
-			"suffix"
+			"suffix",
+			"error-summary"
 		)
 	)
 );
@@ -41,6 +42,10 @@
 // Custom styles
 .ncf {
 	@include oTypographySans($scale: 0);
+
+	&__is-hidden {
+		display: none !important;
+	}
 
 	&__wrapper {
 		background: oColorsGetPaletteColor("white");
@@ -79,7 +84,7 @@
 		padding: 0;
 
 		.ncf__header {
-			margin: 0;
+			margin: 0 0 12px;
 		}
 	}
 

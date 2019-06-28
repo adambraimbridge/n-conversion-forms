@@ -1,17 +1,17 @@
-const OForms = require("o-forms");
-const Input = require("o-forms/src/js/input");
+const OForms = require('o-forms');
+const Input = require('o-forms/src/js/input');
 
 class Validation {
 	/**
 	 * Set up the Validation utility
 	 * @param {Boolean} mutePromptBeforeLeaving (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
 	 */
-	constructor({ mutePromptBeforeLeaving } = {}) {
-		this.$form = document.querySelector("form.ncf");
+	constructor ({ mutePromptBeforeLeaving } = {}) {
+		this.$form = document.querySelector('form.ncf');
 		this.oForms = new OForms(this.$form).init();
 		this.$formFields = this.oForms
 			.findInputs()
-			.filter($el => $el.type !== "hidden");
+			.filter($el => $el.type !== 'hidden');
 		this.$requiredEls = this.$formFields.filter($el => $el.required);
 		this.formValid = false;
 		this.formChanged = false;
@@ -23,27 +23,25 @@ class Validation {
 	/**
 	 * Initalise
 	 */
-	init() {
-		/*eslint-disable*/
-		console.log(this.oForms);
+	init () {
 		if (!this.$form) return;
 		for (const $el of this.$requiredEls) {
 			if (/(checkbox)/gi.test($el.type)) {
 				$el.addEventListener(
-					"change",
+					'change',
 					this.checkElementValidity.bind(this, $el),
 					false
 				);
 			} else {
-				$el.addEventListener("blur", this.checkFormValidity.bind(this), false);
+				$el.addEventListener('blur', this.checkFormValidity.bind(this), false);
 			}
 		}
 
-		this.$form.addEventListener("change", () => {
+		this.$form.addEventListener('change', () => {
 			this.formChanged = true;
 		});
 
-		this.$form.addEventListener("submit", () => {
+		this.$form.addEventListener('submit', () => {
 			this.formSubmit = true;
 		});
 
@@ -60,7 +58,7 @@ class Validation {
 	 * Proxy method for oForms validateForm
 	 * @param {Event} event DOM event
 	 */
-	validateForm(event) {
+	validateForm (event) {
 		this.oForms.validateFormInputs(event);
 	}
 
@@ -71,17 +69,17 @@ class Validation {
 	 * @param {Function} validator The function that will be run to determine whether the field is valid (needs to return `true` or `false`).
 	 * @param {String} errorMessage The error message to display to the user should the validation fail.
 	 */
-	addCustomValidation({ field, validator, errorMessage }) {
+	addCustomValidation ({ field, validator, errorMessage }) {
 		if (this.customValidation.get(field.name)) {
 			throw new Error(`Custom validation for ${field.name} already exists.`);
 		}
 
 		this.customValidation.set(field.name, () => {
 			const id = `custom-validation-for-${field.name}`;
-			const $message = document.createElement("div");
+			const $message = document.createElement('div');
 
 			$message.id = id;
-			$message.className = "o-forms-input__error ncf__custom-validation-error";
+			$message.className = 'o-forms-input__error ncf__custom-validation-error';
 			$message.innerText = errorMessage;
 
 			const isValid = validator();
@@ -99,11 +97,11 @@ class Validation {
 	 * @param {DOMElement} $field The field for which to show a validation error.
 	 * @param {DOMElement} $message The error message to display.
 	 */
-	showCustomFieldValidationError($field, $message) {
+	showCustomFieldValidationError ($field, $message) {
 		const $parent = $field.parentNode;
-		const $oFormsErrorText = $parent.querySelector(".o-forms-input__error");
+		const $oFormsErrorText = $parent.querySelector('.o-forms-input__error');
 
-		$parent.classList.add("o-forms--error");
+		$parent.classList.add('o-forms--error');
 
 		if (!document.querySelector(`#custom-validation-for-${$field.name}`)) {
 			// In order for this error to hang around after normal oForms validation happens it
@@ -114,12 +112,12 @@ class Validation {
 		if (
 			$oFormsErrorText &&
 			$oFormsErrorText.parentNode.className.indexOf(
-				"ncf__custom-validation-error"
+				'ncf__custom-validation-error'
 			) === -1
 		) {
 			// If there's an oForms error we need to hide it so that we can use the `o-forms--error` class
 			//  on the container to highlight the field as invalid.
-			$oFormsErrorText.style.display = "none";
+			$oFormsErrorText.style.display = 'none';
 		}
 	}
 
@@ -128,12 +126,12 @@ class Validation {
 	 *
 	 * @param {DOMElement} $field The field related to the error that now needs to be cleared.
 	 */
-	clearCustomFieldValidationError($field) {
+	clearCustomFieldValidationError ($field) {
 		const $message = this.$form.querySelector(
 			`#custom-validation-for-${$field.name}`
 		);
 		const $oFormsErrorText = $field.parentNode.querySelector(
-			".o-forms-input__error"
+			'.o-forms-input__error'
 		);
 
 		if ($message) {
@@ -151,18 +149,18 @@ class Validation {
 	 *
 	 * @returns {Boolean} whether or not the custom validation passed.
 	 */
-	checkCustomValidation() {
+	checkCustomValidation () {
 		this.customValidation.forEach(validator => {
 			validator();
 		});
 
-		return !document.querySelector(".ncf__custom-validation-error");
+		return !document.querySelector('.ncf__custom-validation-error');
 	}
 
 	/**
 	 * Checks a single elements validity.
 	 */
-	checkElementValidity($el) {
+	checkElementValidity ($el) {
 		const passedCustomValidation = this.checkCustomValidation();
 
 		// If field fails custom validation don't `validateInput` as it may pass standard validation
@@ -176,7 +174,7 @@ class Validation {
 	/**
 	 * Update the state of the form to reflect form validity.
 	 */
-	checkFormValidity() {
+	checkFormValidity () {
 		const passedCustomValidation = this.checkCustomValidation();
 
 		if (passedCustomValidation && this.getInvalidEls().length === 0) {
@@ -190,7 +188,7 @@ class Validation {
 	 * Return the invalid fields on the form.
 	 * @returns {DOMElements} The array-like containing the invalid form elements.
 	 */
-	getInvalidEls() {
+	getInvalidEls () {
 		return this.$requiredEls.filter($el => !$el.checkValidity());
 	}
 }

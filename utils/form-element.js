@@ -5,7 +5,6 @@
  *
  */
 class FormElement {
-
 	/**
 	 * Constructor for the FormElement.
 	 * @param {object} document The global document object
@@ -21,7 +20,9 @@ class FormElement {
 		this.$el = this.$document.querySelector(querySelector);
 
 		if (!this.$el) {
-			throw new Error('Please include the DOM element for this component on the page');
+			throw new Error(
+				'Please include the DOM element for this component on the page'
+			);
 		}
 
 		this.inputs = this.$el.querySelectorAll('input,select');
@@ -31,29 +32,28 @@ class FormElement {
 	 * Hides the form element.
 	 */
 	hide () {
-		this.$el.classList.add('n-ui-hide');
+		this.$el.classList.add('ncf__is-hidden');
 	}
-
 
 	/**
 	 * Shows the form element.
 	 */
 	show () {
-		this.$el.classList.remove('n-ui-hide');
+		this.$el.classList.remove('ncf__is-hidden');
 	}
 
 	/**
 	 * Disable any inputs or selects inside form element
 	 */
 	disable () {
-		this.inputs.forEach(input => input.disabled = true);
+		this.inputs.forEach(input => (input.disabled = true));
 	}
 
 	/**
 	 * Enable any inputs or selects inside form element
 	 */
 	enable () {
-		this.inputs.forEach(input => input.disabled = false);
+		this.inputs.forEach(input => (input.disabled = false));
 	}
 
 	/**

@@ -18,7 +18,7 @@ class Loader {
 		}
 
 		this.VISIBLE_CLASS = 'is-visible';
-		this.HIDDEN_CLASS = 'n-ui-hide';
+		this.HIDDEN_CLASS = 'ncf__is-hidden';
 
 		this.element = element;
 		this.$loader = element.querySelector('.ncf__loader');

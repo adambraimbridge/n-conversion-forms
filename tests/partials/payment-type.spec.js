@@ -84,7 +84,7 @@ describe('payment-type', () => {
 });
 
 function expectPaymentType (context, { creditcard=false, directdebit=false, paypal=false, applepay=false }={}) {
-	const hiddenContainer = 'div.n-ui-hide';
+	const hiddenContainer = 'div.ncf__is-hidden';
 	const $ = context.template({
 		enableCreditcard: creditcard,
 		enableDirectdebit: directdebit,

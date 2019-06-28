@@ -52,18 +52,18 @@ describe('FormElement', () => {
 	});
 
 	describe('hide', () => {
-		it('should add the n-ui-hide class', () => {
+		it('should add the ncf__is-hidden class', () => {
 			formElement.hide();
 
-			expect(addStub.getCall(0).args[0]).to.equal('n-ui-hide');
+			expect(addStub.getCall(0).args[0]).to.equal('ncf__is-hidden');
 		});
 	});
 
 	describe('show', () => {
-		it('should remove the n-ui-hide class', () => {
+		it('should remove the ncf__is-hidden class', () => {
 			formElement.show();
 
-			expect(removeStub.getCall(0).args[0]).to.equal('n-ui-hide');
+			expect(removeStub.getCall(0).args[0]).to.equal('ncf__is-hidden');
 		});
 	});
 

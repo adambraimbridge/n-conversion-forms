@@ -1,5 +1,20 @@
+$paymentProviders: (
+	paypal: (
+		logoUrl:
+			"https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fpp-logo-100px.png?width=300&source=next&fit=scale-down",
+		highlightLogoUrl:
+			"https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fpp-logo-white.png?width=300&source=next&fit=scale-down"
+	),
+	directdebit: (
+		logoUrl:
+			"https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fdirect_debit.png?width=300&source=next&fit=scale-down",
+		highlightLogoUrl:
+			"https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fdirect_debit-white.png?width=300&source=next&fit=scale-down"
+	)
+);
+
 @mixin buttonImageOverriding() {
-	color: transparent;
+	color: transparent !important;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 60px;
@@ -8,7 +23,7 @@
 @mixin ncfPaymentType() {
 	&__payment-type {
 		grid-row: 1;
-		padding: oTypographySpacingSize(2) 0;
+		padding: oTypographySpacingSize(1) 0;
 
 		img {
 			height: 15px;
@@ -16,7 +31,7 @@
 
 		label {
 			height: 15px;
-			width: calc(100% - 5px);
+			width: 100%;
 		}
 
 		&-selector {
@@ -24,27 +39,21 @@
 			width: 100%;
 		}
 
-		&--paypal {
-			.o-forms__label {
-				@include buttonImageOverriding();
-				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fpp-logo-100px.png?width=300&source=next&fit=scale-down);
-			}
-
-			.o-forms__radio-button:checked + .o-forms__label {
-				@include buttonImageOverriding();
-				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fpp-logo-white.png?width=300&source=next&fit=scale-down);
-			}
+		.o-forms-input--radio-box__container {
+			width: 100%;
 		}
 
-		&--directdebit {
-			.o-forms__label {
-				@include buttonImageOverriding();
-				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fdirect_debit.png?width=300&source=next&fit=scale-down);
-			}
+		@each $provider, $logoMap in $paymentProviders {
+			&--#{$provider} {
+				.o-forms-input__label {
+					@include buttonImageOverriding();
+					background-image: url(map-get($logoMap, "logoUrl"));
+				}
 
-			.o-forms__radio-button:checked + .o-forms__label {
-				@include buttonImageOverriding();
-				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fdirect_debit-white.png?width=300&source=next&fit=scale-down);
+				input[type="radio"]:checked + .o-forms-input__label {
+					@include buttonImageOverriding();
+					background-image: url(map-get($logoMap, "highlightLogoUrl"));
+				}
 			}
 		}
 	}
@@ -60,7 +69,7 @@
 
 		&-toggle {
 			@include oExpanderToggle;
-			color: oColorsGetPaletteColor('teal');
+			color: oColorsGetPaletteColor("teal");
 		}
 	}
 

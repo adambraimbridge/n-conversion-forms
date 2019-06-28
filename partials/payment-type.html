@@ -4,32 +4,49 @@
 	<script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=www.ft.com&amp;size=XS&amp;use_flash=NO&amp;use_transparent=Yes&amp;lang=en"></script> Secure payment details
 </div> -->
 
-<div id="paymentTypeField" class="o-forms o-forms--wide ncf__field">
-	<div class="ncf__payment-type-selector">
-		<div class="ncf__payment-type ncf__payment-type--creditcard{{#unless enableCreditcard }} n-ui-hide{{/unless}}">
-			<input type="radio" name="paymentType" value="creditcard" class="o-forms__radio-button" id="creditcard"{{#ifEquals value "creditcard"}} checked="checked"{{/ifEquals}}>
-			<label for="creditcard" class="o-forms__label">Credit / Debit Card</label>
+<div id="paymentTypeField" class="o-forms-field o-forms-field--wide ncf__field">
+	<span class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
+		<div class="ncf__payment-type ncf__payment-type--creditcard{{#unless enableCreditcard }} ncf__is-hidden{{/unless}}">
+			<span class="o-forms-input--radio-box__container">
+				<label>
+					<input type="radio" name="paymentType" value="creditcard" id="creditcard"{{#ifEquals value "creditcard"}} checked="checked"{{/ifEquals}}>
+					<span class="o-forms-input__label" aria-hidden="true">Credit / Debit Card</span>
+				</label>
+			</span>
 		</div>
+		<div class="ncf__payment-type ncf__payment-type--paypal{{#unless enablePaypal }} ncf__is-hidden{{/unless}}">
+			<span class="o-forms-input--radio-box__container">
+				<label>
+					<input type="radio" name="paymentType" value="paypal" id="paypal"{{#ifEquals value "paypal"}} checked="checked"{{/ifEquals}}>
+					<span class="o-forms-input__label" aria-hidden="true">PayPal</span>
+				</label>
+			</span>
+		</div>
+		<div class="ncf__payment-type ncf__payment-type--directdebit{{#unless enableDirectdebit }} ncf__is-hidden{{/unless}}">
+			<span class="o-forms-input--radio-box__container">
+				<label>
+					<input type="radio" name="paymentType" value="directdebit" id="directdebit"{{#ifEquals value "directdebit"}} checked="checked"{{/ifEquals}}>
+					<span class="o-forms-input__label" aria-hidden="true">Direct Debit</span>
+				</label>
+			</span>
+		</div>
+		<div class="ncf__payment-type ncf__payment-type--applepay{{#unless enableApplepay }} ncf__is-hidden{{/unless}}">
+			<span class="o-forms-input--radio-box__container">
+				<label>
+					<input type="radio" name="paymentType" value="applepay" id="applepay"{{#ifEquals value "applepay"}} checked="checked"{{/ifEquals}}>
+					<span class="o-forms-input__label" aria-hidden="true">Apple Pay</span>
+				</label>
+			</span>
+		</div>
+	</span>
 
-		<div class="ncf__payment-type ncf__payment-type--paypal{{#unless enablePaypal }} n-ui-hide{{/unless}}">
-			<input type="radio" name="paymentType" value="paypal" class="o-forms__radio-button" id="paypal"{{#ifEquals value "paypal"}} checked="checked"{{/ifEquals}}>
-			<label for="paypal" class="o-forms__label">PayPal</label>
-		</div>
+		<span class="o-forms-input__error">Please enter a valid payment type</span>
 
-		<div class="ncf__payment-type ncf__payment-type--directdebit{{#unless enableDirectdebit }} n-ui-hide{{/unless}}">
-			<input type="radio" name="paymentType" value="directdebit" class="o-forms__radio-button" id="directdebit"{{#ifEquals value "directdebit"}} checked="checked"{{/ifEquals}}>
-			<label for="directdebit" class="o-forms__label">Direct Debit</label>
-		</div>
-		<div class="ncf__payment-type ncf__payment-type--applepay{{#unless enableApplepay }} n-ui-hide{{/unless}}">
-			<input type="radio" name="paymentType" value="applepay" class="o-forms__radio-button" id="applepay"{{#ifEquals value "applepay"}} checked="checked"{{/ifEquals}}>
-			<label for="applepay" class="o-forms__label">Apple Pay</label>
-		</div>
-	</div>
+	</span>
 
-	<div class="o-forms__errortext">Please enter a valid payment type</div>
 
 	{{#if enableDirectdebit}}
-	<div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit n-ui-hide">
+	<div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit ncf__is-hidden">
 		<div id="directDebitGuarantee" class="ncf__directdebit-guarantee" data-o-component="o-expander" data-o-expander-shrink-to="hidden" data-o-expander-expanded-toggle-text="guarantee" data-o-expander-collapsed-toggle-text="guarantee" role="tabpanel">
 			<p>Direct Debit is only supported in the UK</p>
 			<p>Your payments are protected by the Direct Debit
@@ -52,8 +69,8 @@
 	</div>
 	{{/if}}
 	{{#ifSome enableCreditcard enableDirectdebit }}
-	<div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
-		<div class="ncf__zuora-payment-overlay n-ui-hide"></div>
+	<div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit ncf__is-hidden">
+		<div class="ncf__zuora-payment-overlay ncf__is-hidden"></div>
 		<!-- The Zuora payment interface used for credit card and direct debit -->
 		<!-- ID "zuora_payment" is used by Zuora to target the iframe -->
 		<div id="zuora_payment" class="ncf__zuora-payment">

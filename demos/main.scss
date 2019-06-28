@@ -1,10 +1,16 @@
-@import 'o-techdocs/main';
+@import "o-techdocs/main";
 
 body {
 	margin: 0;
 }
 
-.n-ui-hide { display: none; }
+.ncf__is-hidden {
+	display: none;
+}
+
+.n-ui-hide {
+	display: none;
+}
 
 .demo {
 	&__iframe {

@@ -164,13 +164,13 @@ const shouldBeHiddable = function (context, selector, options) {
 	it('should be displayed by default', () => {
 		const $ = context.template(Object.assign({}, options));
 
-		expect($(selector).attr('class')).to.not.contain('n-ui-hide');
+		expect($(selector).attr('class')).to.not.contain('ncf__is-hidden');
 	});
 
 	it('should be hidden if isHidden is passed', () => {
 		const $ = context.template(Object.assign({ isHidden: true }, options));
 
-		expect($(selector).attr('class')).to.contain('n-ui-hide');
+		expect($(selector).attr('class')).to.contain('ncf__is-hidden');
 	});
 };
 

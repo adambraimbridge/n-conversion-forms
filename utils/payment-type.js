@@ -49,7 +49,7 @@ class PaymentType {
 	 */
 	hide (type) {
 		const container = this.$paymentType.querySelector(`#${type}`).parentElement;
-		container.classList.add('n-ui-hide');
+		container.classList.add('ncf__is-hidden');
 	}
 
 	/**
@@ -59,7 +59,7 @@ class PaymentType {
 	 */
 	show (type) {
 		const container = this.$paymentType.querySelector(`#${type}`).parentElement;
-		container.classList.remove('n-ui-hide');
+		container.classList.remove('ncf__is-hidden');
 	}
 
 	/**
@@ -105,9 +105,9 @@ class PaymentType {
 		const content = this.$paymentType.querySelectorAll('.ncf__payment-type-panel');
 		content.forEach(element => {
 			if (element.classList.contains(`ncf__payment-type-panel--${type}`)) {
-				element.classList.remove('n-ui-hide');
+				element.classList.remove('ncf__is-hidden');
 			} else {
-				element.classList.add('n-ui-hide');
+				element.classList.add('ncf__is-hidden');
 			}
 		});
 	}

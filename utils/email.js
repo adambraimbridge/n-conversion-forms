@@ -1,4 +1,4 @@
-const fetchres = require('fetchres');
+// const fetchres = require('fetchres');
 
 /**
  * Utility for the `n-conversion-forms/partial/email.html` partial
@@ -84,7 +84,7 @@ class Email {
 					csrfToken: this.$csrfToken && this.$csrfToken.value
 				})
 			})
-				.then(fetchres.json)
+				.then(res => res.json())
 				.then(response => {
 					if (response === true) {
 						onFound();
@@ -96,8 +96,7 @@ class Email {
 		} else {
 			onNotFound();
 		}
-	};
-
-};
+	}
+}
 
 module.exports = Email;
