@@ -23,7 +23,10 @@
 		&__term {
 			padding: 4px 0;
 			display: grid;
-			grid-template-columns: max-content max-content 1fr;
+			grid-template-columns: max-content 1fr;
+			&--discounted {
+				grid-template-columns: max-content max-content 1fr;
+			}
 		}
 
 		&__title {
