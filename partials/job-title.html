@@ -8,9 +8,16 @@
 	<span
 		class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}"
 	>
-		<input type="text" id="jobTitle" name="title" value="{{ value }}"
-		placeholder="Enter your job title" aria-required="true" required
-		{{#if isDisabled}}disabled{{/if}}>
+		<input
+			type="text"
+			id="jobTitle"
+			name="title"
+			value="{{ value }}"
+			placeholder="Enter your job title"
+			aria-required="true"
+			required
+			{{#if isDisabled}}disabled{{/if}}
+		/>
 
 		<span class="o-forms-input__error">Please enter your job title.</span>
 	</span>

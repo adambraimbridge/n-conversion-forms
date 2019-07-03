@@ -10,10 +10,18 @@
 	<span
 		class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}"
 	>
-		<input type="text" autocomplete="organization" data-trackable="company-name" id="companyName" name="company" value="{{ value }}"
-		placeholder="Enter your company name" aria-required="true" required
-		{{#if isDisabled}}disabled{{/if}}>
-
+		<input
+			type="text"
+			autocomplete="organization"
+			data-trackable="company-name"
+			id="companyName"
+			name="company"
+			value="{{ value }}"
+			placeholder="Enter your company name"
+			aria-required="true"
+			required
+			{{#if isDisabled}}disabled{{/if}}
+		/>
 		<span class="o-forms-input__error">Please enter your company name.</span>
 	</span>
 </label>

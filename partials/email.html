@@ -23,9 +23,18 @@
 	<span
 		class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}"
 	>
-		<input type="email" id="email" name="email" value="{{ value }}"
-		placeholder="Enter your email address" autocomplete="email" aria-describedby="email-description"
-		aria-required="true" required {{#if isDisabled}}disabled{{/if}}>
+		<input
+			type="email"
+			id="email"
+			name="email"
+			value="{{ value }}"
+			placeholder="Enter your email address"
+			autocomplete="email"
+			aria-describedby="email-description"
+			aria-required="true"
+			required
+			{{#if isDisabled}}disabled{{/if}}
+		/>
 
 		<span class="o-forms-input__error">This email address is not valid</span>
 	</span>
@@ -44,9 +53,16 @@
 	<span
 		class="o-forms-input o-forms-input--text{{#if hasConfirmError}} o-forms-input--invalid{{/if}}"
 	>
-		<input type="email" id="emailConfirm" name="emailConfirm"
-		placeholder="Confirm your email address" autocomplete="email" aria-required="true" required
-		{{#if isDisabled}}disabled{{/if}}>
+		<input
+			type="email"
+			id="emailConfirm"
+			name="emailConfirm"
+			placeholder="Confirm your email address"
+			autocomplete="email"
+			aria-required="true"
+			required
+			{{#if isDisabled}}disabled{{/if}}
+		/>
 
 		<span class="o-forms-input__error">This email address does not match</span>
 	</span>
