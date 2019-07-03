@@ -19,7 +19,7 @@
 				background-color: oColorsGetPaletteColor("teal");
 				color: oColorsGetPaletteColor("white");
 
-				input[type="radio"] + .o-forms-input__label {
+				.ncf__payment-term__input + .o-forms-input__label {
 					// radio button styling
 					&::before {
 						border: 2px solid oColorsGetPaletteColor("white") !important;
@@ -32,7 +32,7 @@
 			}
 		}
 
-		input[type="radio"] + .o-forms-input__label {
+		.ncf__payment-term__input + .o-forms-input__label {
 			position: absolute;
 			right: 0;
 

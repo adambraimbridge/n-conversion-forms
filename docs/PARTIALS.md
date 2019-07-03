@@ -47,7 +47,7 @@ Renders an inline yes / no radio group for users to enter if they are a decision
 
 ### Options
 + `value`: string - Pass 'yes' or 'no' to check an option, default is unchecked.
-+ `hasError`: boolean - if true it adds `o-forms--error` class to display error.
++ `hasError`: boolean - if true it adds `o-forms-input--invalid` class to display error.
 
 ## Fieldset
 
@@ -96,7 +96,7 @@ A form field for adding a user's first name.
 ### Options
 
 + `value`: string - Text to pre-populate the `firstname` field.
-+ `hasError`: boolean - true - adds `o-forms--error` class
++ `hasError`: boolean - true - adds `o-forms-input--invalid` class
 + `isDisabled`: boolean - true - disables the form field
 
 ```handlebars
@@ -110,7 +110,7 @@ A form field for adding a user's last name.
 ### Options
 
 + `value`: string - Text to pre-populate the `lastname` field.
-+ `hasError`: boolean - true - adds `o-forms--error` class
++ `hasError`: boolean - true - adds `o-forms-input--invalid` class
 + `isDisabled`: boolean - true - disables the field
 
 ```handlebars
@@ -213,7 +213,7 @@ Displays a phone field with o-forms styling and the name and id `primaryTelephon
 ### Options
 
 + `value`: string - Text to pre-populate the `lastname` field.
-+ `hasError`: boolean - true - adds `o-forms--error` class.
++ `hasError`: boolean - true - adds `o-forms-input--invalid` class.
 + `isDisabled`: boolean - true - disables the field.
 + `isB2b`: boolean - true - displays work email copy.
 + `pattern`: string - Pattern to be used for validation.

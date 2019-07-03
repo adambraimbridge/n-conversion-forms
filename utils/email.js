@@ -38,9 +38,9 @@ class Email {
 	checkMatch () {
 		if (this.$emailConfirm.value) {
 			if (this.$email.value !== this.$emailConfirm.value) {
-				this.$emailConfirmField.classList.add('o-forms--error');
+				this.$emailConfirmField.classList.add('o-forms-input--invalid');
 			} else {
-				this.$emailConfirmField.classList.remove('o-forms--error');
+				this.$emailConfirmField.classList.remove('o-forms-input--invalid');
 			}
 		}
 	}

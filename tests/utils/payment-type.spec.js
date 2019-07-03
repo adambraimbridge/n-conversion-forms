@@ -33,7 +33,8 @@ describe('PaymentType', () => {
 				add: sandbox.stub(),
 				remove: sandbox.stub(),
 				contains: sandbox.stub()
-			}
+			},
+			closest: sandbox.stub()
 		};
 		documentStub = {
 			querySelector: sandbox.stub()
@@ -41,6 +42,7 @@ describe('PaymentType', () => {
 
 		documentStub.querySelector.returns(elementStub);
 		elementStub.querySelector.returns(elementStub);
+		elementStub.closest.returns(elementStub);
 		elementStub.querySelectorAll.returns([elementStub]);
 	});
 
@@ -81,14 +83,14 @@ describe('PaymentType', () => {
 		describe('show', () => {
 			it('should remove class from the parent node', () => {
 				paymentType.show(PaymentType.CREDITCARD);
-				expect(parentStub.classList.remove.called).to.true;
+				expect(elementStub.classList.remove.called).to.true;
 			});
 		});
 
 		describe('hide', () => {
 			it('should add class to the parent node', () => {
 				paymentType.hide(PaymentType.CREDITCARD);
-				expect(parentStub.classList.add.called).to.true;
+				expect(elementStub.classList.add.called).to.true;
 			});
 		});
 

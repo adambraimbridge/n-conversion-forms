@@ -8,9 +8,9 @@ class Validation {
 	 */
 	constructor ({ mutePromptBeforeLeaving } = {}) {
 		this.$form = document.querySelector('form.ncf');
-		this.oForms = new OForms(this.$form).init();
-		this.$formFields = this.oForms
-			.findInputs()
+		this.oForms = OForms.init(this.$form);
+		this.$formFields = this.oForms.formInputs
+			.map($el => $el.input)
 			.filter($el => $el.type !== 'hidden');
 		this.$requiredEls = this.$formFields.filter($el => $el.required);
 		this.formValid = false;
@@ -60,6 +60,7 @@ class Validation {
 	 */
 	validateForm (event) {
 		this.oForms.validateFormInputs(event);
+		this.checkCustomValidation();
 	}
 
 	/**
@@ -98,10 +99,20 @@ class Validation {
 	 * @param {DOMElement} $message The error message to display.
 	 */
 	showCustomFieldValidationError ($field, $message) {
-		const $parent = $field.parentNode;
-		const $oFormsErrorText = $parent.querySelector('.o-forms-input__error');
+		/**
+		 * - remove o-forms-input--valid class from $parent
+		 */
 
-		$parent.classList.add('o-forms--error');
+		$field.setCustomValidity($message);
+
+		const $parent = $field.parentNode;
+
+		const $oFormsErrorText = Array.from(
+			$parent.querySelectorAll('.o-forms-input__error')
+		).find(el => !el.classList.contains('ncf__custom-validation-error'));
+
+		$parent.classList.remove('o-forms-input--valid');
+		$parent.classList.add('o-forms-input--invalid');
 
 		if (!document.querySelector(`#custom-validation-for-${$field.name}`)) {
 			// In order for this error to hang around after normal oForms validation happens it
@@ -111,11 +122,12 @@ class Validation {
 
 		if (
 			$oFormsErrorText &&
+			$oFormsErrorText.style.display !== 'none' &&
 			$oFormsErrorText.parentNode.className.indexOf(
 				'ncf__custom-validation-error'
 			) === -1
 		) {
-			// If there's an oForms error we need to hide it so that we can use the `o-forms--error` class
+			// If there's an oForms error we need to hide it so that we can use the `o-forms-input--invalid` class
 			//  on the container to highlight the field as invalid.
 			$oFormsErrorText.style.display = 'none';
 		}
@@ -127,6 +139,8 @@ class Validation {
 	 * @param {DOMElement} $field The field related to the error that now needs to be cleared.
 	 */
 	clearCustomFieldValidationError ($field) {
+		$field.setCustomValidity('');
+
 		const $message = this.$form.querySelector(
 			`#custom-validation-for-${$field.name}`
 		);
@@ -155,7 +169,7 @@ class Validation {
 		if (!this.debounceCustomValidation) {
 			this.debounceCustomValidation = true;
 
-			this.customValidation.forEach((validator) => {
+			this.customValidation.forEach(validator => {
 				validator();
 			});
 

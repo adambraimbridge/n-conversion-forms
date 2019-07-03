@@ -1,7 +1,5 @@
 const { expect } = require('chai');
-const {
-	fetchPartial,
-} = require('../helpers');
+const { fetchPartial } = require('../helpers');
 
 let context = {};
 let params;
@@ -83,7 +81,15 @@ describe('payment-type', () => {
 	});
 });
 
-function expectPaymentType (context, { creditcard=false, directdebit=false, paypal=false, applepay=false }={}) {
+function expectPaymentType (
+	context,
+	{
+		creditcard = false,
+		directdebit = false,
+		paypal = false,
+		applepay = false
+	} = {}
+) {
 	const hiddenContainer = 'div.ncf__is-hidden';
 	const $ = context.template({
 		enableCreditcard: creditcard,
@@ -91,12 +97,29 @@ function expectPaymentType (context, { creditcard=false, directdebit=false, payp
 		enablePaypal: paypal,
 		enableApplepay: applepay
 	});
-	expect($(`${hiddenContainer} input[value="creditcard"]`).length === 0).to.equal(creditcard);
-	expect($(`${hiddenContainer} label[for="creditcard"]`).length === 0).to.equal(creditcard);
-	expect($(`${hiddenContainer} input[value="directdebit"]`).length === 0).to.equal(directdebit);
-	expect($(`${hiddenContainer} label[for="directdebit"]`).length === 0).to.equal(directdebit);
-	expect($(`${hiddenContainer} input[value="paypal"]`).length === 0).to.equal(paypal);
-	expect($(`${hiddenContainer} label[for="paypal"]`).length === 0).to.equal(paypal);
-	expect($(`${hiddenContainer} input[value="applepay"]`).length === 0).to.equal(applepay);
-	expect($(`${hiddenContainer} label[for="applepay"]`).length === 0).to.equal(applepay);
+
+	expect(
+		$(`${hiddenContainer} input[value="creditcard"]`).length === 0
+	).to.equal(creditcard);
+	expect($(`${hiddenContainer} label[for="creditcard"]`).length === 0).to.equal(
+		creditcard
+	);
+	expect(
+		$(`${hiddenContainer} input[value="directdebit"]`).length === 0
+	).to.equal(directdebit);
+	expect(
+		$(`${hiddenContainer} label[for="directdebit"]`).length === 0
+	).to.equal(directdebit);
+	expect($(`${hiddenContainer} input[value="paypal"]`).length === 0).to.equal(
+		paypal
+	);
+	expect($(`${hiddenContainer} label[for="paypal"]`).length === 0).to.equal(
+		paypal
+	);
+	expect($(`${hiddenContainer} input[value="applepay"]`).length === 0).to.equal(
+		applepay
+	);
+	expect($(`${hiddenContainer} label[for="applepay"]`).length === 0).to.equal(
+		applepay
+	);
 }
