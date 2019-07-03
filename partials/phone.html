@@ -17,7 +17,7 @@
 		<input type="tel" id="primaryTelephone" name="primaryTelephone" value="{{
 			value
 		}}" placeholder="Enter your phone number" minLength="5" maxLength="15"
-		aria-required="true" required {{#if pattern}}pattern="{{ pattern }}"{{/if}}
+		aria-required="true" autocomplete="tel" data-trackable="field-phone" required {{#if pattern}}pattern="{{ pattern }}"{{/if}}
 		{{#if isDisabled}}disabled{{/if}}>
 
 		<span class="o-forms-input__error">This phone number is not valid</span>

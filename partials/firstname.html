@@ -5,7 +5,7 @@
 	</span>
 
 	<span class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}">
-		<input type="text" id="firstName" name="firstName" value="{{value}}" placeholder="Enter your first name" required{{#if isDisabled}} disabled{{/if}}>
+		<input type="text" id="firstName" name="firstName" value="{{value}}" placeholder="Enter your first name" data-trackable="field-name" autocomplete="given-name" aria-required="true" required{{#if isDisabled}} disabled{{/if}}>
 		<span class="o-forms-input__error">Please enter your first name</span>
 	</span>
 

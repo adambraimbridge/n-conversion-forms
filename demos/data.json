@@ -45,7 +45,8 @@
       "terms": [
         {
           "name": "annual",
-          "price": "£1000"
+          "price": "£1000",
+          "weeklyPrice": "£4.5"
         },
         {
           "name": "quarterly",
