@@ -3,8 +3,13 @@
 ## Content
 
 * [App Banner](#app-banner)
+* [City/town](#city-town)
 * [Continue Reading](#continue-reading)
+* [County](#county)
 * [Decision Maker](#decision-maker)
+* [Delivery Address](#delivery-address)
+* [Delivery Information](#delivery-information)
+* [Delivery Start Date](#delivery-start-date)
 * [Fieldset](#fieldset)
 * [Firstname](#firstname)
 * [Lastname](#lastname)
@@ -23,6 +28,19 @@ Banner that appears on confirmation pages to inform the user of our App
 ```handlebars
 {{> n-conversion-forms/partials/app-banner }}
 ```
+## City/town
+
+Renders the city/town field.
+
+```handlebars
+{{> n-conversion-forms/partials/city-town value="Bath" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `value`: string - The name of the city or town.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
 
 ## Continue Reading
 
@@ -37,6 +55,20 @@ A message to inform the user they can read an article once they've subscribed.
 + `quote`: string - Title displayed between the quote marks.
 + `link`: string - Location of the continue reading button.
 
+## County
+
+Renders the county field.
+
+```handlebars
+{{> n-conversion-forms/partials/county value="Somerset" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `value`: string - The name of the county.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
 ## Decision Maker
 
 Renders an inline yes / no radio group for users to enter if they are a decision maker in their company.
@@ -48,6 +80,53 @@ Renders an inline yes / no radio group for users to enter if they are a decision
 ### Options
 + `value`: string - Pass 'yes' or 'no' to check an option, default is unchecked.
 + `hasError`: boolean - if true it adds `o-forms--error` class to display error.
+
+## Delivery Address
+
+Renders the 3 delivery address fields (line 1/2/3).
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-address values="['10 Elm Street', 'Apartment 1']" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `values`: Array - An array containing the 3 lines of the address.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Delivery Instructions
+
+Renders the delivery instructions text area.
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-instructions value="Leave on the front porch." hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `maxlength`: string - The maximum number of characters to allow in this field.
++ `rows`: string - The number of rows to render this textarea with.
++ `value`: string - The delivery instructions.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Delivery Start Date
+
+Renders a date field with a given start date (and accompanying copy).
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-start-date value="2019-02-16" date="Saturday 16th February 2019" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `value`: string - The date in `YYYY-MM-DD` format.
++ `min`: string - The earliest start date in `YYYY-MM-DD` format.
++ `max`: string - The latest start date in `YYYY-MM-DD` format.
++ `date`: string - The date in `dddd Do MMMM YYYY` format.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
 
 ## Fieldset
 
