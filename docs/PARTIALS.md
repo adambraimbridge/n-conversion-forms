@@ -4,6 +4,7 @@
 
 * [App Banner](#app-banner)
 * [City/town](#city-town)
+* [Confirmation](#confirmation)
 * [Continue Reading](#continue-reading)
 * [County](#county)
 * [Decision Maker](#decision-maker)
@@ -42,6 +43,25 @@ Renders the city/town field.
 + `value`: string - The name of the city or town.
 + `isDisabled`: boolean - Whether the field is disabled or not.
 + `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Confirmation
+
+Renders the subscription confirmation page.
+Displayed cta and link are different for print only offers.
+
+```handlebars
+{{> n-conversion-forms/partials/confirmation isPrintOnly=true offer="Premium Digital & Print" email="test@example.com" details=details }}
+```
+
+### Options
+
++ `isPrintOnly`: boolean - is this offer a print only offer or not.
++ `offer`: string - offer display name.
++ `email`: email - user email.
++ `details`: array - objects with the following properties.
+  + `title`: string
+  + `data`: string
+  + `description`: string
 
 ## Continue Reading
 
