@@ -31,6 +31,21 @@ Banner that appears on confirmation pages to inform the user of our App
 ```handlebars
 {{> n-conversion-forms/partials/app-banner }}
 ```
+## Billing postcode
+
+Displays a billing postal code field with o-forms styling.
+
+```handlebars
+{{> n-conversion-forms/partials/billing-postcode value="EC4M9BT" isZipCode=true }}
+```
+
+### Options
+
++ `isDisabled`: boolean - true - disables the field.
++ `isZipCode`: boolean - true - `zip code` label - false - `post code`.
++ `pattern`: string - Pattern to be used for validation.
++ `value`: string - Text to pre-populate the field.
+
 ## City/town
 
 Renders the city/town field.
@@ -147,6 +162,20 @@ Display delivery options with radio buttons for users to choose between.
 + `options`: array - An array of objects that can have the following properties.
   + `value`: string - Value to send when selected.
   + `isSelected`: boolean - Set to true for the term to be selected.
+
+## Delivery postcode
+
+Displays a postal code field with o-forms styling.
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-postcode value="EC4M9BT" isZipCode=true }}
+```
+### Options
+
++ `isDisabled`: boolean - true - disables the field.
++ `isZipCode`: boolean - true - `zip code` label - false - `post code`.
++ `pattern`: string - Pattern to be used for validation.
++ `value`: string - Text to pre-populate the field.
 
 ## Delivery Start Date
 
@@ -347,6 +376,23 @@ Displays a phone field with o-forms styling and the name and id `primaryTelephon
 + `isDisabled`: boolean - true - disables the field.
 + `isB2b`: boolean - true - displays work email copy.
 + `pattern`: string - Pattern to be used for validation.
+
+## Postcode
+
+Displays a postal code field with o-forms styling.
+Form id/name/label can be overridden via options below.
+
+```handlebars
+{{> n-conversion-forms/partials/postcode value="EC4M9BT" formPrefix="delivery" }}
+```
+
+### Options
+
++ `isBillingPostcode`: boolean - true - adds `Billing` label.
++ `isDisabled`: boolean - true - disables the field.
++ `isZipCode`: boolean - true - `Zip code` label - false - `Post Code`.
++ `pattern`: string - Pattern to be used for validation.
++ `value`: string - Text to pre-populate the field.
 
 ## Submit
 

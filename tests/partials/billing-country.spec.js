@@ -11,9 +11,9 @@ const {
 
 let context = {};
 
-describe('country template', () => {
+describe('billing country template', () => {
 	before(async () => {
-		context.template = await fetchPartial('country.html');
+		context.template = await fetchPartial('billing-country.html');
 	});
 
 	beforeEach(() => {
@@ -22,6 +22,13 @@ describe('country template', () => {
 
 	afterEach(() => {
 		unregisterHelper('ncf-countries');
+	});
+
+	it('should have billing label', () => {
+		const $ = context.template({
+			isBillingCountry: true
+		});
+		expect($('label').text()).to.equal('Billing Country');
 	});
 
 	describe('selection', () => {

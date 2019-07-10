@@ -33,11 +33,11 @@ describe('postcode template', () => {
 		expect($('input').attr('name')).to.contain('postCode');
 	});
 
-	it('should be be billing if asked', () => {
+	it('should be billing if asked', () => {
 		const $ = context.template({
 			isBillingPostcode: true
 		});
-		expect($('input').attr('name')).to.contain('billingPostcode');
+		expect($('label').text()).to.contain('Billing');
 	});
 
 	shouldPopulateValue(context);

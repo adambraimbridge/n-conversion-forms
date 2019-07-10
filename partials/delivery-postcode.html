@@ -1,0 +1,25 @@
+<div id="deliveryPostCodeField"
+		class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}{{#if isHidden}} n-ui-hide{{/if}}"
+		data-ui-item="form-field"
+		data-ui-item-name="deliveryPostCode"
+		data-validate="required">
+
+	<label for="deliveryPostCode" class="o-forms__label">
+		Delivery {{> post-or-zip isZipCode=isZipCode}}
+	</label>
+
+	<input type="text"
+			id="deliveryPostCode"
+			name="deliveryPostCode"
+			value="{{value}}"
+			placeholder="{{> post-or-zip isZipCode}}"
+			autocomplete="postal-code"
+			class="o-forms__text js-field__input js-item__value"
+			data-trackable="delivery-post-code"
+			aria-required="true" required
+			{{#if pattern}}pattern="{{pattern}}"{{/if}}
+			{{#if isDisabled}}disabled{{/if}}>
+
+	<div class="o-forms__errortext">Please enter a valid {{> post-or-zip isZipCode=isZipCode}}.</div>
+
+</div>
