@@ -10,6 +10,7 @@
 * [Decision Maker](#decision-maker)
 * [Delivery Address](#delivery-address)
 * [Delivery Information](#delivery-information)
+* [Delivery Option](#delivery-option)
 * [Delivery Start Date](#delivery-start-date)
 * [Fieldset](#fieldset)
 * [Firstname](#firstname)
@@ -131,6 +132,21 @@ Renders the delivery instructions text area.
 + `value`: string - The delivery instructions.
 + `isDisabled`: boolean - Whether the field is disabled or not.
 + `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Delivery Option
+
+Display delivery options with radio buttons for users to choose between.
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-option options=options }}
+```
+
+### Options
+
++ `isSingle`: boolean - Whether there is only one single option being presented.
++ `options`: array - An array of objects that can have the following properties.
+  + `value`: string - Value to send when selected.
+  + `isSelected`: boolean - Set to true for the term to be selected.
 
 ## Delivery Start Date
 
