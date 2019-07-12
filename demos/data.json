@@ -228,7 +228,7 @@
     "params": {
       "value": "EC4M9BT",
       "isBillingPostcode": true,
-      "isZipCode": true
+      "isZipCode": false
     }
   },
   "progress-indicator": {

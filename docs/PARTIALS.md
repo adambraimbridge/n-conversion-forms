@@ -377,7 +377,10 @@ Displays a phone field with o-forms styling and the name and id `primaryTelephon
 + `isB2b`: boolean - true - displays work email copy.
 + `pattern`: string - Pattern to be used for validation.
 
-## Postcode
+## Postcode (DEPRECATED)
+
+**This is deprecated and should no longer be used.  
+Please use `delivery-postcode`/`billing-postcode` instead.**  
 
 Displays a postal code field with o-forms styling.
 Form id/name/label can be overridden via options below.
