@@ -3,12 +3,12 @@
 ## Content
 
 * [App Banner](#app-banner)
-* [City/town](#city-town)
 * [Confirmation](#confirmation)
 * [Continue Reading](#continue-reading)
 * [County](#county)
 * [Decision Maker](#decision-maker)
 * [Delivery Address](#delivery-address)
+* [Delivey City/town](#delivery-city-town)
 * [Delivery Information](#delivery-information)
 * [Delivery Option](#delivery-option)
 * [Delivery Start Date](#delivery-start-date)
@@ -45,20 +45,6 @@ Displays a billing postal code field with o-forms styling.
 + `isZipCode`: boolean - true - `zip code` label - false - `post code`.
 + `pattern`: string - Pattern to be used for validation.
 + `value`: string - Text to pre-populate the field.
-
-## City/town
-
-Renders the city/town field.
-
-```handlebars
-{{> n-conversion-forms/partials/city-town value="Bath" hasError=true isDisabled=true }}
-```
-
-### Options
-
-+ `value`: string - The name of the city or town.
-+ `isDisabled`: boolean - Whether the field is disabled or not.
-+ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
 
 ## Confirmation
 
@@ -129,6 +115,20 @@ Renders the 3 delivery address fields (line 1/2/3).
 ### Options
 
 + `values`: Array - An array containing the 3 lines of the address.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Delivery City/town
+
+Renders the delivery city/town field.
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-city-town value="Bath" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `value`: string - The name of the city or town.
 + `isDisabled`: boolean - Whether the field is disabled or not.
 + `hasError`: boolean - If true it adds `o-forms--error` class to display error.
 

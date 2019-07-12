@@ -5,11 +5,6 @@
       "isZipCode": true
     }
   },
-  "city-town": {
-    "params": {
-      "value": "Bath"
-    }
-  },
   "confirmation": {
     "params": {
       "isPrintOnly": false,
@@ -69,6 +64,11 @@
   "delivery-address": {
     "params": {
       "values": ["10 Elm Street", "Apartment 1"]
+    }
+  },
+  "delivery-city-town": {
+    "params": {
+      "value": "Bath"
     }
   },
   "delivery-county": {
