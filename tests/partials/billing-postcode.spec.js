@@ -2,7 +2,6 @@ const { expect } = require('chai');
 
 const {
 	fetchPartial,
-	registerPartial,
 	shouldBeDisableable,
 	shouldBeHiddable,
 	shouldBeRequired,
@@ -14,7 +13,6 @@ let context = {};
 
 describe('billing postcode template', () => {
 	before(async () => {
-		registerPartial('post-or-zip','');
 		context.template = await fetchPartial('billing-postcode.html');
 	});
 
@@ -22,6 +20,19 @@ describe('billing postcode template', () => {
 		const $ = context.template({});
 		expect($('label').text()).to.contain('Billing');
 	});
+
+	it('should be post code by default', () => {
+		const $ = context.template({});
+		expect($.text()).to.contain('Post code');
+	});
+
+	it('should render zip code if asked', () => {
+		const $ = context.template({
+			isZipCode: true
+		});
+		expect($.text()).to.contain('Zip code');
+	});
+
 
 	shouldPopulateValue(context);
 

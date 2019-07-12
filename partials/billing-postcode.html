@@ -1,14 +1,21 @@
-<div id="billingPostCodeField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}{{#if isHidden}} n-ui-hide{{/if}}" data-ui-item="form-field" data-ui-item-name="deliveryPostCode" data-validate="required">
+{{#*inline "postCodeLabel"}}
+{{#if isZipCode}}Zip code{{else}}Post code{{/if}}
+{{/inline}}
+<div id="billingPostCodeField"
+		class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}{{#if isHidden}} n-ui-hide{{/if}}"
+		data-ui-item="form-field"
+		data-ui-item-name="deliveryPostCode"
+		data-validate="required">
 
 	<label for="billingPostCode" class="o-forms__label">
-		Billing {{> post-or-zip isZipCode=isZipCode}}
+		Billing {{> postCodeLabel }}
 	</label>
 
 	<input type="text"
 			id="billingPostCode"
 			name="billingPostCode"
 			value="{{value}}"
-			placeholder="{{> post-or-zip isZipCode}}"
+			placeholder="{{> postCodeLabel }}"
 			autocomplete="postal-code"
 			class="o-forms__text js-field__input js-item__value"
 			data-trackable="billing-post-code"
@@ -16,6 +23,6 @@
 			{{#if pattern}}pattern="{{pattern}}"{{/if}}
 			{{#if isDisabled}}disabled{{/if}}>
 
-	<div class="o-forms__errortext">Please enter a valid {{> post-or-zip isZipCode=isZipCode }}.</div>
+	<div class="o-forms__errortext">Please enter a valid {{> postCodeLabel }}.</div>
 
 </div>
