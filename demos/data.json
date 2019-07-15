@@ -1,4 +1,10 @@
 {
+  "billing-country": {
+    "params": {
+      "filterList": ["GBR", "JPN", "USA", "FRA"],
+      "value": "USA"
+    }
+  },
   "billing-postcode": {
     "params": {
       "value": "EC4M9BT",

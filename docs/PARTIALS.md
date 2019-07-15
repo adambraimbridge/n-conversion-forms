@@ -3,8 +3,11 @@
 ## Content
 
 * [App Banner](#app-banner)
+* [Billing Country](#billing-country)
+* [Billing Postcode](#billing-postcode)
 * [Confirmation](#confirmation)
 * [Continue Reading](#continue-reading)
+* [Country](#country)
 * [County](#county)
 * [Decision Maker](#decision-maker)
 * [Delivery Address](#delivery-address)
@@ -31,6 +34,22 @@ Banner that appears on confirmation pages to inform the user of our App
 ```handlebars
 {{> n-conversion-forms/partials/app-banner }}
 ```
+
+## Billing country
+
+Renders the billing country field.
+
+```handlebars
+{{> n-conversion-forms/partials/billing-country value="USA" filterList=countrylist }}
+```
+
+### Options
+
++ `value`: string - The name of the county.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `filterList`: object - list of country objects: `label`, `name`, `code`
+
 ## Billing postcode
 
 Displays a billing postal code field with o-forms styling.
@@ -77,6 +96,23 @@ A message to inform the user they can read an article once they've subscribed.
 + `isEmbedded`: boolean - Sets links to reference top frame when embedded.
 + `quote`: string - Title displayed between the quote marks.
 + `link`: string - Location of the continue reading button.
+
+## Country
+
+Renders the country field.
+NOTE: `isBillingCountry` flag is deprecated, use `billing-country` instead
+
+```handlebars
+{{> n-conversion-forms/partials/country value="USA" filterList=countrylist }}
+```
+
+### Options
+
++ `value`: string - The name of the county.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `filterList`: object - list of country objects: `label`, `name`, `code`
++ `isBillingCountry`: boolean - DEPRECATED, use billing-country instead.
 
 ## County
 

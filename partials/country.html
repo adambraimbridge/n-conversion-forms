@@ -1,12 +1,21 @@
-<div id="countryField" class="o-forms o-forms--wide ncf__field js-field js-unknown-user-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="country" data-ui-item-store-previous="true" data-validate="required">
+{{!--
+	isBillingCountry is now deprecated
+	use billing-country instead
+--}}
+<div id="countryField" class="o-forms o-forms--wide ncf__field js-field js-unknown-user-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="{{#if isBillingCountry}}billingCountry{{else}}country{{/if}}" data-ui-item-store-previous="true" data-validate="required">
 
-	<label for="country" class="o-forms__label">Country</label>
+	<label for="country" class="o-forms__label">{{#if isBillingCountry}}Billing Country{{else}}Country{{/if}}</label>
 
 	{{#ncf-countries value=value filterList=filterList}}
 	<select id="country" class="o-forms__select js-field__input js-item__value" aria-required="true" required
-			name="country"
-			data-trackable="field-country"
-			{{#if isDisabled}}disabled{{/if}}>
+		{{#if isBillingCountry}}
+		name="billingCountry"
+		data-trackable="field-billing-country"
+		{{else}}
+		name="country"
+		data-trackable="field-country"
+		{{/if}}
+		{{#if isDisabled}}disabled{{/if}}>
 
 		<option value>Please select a country</option>
 		{{#each countries as |country|}}

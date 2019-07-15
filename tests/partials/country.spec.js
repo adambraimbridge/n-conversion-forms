@@ -24,6 +24,21 @@ describe('country template', () => {
 		unregisterHelper('ncf-countries');
 	});
 
+	/* isBillingCountry is deprecated, use billing-country partial instead */
+	describe('isBillingCountry', () => {
+		it('should be have the name country by default', () => {
+			const $ = context.template({});
+			expect($('select').attr('name')).to.equal('country');
+		});
+
+		it('should be have the name billingCountry if isBillingCountry', () => {
+			const $ = context.template({
+				isBillingCountry: true
+			});
+			expect($('select').attr('name')).to.equal('billingCountry');
+		});
+	});
+
 	describe('selection', () => {
 		it('should select the correct option if value passed', () => {
 			const value = 'GBR';
