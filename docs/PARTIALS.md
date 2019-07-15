@@ -165,7 +165,7 @@ Display delivery options with radio buttons for users to choose between.
 
 ## Delivery postcode
 
-Displays a postal code field with o-forms styling.
+Displays a post code field with o-forms styling.
 
 ```handlebars
 {{> n-conversion-forms/partials/delivery-postcode value="EC4M9BT" isZipCode=true }}
