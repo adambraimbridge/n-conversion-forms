@@ -1,9 +1,9 @@
 const FormElement = require('./form-element');
 
-class BillingPostCode extends FormElement {
+class BillingPostcode extends FormElement {
 	constructor (document) {
-		super(document, '.ncf #billingPostCodeField');
+		super(document, '.ncf #billingPostcodeField');
 	}
 }
 
-module.exports = BillingPostCode;
+module.exports = BillingPostcode;

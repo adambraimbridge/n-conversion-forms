@@ -36,5 +36,5 @@ describe('delivery postcode template', () => {
 
 	shouldBeDisableable(context, 'input');
 
-	shouldBeHiddable(context, '#deliveryPostCodeField');
+	shouldBeHiddable(context, '#deliveryPostcodeField');
 });

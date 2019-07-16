@@ -42,5 +42,5 @@ describe('billing postcode template', () => {
 
 	shouldBeDisableable(context, 'input');
 
-	shouldBeHiddable(context, '#billingPostCodeField');
+	shouldBeHiddable(context, '#billingPostcodeField');
 });
