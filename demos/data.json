@@ -69,7 +69,8 @@
   },
   "delivery-address": {
     "params": {
-      "values": ["10 Elm Street", "Apartment 1"]
+      "line1": "20 Elm Street",
+      "line2": "Apartment 2"
     }
   },
   "delivery-city-town": {
