@@ -145,7 +145,7 @@ Renders an inline yes / no radio group for users to enter if they are a decision
 Renders the 3 delivery address fields (line 1/2/3).
 
 ```handlebars
-{{> n-conversion-forms/partials/delivery-address values="['10 Elm Street', 'Apartment 1']" hasError=true isDisabled=true }}
+{{> n-conversion-forms/partials/delivery-address line1="10 Elm Street" line2="Apartment 1" hasError=true isDisabled=true }}
 ```
 
 ### Options
