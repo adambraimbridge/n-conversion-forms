@@ -30,6 +30,10 @@
 </div>
 <script>
 	var FORM_SELECTOR = 'form.ncf';
+	var INPUT_SELECTOR = FORM_SELECTOR + ' input:not([type="checkbox"]):not([type="radio"])';
+	var SELECT_SELECTOR = FORM_SELECTOR + ' select';
+	var CHECKBOX_SELECTOR = FORM_SELECTOR + ' input[type="checkbox"]';
+	var RADIO_SELECTOR = FORM_SELECTOR + ' input[type="radio"]';
 	var debugData = {
 		billingCountry: 'GBR',
 		billingPostcode: 'EC4M9BT',
@@ -44,6 +48,7 @@
 		firstName: 'Test',
 		industry: 'DEF',
 		lastName: 'Test',
+		jobTitle: 'CEO',
 		password: 'password123',
 		position: 'AS',
 		postCode: 'EC4M9BT',
@@ -65,14 +70,14 @@
 	}
 
 	function fillForm () {
-		var inputs = document.querySelectorAll(FORM_SELECTOR + ' input, ' + FORM_SELECTOR + ' select');
+		var inputs = document.querySelectorAll(INPUT_SELECTOR + ', ' + SELECT_SELECTOR);
 		inputs.forEach(function (input) {
 			if (!/hidden/i.test(input.type)) {
 				var value = debugData[input.name];
 				input.value = value;
 			}
 		});
-		var checkboxes = document.querySelectorAll(FORM_SELECTOR + ' input[type="checkbox"]');
+		var checkboxes = document.querySelectorAll(CHECKBOX_SELECTOR + ', ' + RADIO_SELECTOR);
 		checkboxes.forEach(function (checkbox) {
 			checkbox.checked = true;
 		});
