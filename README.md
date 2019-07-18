@@ -15,7 +15,7 @@ make run # build and start documentation app at http://local.ft.com:5005/
 * [Requirements](#requirements)
 * [Usage](#usage)
 * [Utilities](#utilities)
-* [Contributing](#contributing)
+* [Contributing](CONTRIBUTING.md)
 * [Partials](docs/PARTIALS.md)
 
 ## Requirements
@@ -38,6 +38,10 @@ The `partials` directory contains [Handlebars](https://handlebarsjs.com/) templa
 Handlebars.registerPartial(fileName, fileContents);
 ```
 
+#### Autocomplete attributes
+Autocomplete fields documentation is available here:  
+https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute
+ 
 ### CSS
 
 The styles can be used by including the `main.scss` file within your own SASS files.
