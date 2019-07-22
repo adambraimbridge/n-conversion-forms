@@ -65,6 +65,8 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 * [AppBanner](#app-banner)
 * [TrialBanner](#trial-banner)
 * [Country](#country)
+* [Delivery Option](#delivery-option)
+* [Delivery Start Date](#delivery-start-date)
 * [Email](#email)
 * [Event Notifier](#event-notifier)
 * [Loader](#loader)
@@ -103,6 +105,38 @@ country.onChange(() => {
 
 Adds listener for country changes and retrieve the currently selected value.
 
+### Delivery Option
+
+```js
+const deliveryOption = new DeliveryOption(document);
+```
+
+This utility provides the ability to bind a callback that gets fired when the delivery option gets changed by the user.
+
+```js
+deliveryOption.handleDeliveryOptionChange(() => {
+  // your code here.
+});
+```
+
+### Delivery Start Date
+
+This utility provides the ability to call a backend service that validates the selected start date and updates the UI accordingly with the new information returned<sup>†</sup>. The start date will be sent as a `POST` to the service as `startDate` in the body, along with any data returned by the given function (second parameter).
+
+```js
+deliveryStartDate.handleDeliveryStartDateChange('/api/path', () => {
+  // This function needs to return an object containing any extra data to send with the request.
+});
+```
+
+† This requires the result of the endpoint to look as follows:
+
+```js
+{
+  firstDeliveryDate: '2019-02-16',
+  firstDeliveryDateString: 'Saturday 16th of February 2019'
+}
+```
 
 ### Email
 

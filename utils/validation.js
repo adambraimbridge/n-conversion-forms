@@ -68,15 +68,15 @@ class Validation {
 			throw new Error(`Custom validation for ${field.name} already exists.`);
 		}
 
-		this.customValidation.set(field.name, () => {
+		this.customValidation.set(field.name, async () => {
 			const id = `custom-validation-for-${field.name}`;
 			const $message = document.createElement('div');
 
 			$message.id = id;
 			$message.className = 'o-forms__errortext ncf__custom-validation-error';
-			$message.innerText = errorMessage;
+			$message.innerHTML = errorMessage;
 
-			const isValid = validator();
+			const isValid = await validator();
 			if (!isValid) {
 				this.showCustomFieldValidationError(field, $message);
 			} else {
@@ -137,11 +137,11 @@ class Validation {
 	checkCustomValidation () {
 		// Debounce this to prevent custom validation running again straight away
 		// through the checkFormValidity function below.
-		if (!this.debounceCustomValidation) {
+		if (this.customValidation.size > 0 && !this.debounceCustomValidation) {
 			this.debounceCustomValidation = true;
 
-			this.customValidation.forEach((validator) => {
-				validator();
+			this.customValidation.forEach(async (validator) => {
+				await validator();
 			});
 
 			setTimeout(() => {
