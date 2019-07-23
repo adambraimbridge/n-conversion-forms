@@ -209,7 +209,7 @@ describe('Validation', () => {
 				}).to.throw();
 			});
 
-			it('should store a custom validation function that will show a custom validation message when validation fails', () => {
+			it('should store a custom validation function that will show a custom validation message when validation fails', async () => {
 				sandbox.stub(validation, 'showCustomFieldValidationError');
 				sandbox.stub(validation, 'clearCustomFieldValidationError');
 
@@ -220,13 +220,13 @@ describe('Validation', () => {
 				});
 
 				// Run the stored custom validation function
-				validation.customValidation.get('foo')();
+				await validation.customValidation.get('foo')();
 
 				expect(validation.showCustomFieldValidationError.called).to.be.true;
 				expect(validation.clearCustomFieldValidationError.called).to.be.false;
 			});
 
-			it('should store a custom validation function that will clear a custom validation message when validation passes', () => {
+			it('should store a custom validation function that will clear a custom validation message when validation passes', async () => {
 				sandbox.stub(validation, 'showCustomFieldValidationError');
 				sandbox.stub(validation, 'clearCustomFieldValidationError');
 
@@ -237,7 +237,7 @@ describe('Validation', () => {
 				});
 
 				// Run the stored custom validation function
-				validation.customValidation.get('foo')();
+				await validation.customValidation.get('foo')();
 
 				expect(validation.clearCustomFieldValidationError.called).to.be.true;
 			});
