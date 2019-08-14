@@ -1,4 +1,5 @@
-<div class="ncf ncf__wrapper">
+{{!-- the isTrial bit is needed for the floodlight pixel tracking. --}}
+<div class="ncf ncf__wrapper"{{#if isTrial}} data-signup-is-trial="true"{{/if}}>
 	<div class="ncf__center">
 		<div class="ncf__icon ncf__icon--tick ncf__icon--large"></div>
 		<p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">You are now subscribed to:</p>
