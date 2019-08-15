@@ -96,4 +96,18 @@ describe('confirmation template', () => {
 		const buttonText = 'Start exploring';
 		expect($.text()).to.contain(buttonText);
 	});
+
+	it('should add a data-signup-is-trial="true" attribute for floodlight pixel tracking', () => {
+		const $ = context.template({
+			isTrial: true
+		});
+
+		expect($.html()).to.contain('data-signup-is-trial="true"');
+	});
+
+	it('should not add a data-signup-is-trial="true" attribute if isTrial not passed in', () => {
+		const $ = context.template();
+
+		expect($.html()).to.not.contain('data-signup-is-trial="true"');
+	});
 });

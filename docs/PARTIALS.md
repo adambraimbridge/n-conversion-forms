@@ -71,12 +71,13 @@ Renders the subscription confirmation page.
 Displayed cta and link are different for print only offers.
 
 ```handlebars
-{{> n-conversion-forms/partials/confirmation isPrintOnly=true offer="Premium Digital & Print" email="test@example.com" details=details }}
+{{> n-conversion-forms/partials/confirmation isPrintOnly=true isTrial=true offer="Premium Digital & Print" email="test@example.com" details=details }}
 ```
 
 ### Options
 
-+ `isPrintOnly`: boolean - is this offer a print only offer or not.
++ `isPrintOnly`: boolean - whether or not this is a print only offer.
++ `isTrial`: boolean - whether or not this is a trial offer.
 + `offer`: string - offer display name.
 + `email`: email - user email.
 + `details`: array - objects with the following properties.
