@@ -59,6 +59,20 @@ class DeliveryStartDate {
 		}
 	};
 
+	/**
+	 * Enables the start date field
+	 */
+	enable () {
+		this.$deliveryStartDate.removeAttribute('disabled');
+	}
+
+	/**
+	 * Disables the start date field
+	 */
+	disable () {
+		this.$deliveryStartDate.setAttribute('disabled', 'true');
+	}
+
 };
 
 module.exports = DeliveryStartDate;
