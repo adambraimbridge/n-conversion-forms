@@ -15,7 +15,7 @@ describe('DeliveryStartDate', () => {
 		document = { querySelector: sandbox.stub().returns(false) };
 
 		startDateContainer = { classList: { add: sandbox.stub(), remove: sandbox.stub() } };
-		startDateFieldStub = { value: '2019-02-16' };
+		startDateFieldStub = { value: '2019-02-16', setAttribute: sandbox.stub(), removeAttribute: sandbox.stub() };
 		startDateTextStub = { innerHTML: 'Saturday 16th of February 2019' };
 
 		document.querySelector.withArgs('#deliveryStartDateField').returns(startDateContainer);
@@ -98,6 +98,24 @@ describe('DeliveryStartDate', () => {
 
 			expect(startDateContainer.classList.add.calledWith('o-forms--error')).to.be.true;
 			expect(startDateChangeResult).to.be.false;
+		});
+	});
+
+	describe('enable', () => {
+		it('should enable the start date field', () => {
+			let startDateUtil = new DeliveryStartDate(document);
+			startDateUtil.enable();
+
+			expect(startDateFieldStub.removeAttribute.calledWith('disabled')).to.be.true;
+		});
+	});
+
+	describe('disable', () => {
+		it('should disable the start date field', () => {
+			let startDateUtil = new DeliveryStartDate(document);
+			startDateUtil.disable();
+
+			expect(startDateFieldStub.setAttribute.calledWith('disabled', 'true')).to.be.true;
 		});
 	});
 
