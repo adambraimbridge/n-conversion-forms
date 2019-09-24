@@ -34,6 +34,10 @@
 	var SELECT_SELECTOR = FORM_SELECTOR + ' select';
 	var CHECKBOX_SELECTOR = FORM_SELECTOR + ' input[type="checkbox"]';
 	var RADIO_SELECTOR = FORM_SELECTOR + ' input[type="radio"]';
+	// This env var gets set in production. We use this when creating email addresses in case any
+	// get into production so Membership know who to come to about deleting them.
+	var SYSTEM_CODE = '{{process.env.SYSTEM_CODE}}' || 'n-conversion-forms';
+
 	var debugData = {
 		billingCountry: 'GBR',
 		billingPostcode: 'EC4M9BT',
@@ -44,7 +48,7 @@
 		deliveryCity: 'delivery city',
 		deliveryCounty: 'delivery county',
 		deliveryPostcode: 'EC4M9BT',
-		email: Date.now() + '@ftqa.org',
+		email: `${SYSTEM_CODE}-${Date.now()}@ftqa.org`,
 		firstName: 'Test',
 		industry: 'DEF',
 		lastName: 'Test',
