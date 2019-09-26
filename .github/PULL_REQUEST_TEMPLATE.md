@@ -1,16 +1,20 @@
-## Feature Description
+### Description
 <!--- Describe your changes in detail -->
 
-## Link to Ticket / Card:
+[Ticket](<!-- Add link to the corresponding ticket -->)
 
+### Screenshots
 
-## Screenshots:
+| Before | After |
+| ------ | ----- |
+|        |       |
 
+### Reminder
+Have you completed these common tasks (remove those that don't apply)?
 
-## Has the necessary documentation been created / updated?
-- [ ] Yes
-- [ ] Not required for this ticket
-
-## Has this been given a review by Design/UX?
-- [ ] Yes
-- [ ] Not required for this ticket
+- [ ] **Documentation** updated or created
+- [ ] **Tests** written for new or updated for existing functionality
+- [ ] **Demos** updated to use this change
+- [ ] **Accessibility** checked for screen readers and contrast
+- [ ] **Design Review** ran past the designer 
+- [ ] **Product Review** ran past the product owner
