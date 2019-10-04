@@ -19,11 +19,15 @@ a11y: build
 	@$(DONE)
 
 test: verify
+	make jest
 	make unit-test
 	make a11y-demo
 
 unit-test:
 	mocha --recursive --reporter spec test
+
+jest:
+	jest
 
 a11y-demo:
 	export TEST_URL=http://localhost:5005; \
