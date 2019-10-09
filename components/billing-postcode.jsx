@@ -9,7 +9,6 @@ export default function BillingPostcode ({ postcodeReference,
 	isHidden = false }) {
 	let BillingPostcodeFieldClassNames = 'o-forms o-forms--wide ncf__field js-field';
 
-
 	if (hasError) {
 		BillingPostcodeFieldClassNames += ' o-forms--error';
 	}
