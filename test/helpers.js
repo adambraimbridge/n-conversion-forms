@@ -46,9 +46,6 @@ const fetchPartial = async (name, returnString = false) => {
 	return (context) => cheerio.load(template(context));
 };
 
-const fetchPartialAsString = async (name) => await fetchPartial(name, true);
-
-
 const shouldPopulateOptions = function (context) {
 	it('should show no options if none passed in', () => {
 		const $ = context.template({});
@@ -222,7 +219,6 @@ module.exports = {
 	registerHelper,
 	unregisterHelper,
 	fetchPartial,
-	fetchPartialAsString,
 	shouldPopulateOptions,
 	shouldSelectOption,
 	shouldPopulateValue,

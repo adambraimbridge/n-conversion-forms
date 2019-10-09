@@ -1,4 +1,4 @@
-import BillingPostcode from './billing-postcode';
+import DeliveryPostcode from './delivery-postcode';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
 
@@ -7,9 +7,9 @@ const context = {
 
 expect.extend(expectToRenderAs);
 
-describe('Billing Postcode', () => {
+describe('Delivery Postcode', () => {
 	beforeAll(async () => {
-		context.template = await fetchPartialAsString('billing-postcode.html');
+		context.template = await fetchPartialAsString('delivery-postcode.html');
 	});
 
 	it('render a postcode input with a label', () => {
@@ -18,7 +18,7 @@ describe('Billing Postcode', () => {
 			pattern: 'whatever',
 		};
 
-		expect(BillingPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderAs(context, props);
 
 	});
 
@@ -29,7 +29,7 @@ describe('Billing Postcode', () => {
 			isDisabled: true,
 		};
 
-		expect(BillingPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderAs(context, props);
 
 	});
 
@@ -41,6 +41,6 @@ describe('Billing Postcode', () => {
 			isHidden: true,
 		};
 
-		expect(BillingPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderAs(context, props);
 	});
 });

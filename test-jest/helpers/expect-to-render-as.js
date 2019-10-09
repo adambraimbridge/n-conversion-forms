@@ -1,7 +1,6 @@
 import ReactDOMServer from 'react-dom/server';
 import toDiffableHtml from 'diffable-html';
 
-
 export const expectToRenderAs = {
 	toRenderAs (reactComponent, context, props) {
 		// Render the React component with props.
