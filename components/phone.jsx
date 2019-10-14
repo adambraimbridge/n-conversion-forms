@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import classNames from 'classnames';
 
 export default function Phone ({
 	hasError = false,
@@ -15,11 +16,10 @@ export default function Phone ({
 }) {
 	const labelText = isB2b ? 'Work phone number' : 'Phone number';
 	const descriptionId = 'phone-description';
-	let className = 'o-forms o-forms--wide ncf__field js-field';
-
-	if (hasError) {
-		className += ' o-forms--error';
-	}
+	const className = classNames([
+		'o-forms o-forms--wide ncf__field js-field',
+		{ 'o-forms--error': hasError }
+	]);
 
 	return (
 		<div
@@ -57,7 +57,7 @@ export default function Phone ({
 			<div className="o-forms__errortext">This phone number is not valid</div>
 		</div>
 	);
-};
+}
 
 Phone.propTypes = {
 	hasError: propTypes.bool,
