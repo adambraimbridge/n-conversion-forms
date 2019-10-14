@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Message({ title, message, additional = [], actions = null, name, isNotice, isError, isSuccess, isInform, isHidden }) {
+function Message ({ title, message, additional = [], actions = null, name, isNotice, isError, isSuccess, isInform, isHidden }) {
 
 	const additionalMessages = additional.map((text, index) => {
-		return <p className="o-message__content--additional" key={index}>{text}</p>
-	})
+		return <p className="o-message__content--additional" key={index}>{text}</p>;
+	});
 
 	const oMessageClassNames = classNames({
 		'o-message': true,
@@ -14,22 +14,21 @@ function Message({ title, message, additional = [], actions = null, name, isNoti
 		'o-message--alert-inner': !isNotice,
 		'o-message--error': isError,
 		'o-message--success': !isError && isSuccess,
-		'o-message--inform': !isError && isSuccess,
 		'o-message--inform': !isError && !isSuccess && isInform,
 		'o-message--neutral': !isError && !isSuccess && !isInform,
 	});
 
 	const ncfClassNames = classNames(
-		'ncf__message', 'o-forms', 'o-forms--wide', { ' n-ui-hide': isHidden }
-	)
+		'ncf__message', 'o-forms', 'o-forms--wide', { 'n-ui-hide': isHidden }
+	);
 
-	let callToActionsList = null;
-	if (actions) {
-		const callToActionElements = actions.map(({ link, isSecondary, text }, index) => {
-			return <a href={link} key={index} className={isSecondary ? 'o-message__actions__secondary' : 'o-message__actions__primary'}>{text}</a>
-		});
-		callToActionsList = <div className="o-message__actions">{callToActionElements}</div>;
-	}
+	const callToActionsList = actions ? (
+		<div className="o-message__actions">
+			{actions.map(({ link, isSecondary, text }, index) => {
+				return <a href={link} key={index} className={isSecondary ? 'o-message__actions__secondary' : 'o-message__actions__primary'}>{text}</a>;
+			})}
+		</div>
+	) : null;
 
 	return (
 		<div className={ncfClassNames} data-message-name={name}>
