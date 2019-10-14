@@ -1,21 +1,22 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import classNames from 'classnames';
 
-export default function BillingPostcode ({ postcodeReference,
+export default function BillingPostcode ({
+	postcodeReference,
 	value = '',
-	pattern = '',
+	pattern = null,
 	isDisabled = false,
 	hasError = false,
 	isHidden = false }) {
-	let BillingPostcodeFieldClassNames = 'o-forms o-forms--wide ncf__field js-field';
 
-	if (hasError) {
-		BillingPostcodeFieldClassNames += ' o-forms--error';
-	}
-
-	if (isHidden) {
-		BillingPostcodeFieldClassNames += ' n-ui-hide';
-	}
+	const BillingPostcodeFieldClassNames = classNames([
+		'o-forms o-forms--wide ncf__field js-field',
+		{
+			'o-forms--error': hasError,
+			'n-ui-hide': isHidden
+		}
+	]);
 
 	return (<div
 		id="billingPostcodeField"
