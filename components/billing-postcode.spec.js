@@ -15,17 +15,15 @@ describe('Billing Postcode', () => {
 	it('render a postcode input with a label', () => {
 		const props = {
 			postcodeReference: 'ZipCode',
-			pattern: 'whatever',
 		};
 
 		expect(BillingPostcode).toRenderAs(context, props);
 
 	});
 
-	it('render a disable input', () => {
+	it('can render a disable input', () => {
 		const props = {
 			postcodeReference: 'ZipCode',
-			pattern: 'whatever',
 			isDisabled: true,
 		};
 
@@ -33,11 +31,28 @@ describe('Billing Postcode', () => {
 
 	});
 
-	it('render different styles', () => {
+	it('can render a pattern attribute', () => {
 		const props = {
 			postcodeReference: 'ZipCode',
-			pattern: 'whatever',
+			pattern: 'Whatever'
+		};
+
+		expect(BillingPostcode).toRenderAs(context, props);
+
+	});
+
+	it('can render as an Error', () => {
+		const props = {
+			postcodeReference: 'ZipCode',
 			hasError: true,
+		};
+
+		expect(BillingPostcode).toRenderAs(context, props);
+	});
+
+	it('can render as an hidden field', () => {
+		const props = {
+			postcodeReference: 'ZipCode',
 			isHidden: true,
 		};
 
