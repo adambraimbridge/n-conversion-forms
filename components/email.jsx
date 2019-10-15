@@ -31,9 +31,6 @@ function Email ({
 	if (describedBy) {
 		conditionalInputs['aria-describedby'] = describedBy;
 	}
-	if (value) {
-		conditionalInputs['defaultValue'] = value;
-	}
 
 	return (
 		<div
@@ -57,6 +54,7 @@ function Email ({
 				required
 				disabled={isDisabled}
 				{...conditionalInputs}
+				defaultValue={value}
 			/>
 			<div className="o-forms__errortext">{errorText}</div>
 		</div>

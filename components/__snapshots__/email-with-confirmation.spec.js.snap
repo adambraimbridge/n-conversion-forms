@@ -49,6 +49,7 @@ exports[`Email with confirmation render a email input and confirmation 1`] = `
          data-trackable="field-emailConfirm"
          aria-required="true"
          required
+         value
   >
   <div class="o-forms__errortext">
     This email address does not match
@@ -105,6 +106,7 @@ exports[`Email with confirmation render a email input and confirmation 2`] = `
          data-trackable="field-emailConfirm"
          aria-required="true"
          required
+         value
   >
   <div class="o-forms__errortext">
     This email address does not match
