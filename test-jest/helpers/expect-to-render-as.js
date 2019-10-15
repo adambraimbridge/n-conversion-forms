@@ -5,7 +5,7 @@ export const expectToRenderAs = {
 	toRenderAs (reactComponent, context, props) {
 		// Render the React component with props.
 		const ReactComponentRendered = ReactDOMServer.renderToStaticMarkup(reactComponent(props));
-		// Render with the same proprieties but using Handlebars.
+		// Render with the same properties but using Handlebars.
 		const handlerBarsVersion = context.template(props);
 		// `this.isNot` indicates whether the assertion was inverted with `.not`
 		// which needs to be respected, otherwise it fails incorrectly.

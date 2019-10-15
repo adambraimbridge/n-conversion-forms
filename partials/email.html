@@ -15,13 +15,16 @@
 		{{/if}}
 	</small>
 
-	<input type="email" id="email" name="email" value="{{value}}" placeholder="Enter your email address"
+	<input type="email" id="email" name="email" placeholder="Enter your email address"
 				autocomplete="email"
 				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
 				data-trackable="field-email"
+				aria-required="true"
+				required
+				{{#if isDisabled}}disabled{{/if}}
 				aria-describedby="email-description"
-				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+				value="{{value}}"
+	/>
 
 	<div class="o-forms__errortext">This email address is not valid</div>
 
@@ -36,9 +39,10 @@
 	<input type="email" id="emailConfirm" name="emailConfirm" placeholder="Confirm your email address"
 				autocomplete="email"
 				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
-				data-trackable="field-emailConfrm"
+				data-trackable="field-emailConfirm"
 				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+				{{#if isDisabled}}disabled{{/if}}
+	/>
 
 	<div class="o-forms__errortext">This email address does not match</div>
 
