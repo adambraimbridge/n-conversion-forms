@@ -5,7 +5,7 @@ import classNames from 'classnames';
 function Email ({
 	dataTrackable='field-email',
 	describedBy = 'email-description',
-	description = 'Please enter an email address',
+	description = '',
 	errorText='This email address is not valid',
 	fieldId = 'emailField',
 	hasError = false,
