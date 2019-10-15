@@ -1,7 +1,6 @@
 import EmailWithConfirmation from './email-with-confirmation';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
-import ReactDOMServer from 'react-dom/server';
 
 const context = {};
 expect.extend(expectToRenderAs);
