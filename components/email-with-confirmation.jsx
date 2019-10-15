@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Email from './email';
 
 function EmailWithConfirmation ({
+	description = 'Please enter an email address',
 	hasConfirmError = false,
 	hasError = false,
 	isB2b = false,
@@ -15,6 +16,7 @@ function EmailWithConfirmation ({
 	return (
 		<React.Fragment>
 			<Email
+				description={description}
 				hasError={hasError}
 				isB2b={isB2b}
 				isDisabled={isDisabled}
@@ -42,6 +44,7 @@ function EmailWithConfirmation ({
 }
 
 EmailWithConfirmation.propTypes = {
+	description: PropTypes.string,
 	hasConfirmError: PropTypes.bool,
 	hasError: PropTypes.bool,
 	isB2b: PropTypes.bool,
