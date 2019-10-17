@@ -20,32 +20,12 @@
 				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
 				data-trackable="field-email"
 				aria-required="true"
+				aria-describedby="email-description"
 				required
 				{{#if isDisabled}}disabled{{/if}}
-				aria-describedby="email-description"
 				value="{{value}}"
 	/>
 
 	<div class="o-forms__errortext">This email address is not valid</div>
 
 </div>
-{{#if showConfirm}}
-<div id="emailConfirmField" class="o-forms o-forms--wide ncf__field js-field{{#if hasConfirmError}} o-forms--error{{/if}}" data-validate="required,email">
-
-	<label for="emailConfirm" class="o-forms__label">
-		Confirm email address
-	</label>
-
-	<input type="email" id="emailConfirm" name="emailConfirm" placeholder="Confirm your email address"
-				autocomplete="email"
-				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
-				data-trackable="field-emailConfirm"
-				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}
-				value=""
-	/>
-
-	<div class="o-forms__errortext">This email address does not match</div>
-
-</div>
-{{/if}}

@@ -5,7 +5,7 @@ import classNames from 'classnames';
 function Email ({
 	dataTrackable='field-email',
 	describedBy = 'email-description',
-	description = '',
+	description = 'Please enter an email address',
 	errorText='This email address is not valid',
 	fieldId = 'emailField',
 	hasError = false,
@@ -14,7 +14,7 @@ function Email ({
 	isDisabled = false,
 	label = '',
 	placeHolder = 'Enter your email address',
-	readOnly = false,
+	readonly = false,
 	value = ''
 }) {
 	const labelText = label || (isB2b ? 'Work email address' : 'Email address');
@@ -24,13 +24,8 @@ function Email ({
 	]);
 	const inputClassName = classNames([
 		'no-mouseflow o-forms__text js-field__input js-item__value',
-		{ 'o-forms__field-disabled': readOnly }
+		{ 'o-forms__field-disabled': readonly }
 	]);
-
-	const conditionalInputs = {};
-	if (describedBy) {
-		conditionalInputs['aria-describedby'] = describedBy;
-	}
 
 	return (
 		<div
@@ -51,9 +46,9 @@ function Email ({
 				className={inputClassName}
 				data-trackable={dataTrackable}
 				aria-required="true"
+				aria-describedby={describedBy}
 				required
 				disabled={isDisabled}
-				{...conditionalInputs}
 				defaultValue={value}
 			/>
 			<div className="o-forms__errortext">{errorText}</div>
@@ -73,7 +68,7 @@ Email.propTypes = {
 	isDisabled: PropTypes.bool,
 	label: PropTypes.string,
 	placeHolder: PropTypes.string,
-	readOnly: PropTypes.bool,
+	readonly: PropTypes.bool,
 	value: PropTypes.string,
 };
 
