@@ -2,16 +2,16 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 
-function Firstname ({
-	dataTrackable='field-name',
-	errorText = 'Please enter your first name',
-	fieldId = 'firstNameField',
+function LastName ({
+	dataTrackable='field-lastname',
+	errorText = 'Please enter your last name',
+	fieldId = 'lastNameField',
 	hasError = false,
-	inputId = 'firstName',
+	inputId = 'lastName',
 	inputName,
 	isDisabled = false,
-	label = 'First name',
-	placeHolder = 'Enter your first name',
+	label = 'Last name',
+	placeHolder = 'Enter your last name',
 	value = ''
 }) {
 	// Use inputId if inputName is not explicitly passed.
@@ -39,7 +39,7 @@ function Firstname ({
 				id={inputId}
 				name={inputName}
 				placeholder={placeHolder}
-				autoComplete="given-name"
+				autoComplete="family-name"
 				className={inputClassNames}
 				data-trackable={dataTrackable}
 				aria-required="true" required
@@ -52,8 +52,9 @@ function Firstname ({
 	);
 }
 
-Firstname.propTypes = {
+LastName.propTypes = {
 	dataTrackable: PropTypes.string,
+	describedBy: PropTypes.string,
 	errorText: PropTypes.string,
 	fieldId: PropTypes.string,
 	hasError: PropTypes.bool,
@@ -65,4 +66,4 @@ Firstname.propTypes = {
 	value: PropTypes.string,
 };
 
-export default Firstname;
+export default LastName;

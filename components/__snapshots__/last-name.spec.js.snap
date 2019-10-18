@@ -1,63 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`First name render a first name field with default values 1`] = `
-<div id="firstNameField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="firstName"
-     data-validate="required"
->
-  <label for="firstName"
-         class="o-forms__label"
-  >
-    First name
-  </label>
-  <input type="text"
-         id="firstName"
-         name="firstName"
-         placeholder="Enter your first name"
-         autocomplete="given-name"
-         class="o-forms__text js-field__input js-item__value"
-         data-trackable="field-name"
-         aria-required="true"
-         required
-         value
-  >
-  <div class="o-forms__errortext">
-    Please enter your first name
-  </div>
-</div>
-`;
-
-exports[`First name render a first name field with default values 2`] = `
-<div id="firstNameField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="firstName"
-     data-validate="required"
->
-  <label for="firstName"
-         class="o-forms__label"
-  >
-    First name
-  </label>
-  <input type="text"
-         id="firstName"
-         name="firstName"
-         placeholder="Enter your first name"
-         autocomplete="given-name"
-         class="o-forms__text js-field__input js-item__value"
-         data-trackable="field-name"
-         aria-required="true"
-         required
-         value
-  >
-  <div class="o-forms__errortext">
-    Please enter your first name
-  </div>
-</div>
-`;
-
 exports[`Last name render a disabled field 1`] = `
 <div id="lastNameField"
      class="o-forms o-forms--wide ncf__field js-field"
@@ -285,64 +227,6 @@ exports[`Last name render a field with value 2`] = `
          aria-required="true"
          required
          value="some value"
-  >
-  <div class="o-forms__errortext">
-    Please enter your last name
-  </div>
-</div>
-`;
-
-exports[`Last name render a last name field with default values 1`] = `
-<div id="lastNameField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="lastName"
-     data-validate="required"
->
-  <label for="lastName"
-         class="o-forms__label"
-  >
-    Last name
-  </label>
-  <input type="text"
-         id="lastName"
-         name="lastName"
-         placeholder="Enter your last name"
-         autocomplete="family-name"
-         class="o-forms__text js-field__input js-item__value"
-         data-trackable="field-lastname"
-         aria-required="true"
-         required
-         value
-  >
-  <div class="o-forms__errortext">
-    Please enter your last name
-  </div>
-</div>
-`;
-
-exports[`Last name render a last name field with default values 2`] = `
-<div id="lastNameField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="lastName"
-     data-validate="required"
->
-  <label for="lastName"
-         class="o-forms__label"
-  >
-    Last name
-  </label>
-  <input type="text"
-         id="lastName"
-         name="lastName"
-         placeholder="Enter your last name"
-         autocomplete="family-name"
-         class="o-forms__text js-field__input js-item__value"
-         data-trackable="field-lastname"
-         aria-required="true"
-         required
-         value
   >
   <div class="o-forms__errortext">
     Please enter your last name
