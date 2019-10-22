@@ -60,6 +60,122 @@ exports[`Last name render a disabled field 2`] = `
 </div>
 `;
 
+exports[`Last name render a field with custom error 1`] = `
+<div id="lastNameField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="lastName"
+     data-validate="required"
+>
+  <label for="lastName"
+         class="o-forms__label"
+  >
+    Last name
+  </label>
+  <input type="text"
+         id="lastName"
+         name="lastName"
+         placeholder="Enter your last name"
+         autocomplete="family-name"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-lastname"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your last name
+  </div>
+</div>
+`;
+
+exports[`Last name render a field with custom error 2`] = `
+<div id="lastNameField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="lastName"
+     data-validate="required"
+>
+  <label for="lastName"
+         class="o-forms__label"
+  >
+    Last name
+  </label>
+  <input type="text"
+         id="lastName"
+         name="lastName"
+         placeholder="Enter your last name"
+         autocomplete="family-name"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-lastname"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your last name
+  </div>
+</div>
+`;
+
+exports[`Last name render a field with default error 1`] = `
+<div id="lastNameField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="lastName"
+     data-validate="required"
+>
+  <label for="lastName"
+         class="o-forms__label"
+  >
+    Last name
+  </label>
+  <input type="text"
+         id="lastName"
+         name="lastName"
+         placeholder="Enter your last name"
+         autocomplete="family-name"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-lastname"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your last name
+  </div>
+</div>
+`;
+
+exports[`Last name render a field with default error 2`] = `
+<div id="lastNameField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="lastName"
+     data-validate="required"
+>
+  <label for="lastName"
+         class="o-forms__label"
+  >
+    Last name
+  </label>
+  <input type="text"
+         id="lastName"
+         name="lastName"
+         placeholder="Enter your last name"
+         autocomplete="family-name"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-lastname"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your last name
+  </div>
+</div>
+`;
+
 exports[`Last name render a field with default settings 1`] = `
 <div id="lastNameField"
      class="o-forms o-forms--wide ncf__field js-field"
