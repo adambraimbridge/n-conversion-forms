@@ -22,7 +22,7 @@ const fetchPartial = async (name, returnString = false) => {
 	return (context) => cheerio.load(template(context));
 };
 
-const fetchPartialAsString = async (name) => await fetchPartial(name, true);
+const fetchPartialAsString = async (name) => fetchPartial(name, true);
 
 module.exports = {
 	fetchPartialAsString
