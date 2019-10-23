@@ -67,7 +67,7 @@ Phone.propTypes = {
 	pattern: propTypes.string,
 	fieldId: propTypes.string,
 	fieldName: propTypes.string,
-	inputId: propTypes.string.isRequired,
-	inputName: propTypes.string.isRequired,
-	dataTrackable: propTypes.string.isRequired,
+	inputId: propTypes.string,
+	inputName: propTypes.string,
+	dataTrackable: propTypes.string,
 };
