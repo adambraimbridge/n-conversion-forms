@@ -2,7 +2,7 @@
   "name": "@financial-times/n-conversion-forms",
   "version": "0.0.0",
   "description": "Containing partials and styles for forms included on Conversion apps (next-signup, next-corp-signup, next-b2b-prospect etc).",
-  "main": "dist/main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "node_modules/.bin/secret-squirrel",
@@ -40,7 +40,6 @@
     "@financial-times/n-internal-tool": "^2.3.1",
     "@sucrase/jest-plugin": "^2.0.0",
     "autoprefixer": "^8.6.3",
-    "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.0-beta.6",
     "bower": "^1.8.8",
     "bower-resolve-webpack-plugin": "^1.0.4",

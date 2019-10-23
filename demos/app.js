@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const express = require('@financial-times/n-internal-tool');
 const Handlebars = require('@financial-times/n-handlebars').handlebars;
 const data = require('./data.json');
+const jsxTemplate = require('./views/jsx');
 
 const PORT = process.env.PORT || 5005;
 const PARTIALS_DIR = resolve(__dirname, '../partials');
@@ -39,6 +40,15 @@ app.get('/partial/:name', (req, res) => {
 	const partial = `${req.params.name}`;
 	const template = compilePartial(partial);
 	res.send(template);
+});
+
+// add demo for jsx components
+app.use('/public', express.static('public'));
+app.use('/dist', express.static('dist'));
+app.get('/jsx', (req, res) => {
+	res.send(jsxTemplate({
+		title: 'n-conversion-forms-jsx-demo'
+	}));
 });
 
 app.listen(PORT, () => {
@@ -129,9 +139,8 @@ function compilePartial (partial) {
 <html lang="en">
 	<head>
 		<title>${partial}</title>
-		<link rel="stylesheet" href="/public/main.css">
-		<link rel="stylesheet" href="/public/component.css">
-		<link rel="stylesheet" href="/public/main.css">
+		<link rel="stylesheet" href="/public/demo.css">
+		<link rel="stylesheet" href="/dist/component.css">
 	</head>
 	<body style="background-color:#fff1e5;" id="demo-page-${partial}">
 
