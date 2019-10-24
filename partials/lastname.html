@@ -2,12 +2,18 @@
 
 	<label for="lastName" class="o-forms__label">Last name</label>
 
-	<input type="text" id="lastName" name="lastName" value="{{value}}" placeholder="Enter your last name"
-				autocomplete="family-name"
-				class="o-forms__text js-field__input js-item__value"
-				data-trackable="field-lastname"
-				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+	<input
+		type="text"
+		id="lastName"
+		name="lastName"
+		placeholder="Enter your last name"
+		autocomplete="family-name"
+		class="o-forms__text js-field__input js-item__value"
+		data-trackable="field-lastname"
+		aria-required="true" required
+		{{#if isDisabled}}disabled{{/if}}
+		value="{{value}}"
+	/>
 
 	<div class="o-forms__errortext">Please enter your last name</div>
 

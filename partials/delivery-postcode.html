@@ -5,21 +5,21 @@
 		data-validate="required">
 
 	<label for="deliveryPostcode" class="o-forms__label">
-		Delivery <span data-reference="postcode">{{postcodeReference}}<span>
+		Delivery <span data-reference="postcode">{{postcodeReference}}</span>
 	</label>
 
 	<input type="text"
 			id="deliveryPostcode"
 			name="deliveryPostcode"
-			value="{{value}}"
 			placeholder= "Enter your {{postcodeReference}}"
 			autocomplete="postal-code"
 			class="o-forms__text js-field__input js-item__value"
 			data-trackable="delivery-postcode"
 			aria-required="true" required
 			{{#if pattern}}pattern="{{pattern}}"{{/if}}
-			{{#if isDisabled}}disabled{{/if}}>
+			{{#if isDisabled}}disabled{{/if}}
+			value="{{value}}">
 
-	<div class="o-forms__errortext">Please enter a valid <span data-reference="postcode">{{postcodeReference}}<span>.</div>
+	<div class="o-forms__errortext">Please enter a valid <span data-reference="postcode">{{postcodeReference}}</span>.</div>
 
 </div>
