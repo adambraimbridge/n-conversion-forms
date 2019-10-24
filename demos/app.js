@@ -140,7 +140,7 @@ function compilePartial (partial) {
 	<head>
 		<title>${partial}</title>
 		<link rel="stylesheet" href="/public/demo.css">
-		<link rel="stylesheet" href="/dist/component.css">
+		<link rel="stylesheet" href="/public/main.css">
 	</head>
 	<body style="background-color:#fff1e5;" id="demo-page-${partial}">
 
