@@ -8,11 +8,11 @@ const readFile = promisify(fs.readFile);
 const PARTIAL_DIR = __dirname + '/../partials/';
 const ERROR_CLASS = 'o-forms--error';
 const options = [
-	{value: 'testValue1', label: 'testLabel1'},
-	{value: 'testValue2', label: 'testValue2'},
-	{value: 'testValue3', label: 'testLabel3'}
+	{ value: 'testValue1', label: 'testLabel1' },
+	{ value: 'testValue2', label: 'testValue2' },
+	{ value: 'testValue3', label: 'testLabel3' }
 ];
-const optionsWithDefault = options.map((option, index) => ({...option, isSelected: index === 1}));
+const optionsWithDefault = options.map((option, index) => ({ ...option, isSelected: index === 1 }));
 const selectedOption = optionsWithDefault.find(option => option.isSelected);
 const handlebars = Handlebars();
 
@@ -32,7 +32,7 @@ const unregisterHelper = name => {
 	return handlebars.unregisterHelper(name);
 };
 
-const fetchPartial = async name => {
+const fetchPartial = async (name, returnString = false) => {
 	let file = await readFile(PARTIAL_DIR + name, 'utf8');
 	// HACK ALERT: this is necessary to make testing @partial-block work. It does mean that any test where
 	//  a @partial-block helper isn't registered will blow up, but that will just have to be worked around
@@ -40,7 +40,9 @@ const fetchPartial = async name => {
 	//  We need to use the `#if` around the partial block to make using that in a template optional.
 	file = file.replace(/{{#if @partial-block}}([\s\S]*){{\/if}}/gm, '$1');
 	const template = handlebars.compile(file);
-
+	if (returnString) {
+		return (context) => template(context);
+	}
 	return (context) => cheerio.load(template(context));
 };
 
@@ -148,7 +150,7 @@ const shouldBeDisableable = function (context, selector, options) {
 
 const shouldBeHiddable = function (context, selector, options) {
 	it('should be displayed by default', () => {
-		const $ = context.template(Object.assign({ }, options));
+		const $ = context.template(Object.assign({}, options));
 
 		expect($(selector).attr('class')).to.not.contain('n-ui-hide');
 	});
@@ -186,11 +188,11 @@ const shouldAllowPattern = function (context, selector) {
 
 const shouldContainPartials = function (context, partials) {
 	it('should contain partials', () => {
-		partials.forEach(({id, partial}) => registerPartial(partial, `<div id="${id}"></div>`));
+		partials.forEach(({ id, partial }) => registerPartial(partial, `<div id="${id}"></div>`));
 
 		const $ = context.template({});
 
-		partials.forEach(({id, partial}) => {
+		partials.forEach(({ id, partial }) => {
 			unregisterPartial(partial);
 			expect($(`#${id}`).length).to.equal(1);
 		});

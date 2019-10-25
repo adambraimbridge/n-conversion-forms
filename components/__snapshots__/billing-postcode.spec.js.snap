@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Billing Postcode can render a disable input 1`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
+
+exports[`Billing Postcode can render a disable input 2`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
+
+exports[`Billing Postcode can render a pattern attribute 1`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         pattern="Whatever"
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
+
+exports[`Billing Postcode can render a pattern attribute 2`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         pattern="Whatever"
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
+
+exports[`Billing Postcode can render as an Error 1`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
+
+exports[`Billing Postcode can render as an Error 2`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
+
+exports[`Billing Postcode can render as an hidden field 1`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field n-ui-hide"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
+
+exports[`Billing Postcode can render as an hidden field 2`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field n-ui-hide"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
+
+exports[`Billing Postcode render a postcode input with a label 1`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
+
+exports[`Billing Postcode render a postcode input with a label 2`] = `
+<div id="billingPostcodeField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryPostcode"
+     data-validate="required"
+>
+  <label for="billingPostcode"
+         class="o-forms__label"
+  >
+    Billing
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+  </label>
+  <input type="text"
+         id="billingPostcode"
+         name="billingPostcode"
+         placeholder="Enter your ZipCode"
+         autocomplete="postal-code"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="billing-postcode"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter a valid
+    <span data-reference="postcode">
+      ZipCode
+    </span>
+    .
+  </div>
+</div>
+`;
