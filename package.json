@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Financial-Times/n-conversion-forms#readme",
   "dependencies": {
     "@babel/runtime": "^7.6.3",
+    "classnames": "^2.2.6",
     "diffable-html": "^4.0.0",
     "fetchres": "^1.7.2",
     "lodash.get": "^4.4.2",
@@ -45,7 +46,6 @@
     "bower-resolve-webpack-plugin": "^1.0.4",
     "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.2",
-    "classnames": "^2.2.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint-plugin-jest": "^22.17.0",
