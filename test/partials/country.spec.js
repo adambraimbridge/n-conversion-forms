@@ -24,6 +24,29 @@ describe('country template', () => {
 		unregisterHelper('ncf-countries');
 	});
 
+	describe('isB2b', () => {
+		it('should have the correct label', () => {
+			const $ = context.template({
+				isB2b: true
+			});
+			expect($('label').html()).to.equal('Country/Region');
+		});
+
+		it('should have the correct default option', () => {
+			const $ = context.template({
+				isB2b: true
+			});
+			expect($('option[value=""]').html()).to.equal('Please select a country/region');
+		});
+
+		it('should have the correct error text', () => {
+			const $ = context.template({
+				isB2b: true
+			});
+			expect($('.o-forms__errortext').html()).to.equal('Please select your country/region');
+		});
+	});
+
 	/* isBillingCountry is deprecated, use billing-country partial instead */
 	describe('isBillingCountry', () => {
 		it('should be have the name country by default', () => {

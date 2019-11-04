@@ -4,7 +4,7 @@
 --}}
 <div id="countryField" class="o-forms o-forms--wide ncf__field js-field js-unknown-user-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="{{#if isBillingCountry}}billingCountry{{else}}country{{/if}}" data-ui-item-store-previous="true" data-validate="required">
 
-	<label for="country" class="o-forms__label">{{#if isBillingCountry}}Billing Country{{else}}Country{{/if}}</label>
+	<label for="country" class="o-forms__label">{{#if isBillingCountry}}Billing Country{{else}}Country{{/if}}{{#if isB2b}}/Region{{/if}}</label>
 
 	{{#ncf-countries value=value filterList=filterList}}
 	<select id="country" class="o-forms__select js-field__input js-item__value" aria-required="true" required
@@ -17,7 +17,7 @@
 		{{/if}}
 		{{#if isDisabled}}disabled{{/if}}>
 
-		<option value>Please select a country</option>
+		<option value>Please select a country{{#if isB2b}}/region{{/if}}</option>
 		{{#each countries as |country|}}
 			{{#if this.label}}
 			<optgroup label="{{country.label}}">
@@ -32,6 +32,6 @@
 	</select>
 	{{/ncf-countries}}
 
-	<div class="o-forms__errortext">Please select your country</div>
+	<div class="o-forms__errortext">Please select your country{{#if isB2b}}/region{{/if}}</div>
 
 </div>
