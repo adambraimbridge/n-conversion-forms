@@ -1,6 +1,7 @@
 import BillingPostcode from './billing-postcode';
 import DeliveryPostcode from './delivery-postcode';
 import Email from './email';
+import Fieldset from './fieldset';
 import FirstName from './first-name';
 import Industry from './industry';
 import JobTitle from './job-title';
@@ -16,6 +17,7 @@ export {
 	BillingPostcode,
 	DeliveryPostcode,
 	Email,
+	Fieldset,
 	FirstName,
 	Industry,
 	JobTitle,
