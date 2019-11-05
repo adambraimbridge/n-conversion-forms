@@ -17,6 +17,7 @@ function initDemo () {
 			<ncf.DeliveryCity />
 			<ncf.DeliveryCounty />
 			<ncf.DeliveryPostcode postcodeReference={'delivery postcode'}/>
+			<ncf.DeliveryStartDate />
 			<ncf.Email />
 			<ncf.Fieldset />
 			<ncf.FirstName />
