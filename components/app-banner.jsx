@@ -7,7 +7,7 @@ function AppBanner () {
 				<div className="ncf__app-banner-image">
 					<img
 						alt="FT app"
-						src="https://www.ft.com/__origami/service/image/v2/images/raw/https://s3-eu-west-1.amazonaws.com/envoy-b2b-trial/phone.png?source=ip-envoy"
+						src="https://www.ft.com/__origami/service/image/v2/images/raw/https://ft-next-assets-prod.s3-eu-west-1.amazonaws.com/assets/product/republishing-app-packshot-191107.png?source=ip-envoy"
 					/>
 				</div>
 				<div className="ncf__app-banner-content">
