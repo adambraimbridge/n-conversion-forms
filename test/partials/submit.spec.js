@@ -58,6 +58,16 @@ describe('submit template', () => {
 		expect($(SELECTOR_BACK_BUTTON).attr('target')).to.equal('_parent');
 	});
 
+	it('should show custom back button text if supplied', () => {
+		const url = 'https://google.com';
+		const $ = context.template({
+			backButtonText: 'No thanks',
+			backButtonUrl: url
+		});
+
+		expect($(SELECTOR_BACK_BUTTON).html()).to.equal('No thanks');
+	});
+
 	it('should have an id of submit by default', () => {
 		const $ = context.template();
 		expect($('#submitButton').length).to.equal(1);

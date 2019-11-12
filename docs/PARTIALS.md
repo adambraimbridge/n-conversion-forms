@@ -491,5 +491,6 @@ A form submit button with o-button styling
 
 + `isCentered`: boolean - true - centers the button
 + `backButtonUrl`: string - URL of a back button to add next to the button
++ `backButtonText`: string - The text to display inside the back button. Defaults to "Back"
 + `id`: string - The ID of the button defaults to "submitButton"
 + `label`: string - Label to use for the button defaults to "Continue"

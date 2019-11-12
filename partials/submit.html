@@ -1,7 +1,7 @@
 <div class="o-forms o-forms--wide ncf__field{{#if isCentered}} ncf__field--center{{/if}}{{#if backButtonUrl}} ncf__field--flex{{/if}}">
 
 	{{#if backButtonUrl }}
-	<a class="ncf__button" href="{{ backButtonUrl }}" target="_parent" data-trackable="link">Back</a>
+	<a class="ncf__button" href="{{ backButtonUrl }}" target="_parent" data-trackable="link">{{#if backButtonText}}{{backButtonText}}{{else}}Back{{/if}}</a>
 	{{/if}}
 
 	<button id="{{#if id}}{{id}}{{else}}submitButton{{/if}}" class="ncf__button ncf__button--submit" data-trackable="submit" type="submit"{{#if isDisabled}} disabled{{/if}}>
