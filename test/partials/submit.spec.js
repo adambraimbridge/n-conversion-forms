@@ -50,6 +50,12 @@ describe('submit template', () => {
 		expect($(FIELD).hasClass('ncf__field--full-width-buttons')).to.be.true;
 	});
 
+	it('should not have the buttons be full width by default', () => {
+		const $ = context.template();
+
+		expect($(FIELD).hasClass('ncf__field--full-width-buttons')).not.to.be.true;
+	});
+
 	it('should not show a back button by default', () => {
 		const $ = context.template({});
 
