@@ -93,6 +93,21 @@
 			grid-template-columns: 1fr min-content min-content;
 		}
 
+		&--full-width-buttons {
+			display: flex;
+			justify-content: space-between;
+			padding-left: 0;
+			padding-right: 0;
+
+			.ncf__button {
+				flex: 1;
+
+				+ .ncf__button {
+					margin-left: 20px;
+				}
+			}
+		}
+
 		label small {
 			color: oColorsMix(black, white, 70);
 			font-weight: normal;
