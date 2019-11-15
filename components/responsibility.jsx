@@ -58,8 +58,8 @@ export function Responsibility ({
 
 Responsibility.propTypes = {
 	value: PropTypes.string,
-	isDisabled: PropTypes.boolean,
-	hasError: PropTypes.boolean,
+	isDisabled: PropTypes.bool,
+	hasError: PropTypes.bool,
 	fieldId: PropTypes.string,
 	selectId: PropTypes.string,
 	selectName: PropTypes.string,

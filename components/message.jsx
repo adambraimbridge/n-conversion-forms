@@ -48,15 +48,16 @@ export function Message ({ title, message, additional = [], actions = null, name
 	);
 }
 
+const actionType = PropTypes.shape({
+	link: PropTypes.string.isRequired,
+	isSecondary: PropTypes.bool,
+	text: PropTypes.string
+});
 Message.propTypes = {
 	title: PropTypes.string,
 	message: PropTypes.string.isRequired,
 	additional: PropTypes.arrayOf(PropTypes.string),
-	actions: PropTypes.arrayOf({
-		link: PropTypes.string.isRequired,
-		isSecondary: PropTypes.bool,
-		text: PropTypes.string
-	}),
+	actions: PropTypes.arrayOf(actionType),
 	name: PropTypes.string,
 	isNotice: PropTypes.bool,
 	isError: PropTypes.bool,
