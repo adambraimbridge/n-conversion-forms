@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const DEFAULT_HEADER_TEXT = 'Sorry, this is not available online';
 const DEFAULT_MESSAGE_TEXT = 'Speak now to our Customer Care team to discuss your options';
 
-function CustomerCare ({
+export function CustomerCare ({
 	header = DEFAULT_HEADER_TEXT,
 	message = DEFAULT_MESSAGE_TEXT
 }) {
@@ -32,5 +32,3 @@ CustomerCare.propTypes = {
 	header: PropTypes.string,
 	message: PropTypes.string
 };
-
-export default CustomerCare;

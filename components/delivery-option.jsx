@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function DeliveryOption ({
+export function DeliveryOption ({
 	options = [],
 	isSingle = false
 }) {
@@ -73,5 +73,3 @@ DeliveryOption.propTypes = {
 	})),
 	isSingle: PropTypes.boolean
 };
-
-export default DeliveryOption;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Submit ({
+export function Submit ({
 	id = 'submitButton',
 	isCentered = false,
 	isDisabled = false,
@@ -52,5 +52,3 @@ Submit.propTypes = {
 	backButtonUrl: PropTypes.string,
 	label: PropTypes.string
 };
-
-export default Submit;

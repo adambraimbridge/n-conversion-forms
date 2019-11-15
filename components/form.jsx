@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Form ({
+export function Form ({
 	children,
 	action = '',
 	method = 'POST'
@@ -25,5 +25,3 @@ Form.propTypes = {
 	action: PropTypes.string,
 	method: PropTypes.string
 };
-
-export default Form;

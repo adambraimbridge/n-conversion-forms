@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.responsibilities.responsibilities;
 
-export default function Responsibility ({
+export function Responsibility ({
 	value,
 	isDisabled = false,
 	hasError = false,

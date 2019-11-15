@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Loader ({
+export function Loader ({
 	children,
 	showLoader,
 	title,
@@ -46,5 +46,3 @@ Loader.propTypes = {
 	showLoader: PropTypes.bool,
 	title: PropTypes.string
 };
-
-export default Loader;

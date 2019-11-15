@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function DecisionMaker ({
+export function DecisionMaker ({
 	hasError = false,
 	value = 'yes'
 }) {
@@ -63,5 +63,3 @@ DecisionMaker.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string
 };
-
-export default DecisionMaker;

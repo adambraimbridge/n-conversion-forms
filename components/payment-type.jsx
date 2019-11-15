@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 
-export default function PaymentType ({
+export function PaymentType ({
 	enableApplepay = false,
 	enableCreditcard = false,
 	enableDirectdebit = false,

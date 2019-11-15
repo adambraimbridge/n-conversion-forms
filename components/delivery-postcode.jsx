@@ -1,7 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-export default function DeliveryPostcode ({
+export function DeliveryPostcode ({
 	postcodeReference,
 	value = '',
 	pattern = '',

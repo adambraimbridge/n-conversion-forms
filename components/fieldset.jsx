@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Fieldset ({
+export function Fieldset ({
 	children = null,
 	name = null,
 	legend = null,
@@ -60,6 +60,4 @@ Fieldset.propTypes = {
 	headingLevel: PropTypes.string,
 	header: PropTypes.elementType,
 	descriptor: PropTypes.string
-}
-
-export default Fieldset;
+};

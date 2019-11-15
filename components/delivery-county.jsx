@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function DeliveryCounty ({
+export function DeliveryCounty ({
 	hasError = false,
 	value = '',
 	isDisabled = false
@@ -46,5 +46,3 @@ DeliveryCounty.propTypes = {
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool
 };
-
-export default DeliveryCounty;

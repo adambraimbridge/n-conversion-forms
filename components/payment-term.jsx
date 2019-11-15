@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 
-export default function PaymentTerm ({
+export function PaymentTerm ({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
 	isPrintOrBundle = false,

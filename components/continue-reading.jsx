@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ContinueReading ({
+export function ContinueReading ({
 	link = null,
 	quote = '',
 	isEmbedded = false
@@ -38,5 +38,3 @@ ContinueReading.propTypes = {
 	quote: PropTypes.string,
 	isEmbedded: PropTypes.bool
 };
-
-export default ContinueReading;

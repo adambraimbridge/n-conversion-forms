@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Section ({
+export function Section ({
 	children
 }) {
 	return (
@@ -19,5 +19,3 @@ Section.propTypes = {
 		PropTypes.node
 	]).isRequired
 };
-
-export default Section;

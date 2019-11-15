@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function PackageChange ({
+export function PackageChange ({
 	changePackageUrl,
 	currentPackage,
 	terms = []
@@ -88,5 +88,3 @@ PackageChange.propTypes = {
 		weeklyPrice: PropTypes.string,
 	}))
 };
-
-export default PackageChange;

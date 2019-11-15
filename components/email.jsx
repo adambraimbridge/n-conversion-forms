@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Email ({
+export function Email ({
 	dataTrackable='field-email',
 	describedBy = 'email-description',
 	description = 'Please enter an email address',
@@ -71,5 +71,3 @@ Email.propTypes = {
 	readonly: PropTypes.bool,
 	value: PropTypes.string,
 };
-
-export default Email;

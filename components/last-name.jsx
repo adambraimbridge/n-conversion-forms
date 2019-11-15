@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 
-function LastName ({
+export function LastName ({
 	dataTrackable='field-lastname',
 	errorText = 'Please enter your last name',
 	fieldId = 'lastNameField',
@@ -65,5 +65,3 @@ LastName.propTypes = {
 	placeHolder: PropTypes.string,
 	value: PropTypes.string,
 };
-
-export default LastName;
