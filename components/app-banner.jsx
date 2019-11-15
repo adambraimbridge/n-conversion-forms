@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AppBanner () {
+export function AppBanner () {
 	return (
 		<div id="appBanner" className="ncf ncf__app-banner">
 			<div className="ncf__app-banner-inner">
@@ -46,5 +46,3 @@ function AppBanner () {
 		</div>
 	);
 }
-
-export default AppBanner;

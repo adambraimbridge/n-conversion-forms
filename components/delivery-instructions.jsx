@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function DeliveryInstructions ({
+export function DeliveryInstructions ({
 	fieldId = 'deliveryInstructionsField',
 	hasError = false,
 	inputId = 'deliveryInstructions',
@@ -63,5 +63,3 @@ DeliveryInstructions.propTypes = {
 	isDisabled: PropTypes.bool,
 	value: PropTypes.string
 };
-
-export default DeliveryInstructions;

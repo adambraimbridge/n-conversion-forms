@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function TrialBanner ({
+export function TrialBanner ({
 	trialDuration = null
 }) {
 	return (
@@ -20,5 +20,3 @@ function TrialBanner ({
 TrialBanner.propTypes = {
 	trialDuration: PropTypes.string
 };
-
-export default TrialBanner;

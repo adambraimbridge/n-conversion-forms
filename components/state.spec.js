@@ -1,4 +1,4 @@
-import State from './state';
+import { State } from './index';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
 import { americanStates } from 'n-common-static-data';

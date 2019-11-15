@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const EMAIL_DEFAULT_TEXT = 'your email';
 
-function RegistrationConfirmation ({
+export function RegistrationConfirmation ({
 	email = EMAIL_DEFAULT_TEXT
 }) {
 	return (
@@ -36,5 +36,3 @@ function RegistrationConfirmation ({
 RegistrationConfirmation.propTypes = {
 	email: PropTypes.string
 };
-
-export default RegistrationConfirmation;

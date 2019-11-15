@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ErrorPage ({
+export function ErrorPage ({
 	children,
 	header = 'Sorry, something went wrong',
 	message = 'Speak to our Customer Care team now so we can help.'
@@ -35,5 +35,3 @@ ErrorPage.propTypes = {
 	header: PropTypes.string,
 	message: PropTypes.string,
 };
-
-export default ErrorPage;

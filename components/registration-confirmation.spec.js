@@ -1,4 +1,4 @@
-import RegistrationConfirmation from './registration-confirmation';
+import { RegistrationConfirmation } from './index';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
 

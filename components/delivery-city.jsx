@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function DeliveryCity ({
+export function DeliveryCity ({
 	hasError = false,
 	value = '',
 	isDisabled = false
@@ -47,5 +47,3 @@ DeliveryCity.propTypes = {
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool
 };
-
-export default DeliveryCity;

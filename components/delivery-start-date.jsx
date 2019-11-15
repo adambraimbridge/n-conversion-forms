@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function DeliveryStartDate ({
+export function DeliveryStartDate ({
 	hasError = false,
 	date = '',
 	value = '',
@@ -64,5 +64,3 @@ DeliveryStartDate.propTypes = {
 	max: PropTypes.string,
 	isDisabled: PropTypes.bool
 };
-
-export default DeliveryStartDate;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Message ({ title, message, additional = [], actions = null, name, isNotice, isError, isSuccess, isInform, isHidden }) {
+export function Message ({ title, message, additional = [], actions = null, name, isNotice, isError, isSuccess, isInform, isHidden }) {
 
 	const additionalMessages = additional.map((text, index) => {
 		return <p className="o-message__content--additional" key={index}>{text}</p>;
@@ -64,5 +64,3 @@ Message.propTypes = {
 	isInform: PropTypes.bool,
 	isHidden: PropTypes.bool,
 };
-
-export default Message;

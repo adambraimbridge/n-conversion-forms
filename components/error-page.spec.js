@@ -1,6 +1,6 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import ErrorPage from './error-page';
+import { ErrorPage } from './index';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
 import { registerPartial, unregisterPartial } from '../test/helpers';

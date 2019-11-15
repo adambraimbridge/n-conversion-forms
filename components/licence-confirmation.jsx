@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function LicenceConfirmation ({
+export function LicenceConfirmation ({
 	isTrial = false,
 	isEmbedded = false,
 	duration = null
@@ -55,5 +55,3 @@ LicenceConfirmation.propTypes = {
 	isEmbedded: PropTypes.bool,
 	duration: PropTypes.string
 };
-
-export default LicenceConfirmation;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function DeliveryAddress ({
+export function DeliveryAddress ({
 	hasError = false,
 	line1 = '',
 	line2 = '',
@@ -80,5 +80,3 @@ DeliveryAddress.propTypes = {
 	line3: PropTypes.string,
 	isDisabled: PropTypes.bool
 };
-
-export default DeliveryAddress;

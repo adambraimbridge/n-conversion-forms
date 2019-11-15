@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function ProgressIndicator ({
+export function ProgressIndicator ({
 	items = []
 }) {
 	function getElementsForComplete (item) {
@@ -64,4 +64,3 @@ ProgressIndicator.propTypes = {
 	}))
 };
 
-export default ProgressIndicator;

@@ -1,4 +1,4 @@
-import Submit from './submit';
+import { Submit } from './index';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
 

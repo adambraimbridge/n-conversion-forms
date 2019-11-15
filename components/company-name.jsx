@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function CompanyName ({
+export function CompanyName ({
 	fieldId = 'companyNameField',
 	hasError = false,
 	inputId = 'companyName',
@@ -56,5 +56,3 @@ CompanyName.propTypes = {
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool
 };
-
-export default CompanyName;

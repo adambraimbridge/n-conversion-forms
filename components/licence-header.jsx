@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function LicenceHeader ({
+export function LicenceHeader ({
 	displayName = null,
 	isTrial = false,
 	welcomeText = null
@@ -32,5 +32,3 @@ LicenceHeader.propTypes = {
 	isTrial: PropTypes.bool,
 	welcomeText: PropTypes.string
 };
-
-export default LicenceHeader;

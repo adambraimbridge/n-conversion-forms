@@ -1,5 +1,5 @@
 import React from 'react';
-import Loader from './loader';
+import { Loader } from './index';
 import { registerPartial, unregisterPartial } from '../test/helpers.js';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
