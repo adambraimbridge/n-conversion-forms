@@ -1,5 +1,5 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.industries.industries;
