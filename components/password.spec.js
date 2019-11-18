@@ -27,6 +27,18 @@ describe('Password', () => {
 
 	});
 
+	it('can have a different label', () => {
+		const props = {
+			label: 'Current password',
+			inputId: 'passwordWithCustomLabel',
+		};
+
+		const renderedPassword = mount(Password(props));
+		const inputElement = renderedPassword.find(`label[htmlFor="${props.inputId}"]`);
+		expect(inputElement.text()).toBe(props.label);
+
+	});
+
 	it('can have an input ID different from an input name', () => {
 		const props = {
 			inputId: 'i-m-kebab-case',

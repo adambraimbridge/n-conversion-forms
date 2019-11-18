@@ -10,6 +10,7 @@ export function Password ({
 	fieldId = 'passwordField',
 	inputId = 'password',
 	inputName,
+	label = 'Password',
 }) {
 	// This is necessary to make this backward compatible with the Handlebars partial.
 	const showPasswordId = inputId === 'password' ? 'showPassword' : `${inputId}-showPassword`;
@@ -36,7 +37,7 @@ export function Password ({
 			data-validate="required,password"
 		>
 
-			<label htmlFor={inputId} className="o-forms__label">Password</label>
+			<label htmlFor={inputId} className="o-forms__label">{label}</label>
 			<small id="password-description" className="o-forms__additional-info">
 				Use 8 or more characters with a mix of letters, numbers &amp; symbols
 			</small>
@@ -72,4 +73,5 @@ Password.propTypes = {
 	fieldId: PropTypes.string,
 	inputId: PropTypes.string,
 	inputName: PropTypes.string,
+	label: PropTypes.string,
 };
