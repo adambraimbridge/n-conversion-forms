@@ -12,6 +12,7 @@ export function Password ({
 	inputName,
 	label = 'Password',
 	placeholder = 'Enter a password',
+	showDescription = true,
 }) {
 	// This is necessary to make this backward compatible with the Handlebars partial.
 	const showPasswordId = inputId === 'password' ? 'showPassword' : `${inputId}-showPassword`;
@@ -39,9 +40,10 @@ export function Password ({
 		>
 
 			<label htmlFor={inputId} className="o-forms__label">{label}</label>
-			<small id="password-description" className="o-forms__additional-info">
-				Use 8 or more characters with a mix of letters, numbers &amp; symbols
-			</small>
+			{showDescription ?
+				(<small id="password-description" className="o-forms__additional-info">
+					Use 8 or more characters with a mix of letters, numbers &amp; symbols
+				</small>) : null}
 
 			<div className="o-forms__affix-wrapper js-show-password">
 				<input
@@ -52,7 +54,7 @@ export function Password ({
 					className="no-mouseflow o-forms__text o-forms__text--suffixed js-field__input js-show-password__password-input js-item__value"
 					autoComplete="new-password"
 					data-trackable="field-password"
-					aria-describedby="password-description"
+					aria-describedby={showDescription ? 'password-description' : undefined}
 					aria-required="true" required
 					pattern={pattern}
 					disabled={isDisabled} />

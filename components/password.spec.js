@@ -95,4 +95,16 @@ describe('Password', () => {
 
 		expect(Password).toRenderAs(context, props);
 	});
+
+	it('can render without a description', () => {
+		const props = {
+			showDescription: false,
+			inputId: 'passwordWithoutDescription',
+		};
+
+		const renderedPassword = mount(Password(props));
+		const inputElement = renderedPassword.find(`#${props.inputId}`);
+		expect(renderedPassword.exists('#password-description')).toBe(false);
+		expect(inputElement.prop('aria-describedby')).toBeUndefined();
+	});
 });
