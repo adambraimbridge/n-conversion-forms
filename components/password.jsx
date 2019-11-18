@@ -11,6 +11,7 @@ export function Password ({
 	inputId = 'password',
 	inputName,
 	label = 'Password',
+	placeholder = 'Enter a password',
 }) {
 	// This is necessary to make this backward compatible with the Handlebars partial.
 	const showPasswordId = inputId === 'password' ? 'showPassword' : `${inputId}-showPassword`;
@@ -47,7 +48,7 @@ export function Password ({
 					type="password"
 					id={inputId}
 					name={inputName}
-					placeholder="Enter a password"
+					placeholder={placeholder}
 					className="no-mouseflow o-forms__text o-forms__text--suffixed js-field__input js-show-password__password-input js-item__value"
 					autoComplete="new-password"
 					data-trackable="field-password"
@@ -74,4 +75,5 @@ Password.propTypes = {
 	inputId: PropTypes.string,
 	inputName: PropTypes.string,
 	label: PropTypes.string,
+	placeholder: PropTypes.string,
 };

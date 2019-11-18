@@ -39,6 +39,17 @@ describe('Password', () => {
 
 	});
 
+	it('can have different placeholder text', () => {
+		const props = {
+			placeholder: 'Please enter your current password',
+			inputId: 'passwordWithCustomPlaceholder',
+		};
+
+		const renderedPassword = mount(Password(props));
+		const inputElement = renderedPassword.find(`#${props.inputId}`);
+		expect(inputElement.prop('placeholder')).toBe(props.placeholder);
+	});
+
 	it('can have an input ID different from an input name', () => {
 		const props = {
 			inputId: 'i-m-kebab-case',
