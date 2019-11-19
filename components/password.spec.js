@@ -107,4 +107,14 @@ describe('Password', () => {
 		expect(renderedPassword.exists('#password-description')).toBe(false);
 		expect(inputElement.prop('aria-describedby')).toBeUndefined();
 	});
+
+	it('can render without the show password checkbox', () => {
+		const props = {
+			hasShowPassword: false,
+			inputId: 'passwordWithoutShowPassword',
+		};
+
+		const renderedPassword = mount(Password(props));
+		expect(renderedPassword.exists('input[data-trackable="field-show-password"]')).toBe(false);
+	});
 });

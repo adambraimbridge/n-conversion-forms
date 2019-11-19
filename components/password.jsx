@@ -13,6 +13,7 @@ export function Password ({
 	label = 'Password',
 	placeholder = 'Enter a password',
 	showDescription = true,
+	hasShowPassword = true,
 }) {
 	// This is necessary to make this backward compatible with the Handlebars partial.
 	const showPasswordId = inputId === 'password' ? 'showPassword' : `${inputId}-showPassword`;
@@ -58,10 +59,11 @@ export function Password ({
 					aria-required="true" required
 					pattern={pattern}
 					disabled={isDisabled} />
-				<span className="o-forms__suffix">
-					<input type="checkbox" id={showPasswordId} name={showPasswordName} className="o-forms__checkbox js-show-password__checkbox" data-trackable="field-show-password" />
-					<label htmlFor={showPasswordId} className="o-forms__label">Show password</label>
-				</span>
+				{hasShowPassword ?
+					(<span className="o-forms__suffix">
+						<input type="checkbox" id={showPasswordId} name={showPasswordName} className="o-forms__checkbox js-show-password__checkbox" data-trackable="field-show-password" />
+						<label htmlFor={showPasswordId} className="o-forms__label">Show password</label>
+					</span>) : null}
 			</div>
 			<div className="o-forms__errortext">Please enter a valid password</div>
 		</div>
