@@ -96,6 +96,17 @@ describe('Password', () => {
 		expect(Password).toRenderAs(context, props);
 	});
 
+	it('can have different description text', () => {
+		const props = {
+			description: 'Keep this a secret!',
+			inputId: 'passwordWithCustomDescription',
+		};
+
+		const renderedPassword = mount(Password(props));
+		const passwordDescription = renderedPassword.find('#password-description');
+		expect(passwordDescription.text()).toBe(props.description);
+	});
+
 	it('can render without a description', () => {
 		const props = {
 			showDescription: false,

@@ -12,6 +12,7 @@ export function Password ({
 	inputName,
 	label = 'Password',
 	placeholder = 'Enter a password',
+	description = 'Use 8 or more characters with a mix of letters, numbers & symbols',
 	showDescription = true,
 	hasShowPassword = true,
 }) {
@@ -43,7 +44,7 @@ export function Password ({
 			<label htmlFor={inputId} className="o-forms__label">{label}</label>
 			{showDescription ?
 				(<small id="password-description" className="o-forms__additional-info">
-					Use 8 or more characters with a mix of letters, numbers &amp; symbols
+					{description}
 				</small>) : null}
 
 			<div className="o-forms__affix-wrapper js-show-password">
