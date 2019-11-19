@@ -27,6 +27,29 @@ describe('Password', () => {
 
 	});
 
+	it('can have a different label', () => {
+		const props = {
+			label: 'Current password',
+			inputId: 'passwordWithCustomLabel',
+		};
+
+		const renderedPassword = mount(Password(props));
+		const inputElement = renderedPassword.find(`label[htmlFor="${props.inputId}"]`);
+		expect(inputElement.text()).toBe(props.label);
+
+	});
+
+	it('can have different placeholder text', () => {
+		const props = {
+			placeholder: 'Please enter your current password',
+			inputId: 'passwordWithCustomPlaceholder',
+		};
+
+		const renderedPassword = mount(Password(props));
+		const inputElement = renderedPassword.find(`#${props.inputId}`);
+		expect(inputElement.prop('placeholder')).toBe(props.placeholder);
+	});
+
 	it('can have an input ID different from an input name', () => {
 		const props = {
 			inputId: 'i-m-kebab-case',
@@ -71,5 +94,38 @@ describe('Password', () => {
 		};
 
 		expect(Password).toRenderAs(context, props);
+	});
+
+	it('can have different description text', () => {
+		const props = {
+			description: 'Keep this a secret!',
+			inputId: 'passwordWithCustomDescription',
+		};
+
+		const renderedPassword = mount(Password(props));
+		const passwordDescription = renderedPassword.find('#password-description');
+		expect(passwordDescription.text()).toBe(props.description);
+	});
+
+	it('can render without a description', () => {
+		const props = {
+			showDescription: false,
+			inputId: 'passwordWithoutDescription',
+		};
+
+		const renderedPassword = mount(Password(props));
+		const inputElement = renderedPassword.find(`#${props.inputId}`);
+		expect(renderedPassword.exists('#password-description')).toBe(false);
+		expect(inputElement.prop('aria-describedby')).toBeUndefined();
+	});
+
+	it('can render without the show password checkbox', () => {
+		const props = {
+			hasShowPassword: false,
+			inputId: 'passwordWithoutShowPassword',
+		};
+
+		const renderedPassword = mount(Password(props));
+		expect(renderedPassword.exists('input[data-trackable="field-show-password"]')).toBe(false);
 	});
 });
