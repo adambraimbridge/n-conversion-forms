@@ -23,6 +23,12 @@ describe('CustomerCare', () => {
 		expect(CustomerCare).toRenderAs(context, props);
 	});
 
+	it('renders in compact mode', () => {
+		const props = { isCompact: true };
+
+		expect(CustomerCare).toRenderAs(context, props);
+	});
+
 	it('renders with custom message text', () => {
 		const props = { message: 'Message text' };
 

@@ -144,6 +144,7 @@ Renders a "contact customer support" page.
 
 ### Options
 + `header`: string - Custom header text. Defaults to "Sorry, this is not available online".
++ `isCompact`: boolean - This removes the phone icon and makes the spacing smaller.
 + `message`: string - Custom message text, defaults to "Speak now to our Customer Care team to discuss your options".
 
 ## Decision Maker
