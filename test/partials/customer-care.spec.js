@@ -29,6 +29,18 @@ describe('customer care template', () => {
 		expect($('#customer-care-message').text()).to.equal(sampleMessage);
 	});
 
+	it('should display the non-compact version unless requested', () => {
+		const $ = context.template();
+		expect($('.ncf__customer-care--compact').length).to.equal(0);
+	});
+
+	it('should display the compact version if requested', () => {
+		const $ = context.template({
+			isCompact: true
+		});
+		expect($('.ncf__customer-care--compact').length).to.equal(1);
+	});
+
 	it('should default the message text if not provided', () => {
 		const $ = context.template({});
 		expect($('#customer-care-message').text()).to.equal('Speak now to our Customer Care team to discuss your options');

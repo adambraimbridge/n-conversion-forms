@@ -1,7 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CustomerCare renders in compact mode 1`] = `
+<div class="ncf__wrapper ncf__center ncf__customer-care ncf__customer-care--compact">
+  <div class="ncf__paragraph">
+    <h1 class="ncf__header">
+      Sorry, this is not available online
+    </h1>
+    <p id="customer-care-message">
+      Speak now to our Customer Care team to discuss your options
+    </p>
+  </div>
+  <div class="ncf__paragraph">
+    <div class="ncf__icon ncf__icon--phone ncf__icon--large">
+    </div>
+    <p>
+      International Toll Free Number
+    </p>
+    <p class="ncf__customer-care__phone">
+      <a id="customer-care-international-number"
+         class="ncf__header ncf__link"
+         href="tel:+80007056477"
+      >
+        + 800 0705 6477
+      </a>
+    </p>
+  </div>
+  <div class="ncf__paragraph">
+    <a class="ncf__link"
+       href="https://help.ft.com/help/contact-us/"
+    >
+      Find a local phone number
+    </a>
+  </div>
+</div>
+`;
+
+exports[`CustomerCare renders in compact mode 2`] = `
+<div class="ncf__wrapper ncf__center ncf__customer-care ncf__customer-care--compact">
+  <div class="ncf__paragraph">
+    <h1 class="ncf__header">
+      Sorry, this is not available online
+    </h1>
+    <p id="customer-care-message">
+      Speak now to our Customer Care team to discuss your options
+    </p>
+  </div>
+  <div class="ncf__paragraph">
+    <div class="ncf__icon ncf__icon--phone ncf__icon--large">
+    </div>
+    <p>
+      International Toll Free Number
+    </p>
+    <p class="ncf__customer-care__phone">
+      <a id="customer-care-international-number"
+         class="ncf__header ncf__link"
+         href="tel:+80007056477"
+      >
+        + 800 0705 6477
+      </a>
+    </p>
+  </div>
+  <div class="ncf__paragraph">
+    <a class="ncf__link"
+       href="https://help.ft.com/help/contact-us/"
+    >
+      Find a local phone number
+    </a>
+  </div>
+</div>
+`;
+
 exports[`CustomerCare renders with custom header text 1`] = `
-<div class="ncf__wrapper ncf__center">
+<div class="ncf__wrapper ncf__center ncf__customer-care">
   <div class="ncf__paragraph">
     <h1 class="ncf__header">
       Header text
@@ -10,18 +80,20 @@ exports[`CustomerCare renders with custom header text 1`] = `
       Speak now to our Customer Care team to discuss your options
     </p>
   </div>
-  <div class="ncf__paragraph ncf__customer-care">
+  <div class="ncf__paragraph">
     <div class="ncf__icon ncf__icon--phone ncf__icon--large">
     </div>
     <p>
       International Toll Free Number
     </p>
-    <a id="customer-care-international-number"
-       class="ncf__header ncf__link"
-       href="tel:+80007056477"
-    >
-      + 800 0705 6477
-    </a>
+    <p class="ncf__customer-care__phone">
+      <a id="customer-care-international-number"
+         class="ncf__header ncf__link"
+         href="tel:+80007056477"
+      >
+        + 800 0705 6477
+      </a>
+    </p>
   </div>
   <div class="ncf__paragraph">
     <a class="ncf__link"
@@ -34,7 +106,7 @@ exports[`CustomerCare renders with custom header text 1`] = `
 `;
 
 exports[`CustomerCare renders with custom header text 2`] = `
-<div class="ncf__wrapper ncf__center">
+<div class="ncf__wrapper ncf__center ncf__customer-care">
   <div class="ncf__paragraph">
     <h1 class="ncf__header">
       Header text
@@ -43,18 +115,20 @@ exports[`CustomerCare renders with custom header text 2`] = `
       Speak now to our Customer Care team to discuss your options
     </p>
   </div>
-  <div class="ncf__paragraph ncf__customer-care">
+  <div class="ncf__paragraph">
     <div class="ncf__icon ncf__icon--phone ncf__icon--large">
     </div>
     <p>
       International Toll Free Number
     </p>
-    <a id="customer-care-international-number"
-       class="ncf__header ncf__link"
-       href="tel:+80007056477"
-    >
-      + 800 0705 6477
-    </a>
+    <p class="ncf__customer-care__phone">
+      <a id="customer-care-international-number"
+         class="ncf__header ncf__link"
+         href="tel:+80007056477"
+      >
+        + 800 0705 6477
+      </a>
+    </p>
   </div>
   <div class="ncf__paragraph">
     <a class="ncf__link"
@@ -67,7 +141,7 @@ exports[`CustomerCare renders with custom header text 2`] = `
 `;
 
 exports[`CustomerCare renders with custom message text 1`] = `
-<div class="ncf__wrapper ncf__center">
+<div class="ncf__wrapper ncf__center ncf__customer-care">
   <div class="ncf__paragraph">
     <h1 class="ncf__header">
       Sorry, this is not available online
@@ -76,18 +150,20 @@ exports[`CustomerCare renders with custom message text 1`] = `
       Message text
     </p>
   </div>
-  <div class="ncf__paragraph ncf__customer-care">
+  <div class="ncf__paragraph">
     <div class="ncf__icon ncf__icon--phone ncf__icon--large">
     </div>
     <p>
       International Toll Free Number
     </p>
-    <a id="customer-care-international-number"
-       class="ncf__header ncf__link"
-       href="tel:+80007056477"
-    >
-      + 800 0705 6477
-    </a>
+    <p class="ncf__customer-care__phone">
+      <a id="customer-care-international-number"
+         class="ncf__header ncf__link"
+         href="tel:+80007056477"
+      >
+        + 800 0705 6477
+      </a>
+    </p>
   </div>
   <div class="ncf__paragraph">
     <a class="ncf__link"
@@ -100,7 +176,7 @@ exports[`CustomerCare renders with custom message text 1`] = `
 `;
 
 exports[`CustomerCare renders with custom message text 2`] = `
-<div class="ncf__wrapper ncf__center">
+<div class="ncf__wrapper ncf__center ncf__customer-care">
   <div class="ncf__paragraph">
     <h1 class="ncf__header">
       Sorry, this is not available online
@@ -109,18 +185,20 @@ exports[`CustomerCare renders with custom message text 2`] = `
       Message text
     </p>
   </div>
-  <div class="ncf__paragraph ncf__customer-care">
+  <div class="ncf__paragraph">
     <div class="ncf__icon ncf__icon--phone ncf__icon--large">
     </div>
     <p>
       International Toll Free Number
     </p>
-    <a id="customer-care-international-number"
-       class="ncf__header ncf__link"
-       href="tel:+80007056477"
-    >
-      + 800 0705 6477
-    </a>
+    <p class="ncf__customer-care__phone">
+      <a id="customer-care-international-number"
+         class="ncf__header ncf__link"
+         href="tel:+80007056477"
+      >
+        + 800 0705 6477
+      </a>
+    </p>
   </div>
   <div class="ncf__paragraph">
     <a class="ncf__link"
@@ -133,7 +211,7 @@ exports[`CustomerCare renders with custom message text 2`] = `
 `;
 
 exports[`CustomerCare renders with default props 1`] = `
-<div class="ncf__wrapper ncf__center">
+<div class="ncf__wrapper ncf__center ncf__customer-care">
   <div class="ncf__paragraph">
     <h1 class="ncf__header">
       Sorry, this is not available online
@@ -142,18 +220,20 @@ exports[`CustomerCare renders with default props 1`] = `
       Speak now to our Customer Care team to discuss your options
     </p>
   </div>
-  <div class="ncf__paragraph ncf__customer-care">
+  <div class="ncf__paragraph">
     <div class="ncf__icon ncf__icon--phone ncf__icon--large">
     </div>
     <p>
       International Toll Free Number
     </p>
-    <a id="customer-care-international-number"
-       class="ncf__header ncf__link"
-       href="tel:+80007056477"
-    >
-      + 800 0705 6477
-    </a>
+    <p class="ncf__customer-care__phone">
+      <a id="customer-care-international-number"
+         class="ncf__header ncf__link"
+         href="tel:+80007056477"
+      >
+        + 800 0705 6477
+      </a>
+    </p>
   </div>
   <div class="ncf__paragraph">
     <a class="ncf__link"
@@ -166,7 +246,7 @@ exports[`CustomerCare renders with default props 1`] = `
 `;
 
 exports[`CustomerCare renders with default props 2`] = `
-<div class="ncf__wrapper ncf__center">
+<div class="ncf__wrapper ncf__center ncf__customer-care">
   <div class="ncf__paragraph">
     <h1 class="ncf__header">
       Sorry, this is not available online
@@ -175,18 +255,20 @@ exports[`CustomerCare renders with default props 2`] = `
       Speak now to our Customer Care team to discuss your options
     </p>
   </div>
-  <div class="ncf__paragraph ncf__customer-care">
+  <div class="ncf__paragraph">
     <div class="ncf__icon ncf__icon--phone ncf__icon--large">
     </div>
     <p>
       International Toll Free Number
     </p>
-    <a id="customer-care-international-number"
-       class="ncf__header ncf__link"
-       href="tel:+80007056477"
-    >
-      + 800 0705 6477
-    </a>
+    <p class="ncf__customer-care__phone">
+      <a id="customer-care-international-number"
+         class="ncf__header ncf__link"
+         href="tel:+80007056477"
+      >
+        + 800 0705 6477
+      </a>
+    </p>
   </div>
   <div class="ncf__paragraph">
     <a class="ncf__link"

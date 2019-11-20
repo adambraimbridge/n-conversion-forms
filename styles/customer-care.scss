@@ -24,4 +24,25 @@
 
 	}
 
+	&__customer-care {
+		&__phone {
+			margin-bottom: 0;
+		}
+
+		&--compact {
+			padding-bottom: 15px;
+			padding-top: 15px;
+
+			.ncf__icon--phone {
+				display: none;
+			}
+			.ncf__customer-care__phone {
+				margin-bottom: 1em;
+			}
+			.ncf__paragraph {
+				padding: 0;
+			}
+		}
+	}
+
 }
