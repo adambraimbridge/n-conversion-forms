@@ -187,12 +187,6 @@
 			@include oButtonsTheme('secondary');
 		}
 
-		&--full-width {
-			display: block;
-			width: 100%;
-			margin: 0 0 10px;
-		}
-
 		&--baseline {
 			vertical-align: baseline;
 		}
