@@ -68,7 +68,7 @@
 
 		&-toggle {
 			@include oExpanderToggle;
-			color: oColorsGetPaletteColor('teal');
+			color: oColorsByName('teal');
 		}
 	}
 

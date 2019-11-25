@@ -38,14 +38,14 @@
 		}
 
 		&__discount {
-			color: oColorsGetPaletteColor('claret-70');
+			color: oColorsByName('claret-70');
 		}
 
 		&__weekly-price {
 			justify-self: end;
 			grid-column: span 3;
 			@include oTypographySize($scale: -1);
-			color: oColorsGetPaletteColor('black-60');
+			color: oColorsByName('black-60');
 		}
 
 		&__annual-copy {

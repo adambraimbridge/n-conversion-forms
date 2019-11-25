@@ -34,7 +34,7 @@
 	@include oTypographySans($scale: 0);
 
 	&__wrapper {
-		background: oColorsGetPaletteColor('white');
+		background: oColorsByName('white');
 		padding: 20px;
 
 		@include oGridRespondTo($from: S) {
@@ -116,7 +116,7 @@
 
 	&__terms {
 		@include oTypographySans($scale: 0);
-		color: oColorsGetPaletteColor('black-80');
+		color: oColorsByName('black-80');
 
 		&--small {
 			@include oTypographySans($scale: -1);
@@ -153,7 +153,7 @@
 				content: '';
 				display: block;
 				width: 90px;
-				border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+				border-bottom: oTypographySpacingSize(1) solid oColorsByName('black');
 			}
 		}
 	}
@@ -199,7 +199,7 @@
 
 		&--google {
 			@include oButtonsTheme('secondary');
-			background-color: oColorsGetPaletteColor('white');
+			background-color: oColorsByName('white');
 			padding-left: 40px;
 
 			&::before {
@@ -222,8 +222,8 @@
 	}
 
 	&__icon {
-		background: oColorsGetPaletteColor('paper');
-		border: 2px solid oColorsGetPaletteColor('black-40');
+		background: oColorsByName('paper');
+		border: 2px solid oColorsByName('black-40');
 		border-radius: 9999px;
 		display: block;
 		height: 20px;
@@ -232,37 +232,37 @@
 	}
 
 	&__icon--tick {
-		background: oColorsGetPaletteColor('teal');
-		border-color: oColorsGetPaletteColor('teal');
+		background: oColorsByName('teal');
+		border-color: oColorsByName('teal');
 		&::before {
-			@include oIconsGetIcon('tick', oColorsGetPaletteColor('white'), 20);
+			@include oIconsGetIcon('tick', oColorsByName('white'), 20);
 			content: '';
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 		}
 	}
 
 	&__icon--phone {
-		background: oColorsGetPaletteColor('teal');
-		border-color: oColorsGetPaletteColor('teal');
+		background: oColorsByName('teal');
+		border-color: oColorsByName('teal');
 		&::before {
-			@include oIconsGetIcon('phone', oColorsGetPaletteColor('white'), 20);
+			@include oIconsGetIcon('phone', oColorsByName('white'), 20);
 			content: '';
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 		}
 	}
 
 	&__icon--error {
-		background: oColorsGetPaletteColor('crimson');
-		border-color: oColorsGetPaletteColor('crimson');
+		background: oColorsByName('crimson');
+		border-color: oColorsByName('crimson');
 		&::before {
-			@include oIconsGetIcon('warning', oColorsGetPaletteColor('white'), 20);
+			@include oIconsGetIcon('warning', oColorsByName('white'), 20);
 			content: '';
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 		}
 	}
 
 	&__icon--inline-edit {
-		@include oIconsGetIcon('edit', oColorsGetPaletteColor('black'), 20);
+		@include oIconsGetIcon('edit', oColorsByName('black'), 20);
 		border: 0;
 		vertical-align: middle;
 	}
@@ -277,7 +277,7 @@
 	}
 
 	&__icon-download {
-		@include oIconsGetIcon('download', oColorsGetPaletteColor('black-70'), 32);
+		@include oIconsGetIcon('download', oColorsByName('black-70'), 32);
 		border: 0;
 		vertical-align: middle;
 	}

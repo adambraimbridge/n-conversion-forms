@@ -2,13 +2,13 @@
 	.o-forms__radio + .o-forms__label {
 		padding: 14px 20px;
 		min-height: 110px;
-		border: 2px solid oColorsGetPaletteColor('teal');
+		border: 2px solid oColorsByName('teal');
 		text-align: left;
 		margin: 8px 0;
 
 		// radio button styling
 		&::before {
-			border: 2px solid oColorsGetPaletteColor('teal');
+			border: 2px solid oColorsByName('teal');
 			top: 43px;
 			right: 14px;
 		}
@@ -20,16 +20,16 @@
 	}
 
 	.o-forms__radio:checked + .o-forms__label {
-		background-color: oColorsGetPaletteColor('teal');
-		color: oColorsGetPaletteColor('white');
+		background-color: oColorsByName('teal');
+		color: oColorsByName('white');
 
 		// radio button styling
 		&::before {
-			border: 2px solid oColorsGetPaletteColor('white');
+			border: 2px solid oColorsByName('white');
 		}
 
 		&::after {
-			background-color: oColorsGetPaletteColor('white');
+			background-color: oColorsByName('white');
 		}
 	}
 

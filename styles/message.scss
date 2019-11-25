@@ -9,7 +9,7 @@
 	// to look better with a white background
 	.ncf__wrapper & &__message {
 		.o-message--error {
-			color: oColorsGetPaletteColor(crimson);
+			color: oColorsByName(crimson);
 			background-color: oColorsMix(crimson, white, 10);
 
 			.o-message__actions__primary {

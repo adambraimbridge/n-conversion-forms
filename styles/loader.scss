@@ -28,7 +28,7 @@
 
 		&__content {
 			@include oTypographySans($scale: -1);
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 
 			&::before {
 				@include oLoadingContent($opts: (
