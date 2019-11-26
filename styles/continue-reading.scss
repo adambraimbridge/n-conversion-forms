@@ -11,8 +11,7 @@
 	}
 
 	&__continue-reading-quote {
-		@include oTypographyDisplay($scale: 1, $line-height: 23px);
-		font-weight: oFontsWeight('semibold');
+		@include oTypographyDisplay($scale: 1, $line-height: 23px, $weight: 'semi-bold');
 		margin: 0;
 		padding: 0 12px;
 		position: relative;
@@ -27,12 +26,20 @@
 		}
 
 		&::before {
-			@include oIconsGetIcon('speech-left', oColorsByName('black-10'), 30);
+			@include oIconsContent(
+				$icon-name: 'speech-left',
+				$color: oColorsByName('black-10'),
+				$size: 30
+				);
 			top: -8px;
 		}
 
 		&::after {
-			@include oIconsGetIcon('speech-right', oColorsByName('black-10'), 30);
+			@include oIconsContent(
+				$icon-name: 'speech-left',
+				$color: oColorsByName('black-10'),
+				$size: 30
+			);
 		}
 	}
 }
