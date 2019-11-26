@@ -1,8 +1,8 @@
 const { expect } = require('chai');
 const { fetchPartial } = require('../helpers');
 
-const CLASS_ALERT = 'o-message--alert-inner';
-const CLASS_NOTICE = 'o-message--notice-inner';
+const CLASS_ALERT = 'o-message--alert';
+const CLASS_NOTICE = 'o-message--notice';
 const CLASS_ERROR = 'o-message--error';
 const CLASS_ACTIONS_PRIMARY = 'o-message__actions__primary';
 const CLASS_ACTIONS_SECONDARY = 'o-message__actions__secondary';

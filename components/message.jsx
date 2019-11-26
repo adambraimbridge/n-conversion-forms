@@ -10,8 +10,9 @@ export function Message ({ title, message, additional = [], actions = null, name
 
 	const oMessageClassNames = classNames({
 		'o-message': true,
-		'o-message--notice-inner': isNotice,
-		'o-message--alert-inner': !isNotice,
+		'o-message--inner': true,
+		'o-message--notice': isNotice,
+		'o-message--alert': !isNotice,
 		'o-message--error': isError,
 		'o-message--success': !isError && isSuccess,
 		'o-message--inform': !isError && !isSuccess && isInform,

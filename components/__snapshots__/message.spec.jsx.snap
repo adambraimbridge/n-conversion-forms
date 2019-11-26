@@ -4,7 +4,7 @@ exports[`Message can add a data attribute name 1`] = `
 <div class="ncf__message o-forms o-forms--wide"
      data-message-name="The Police best album ever"
 >
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -24,7 +24,7 @@ exports[`Message can add a data attribute name 2`] = `
 <div class="ncf__message o-forms o-forms--wide"
      data-message-name="The Police best album ever"
 >
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -42,7 +42,7 @@ exports[`Message can add a data attribute name 2`] = `
 
 exports[`Message can render a message as a Notice 1`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--notice-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--notice o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -60,7 +60,7 @@ exports[`Message can render a message as a Notice 1`] = `
 
 exports[`Message can render a message as a Notice 2`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--notice-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--notice o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -78,7 +78,7 @@ exports[`Message can render a message as a Notice 2`] = `
 
 exports[`Message can render a message as a Success 1`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--success"
+  <div class="o-message o-message--inner o-message--alert o-message--success"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -96,7 +96,7 @@ exports[`Message can render a message as a Success 1`] = `
 
 exports[`Message can render a message as a Success 2`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--success"
+  <div class="o-message o-message--inner o-message--alert o-message--success"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -114,7 +114,7 @@ exports[`Message can render a message as a Success 2`] = `
 
 exports[`Message can render a message as an Error 1`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--error"
+  <div class="o-message o-message--inner o-message--alert o-message--error"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -132,7 +132,7 @@ exports[`Message can render a message as an Error 1`] = `
 
 exports[`Message can render a message as an Error 2`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--error"
+  <div class="o-message o-message--inner o-message--alert o-message--error"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -150,7 +150,7 @@ exports[`Message can render a message as an Error 2`] = `
 
 exports[`Message can render a message as an Inform 1`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--inform"
+  <div class="o-message o-message--inner o-message--alert o-message--inform"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -168,7 +168,7 @@ exports[`Message can render a message as an Inform 1`] = `
 
 exports[`Message can render a message as an Inform 2`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--inform"
+  <div class="o-message o-message--inner o-message--alert o-message--inform"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -186,7 +186,7 @@ exports[`Message can render a message as an Inform 2`] = `
 
 exports[`Message can render a title 1`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -207,7 +207,7 @@ exports[`Message can render a title 1`] = `
 
 exports[`Message can render a title 2`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -228,7 +228,7 @@ exports[`Message can render a title 2`] = `
 
 exports[`Message can render additional information 1`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -258,7 +258,7 @@ exports[`Message can render additional information 1`] = `
 
 exports[`Message can render additional information 2`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -288,7 +288,7 @@ exports[`Message can render additional information 2`] = `
 
 exports[`Message can render some actions as primary 1`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -316,7 +316,7 @@ exports[`Message can render some actions as primary 1`] = `
 
 exports[`Message can render some actions as primary 2`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -344,7 +344,7 @@ exports[`Message can render some actions as primary 2`] = `
 
 exports[`Message can render some actions as secondary 1`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -372,7 +372,7 @@ exports[`Message can render some actions as secondary 1`] = `
 
 exports[`Message can render some actions as secondary 2`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -400,7 +400,7 @@ exports[`Message can render some actions as secondary 2`] = `
 
 exports[`Message render a message 1`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
@@ -418,7 +418,7 @@ exports[`Message render a message 1`] = `
 
 exports[`Message render a message 2`] = `
 <div class="ncf__message o-forms o-forms--wide">
-  <div class="o-message o-message--alert-inner o-message--neutral"
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
        data-o-component="o-message"
   >
     <div class="o-message__container">
