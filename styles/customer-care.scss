@@ -13,7 +13,11 @@
 			background: oColorsByName('white');
 			border-color: oColorsByName('white');
 			&::before {
-				@include oIconsGetIcon('phone', oColorsByName('teal'), 40);
+				@include oIconsContent(
+					$icon-name: 'phone',
+					$color: oColorsByName('teal'),
+					$size: 40
+				);
 				color: oColorsByName('teal');
 			}
 		}

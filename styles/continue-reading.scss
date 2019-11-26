@@ -27,12 +27,20 @@
 		}
 
 		&::before {
-			@include oIconsGetIcon('speech-left', oColorsByName('black-10'), 30);
+			@include oIconsContent(
+				$icon-name: 'speech-left',
+				$color: oColorsByName('black-10'),
+				$size: 30
+				);
 			top: -8px;
 		}
 
 		&::after {
-			@include oIconsGetIcon('speech-right', oColorsByName('black-10'), 30);
+			@include oIconsContent(
+				$icon-name: 'speech-left',
+				$color: oColorsByName('black-10'),
+				$size: 30
+			);
 		}
 	}
 }
