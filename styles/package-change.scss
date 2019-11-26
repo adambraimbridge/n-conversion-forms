@@ -1,5 +1,3 @@
-@include oGridGenerate;
-
 @mixin ncfPackageChange() {
 	&__package-change {
 		@include oTypographySans($scale: 0);
