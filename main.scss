@@ -229,7 +229,11 @@
 		background: oColorsByName('teal');
 		border-color: oColorsByName('teal');
 		&::before {
-			@include oIconsGetIcon('tick', oColorsByName('white'), 20);
+			@include oIconsContent(
+				$icon-name: 'tick',
+				$color: oColorsByName('white'),
+				$size: 20
+			);
 			content: '';
 			color: oColorsByName('white');
 		}
@@ -239,7 +243,11 @@
 		background: oColorsByName('teal');
 		border-color: oColorsByName('teal');
 		&::before {
-			@include oIconsGetIcon('phone', oColorsByName('white'), 20);
+			@include oIconsContent(
+				$icon-name: 'phone',
+				$color: oColorsByName('white'),
+				$size: 20
+			);
 			content: '';
 			color: oColorsByName('white');
 		}
@@ -249,14 +257,22 @@
 		background: oColorsByName('crimson');
 		border-color: oColorsByName('crimson');
 		&::before {
-			@include oIconsGetIcon('warning', oColorsByName('white'), 20);
+			@include oIconsContent(
+				$icon-name: 'warning',
+				$color: oColorsByName('white'),
+				$size: 20
+			);
 			content: '';
 			color: oColorsByName('white');
 		}
 	}
 
 	&__icon--inline-edit {
-		@include oIconsGetIcon('edit', oColorsByName('black'), 20);
+		@include oIconsContent(
+			$icon-name: 'edit',
+			$color: oColorsByName('black'),
+			$size: 20
+		);
 		border: 0;
 		vertical-align: middle;
 	}
@@ -271,7 +287,11 @@
 	}
 
 	&__icon-download {
-		@include oIconsGetIcon('download', oColorsByName('black-70'), 32);
+		@include oIconsContent(
+			$icon-name: 'download',
+			$color: oColorsByName('black-70'),
+			$size: 32
+		);
 		border: 0;
 		vertical-align: middle;
 	}
