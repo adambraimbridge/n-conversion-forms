@@ -1,3 +1,4 @@
+$system-code: 'n-conversion-forms';
 @import 'o-icons/main';
 @import 'o-colors/main';
 @import 'o-normalise/main';
@@ -18,15 +19,24 @@
 @import './styles/customer-care';
 
 @include oFonts();
-@include oFormsBaseFeatures();
-@include oFormsRadioCheckboxFeatures();
-@include oFormsRadioButtonsStyledFeature();
-@include oFormsSuffixFeature();
-@include oFormsSectionFeature();
-@include oFormsInlineFeature();
-@include oFormsWideFeature();
+@include oForms($opts: (
+	'elements': (
+		'text',
+		'password',
+		'checkbox',
+		'select',
+		'radio-box',
+		'radio-round'
+	),
+	'features': (
+		'disabled',
+		'inline',
+		'right',
+		'suffix',
+		'error-summary'
+	)
+));
 @include oMessage();
-@include oFormsRadioCheckboxRightModifier();
 @include oSteppedProgress();
 
 // Custom styles
