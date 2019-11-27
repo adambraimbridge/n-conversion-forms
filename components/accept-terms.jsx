@@ -19,19 +19,15 @@ export function AcceptTerms ({
 	isPrintProduct = false,
 	specialTerms = null
 }) {
-	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassName = classNames([
+		'o-forms-input',
+		'o-forms-input--checkbox',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	const divProps = {
 		id: 'acceptTermsField',
-		className: divClassName,
-		'data-ui-item': 'multi',
-		'data-ui-item-name': 'acceptTerms',
+		className: 'o-forms-field',
 		'data-validate': 'required,checked',
 		...(isSignup && { 'data-trackable': 'sign-up-terms' }),
 		...(isRegister && { 'data-trackable': 'register-up-terms' })
@@ -42,7 +38,6 @@ export function AcceptTerms ({
 		type: 'checkbox',
 		name: 'termsAcceptance',
 		value: 'true',
-		className: 'o-forms__checkbox js-item__value js-field__input',
 		'data-trackable': 'field-terms',
 		'aria-required': 'true',
 		required: true,
@@ -114,22 +109,24 @@ export function AcceptTerms ({
 
 	return (
 		<div {...divProps}>
+			<span className={inputWrapperClassName}>
+				<label>
+					<input {...inputProps} />
+					<span className="o-forms-input__label" aria-hidden="true">
+						{ b2bTerms }
 
-			<input {...inputProps} />
+						{ defaultTerms }
 
-			<label htmlFor="termsAcceptance" className="o-forms__label ncf__terms">
-				{ b2bTerms }
+						{ corpSignupTerms }
 
-				{ defaultTerms }
+						{ transitionTerms }
 
-				{ corpSignupTerms }
+						{ signupTerms }
+					</span>
+				</label>
+			</span>
 
-				{ transitionTerms }
-
-				{ signupTerms }
-			</label>
-
-			<div className="o-forms__errortext">Please accept our terms &amp; conditions</div>
+			<span className="o-forms-input__error">Please accept our terms &amp; conditions</span>
 
 		</div>
 	);
