@@ -3,20 +3,7 @@ const proxyquire = require('proxyquire').noCallThru();
 const sinon = require('sinon');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
-
 const DomHelper = require('../helpers/dom');
-
-let findInputsStub = sinon.stub();
-let validateInputStub = sinon.stub();
-let OFormsStub = sinon.stub().returns({
-	findInputs: findInputsStub,
-	validateInput: validateInputStub
-});
-
-const Validation = proxyquire('../../utils/validation', {
-	'o-forms': OFormsStub
-});
-
 
 let $form;
 let checkboxAddEventListener;
@@ -27,7 +14,7 @@ let requiredElListener;
 let sandbox;
 let validation;
 
-const createElement = (config) => {
+const createElement = config => {
 	let el = DomHelper.createElement(config, sandbox);
 	let parentNode = document.createElement('div');
 
@@ -35,11 +22,32 @@ const createElement = (config) => {
 	sandbox.stub(parentNode, 'removeChild').value(removeChildStub);
 	sandbox.stub(el, 'parentNode').value(parentNode);
 
-	return el;
+	return {
+		input: el,
+		...config
+	};
 };
 
-describe('Validation', () => {
+let validateInputStub = sinon.stub();
+let formInputsStub = [];
+let OFormsStub = {
+	default: {
+		init: sinon.stub().returns({
+			formInputs: formInputsStub
+		})
+	}
+};
 
+let InputStub = sinon.stub().returns({
+	validate: validateInputStub
+});
+
+const Validation = proxyquire('../../utils/validation', {
+	'o-forms': OFormsStub,
+	'o-forms/src/js/input': InputStub
+});
+
+describe('Validation', () => {
 	before(() => {
 		const dom = new JSDOM();
 		global.window = dom.window;
@@ -62,18 +70,43 @@ describe('Validation', () => {
 		requiredElListener = sandbox.stub();
 
 		sandbox.spy(document, 'addEventListener');
-		sandbox.spy(OFormsStub, 'constructor');
+		sandbox.spy(OFormsStub.default.init, 'constructor');
 		sandbox.stub(document, 'querySelector');
 
 		document.querySelector.withArgs('form.ncf').returns($form);
 
-		findInputsStub.returns([
-			createElement({ name: 'foo', type: 'hidden', checkValidity: checkValidityStub }),
-			createElement({ name: 'bar', checkValidity: checkValidityStub }),
-			createElement({ name: 'baz', required: true, addEventListener: requiredElListener, checkValidity: checkValidityStub }),
-			createElement({ name: 'qoo', required: true, addEventListener: requiredElListener, checkValidity: checkValidityStub }),
-			createElement({ name: 'checkbox', type: 'checkbox', addEventListener: checkboxAddEventListener, required: true, checkValidity: checkValidityStub })
-		]);
+		// Clear array before moving on to the next test
+		formInputsStub.splice(0, formInputsStub.length);
+
+		formInputsStub.push(
+			...[
+				createElement({
+					name: 'foo',
+					type: 'hidden',
+					checkValidity: checkValidityStub
+				}),
+				createElement({ name: 'bar', checkValidity: checkValidityStub }),
+				createElement({
+					name: 'baz',
+					required: true,
+					addEventListener: requiredElListener,
+					checkValidity: checkValidityStub
+				}),
+				createElement({
+					name: 'qoo',
+					required: true,
+					addEventListener: requiredElListener,
+					checkValidity: checkValidityStub
+				}),
+				createElement({
+					name: 'checkbox',
+					type: 'checkbox',
+					addEventListener: checkboxAddEventListener,
+					required: true,
+					checkValidity: checkValidityStub
+				})
+			]
+		);
 
 		validation = new Validation(document);
 		sandbox.spy(validation, 'checkFormValidity');
@@ -87,7 +120,7 @@ describe('Validation', () => {
 
 	describe('constructor', () => {
 		it('should call oForms to setup client side validation', () => {
-			expect(OFormsStub.calledWithNew()).to.be.true;
+			expect(OFormsStub.default.init.called).to.be.true;
 		});
 
 		it('should have a $form property exposing the form element', () => {
@@ -120,7 +153,9 @@ describe('Validation', () => {
 		it('should call checkElementValidity when changing a checkbox', () => {
 			expect(checkboxAddEventListener.getCalls().length).to.equal(1);
 			// we have to check `bound ` because we pass it with `.bind(this)`
-			expect(checkboxAddEventListener.getCall(0).args[1].name).to.equal('bound checkElementValidity');
+			expect(checkboxAddEventListener.getCall(0).args[1].name).to.equal(
+				'bound checkElementValidity'
+			);
 		});
 	});
 
@@ -147,13 +182,14 @@ describe('Validation', () => {
 			sandbox.stub(validation, 'checkCustomValidation').returns(false);
 			validation.checkElementValidity($el);
 
-			expect(validateInputStub.called).to.be.false;
+			expect(InputStub.called).to.be.false;
 		});
 
-		it('should call oForms.validateInput for the element.', () => {
+		it('should call input.validate for the element.', () => {
 			validation.checkElementValidity($el);
 
-			expect(validateInputStub.getCall(0).args[0]).to.equal($el);
+			expect(InputStub.calledWithNew()).to.be.true;
+			expect(InputStub.getCall(0).args[0]).to.equal($el);
 		});
 	});
 
@@ -162,15 +198,17 @@ describe('Validation', () => {
 			validation.formValid = true;
 
 			checkValidityStub.returns(false);
+
 			validation.checkFormValidity();
 
 			expect(validation.formValid).to.be.false;
 		});
 
-		it('should set the form as valid if there are invalid elements.', () => {
+		it('should set the form as valid if there are no invalid elements.', () => {
 			validation.formValid = false;
 
 			checkValidityStub.returns(true);
+
 			validation.checkFormValidity();
 
 			expect(validation.formValid).to.be.true;
@@ -247,14 +285,16 @@ describe('Validation', () => {
 			let messageStub = { foo: 'bar' };
 
 			it('adds the o-form--error class to the parent', () => {
-				sandbox.spy(field.parentNode.classList, 'add');
-				validation.showCustomFieldValidationError(field, messageStub);
+				sandbox.spy(field.input.parentNode.classList, 'add');
+				validation.showCustomFieldValidationError(field.input, messageStub);
 
-				expect(field.parentNode.classList.add.getCall(0).args[0]).to.equal('o-forms--error');
+				expect(
+					field.input.parentNode.classList.add.getCall(0).args[0]
+				).to.equal('o-forms-input--invalid');
 			});
 			it('adds the message to the parent', () => {
 				global.document.querySelector.returns(null);
-				validation.showCustomFieldValidationError(field, messageStub);
+				validation.showCustomFieldValidationError(field.input, messageStub);
 
 				expect(insertBeforeStub.getCall(0).args[0]).to.equal(messageStub);
 			});
@@ -264,18 +304,23 @@ describe('Validation', () => {
 			it('removes the message from the page', () => {
 				let fieldToRemove = createElement({ name: 'foo' });
 
-				sandbox.stub(validation.$form, 'querySelector').returns(fieldToRemove);
-				validation.clearCustomFieldValidationError(fieldToRemove);
+				sandbox
+					.stub(validation.$form, 'querySelector')
+					.returns(fieldToRemove.input);
+				validation.clearCustomFieldValidationError(fieldToRemove.input);
 
-				expect(removeChildStub.getCall(0).args[0].outerHTML).to.equal(field.outerHTML);
+				expect(removeChildStub.getCall(0).args[0].outerHTML).to.equal(
+					field.input.outerHTML
+				);
 			});
 			it('re-checks the element validity for standard validation rules', () => {
 				sandbox.spy(validation, 'checkElementValidity');
-				validation.clearCustomFieldValidationError(field);
+				validation.clearCustomFieldValidationError(field.input);
 
-				expect(validation.checkElementValidity.getCall(0).args[0]).to.equal(field);
+				expect(validation.checkElementValidity.getCall(0).args[0]).to.equal(
+					field.input
+				);
 			});
 		});
 	});
-
 });

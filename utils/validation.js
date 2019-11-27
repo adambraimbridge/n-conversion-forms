@@ -1,4 +1,5 @@
-const OForms = require('o-forms');
+const OForms = require('o-forms').default;
+const Input = require('o-forms/src/js/input');
 
 class Validation {
 
@@ -8,9 +9,9 @@ class Validation {
 	 */
 	constructor ({ mutePromptBeforeLeaving } = {}) {
 		this.$form = document.querySelector('form.ncf');
-		this.oForms = new OForms(this.$form);
-		this.$formFields = this.oForms.findInputs().filter($el => $el.type !== 'hidden');
-		this.$requiredEls = this.$formFields.filter($el => $el.required);
+		this.oForms = OForms.init(this.$form);
+		this.$requiredEls = this.oForms.formInputs
+			.filter(({input}) => input.type !== 'hidden' && input.required);
 		this.formValid = false;
 		this.formChanged = false;
 		this.formSubmit = false;
@@ -53,7 +54,8 @@ class Validation {
 	 * @param {Event} event DOM event
 	 */
 	validateForm (event) {
-		this.oForms.validateForm(event);
+		this.oForms.validateFormInputs(event);
+		this.checkCustomValidation();
 	}
 
 	/**
@@ -92,10 +94,17 @@ class Validation {
 	 * @param {DOMElement} $message The error message to display.
 	 */
 	showCustomFieldValidationError ($field, $message) {
+		/**
+		 * - remove o-forms-input--valid class from $parent
+		 */
+
+		$field.setCustomValidity($message);
+
 		const $parent = $field.parentNode;
 		const $oFormsErrorText = $parent.querySelector('.o-forms__errortext');
 
-		$parent.classList.add('o-forms--error');
+		$parent.classList.remove('o-forms-input--valid');
+		$parent.classList.add('o-forms-input--invalid');
 
 		if (!document.querySelector(`#custom-validation-for-${$field.name}`)) {
 			// In order for this error to hang around after normal oForms validation happens it
@@ -116,6 +125,7 @@ class Validation {
 	 * @param {DOMElement} $field The field related to the error that now needs to be cleared.
 	 */
 	clearCustomFieldValidationError ($field) {
+		$field.setCustomValidity('');
 		const $message = this.$form.querySelector(`#custom-validation-for-${$field.name}`);
 		const $oFormsErrorText = $field.parentNode.querySelector('.o-forms__errortext');
 
@@ -140,8 +150,8 @@ class Validation {
 		if (this.customValidation.size > 0 && !this.debounceCustomValidation) {
 			this.debounceCustomValidation = true;
 
-			this.customValidation.forEach(async (validator) => {
-				await validator();
+			this.customValidation.forEach(validator => {
+				validator();
 			});
 
 			setTimeout(() => {
@@ -160,8 +170,9 @@ class Validation {
 
 		// If field fails custom validation don't `validateInput` as it may pass standard validation
 		if (passedCustomValidation) {
+			const input = new Input($el);
 			// Make sure the input element has been updated (for example if this is from a label click for a checkbox).
-			this.oForms.validateInput($el);
+			input.validate();
 		}
 	}
 
