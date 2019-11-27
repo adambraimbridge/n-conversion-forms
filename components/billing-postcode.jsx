@@ -10,52 +10,51 @@ export function BillingPostcode ({
 	hasError = false,
 	isHidden = false,
 	fieldId = 'billingPostcodeField',
-	// This is clearly wrong but has been implemented this way in HBS.
-	// We will need to get rid of these fields anyway:
-	// https://github.com/Financial-Times/n-conversion-forms/issues/263
-	fieldName = 'deliveryPostcode',
 	inputId = 'billingPostcode',
 	inputName = 'billingPostcode',
 }) {
 
 	const BillingPostcodeFieldClassNames = classNames([
-		'o-forms o-forms--wide ncf__field js-field',
-		{
-			'o-forms--error': hasError,
-			'n-ui-hide': isHidden
-		}
+		'o-forms-field',
+		{ 'n-ui-hide': isHidden }
 	]);
 
-	return (<div
-		id={fieldId}
-		className={BillingPostcodeFieldClassNames}
-		data-ui-item="form-field"
-		data-ui-item-name={fieldName}
-		data-validate="required"
-	>
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
+	]);
 
-		<label htmlFor={inputId} className="o-forms__label">
-			Billing <span data-reference="postcode">{postcodeReference}</span>
+	return (
+		<label
+			id={fieldId}
+			className={BillingPostcodeFieldClassNames}
+			data-validate="required"
+		>
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">
+					Billing <span data-reference="postcode">{postcodeReference}</span>
+				</span>
+			</span>
+
+			<span className={inputWrapperClassNames}>
+				<input type="text"
+					id={inputId}
+					name={inputName}
+					defaultValue={value}
+					placeholder={`Enter your ${postcodeReference}`}
+					autoComplete="postal-code"
+					data-trackable="billing-postcode"
+					aria-required="true"
+					required
+					pattern={pattern}
+					disabled={isDisabled} />
+			</span>
+
+			<span className="o-forms-input__error">
+				Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
+			</span>
 		</label>
-
-		<input type="text"
-			id={inputId}
-			name={inputName}
-			defaultValue={`${value}`}
-			placeholder={`Enter your ${postcodeReference}`}
-			autoComplete="postal-code"
-			className="o-forms__text js-field__input js-item__value"
-			data-trackable="billing-postcode"
-			aria-required="true"
-			required
-			pattern={pattern}
-			disabled={isDisabled} />
-
-		<div className="o-forms__errortext">
-			Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
-		</div>
-
-	</div>
 	);
 }
 
@@ -67,7 +66,6 @@ BillingPostcode.propTypes = {
 	hasError: PropTypes.bool,
 	isHidden: PropTypes.bool,
 	fieldId: PropTypes.string,
-	fieldName: PropTypes.string,
 	inputId: PropTypes.string,
 	inputName: PropTypes.string,
 };
