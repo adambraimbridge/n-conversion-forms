@@ -10,21 +10,11 @@ export function CompanyName ({
 	value = '',
 	isDisabled = false
 }) {
-	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
 	]);
-
-	const divProps = {
-		id: fieldId,
-		className: divClassName,
-		'data-ui-item': 'form-field',
-		'data-ui-item-name': 'companyName',
-		'data-validate': 'required'
-	}
 
 	const inputProps = {
 		type: 'text',
@@ -32,22 +22,25 @@ export function CompanyName ({
 		name: inputName,
 		placeholder: 'Enter your company name',
 		autoComplete: 'organization',
-		className: 'o-forms__text js-field__input js-item__value',
 		'data-trackable': 'company-name',
 		'aria-required': 'true',
 		required: true,
 		disabled: isDisabled,
 		defaultValue: value
-	}
+	};
 
 	return (
-		<div {...divProps}>
-			<label htmlFor="companyName" className="o-forms__label">Company name</label>
+		<label id={fieldId} className="o-forms-field" data-validate="required">
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">Company name</span>
+			</span>
 
-			<input {...inputProps} />
+			<span className={inputWrapperClassNames}>
+				<input {...inputProps} />
+			</span>
 
-			<div className="o-forms__errortext">Please enter your company name.</div>
-		</div>
+			<span className="o-forms-input__error">Please enter your company name.</span>
+		</label>
 	);
 }
 
