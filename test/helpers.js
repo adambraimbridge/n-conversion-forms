@@ -203,7 +203,7 @@ const shouldError = function (context, errorParams = { hasError: true }) {
 	it('should not have error class by default', () => {
 		const $ = context.template({});
 
-		expect($(ERROR_CLASS).length).to.equal(0);
+		expect($(`.${ERROR_CLASS}`).length).to.equal(0);
 	});
 
 	it('should have error class if hasError is passed', () => {
