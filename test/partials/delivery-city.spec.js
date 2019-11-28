@@ -8,7 +8,7 @@ const {
 
 let context = {};
 
-describe('delivery-city-town template', () => {
+describe.only('delivery-city-town template', () => {
 	before(async () => {
 		context.template = await fetchPartial('delivery-city.html');
 	});
