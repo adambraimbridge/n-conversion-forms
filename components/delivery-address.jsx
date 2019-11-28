@@ -9,66 +9,67 @@ export function DeliveryAddress ({
 	line3 = '',
 	isDisabled = false
 }) {
-	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	return (
-		<div
-			id="deliveryAddressFields"
-			className={divClassName}
-			data-ui-item="form-field"
-			data-ui-item-name="deliveryAddress"
-			data-validate="required"
-		>
-			<p>
-				<label htmlFor="deliveryAddressLine1" className="o-forms__label">Address line 1</label>
-				<input
-					type="text"
-					id="deliveryAddressLine1"
-					name="deliveryAddressLine1"
-					className="o-forms__text js-field__input js-item__value"
-					data-trackable="field-deliveryAddressLine1"
-					autoComplete="address-line1"
-					placeholder="e.g. 10 Elm Street"
-					aria-required="true"
-					required
-					disabled={isDisabled}
-					defaultValue={line1}
-				/>
-			</p>
-			<p>
-				<label htmlFor="deliveryAddressLine2" className="o-forms__label">Address line 2 <small>(optional)</small></label>
-				<input
-					type="text"
-					id="deliveryAddressLine2"
-					name="deliveryAddressLine2"
-					className="o-forms__text js-field__input js-item__value"
-					data-trackable="field-deliveryAddressLine2"
-					autoComplete="address-line2"
-					placeholder="e.g. Apartment 1"
-					disabled={isDisabled}
-					defaultValue={line2}
-				/>
-			</p>
-			<p>
-				<label htmlFor="deliveryAddressLine3" className="o-forms__label">Address line 3 <small>(optional)</small></label>
-				<input
-					type="text"
-					id="deliveryAddressLine3"
-					name="deliveryAddressLine3"
-					className="o-forms__text js-field__input js-item__value"
-					data-trackable="field-deliveryAddressLine3"
-					autoComplete="address-line3"
-					placeholder=""
-					disabled={isDisabled}
-					defaultValue={line3}
-				/>
-			</p>
+		<div id="deliveryAddressFields" data-validate="required">
+			<label className="o-forms-field">
+				<span className="o-forms-title">
+					<span className="o-forms-title__main">Address line 1</span>
+				</span>
+				<span className={inputWrapperClassNames}>
+					<input
+						type="text"
+						id="deliveryAddressLine1"
+						name="deliveryAddressLine1"
+						data-trackable="field-deliveryAddressLine1"
+						autoComplete="address-line1"
+						placeholder="e.g. 10 Elm Street"
+						aria-required="true"
+						required
+						disabled={isDisabled}
+						defaultValue={line1}
+					/>
+				</span>
+			</label>
+			<label className="o-forms-field">
+				<span className="o-forms-title">
+					<span className="o-forms-title__main">Address line 2 <small>(optional)</small></span>
+				</span>
+				<span className={inputWrapperClassNames}>
+					<input
+						type="text"
+						id="deliveryAddressLine2"
+						name="deliveryAddressLine2"
+						data-trackable="field-deliveryAddressLine2"
+						autoComplete="address-line2"
+						placeholder="e.g. Apartment 1"
+						disabled={isDisabled}
+						defaultValue={line2}
+					/>
+				</span>
+			</label>
+			<label className="o-forms-field">
+				<span className="o-forms-title">
+					<span className="o-forms-title__main">Address line 3 <small>(optional)</small></span>
+				</span>
+				<span className={inputWrapperClassNames}>
+					<input
+						type="text"
+						id="deliveryAddressLine3"
+						name="deliveryAddressLine3"
+						data-trackable="field-deliveryAddressLine3"
+						autoComplete="address-line3"
+						placeholder=""
+						disabled={isDisabled}
+						defaultValue={line3}
+					/>
+				</span>
+			</label>
 		</div>
 	);
 }
