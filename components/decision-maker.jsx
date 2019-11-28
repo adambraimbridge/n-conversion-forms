@@ -6,21 +6,19 @@ export function DecisionMaker ({
 	hasError = false,
 	value = 'yes'
 }) {
-	const fieldsetClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'o-forms--inline',
-		'ncf__field',
-		'js-field',
-		{ 'o-forms--error': hasError }
+	const radioButtonsWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--radio-box',
+		'o-forms-input--inline',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	const decisionMakerYesInputProps = {
 		type: 'radio',
 		id: 'decisionMakerYes',
 		name: 'decisionMaker',
+		'aria-label': 'Yes',
 		value: 'yes',
-		className: 'o-forms__radio-button',
 		...((value === 'yes') && { defaultChecked: true })
 	};
 
@@ -28,34 +26,38 @@ export function DecisionMaker ({
 		type: 'radio',
 		id: 'decisionMakerNo',
 		name: 'decisionMaker',
+		'aria-label': 'No',
 		value: 'no',
-		className: 'o-forms__radio-button o-forms__radio-button--negative',
 		...((value === 'no') && { defaultChecked: true })
 	};
 
 	return (
-		<fieldset
+		<div
 			id="decisionMakerField"
-			className={fieldsetClassName}
-			data-ui-item="form-field"
-			data-ui-item-name="decisionMaker"
+			role="group"
+			aria-labelledby="decisionMakerFieldLabel"
+			className="o-forms-field"
 			data-validate="required"
 		>
-			{/* Duplicate legend so it is the first element of a fieldset for A11Y	 */}
-			<legend className="o-normalise-visually-hidden">Are you a manager with direct reports?</legend>
+			<span className="o-forms-title">
+				<span className="o-forms-title__main" id="decisionMakerFieldLabel">Are you a manager with direct reports?</span>
+			</span>
 
-			<div className="o-forms__inline-container ncf__field--min-content">
-				<div className="o-forms__label">Are you a manager with direct reports?</div>
-				<div className="o-forms__group o-forms__group--inline-together">
-					<input {...decisionMakerYesInputProps} />
-					<label htmlFor="decisionMakerYes" className="o-forms__label">Yes</label>
-					<input {...decisionMakerNoInputProps} />
-					<label htmlFor="decisionMakerNo" className="o-forms__label">No</label>
+			<span className={radioButtonsWrapperClassNames}>
+				<div className="o-forms-input--radio-box__container">
+					<label>
+						<input {...decisionMakerYesInputProps} />
+						<span className="o-forms-input__label" aria-hidden="true">Yes</span>
+					</label>
+					<label>
+						<input {...decisionMakerNoInputProps} />
+						<span className="o-forms-input__label o-forms-input__label--negative" aria-hidden="true">No</span>
+					</label>
 				</div>
-			</div>
+			</span>
 
-			<div className="o-forms__errortext">Please select an option</div>
-		</fieldset>
+			<span className="o-forms-input__error">Please select an option</span>
+		</div>
 	);
 }
 
