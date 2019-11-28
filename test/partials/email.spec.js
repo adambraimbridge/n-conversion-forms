@@ -26,7 +26,7 @@ describe('email template', () => {
 		const label = 'Email address';
 		const $ = context.template({});
 
-		expect($('label').text().trim()).to.equal(label);
+		expect($('.o-forms-title__main').text().trim()).to.equal(label);
 	});
 
 	it('should have the b2b label if isB2b set', () => {
@@ -35,7 +35,7 @@ describe('email template', () => {
 			isB2b: true
 		});
 
-		expect($('label').text().trim()).to.equal(label);
+		expect($('.o-forms-title__main').text().trim()).to.equal(label);
 	});
 
 	it('should have a default description', () => {
