@@ -1,16 +1,13 @@
-<div id="deliveryCountyField"
-		class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}"
-		data-ui-item="form-field"
-		data-ui-item-name="deliveryCounty"
-		data-validate="required">
-
-	<label for="deliveryCounty" class="o-forms__label">County <small>(optional)</small></label>
-	<input type="text" id="deliveryCounty" name="deliveryCounty"
-			class="o-forms__text js-field__input js-item__value"
+<label id="deliveryCountyField" class="o-forms-field" data-validate="required">
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">County <small>(optional)</small></span>
+	</span>
+	<span class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<input type="text" id="deliveryCounty" name="deliveryCounty"
 			data-trackable="field-deliveryCounty"
 			autocomplete="address-level3"
 			placeholder="e.g. Somerset"
 			{{#if isDisabled}}disabled{{/if}}
-			value="{{value}}">
-
-</div>
+			value="{{value}}" />
+	</span>
+</label>
