@@ -9,53 +9,47 @@ export function Phone ({
 	value = '',
 	pattern = '',
 	fieldId = 'primaryTelephoneField',
-	fieldName = 'primaryTelephone',
 	inputId = 'primaryTelephone',
 	inputName = 'primaryTelephone',
 	dataTrackable = 'field-phone',
 }) {
 	const labelText = isB2b ? 'Work phone number' : 'Phone number';
 	const descriptionId = 'phone-description';
-	const className = classNames([
-		'o-forms o-forms--wide ncf__field js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	return (
-		<div
-			id={fieldId}
-			className={className}
-			data-ui-item="form-field"
-			data-ui-item-name={fieldName}
-			data-validate="required,number"
-		>
-			<label htmlFor={inputId} className="o-forms__label">{labelText}</label>
-			<small className="o-forms__additional-info" id={descriptionId}>
-				5 to 15 characters (numbers only)
-			</small>
+		<label id={fieldId} className="o-forms-field" data-validate="required,number">
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">{labelText}</span>
+				<span className="o-forms-title__prompt">5 to 15 characters (numbers only)</span>
+			</span>
+			<span className={inputWrapperClassNames}>
+				<input
+					type="tel"
+					id={inputId}
+					name={inputName}
+					placeholder="Enter your phone number"
+					autoComplete="tel"
+					data-min="5" /* Used by o-forms validation */
+					data-max="15" /* Used by o-forms validation */
+					minLength="5"
+					maxLength="15"
+					data-trackable={dataTrackable}
+					aria-describedby={descriptionId}
+					aria-required="true"
+					required
+					pattern={pattern}
+					disabled={isDisabled}
+					defaultValue={value}
+				/>
+			</span>
 
-			<input
-				type="tel"
-				id={inputId}
-				name={inputName}
-				placeholder="Enter your phone number"
-				autoComplete="tel"
-				className="o-forms__text js-field__input js-item__value"
-				data-min="5" /* Used by o-forms validation */
-				data-max="15" /* Used by o-forms validation */
-				minLength="5"
-				maxLength="15"
-				data-trackable={dataTrackable}
-				aria-describedby={descriptionId}
-				aria-required="true"
-				required
-				pattern={pattern}
-				disabled={isDisabled}
-				defaultValue={value}
-			/>
-
-			<div className="o-forms__errortext">This phone number is not valid</div>
-		</div>
+			<span className="o-forms-input__error">This phone number is not valid</span>
+		</label>
 	);
 }
 
@@ -66,7 +60,6 @@ Phone.propTypes = {
 	value: propTypes.string,
 	pattern: propTypes.string,
 	fieldId: propTypes.string,
-	fieldName: propTypes.string,
 	inputId: propTypes.string,
 	inputName: propTypes.string,
 	dataTrackable: propTypes.string,

@@ -28,7 +28,7 @@ describe('phone template', () => {
 		const label = 'Phone number';
 		const $ = context.template({});
 
-		expect($('label').text().trim()).to.equal(label);
+		expect($('.o-forms-title__main').text().trim()).to.equal(label);
 	});
 
 	it('should have the b2b label if isB2b is set', () => {
@@ -37,7 +37,7 @@ describe('phone template', () => {
 			isB2b: true
 		});
 
-		expect($('label').text().trim()).to.equal(label);
+		expect($('.o-forms-title__main').text().trim()).to.equal(label);
 	});
 
 	it('should have a data-min attribute for o-forms validation', () => {

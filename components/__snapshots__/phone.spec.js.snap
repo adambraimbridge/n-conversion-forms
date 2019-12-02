@@ -1,323 +1,299 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Phone render a disabled phone input 1`] = `
-<div id="primaryTelephoneField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="primaryTelephone"
-     data-validate="required,number"
+<label id="primaryTelephoneField"
+       class="o-forms-field"
+       data-validate="required,number"
 >
-  <label for="primaryTelephone"
-         class="o-forms__label"
-  >
-    Phone number
-  </label>
-  <small class="o-forms__additional-info"
-         id="phone-description"
-  >
-    5 to 15 characters (numbers only)
-  </small>
-  <input type="tel"
-         id="primaryTelephone"
-         name="primaryTelephone"
-         placeholder="Enter your phone number"
-         autocomplete="tel"
-         class="o-forms__text js-field__input js-item__value"
-         data-min="5"
-         data-max="15"
-         minlength="5"
-         maxlength="15"
-         data-trackable="field-phone"
-         aria-describedby="phone-description"
-         aria-required="true"
-         required
-         pattern="whatever"
-         disabled
-         value
-  >
-  <div class="o-forms__errortext">
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           data-min="5"
+           data-max="15"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           disabled
+           value
+    >
+  </span>
+  <span class="o-forms-input__error">
     This phone number is not valid
-  </div>
-</div>
+  </span>
+</label>
 `;
 
 exports[`Phone render a disabled phone input 2`] = `
-<div id="primaryTelephoneField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="primaryTelephone"
-     data-validate="required,number"
+<label id="primaryTelephoneField"
+       class="o-forms-field"
+       data-validate="required,number"
 >
-  <label for="primaryTelephone"
-         class="o-forms__label"
-  >
-    Phone number
-  </label>
-  <small class="o-forms__additional-info"
-         id="phone-description"
-  >
-    5 to 15 characters (numbers only)
-  </small>
-  <input type="tel"
-         id="primaryTelephone"
-         name="primaryTelephone"
-         placeholder="Enter your phone number"
-         autocomplete="tel"
-         class="o-forms__text js-field__input js-item__value"
-         data-min="5"
-         data-max="15"
-         minlength="5"
-         maxlength="15"
-         data-trackable="field-phone"
-         aria-describedby="phone-description"
-         aria-required="true"
-         required
-         pattern="whatever"
-         disabled
-         value
-  >
-  <div class="o-forms__errortext">
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           data-min="5"
+           data-max="15"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           disabled
+           value
+    >
+  </span>
+  <span class="o-forms-input__error">
     This phone number is not valid
-  </div>
-</div>
+  </span>
+</label>
 `;
 
 exports[`Phone render a phone input with a label 1`] = `
-<div id="primaryTelephoneField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="primaryTelephone"
-     data-validate="required,number"
+<label id="primaryTelephoneField"
+       class="o-forms-field"
+       data-validate="required,number"
 >
-  <label for="primaryTelephone"
-         class="o-forms__label"
-  >
-    Phone number
-  </label>
-  <small class="o-forms__additional-info"
-         id="phone-description"
-  >
-    5 to 15 characters (numbers only)
-  </small>
-  <input type="tel"
-         id="primaryTelephone"
-         name="primaryTelephone"
-         placeholder="Enter your phone number"
-         autocomplete="tel"
-         class="o-forms__text js-field__input js-item__value"
-         data-min="5"
-         data-max="15"
-         minlength="5"
-         maxlength="15"
-         data-trackable="field-phone"
-         aria-describedby="phone-description"
-         aria-required="true"
-         required
-         pattern="whatever"
-         value
-  >
-  <div class="o-forms__errortext">
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           data-min="5"
+           data-max="15"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+  </span>
+  <span class="o-forms-input__error">
     This phone number is not valid
-  </div>
-</div>
+  </span>
+</label>
 `;
 
 exports[`Phone render a phone input with a label 2`] = `
-<div id="primaryTelephoneField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="primaryTelephone"
-     data-validate="required,number"
+<label id="primaryTelephoneField"
+       class="o-forms-field"
+       data-validate="required,number"
 >
-  <label for="primaryTelephone"
-         class="o-forms__label"
-  >
-    Phone number
-  </label>
-  <small class="o-forms__additional-info"
-         id="phone-description"
-  >
-    5 to 15 characters (numbers only)
-  </small>
-  <input type="tel"
-         id="primaryTelephone"
-         name="primaryTelephone"
-         placeholder="Enter your phone number"
-         autocomplete="tel"
-         class="o-forms__text js-field__input js-item__value"
-         data-min="5"
-         data-max="15"
-         minlength="5"
-         maxlength="15"
-         data-trackable="field-phone"
-         aria-describedby="phone-description"
-         aria-required="true"
-         required
-         pattern="whatever"
-         value
-  >
-  <div class="o-forms__errortext">
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           data-min="5"
+           data-max="15"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+  </span>
+  <span class="o-forms-input__error">
     This phone number is not valid
-  </div>
-</div>
+  </span>
+</label>
 `;
 
 exports[`Phone render a phone input with a label for B2B 1`] = `
-<div id="primaryTelephoneField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="primaryTelephone"
-     data-validate="required,number"
+<label id="primaryTelephoneField"
+       class="o-forms-field"
+       data-validate="required,number"
 >
-  <label for="primaryTelephone"
-         class="o-forms__label"
-  >
-    Work phone number
-  </label>
-  <small class="o-forms__additional-info"
-         id="phone-description"
-  >
-    5 to 15 characters (numbers only)
-  </small>
-  <input type="tel"
-         id="primaryTelephone"
-         name="primaryTelephone"
-         placeholder="Enter your phone number"
-         autocomplete="tel"
-         class="o-forms__text js-field__input js-item__value"
-         data-min="5"
-         data-max="15"
-         minlength="5"
-         maxlength="15"
-         data-trackable="field-phone"
-         aria-describedby="phone-description"
-         aria-required="true"
-         required
-         pattern="whatever"
-         value
-  >
-  <div class="o-forms__errortext">
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Work phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           data-min="5"
+           data-max="15"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+  </span>
+  <span class="o-forms-input__error">
     This phone number is not valid
-  </div>
-</div>
+  </span>
+</label>
 `;
 
 exports[`Phone render a phone input with a label for B2B 2`] = `
-<div id="primaryTelephoneField"
-     class="o-forms o-forms--wide ncf__field js-field"
-     data-ui-item="form-field"
-     data-ui-item-name="primaryTelephone"
-     data-validate="required,number"
+<label id="primaryTelephoneField"
+       class="o-forms-field"
+       data-validate="required,number"
 >
-  <label for="primaryTelephone"
-         class="o-forms__label"
-  >
-    Work phone number
-  </label>
-  <small class="o-forms__additional-info"
-         id="phone-description"
-  >
-    5 to 15 characters (numbers only)
-  </small>
-  <input type="tel"
-         id="primaryTelephone"
-         name="primaryTelephone"
-         placeholder="Enter your phone number"
-         autocomplete="tel"
-         class="o-forms__text js-field__input js-item__value"
-         data-min="5"
-         data-max="15"
-         minlength="5"
-         maxlength="15"
-         data-trackable="field-phone"
-         aria-describedby="phone-description"
-         aria-required="true"
-         required
-         pattern="whatever"
-         value
-  >
-  <div class="o-forms__errortext">
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Work phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           data-min="5"
+           data-max="15"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+  </span>
+  <span class="o-forms-input__error">
     This phone number is not valid
-  </div>
-</div>
+  </span>
+</label>
 `;
 
 exports[`Phone render a phone input with error styling 1`] = `
-<div id="primaryTelephoneField"
-     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
-     data-ui-item="form-field"
-     data-ui-item-name="primaryTelephone"
-     data-validate="required,number"
+<label id="primaryTelephoneField"
+       class="o-forms-field"
+       data-validate="required,number"
 >
-  <label for="primaryTelephone"
-         class="o-forms__label"
-  >
-    Phone number
-  </label>
-  <small class="o-forms__additional-info"
-         id="phone-description"
-  >
-    5 to 15 characters (numbers only)
-  </small>
-  <input type="tel"
-         id="primaryTelephone"
-         name="primaryTelephone"
-         placeholder="Enter your phone number"
-         autocomplete="tel"
-         class="o-forms__text js-field__input js-item__value"
-         data-min="5"
-         data-max="15"
-         minlength="5"
-         maxlength="15"
-         data-trackable="field-phone"
-         aria-describedby="phone-description"
-         aria-required="true"
-         required
-         pattern="whatever"
-         value
-  >
-  <div class="o-forms__errortext">
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           data-min="5"
+           data-max="15"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+  </span>
+  <span class="o-forms-input__error">
     This phone number is not valid
-  </div>
-</div>
+  </span>
+</label>
 `;
 
 exports[`Phone render a phone input with error styling 2`] = `
-<div id="primaryTelephoneField"
-     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
-     data-ui-item="form-field"
-     data-ui-item-name="primaryTelephone"
-     data-validate="required,number"
+<label id="primaryTelephoneField"
+       class="o-forms-field"
+       data-validate="required,number"
 >
-  <label for="primaryTelephone"
-         class="o-forms__label"
-  >
-    Phone number
-  </label>
-  <small class="o-forms__additional-info"
-         id="phone-description"
-  >
-    5 to 15 characters (numbers only)
-  </small>
-  <input type="tel"
-         id="primaryTelephone"
-         name="primaryTelephone"
-         placeholder="Enter your phone number"
-         autocomplete="tel"
-         class="o-forms__text js-field__input js-item__value"
-         data-min="5"
-         data-max="15"
-         minlength="5"
-         maxlength="15"
-         data-trackable="field-phone"
-         aria-describedby="phone-description"
-         aria-required="true"
-         required
-         pattern="whatever"
-         value
-  >
-  <div class="o-forms__errortext">
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           data-min="5"
+           data-max="15"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+  </span>
+  <span class="o-forms-input__error">
     This phone number is not valid
-  </div>
-</div>
+  </span>
+</label>
 `;
