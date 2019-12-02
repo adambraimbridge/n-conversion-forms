@@ -40,7 +40,6 @@ describe('First name', () => {
 		expect(FirstName).toRenderAs(context, props);
 	});
 
-
 	it('render a field with custom error', () => {
 		const props = {
 			errorText: 'some error happened',
@@ -48,7 +47,7 @@ describe('First name', () => {
 			hasError: true,
 		};
 		const component = mount(FirstName(props));
-		const element = component.find('#fieldId').children('.o-forms__errortext').first();
+		const element = component.find('#fieldId').children('.o-forms-input__error').first();
 		expect(element.text()).toBe(props.errorText);
 	});
 
@@ -63,12 +62,12 @@ describe('First name', () => {
 		expect(actualValue).toBe(props.dataTrackable);
 	});
 
-	it('render a field with custom div id', () => {
+	it('render a field with custom id', () => {
 		const props = {
 			fieldId: 'fieldId'
 		};
 		const component = mount(FirstName(props));
-		const element = component.find('div#fieldId');
+		const element = component.find('#fieldId');
 		expect(element.exists()).toBe(true);
 	});
 
@@ -87,7 +86,7 @@ describe('First name', () => {
 			label: 'test label'
 		};
 		const component = mount(FirstName(props));
-		const element = component.find('#fieldId').children('.o-forms__label').first();
+		const element = component.find('#fieldId').children('.o-forms-title').first();
 		expect(element.text()).toBe(props.label);
 	});
 

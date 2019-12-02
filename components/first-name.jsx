@@ -17,38 +17,37 @@ export function FirstName ({
 	// Use inputId if inputName is not explicitly passed.
 	inputName = inputName || inputId;
 
-	const fieldClassNames = classNames([
-		'o-forms o-forms--wide ncf__field js-field',
-		{ 'o-forms--error': hasError }
-	]);
-	const inputClassNames = classNames([
-		'o-forms__text js-field__input js-item__value'
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	return (
-		<div
+		<label
 			id={fieldId}
-			className={fieldClassNames}
-			data-ui-item="form-field"
-			data-ui-item-name={inputId}
+			className="o-forms-field"
 			data-validate="required"
 		>
-			<label htmlFor={inputId} className="o-forms__label">{label}</label>
-			<input
-				type="text"
-				id={inputId}
-				name={inputName}
-				placeholder={placeHolder}
-				autoComplete="given-name"
-				className={inputClassNames}
-				data-trackable={dataTrackable}
-				aria-required="true" required
-				disabled={isDisabled}
-				defaultValue={value}
-			/>
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">{label}</span>
+			</span>
+			<span className={inputWrapperClassNames}>
+				<input
+					type="text"
+					id={inputId}
+					name={inputName}
+					placeholder={placeHolder}
+					autoComplete="given-name"
+					data-trackable={dataTrackable}
+					aria-required="true" required
+					disabled={isDisabled}
+					defaultValue={value}
+				/>
+			</span>
 
-			<div className="o-forms__errortext">{errorText}</div>
-		</div>
+			<span className="o-forms-input__error">{errorText}</span>
+		</label>
 	);
 }
 
