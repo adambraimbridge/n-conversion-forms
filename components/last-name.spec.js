@@ -47,7 +47,7 @@ describe('Last name', () => {
 			hasError: true,
 		};
 		const component = mount(LastName(props));
-		const element = component.find('#fieldId').children('.o-forms__errortext').first();
+		const element = component.find('#fieldId').children('.o-forms-input__error').first();
 		expect(element.text()).toBe(props.errorText);
 	});
 
@@ -62,12 +62,12 @@ describe('Last name', () => {
 		expect(actualValue).toBe(props.dataTrackable);
 	});
 
-	it('render a field with custom div id', () => {
+	it('render a field with custom id', () => {
 		const props = {
 			fieldId: 'fieldId'
 		};
 		const component = mount(LastName(props));
-		const element = component.find('div#fieldId');
+		const element = component.find('#fieldId');
 		expect(element.exists()).toBe(true);
 	});
 
@@ -86,7 +86,7 @@ describe('Last name', () => {
 			label: 'test label'
 		};
 		const component = mount(LastName(props));
-		const element = component.find('#fieldId').children('.o-forms__label').first();
+		const element = component.find('.o-forms-title__main').first();
 		expect(element.text()).toBe(props.label);
 	});
 

@@ -1,20 +1,20 @@
-<div id="lastNameField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="form-field" data-ui-item-name="lastName" data-validate="required">
+<label id="lastNameField" class="o-forms-field" data-validate="required">
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">Last name</span>
+	</span>
 
-	<label for="lastName" class="o-forms__label">Last name</label>
-
-	<input
-		type="text"
-		id="lastName"
-		name="lastName"
-		placeholder="Enter your last name"
-		autocomplete="family-name"
-		class="o-forms__text js-field__input js-item__value"
-		data-trackable="field-lastname"
-		aria-required="true" required
-		{{#if isDisabled}}disabled{{/if}}
-		value="{{value}}"
-	/>
-
-	<div class="o-forms__errortext">Please enter your last name</div>
-
-</div>
+	<span class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<input
+			type="text"
+			id="lastName"
+			name="lastName"
+			placeholder="Enter your last name"
+			autocomplete="family-name"
+			data-trackable="field-lastname"
+			aria-required="true" required
+			{{#if isDisabled}}disabled{{/if}}
+			value="{{value}}"
+		/>
+	</span>
+	<span class="o-forms-input__error">Please enter your last name</span>
+</label>
