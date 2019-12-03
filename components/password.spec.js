@@ -34,7 +34,7 @@ describe('Password', () => {
 		};
 
 		const renderedPassword = mount(Password(props));
-		const inputElement = renderedPassword.find(`label[htmlFor="${props.inputId}"]`);
+		const inputElement = renderedPassword.find(`label[htmlFor="${props.inputId}"] .o-forms-title__main`);
 		expect(inputElement.text()).toBe(props.label);
 
 	});
@@ -103,7 +103,7 @@ describe('Password', () => {
 		};
 
 		const renderedPassword = mount(Password(props));
-		const passwordDescription = renderedPassword.find('#password-description');
+		const passwordDescription = renderedPassword.find('.o-forms-title__prompt');
 		expect(passwordDescription.text()).toBe(props.description);
 	});
 
@@ -115,7 +115,7 @@ describe('Password', () => {
 
 		const renderedPassword = mount(Password(props));
 		const inputElement = renderedPassword.find(`#${props.inputId}`);
-		expect(renderedPassword.exists('#password-description')).toBe(false);
+		expect(renderedPassword.exists('.o-forms-title__prompt')).toBe(false);
 		expect(inputElement.prop('aria-describedby')).toBeUndefined();
 	});
 
