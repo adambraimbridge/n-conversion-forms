@@ -86,7 +86,7 @@ describe('DeliveryStartDate', () => {
 
 		it('should clear errors and return true if the fetch call succeeds', async () => {
 			await setup();
-			expect(startDateContainer.classList.remove.calledWith('o-forms--error')).to.be.true;
+			expect(startDateContainer.classList.remove.calledWith('o-forms-input--invalid')).to.be.true;
 			expect(startDateChangeResult).to.be.true;
 		});
 
@@ -96,7 +96,7 @@ describe('DeliveryStartDate', () => {
 
 			let startDateChangeResult = await startDateUtil.handleDeliveryStartDateChange('/api/path', () => {});
 
-			expect(startDateContainer.classList.add.calledWith('o-forms--error')).to.be.true;
+			expect(startDateContainer.classList.add.calledWith('o-forms-input--invalid')).to.be.true;
 			expect(startDateChangeResult).to.be.false;
 		});
 	});

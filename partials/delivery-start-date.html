@@ -1,29 +1,24 @@
-<div id="deliveryStartDateField"
-		class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}"
-		data-ui-item="form-field"
-		data-ui-item-name="deliveryStartDate"
-		data-validate="required">
+<label id="deliveryStartDateField" class="o-forms-field" data-validate="required">
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">Delivery start date</span>
+		<span class="o-forms-title__prompt">Earliest available delivery date: {{date}}</span>
+	</span>
 
-	<label for="deliveryStartDate" class="o-forms__label">
-		Delivery start date<br />
-		<small>Earliest available delivery date: {{date}}</small>
-	</label>
+	<span class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<input type="date" id="deliveryStartDate" name="deliveryStartDate"
+			{{#if min}}min={{min}}{{/if}}
+			{{#if max}}max={{max}}{{/if}}
+			data-trackable="field-deliveryStartDate"
+			aria-required="true" required
+			{{#if isDisabled}}disabled{{/if}}
+			value="{{value}}" />
+	</span>
 
-	<input type="date" id="deliveryStartDate" name="deliveryStartDate"
-				{{#if min}}min={{min}}{{/if}}
-				{{#if max}}max={{max}}{{/if}}
-				class="o-forms__text js-field__input js-item__value"
-				data-trackable="field-deliveryStartDate"
-				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}
-				value="{{value}}">
-
-	<div class="o-forms__errortext">Please select a valid start date</div>
+	<span class="o-forms-input__error">Please select a valid start date</span>
 
 	<p>Your print subscription will start from: <strong class="js-start-date-text">{{date}}</strong></p>
 
 	<p>
 		NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
 	</p>
-
-</div>
+</label>
