@@ -20,7 +20,8 @@ export function Message ({ title, message, additional = [], actions = null, name
 	});
 
 	const ncfClassNames = classNames(
-		'ncf__message', 'o-forms', 'o-forms--wide', { 'n-ui-hide': isHidden }
+		'ncf__message',
+		{ 'n-ui-hide': isHidden }
 	);
 
 	const callToActionsList = actions ? (
