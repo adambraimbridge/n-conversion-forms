@@ -10,8 +10,6 @@ export function Submit ({
 	label = 'Continue'
 }) {
 	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
 		'ncf__field',
 		{ 'ncf__field--center': isCentered },
 		{ 'ncf__field--flex': backButtonUrl }
