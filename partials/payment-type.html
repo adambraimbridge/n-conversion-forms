@@ -12,29 +12,37 @@
 	<!--- DO NOT EDIT - GlobalSign SSL Site Seal Code - DO NOT EDIT --->
 </div>
 
-<div id="paymentTypeField" class="o-forms o-forms--wide ncf__field">
-	<div class="ncf__payment-type-selector">
-		<div class="ncf__payment-type ncf__payment-type--creditcard{{#unless enableCreditcard }} n-ui-hide{{/unless}}">
-			<input type="radio" name="paymentType" value="creditcard" class="o-forms__radio-button" id="creditcard"{{#ifEquals value "creditcard"}} checked{{/ifEquals}}>
-			<label for="creditcard" class="o-forms__label">Credit / Debit Card</label>
+<div id="paymentTypeField" class="o-forms-field ncf__field">
+	<div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
+		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard{{#unless enableCreditcard }} n-ui-hide{{/unless}}">
+			<label>
+				<input type="radio" name="paymentType" value="creditcard" id="creditcard" aria-label="Credit / Debit Card"{{#ifEquals value "creditcard"}} checked{{/ifEquals}} />
+				<span class="o-forms-input__label" aria-hidden="true">Credit / Debit Card</span>
+			</label>
 		</div>
 
-		<div class="ncf__payment-type ncf__payment-type--paypal{{#unless enablePaypal }} n-ui-hide{{/unless}}">
-			<input type="radio" name="paymentType" value="paypal" class="o-forms__radio-button" id="paypal"{{#ifEquals value "paypal"}} checked{{/ifEquals}}>
-			<label for="paypal" class="o-forms__label">PayPal</label>
+		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal{{#unless enablePaypal }} n-ui-hide{{/unless}}">
+			<label>
+				<input type="radio" name="paymentType" value="paypal" id="paypal" aria-label="PayPal"{{#ifEquals value "paypal"}} checked{{/ifEquals}} />
+				<span class="o-forms-input__label" aria-hidden="true">PayPal</span>
+			</label>
 		</div>
 
-		<div class="ncf__payment-type ncf__payment-type--directdebit{{#unless enableDirectdebit }} n-ui-hide{{/unless}}">
-			<input type="radio" name="paymentType" value="directdebit" class="o-forms__radio-button" id="directdebit"{{#ifEquals value "directdebit"}} checked{{/ifEquals}}>
-			<label for="directdebit" class="o-forms__label">Direct Debit</label>
+		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit{{#unless enableDirectdebit }} n-ui-hide{{/unless}}">
+			<label>
+				<input type="radio" name="paymentType" value="directdebit" id="directdebit" aria-label="Direct Debit"{{#ifEquals value "directdebit"}} checked{{/ifEquals}} />
+				<span class="o-forms-input__label" aria-hidden="true">Direct Debit</span>
+			</label>
 		</div>
-		<div class="ncf__payment-type ncf__payment-type--applepay{{#unless enableApplepay }} n-ui-hide{{/unless}}">
-			<input type="radio" name="paymentType" value="applepay" class="o-forms__radio-button" id="applepay"{{#ifEquals value "applepay"}} checked{{/ifEquals}}>
-			<label for="applepay" class="o-forms__label">Apple Pay</label>
+		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay{{#unless enableApplepay }} n-ui-hide{{/unless}}">
+			<label>
+				<input type="radio" name="paymentType" value="applepay" id="applepay" aria-label="Apple Pay"{{#ifEquals value "applepay"}} checked{{/ifEquals}} />
+				<span class="o-forms-input__label" aria-hidden="true">Apple Pay</span>
+			</label>
 		</div>
 	</div>
 
-	<div class="o-forms__errortext">Please enter a valid payment type</div>
+	<div class="o-forms-input__error">Please enter a valid payment type</div>
 
 	{{#if enableDirectdebit}}
 	<div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit n-ui-hide">
