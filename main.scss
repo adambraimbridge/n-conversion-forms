@@ -358,14 +358,6 @@ $system-code: 'n-conversion-forms';
 	.o-normalise-visually-hidden {
 		@include oNormaliseVisuallyHidden;
 	}
-
-	// Override o-forms padding set at certain screen sizes
-	// This should be removed when Origami remove this from o-forms
-	.o-forms {
-		@include oGridRespondTo(S) {
-			padding: 0;
-		}
-	}
 }
 
 .ncf__password-field .ncf__password-field--show-password {
