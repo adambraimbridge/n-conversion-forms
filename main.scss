@@ -355,6 +355,10 @@ $system-code: 'n-conversion-forms';
 	@include ncfBanner();
 	@include ncfCustomerCarePanel();
 
+	&__hidden {
+		display: none !important;
+	}
+
 	.o-normalise-visually-hidden {
 		@include oNormaliseVisuallyHidden;
 	}

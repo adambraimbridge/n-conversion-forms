@@ -14,27 +14,27 @@
 
 <div id="paymentTypeField" class="o-forms-field ncf__field">
 	<div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
-		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard{{#unless enableCreditcard }} n-ui-hide{{/unless}}">
+		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard{{#unless enableCreditcard }} ncf__hidden{{/unless}}">
 			<label>
 				<input type="radio" name="paymentType" value="creditcard" id="creditcard" aria-label="Credit / Debit Card"{{#ifEquals value "creditcard"}} checked{{/ifEquals}} />
 				<span class="o-forms-input__label" aria-hidden="true">Credit / Debit Card</span>
 			</label>
 		</div>
 
-		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal{{#unless enablePaypal }} n-ui-hide{{/unless}}">
+		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal{{#unless enablePaypal }} ncf__hidden{{/unless}}">
 			<label>
 				<input type="radio" name="paymentType" value="paypal" id="paypal" aria-label="PayPal"{{#ifEquals value "paypal"}} checked{{/ifEquals}} />
 				<span class="o-forms-input__label" aria-hidden="true">PayPal</span>
 			</label>
 		</div>
 
-		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit{{#unless enableDirectdebit }} n-ui-hide{{/unless}}">
+		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit{{#unless enableDirectdebit }} ncf__hidden{{/unless}}">
 			<label>
 				<input type="radio" name="paymentType" value="directdebit" id="directdebit" aria-label="Direct Debit"{{#ifEquals value "directdebit"}} checked{{/ifEquals}} />
 				<span class="o-forms-input__label" aria-hidden="true">Direct Debit</span>
 			</label>
 		</div>
-		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay{{#unless enableApplepay }} n-ui-hide{{/unless}}">
+		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay{{#unless enableApplepay }} ncf__hidden{{/unless}}">
 			<label>
 				<input type="radio" name="paymentType" value="applepay" id="applepay" aria-label="Apple Pay"{{#ifEquals value "applepay"}} checked{{/ifEquals}} />
 				<span class="o-forms-input__label" aria-hidden="true">Apple Pay</span>

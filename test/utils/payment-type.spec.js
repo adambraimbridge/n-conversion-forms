@@ -28,7 +28,9 @@ describe('PaymentType', () => {
 			querySelectorAll: sandbox.stub(),
 			getAttribute: sandbox.stub(),
 			addEventListener: sandbox.stub(),
-			parentElement: parentStub,
+			parentElement: {
+				parentElement: parentStub
+			},
 			classList: {
 				add: sandbox.stub(),
 				remove: sandbox.stub(),

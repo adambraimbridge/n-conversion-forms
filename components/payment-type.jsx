@@ -49,7 +49,7 @@ export function PaymentType ({
 				'o-forms-input--radio-box__container',
 				'ncf__payment-type',
 				`ncf__payment-type--${type.id}`,
-				{ 'n-ui-hide': type.hide }
+				{ 'ncf__hidden': type.hide }
 			]);
 			return (
 				<div key={type.id} className={className}>

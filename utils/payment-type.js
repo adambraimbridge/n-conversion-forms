@@ -48,8 +48,8 @@ class PaymentType {
 	 * @param {String} type Payment type to hide
 	 */
 	hide (type) {
-		const container = this.$paymentType.querySelector(`#${type}`).parentElement;
-		container.classList.add('n-ui-hide');
+		const container = this.$paymentType.querySelector(`#${type}`).parentElement.parentElement;
+		container.classList.add('ncf__hidden');
 	}
 
 	/**
@@ -58,8 +58,8 @@ class PaymentType {
 	 * @param {String} type Payment type to show
 	 */
 	show (type) {
-		const container = this.$paymentType.querySelector(`#${type}`).parentElement;
-		container.classList.remove('n-ui-hide');
+		const container = this.$paymentType.querySelector(`#${type}`).parentElement.parentElement;
+		container.classList.remove('ncf__hidden');
 	}
 
 	/**
