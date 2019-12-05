@@ -66,14 +66,14 @@ class PaymentType {
 	 * Display an error message on the paymentType
 	 */
 	displayError () {
-		this.$paymentType.classList.add('o-forms--error');
+		this.$paymentType.classList.add('o-forms-input--invalid');
 	}
 
 	/**
 	 * Remove an error from display
 	 */
 	removeError () {
-		this.$paymentType.classList.remove('o-forms--error');
+		this.$paymentType.classList.remove('o-forms-input--invalid');
 	}
 
 	/**
