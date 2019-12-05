@@ -4,7 +4,7 @@ exports[`DecisionMaker renders with 'no' as default state for radio buttons 1`] 
 <div id="decisionMakerField"
      role="group"
      aria-labelledby="decisionMakerFieldLabel"
-     class="o-forms-field"
+     class="o-forms-field o-forms-field--inline"
      data-validate="required"
 >
   <span class="o-forms-title">
@@ -55,7 +55,7 @@ exports[`DecisionMaker renders with 'no' as default state for radio buttons 2`] 
 <div id="decisionMakerField"
      role="group"
      aria-labelledby="decisionMakerFieldLabel"
-     class="o-forms-field"
+     class="o-forms-field o-forms-field--inline"
      data-validate="required"
 >
   <span class="o-forms-title">
@@ -106,7 +106,7 @@ exports[`DecisionMaker renders with an error 1`] = `
 <div id="decisionMakerField"
      role="group"
      aria-labelledby="decisionMakerFieldLabel"
-     class="o-forms-field"
+     class="o-forms-field o-forms-field--inline"
      data-validate="required"
 >
   <span class="o-forms-title">
@@ -157,7 +157,7 @@ exports[`DecisionMaker renders with an error 2`] = `
 <div id="decisionMakerField"
      role="group"
      aria-labelledby="decisionMakerFieldLabel"
-     class="o-forms-field"
+     class="o-forms-field o-forms-field--inline"
      data-validate="required"
 >
   <span class="o-forms-title">
@@ -208,7 +208,7 @@ exports[`DecisionMaker renders with default props 1`] = `
 <div id="decisionMakerField"
      role="group"
      aria-labelledby="decisionMakerFieldLabel"
-     class="o-forms-field"
+     class="o-forms-field o-forms-field--inline"
      data-validate="required"
 >
   <span class="o-forms-title">
@@ -259,7 +259,7 @@ exports[`DecisionMaker renders with default props 2`] = `
 <div id="decisionMakerField"
      role="group"
      aria-labelledby="decisionMakerFieldLabel"
-     class="o-forms-field"
+     class="o-forms-field o-forms-field--inline"
      data-validate="required"
 >
   <span class="o-forms-title">

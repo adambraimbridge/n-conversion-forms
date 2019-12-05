@@ -36,7 +36,7 @@ export function DecisionMaker ({
 			id="decisionMakerField"
 			role="group"
 			aria-labelledby="decisionMakerFieldLabel"
-			className="o-forms-field"
+			className="o-forms-field o-forms-field--inline"
 			data-validate="required"
 		>
 			<span className="o-forms-title">
