@@ -75,7 +75,7 @@ class Validation {
 			const $message = document.createElement('div');
 
 			$message.id = id;
-			$message.className = 'o-forms__errortext ncf__custom-validation-error';
+			$message.className = 'o-forms-input__error ncf__custom-validation-error';
 			$message.innerHTML = errorMessage;
 
 			const isValid = await validator();
@@ -101,7 +101,7 @@ class Validation {
 		$field.setCustomValidity($message);
 
 		const $parent = $field.parentNode;
-		const $oFormsErrorText = $parent.querySelector('.o-forms__errortext');
+		const $oFormsErrorText = $parent.querySelector('.o-forms-input__error');
 
 		$parent.classList.remove('o-forms-input--valid');
 		$parent.classList.add('o-forms-input--invalid');
@@ -113,7 +113,7 @@ class Validation {
 		}
 
 		if ($oFormsErrorText && $oFormsErrorText.parentNode.className.indexOf('ncf__custom-validation-error') === -1) {
-			// If there's an oForms error we need to hide it so that we can use the `o-forms--error` class
+			// If there's an oForms error we need to hide it so that we can use the `o-forms-input--invalid` class
 			//  on the container to highlight the field as invalid.
 			$oFormsErrorText.style.display = 'none';
 		}
@@ -127,7 +127,7 @@ class Validation {
 	clearCustomFieldValidationError ($field) {
 		$field.setCustomValidity('');
 		const $message = this.$form.querySelector(`#custom-validation-for-${$field.name}`);
-		const $oFormsErrorText = $field.parentNode.querySelector('.o-forms__errortext');
+		const $oFormsErrorText = $field.parentNode.querySelector('.o-forms-input__error');
 
 		if ($message) {
 			$message.parentNode.removeChild($message);
