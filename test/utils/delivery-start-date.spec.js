@@ -18,7 +18,7 @@ describe('DeliveryStartDate', () => {
 		startDateFieldStub = { value: '2019-02-16', setAttribute: sandbox.stub(), removeAttribute: sandbox.stub() };
 		startDateTextStub = { innerHTML: 'Saturday 16th of February 2019' };
 
-		document.querySelector.withArgs('#deliveryStartDateField').returns(startDateContainer);
+		document.querySelector.withArgs('#deliveryStartDateField .o-forms-input').returns(startDateContainer);
 		document.querySelector.withArgs('#deliveryStartDate').returns(startDateFieldStub);
 		document.querySelector.withArgs('.js-start-date-text').returns(startDateTextStub);
 	});
