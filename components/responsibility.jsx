@@ -41,9 +41,8 @@ export function Responsibility ({
 						return <option key={code} value={code}>{description}</option>;
 					})}
 				</select>
+				<span className="o-forms-input__error">Please select your responsibility</span>
 			</span>
-
-			<span className="o-forms-input__error" >Please select your responsibility</span>
 		</label>
 	);
 }

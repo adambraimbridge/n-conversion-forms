@@ -22,9 +22,9 @@ exports[`DeliveryStartDate renders with a custom date 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -60,9 +60,9 @@ exports[`DeliveryStartDate renders with a custom date 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -98,9 +98,9 @@ exports[`DeliveryStartDate renders with a custom input max value 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -136,9 +136,9 @@ exports[`DeliveryStartDate renders with a custom input max value 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -175,9 +175,9 @@ exports[`DeliveryStartDate renders with a custom input min value 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -213,9 +213,9 @@ exports[`DeliveryStartDate renders with a custom input min value 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -250,9 +250,9 @@ exports[`DeliveryStartDate renders with a custom input value 1`] = `
            required
            value="Foobar"
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -287,9 +287,9 @@ exports[`DeliveryStartDate renders with a custom input value 2`] = `
            required
            value="Foobar"
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -325,9 +325,9 @@ exports[`DeliveryStartDate renders with a disabled input 1`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -363,9 +363,9 @@ exports[`DeliveryStartDate renders with a disabled input 2`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -400,9 +400,9 @@ exports[`DeliveryStartDate renders with an error 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -437,9 +437,9 @@ exports[`DeliveryStartDate renders with an error 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -474,9 +474,9 @@ exports[`DeliveryStartDate renders with default props 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:
@@ -511,9 +511,9 @@ exports[`DeliveryStartDate renders with default props 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please select a valid start date
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
   </span>
   <p>
     Your print subscription will start from:

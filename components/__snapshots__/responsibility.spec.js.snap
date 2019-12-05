@@ -103,9 +103,9 @@ exports[`Responsibility can render a disable select 1`] = `
         Telecommunications
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your responsibility
+    <span class="o-forms-input__error">
+      Please select your responsibility
+    </span>
   </span>
 </label>
 `;
@@ -213,9 +213,9 @@ exports[`Responsibility can render a disable select 2`] = `
         Telecommunications
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your responsibility
+    <span class="o-forms-input__error">
+      Please select your responsibility
+    </span>
   </span>
 </label>
 `;
@@ -322,9 +322,9 @@ exports[`Responsibility can render an error message 1`] = `
         Telecommunications
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your responsibility
+    <span class="o-forms-input__error">
+      Please select your responsibility
+    </span>
   </span>
 </label>
 `;
@@ -431,9 +431,9 @@ exports[`Responsibility can render an error message 2`] = `
         Telecommunications
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your responsibility
+    <span class="o-forms-input__error">
+      Please select your responsibility
+    </span>
   </span>
 </label>
 `;
@@ -542,9 +542,9 @@ exports[`Responsibility can render an initial selected value 1`] = `
         Telecommunications
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your responsibility
+    <span class="o-forms-input__error">
+      Please select your responsibility
+    </span>
   </span>
 </label>
 `;
@@ -653,9 +653,9 @@ exports[`Responsibility can render an initial selected value 2`] = `
         Telecommunications
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your responsibility
+    <span class="o-forms-input__error">
+      Please select your responsibility
+    </span>
   </span>
 </label>
 `;
@@ -762,9 +762,9 @@ exports[`Responsibility render a select with a label 1`] = `
         Telecommunications
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your responsibility
+    <span class="o-forms-input__error">
+      Please select your responsibility
+    </span>
   </span>
 </label>
 `;
@@ -871,9 +871,9 @@ exports[`Responsibility render a select with a label 2`] = `
         Telecommunications
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your responsibility
+    <span class="o-forms-input__error">
+      Please select your responsibility
+    </span>
   </span>
 </label>
 `;

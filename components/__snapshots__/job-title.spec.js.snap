@@ -21,9 +21,9 @@ exports[`JobTitle can render a disable input 1`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your job title.
+    <span class="o-forms-input__error">
+      Please enter your job title.
+    </span>
   </span>
 </label>
 `;
@@ -49,9 +49,9 @@ exports[`JobTitle can render a disable input 2`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your job title.
+    <span class="o-forms-input__error">
+      Please enter your job title.
+    </span>
   </span>
 </label>
 `;
@@ -76,9 +76,9 @@ exports[`JobTitle can render an error message 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your job title.
+    <span class="o-forms-input__error">
+      Please enter your job title.
+    </span>
   </span>
 </label>
 `;
@@ -103,9 +103,9 @@ exports[`JobTitle can render an error message 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your job title.
+    <span class="o-forms-input__error">
+      Please enter your job title.
+    </span>
   </span>
 </label>
 `;
@@ -130,9 +130,9 @@ exports[`JobTitle can render an initial selected value 1`] = `
            required
            value="Super hero"
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your job title.
+    <span class="o-forms-input__error">
+      Please enter your job title.
+    </span>
   </span>
 </label>
 `;
@@ -157,9 +157,9 @@ exports[`JobTitle can render an initial selected value 2`] = `
            required
            value="Super hero"
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your job title.
+    <span class="o-forms-input__error">
+      Please enter your job title.
+    </span>
   </span>
 </label>
 `;
@@ -184,9 +184,9 @@ exports[`JobTitle render a select with a label 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your job title.
+    <span class="o-forms-input__error">
+      Please enter your job title.
+    </span>
   </span>
 </label>
 `;
@@ -211,9 +211,9 @@ exports[`JobTitle render a select with a label 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your job title.
+    <span class="o-forms-input__error">
+      Please enter your job title.
+    </span>
   </span>
 </label>
 `;

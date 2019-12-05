@@ -24,9 +24,9 @@ exports[`Email with confirmation render a email input for B2B 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -55,9 +55,9 @@ exports[`Email with confirmation render a email input for B2B 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -86,9 +86,9 @@ exports[`Email with confirmation render a email input with default params 1`] = 
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -117,9 +117,9 @@ exports[`Email with confirmation render a email input with default params 2`] = 
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -148,9 +148,9 @@ exports[`Email with confirmation render a email input with default value 1`] = `
            required
            value="test@example.com"
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -179,9 +179,9 @@ exports[`Email with confirmation render a email input with default value 2`] = `
            required
            value="test@example.com"
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -211,9 +211,9 @@ exports[`Email with confirmation render a email input with disabled fields 1`] =
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -243,9 +243,9 @@ exports[`Email with confirmation render a email input with disabled fields 2`] =
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -274,9 +274,9 @@ exports[`Email with confirmation render a email input with email error 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -305,9 +305,9 @@ exports[`Email with confirmation render a email input with email error 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -336,9 +336,9 @@ exports[`Email with confirmation render a email input with given description 1`]
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -367,9 +367,9 @@ exports[`Email with confirmation render a email input with given description 2`]
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -398,9 +398,9 @@ exports[`Email with confirmation render a email input with read only fields 1`] 
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;
@@ -429,9 +429,9 @@ exports[`Email with confirmation render a email input with read only fields 2`] 
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This email address is not valid
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
   </span>
 </label>
 `;

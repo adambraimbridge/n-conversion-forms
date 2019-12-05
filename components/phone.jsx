@@ -46,9 +46,8 @@ export function Phone ({
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
+				<span className="o-forms-input__error">This phone number is not valid</span>
 			</span>
-
-			<span className="o-forms-input__error">This phone number is not valid</span>
 		</label>
 	);
 }

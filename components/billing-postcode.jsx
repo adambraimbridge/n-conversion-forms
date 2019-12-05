@@ -48,11 +48,11 @@ export function BillingPostcode ({
 					aria-required="true"
 					required
 					pattern={pattern}
-					disabled={isDisabled} />
-			</span>
-
-			<span className="o-forms-input__error">
-				Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
+					disabled={isDisabled}
+				/>
+				<span className="o-forms-input__error">
+					Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
+				</span>
 			</span>
 		</label>
 	);

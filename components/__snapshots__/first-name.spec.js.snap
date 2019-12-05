@@ -22,9 +22,9 @@ exports[`First name render a disabled field 1`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your first name
+    <span class="o-forms-input__error">
+      Please enter your first name
+    </span>
   </span>
 </label>
 `;
@@ -51,9 +51,9 @@ exports[`First name render a disabled field 2`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your first name
+    <span class="o-forms-input__error">
+      Please enter your first name
+    </span>
   </span>
 </label>
 `;
@@ -79,9 +79,9 @@ exports[`First name render a field with default settings 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your first name
+    <span class="o-forms-input__error">
+      Please enter your first name
+    </span>
   </span>
 </label>
 `;
@@ -107,9 +107,9 @@ exports[`First name render a field with default settings 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your first name
+    <span class="o-forms-input__error">
+      Please enter your first name
+    </span>
   </span>
 </label>
 `;
@@ -135,9 +135,9 @@ exports[`First name render a field with error 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your first name
+    <span class="o-forms-input__error">
+      Please enter your first name
+    </span>
   </span>
 </label>
 `;
@@ -163,9 +163,9 @@ exports[`First name render a field with error 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your first name
+    <span class="o-forms-input__error">
+      Please enter your first name
+    </span>
   </span>
 </label>
 `;
@@ -191,9 +191,9 @@ exports[`First name render a field with value 1`] = `
            required
            value="some value"
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your first name
+    <span class="o-forms-input__error">
+      Please enter your first name
+    </span>
   </span>
 </label>
 `;
@@ -219,9 +219,9 @@ exports[`First name render a field with value 2`] = `
            required
            value="some value"
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your first name
+    <span class="o-forms-input__error">
+      Please enter your first name
+    </span>
   </span>
 </label>
 `;

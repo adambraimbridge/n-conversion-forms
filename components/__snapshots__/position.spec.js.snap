@@ -85,9 +85,9 @@ exports[`Position can render a disable select 1`] = `
         VP/Director
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your position
+    <span class="o-forms-input__error">
+      Please select your position
+    </span>
   </span>
 </label>
 `;
@@ -177,9 +177,9 @@ exports[`Position can render a disable select 2`] = `
         VP/Director
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your position
+    <span class="o-forms-input__error">
+      Please select your position
+    </span>
   </span>
 </label>
 `;
@@ -268,9 +268,9 @@ exports[`Position can render an error message 1`] = `
         VP/Director
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your position
+    <span class="o-forms-input__error">
+      Please select your position
+    </span>
   </span>
 </label>
 `;
@@ -359,9 +359,9 @@ exports[`Position can render an error message 2`] = `
         VP/Director
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your position
+    <span class="o-forms-input__error">
+      Please select your position
+    </span>
   </span>
 </label>
 `;
@@ -452,9 +452,9 @@ exports[`Position can render an initial selected value 1`] = `
         VP/Director
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your position
+    <span class="o-forms-input__error">
+      Please select your position
+    </span>
   </span>
 </label>
 `;
@@ -545,9 +545,9 @@ exports[`Position can render an initial selected value 2`] = `
         VP/Director
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your position
+    <span class="o-forms-input__error">
+      Please select your position
+    </span>
   </span>
 </label>
 `;
@@ -636,9 +636,9 @@ exports[`Position render a select with a label 1`] = `
         VP/Director
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your position
+    <span class="o-forms-input__error">
+      Please select your position
+    </span>
   </span>
 </label>
 `;
@@ -727,9 +727,9 @@ exports[`Position render a select with a label 2`] = `
         VP/Director
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your position
+    <span class="o-forms-input__error">
+      Please select your position
+    </span>
   </span>
 </label>
 `;

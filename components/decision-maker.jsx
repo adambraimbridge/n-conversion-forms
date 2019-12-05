@@ -54,9 +54,8 @@ export function DecisionMaker ({
 						<span className="o-forms-input__label o-forms-input__label--negative" aria-hidden="true">No</span>
 					</label>
 				</div>
+				<span className="o-forms-input__error">Please select an option</span>
 			</span>
-
-			<span className="o-forms-input__error">Please select an option</span>
 		</div>
 	);
 }

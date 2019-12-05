@@ -45,13 +45,12 @@ export function DeliveryPostcode ({
 					aria-required="true"
 					required
 					pattern={pattern}
-					disabled={isDisabled} />
+					disabled={isDisabled}
+				/>
+				<span className="o-forms-input__error">
+					Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
+				</span>
 			</span>
-
-			<span className="o-forms-input__error">
-				Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
-			</span>
-
 		</label>
 	);
 }

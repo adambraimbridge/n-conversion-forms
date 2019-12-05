@@ -37,9 +37,8 @@ export function CompanyName ({
 
 			<span className={inputWrapperClassNames}>
 				<input {...inputProps} />
+				<span className="o-forms-input__error">Please enter your company name.</span>
 			</span>
-
-			<span className="o-forms-input__error">Please enter your company name.</span>
 		</label>
 	);
 }

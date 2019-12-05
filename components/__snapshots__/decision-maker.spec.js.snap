@@ -44,9 +44,9 @@ exports[`DecisionMaker renders with 'no' as default state for radio buttons 1`] 
         </span>
       </label>
     </div>
-  </span>
-  <span class="o-forms-input__error">
-    Please select an option
+    <span class="o-forms-input__error">
+      Please select an option
+    </span>
   </span>
 </div>
 `;
@@ -95,9 +95,9 @@ exports[`DecisionMaker renders with 'no' as default state for radio buttons 2`] 
         </span>
       </label>
     </div>
-  </span>
-  <span class="o-forms-input__error">
-    Please select an option
+    <span class="o-forms-input__error">
+      Please select an option
+    </span>
   </span>
 </div>
 `;
@@ -146,9 +146,9 @@ exports[`DecisionMaker renders with an error 1`] = `
         </span>
       </label>
     </div>
-  </span>
-  <span class="o-forms-input__error">
-    Please select an option
+    <span class="o-forms-input__error">
+      Please select an option
+    </span>
   </span>
 </div>
 `;
@@ -197,9 +197,9 @@ exports[`DecisionMaker renders with an error 2`] = `
         </span>
       </label>
     </div>
-  </span>
-  <span class="o-forms-input__error">
-    Please select an option
+    <span class="o-forms-input__error">
+      Please select an option
+    </span>
   </span>
 </div>
 `;
@@ -248,9 +248,9 @@ exports[`DecisionMaker renders with default props 1`] = `
         </span>
       </label>
     </div>
-  </span>
-  <span class="o-forms-input__error">
-    Please select an option
+    <span class="o-forms-input__error">
+      Please select an option
+    </span>
   </span>
 </div>
 `;
@@ -299,9 +299,9 @@ exports[`DecisionMaker renders with default props 2`] = `
         </span>
       </label>
     </div>
-  </span>
-  <span class="o-forms-input__error">
-    Please select an option
+    <span class="o-forms-input__error">
+      Please select an option
+    </span>
   </span>
 </div>
 `;

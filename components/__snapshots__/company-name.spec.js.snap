@@ -21,9 +21,9 @@ exports[`CompanyName renders with a custom value 1`] = `
            required
            value="foobar"
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your company name.
+    <span class="o-forms-input__error">
+      Please enter your company name.
+    </span>
   </span>
 </label>
 `;
@@ -49,9 +49,9 @@ exports[`CompanyName renders with a custom value 2`] = `
            required
            value="foobar"
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your company name.
+    <span class="o-forms-input__error">
+      Please enter your company name.
+    </span>
   </span>
 </label>
 `;
@@ -77,9 +77,9 @@ exports[`CompanyName renders with an error 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your company name.
+    <span class="o-forms-input__error">
+      Please enter your company name.
+    </span>
   </span>
 </label>
 `;
@@ -105,9 +105,9 @@ exports[`CompanyName renders with an error 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your company name.
+    <span class="o-forms-input__error">
+      Please enter your company name.
+    </span>
   </span>
 </label>
 `;
@@ -133,9 +133,9 @@ exports[`CompanyName renders with default props 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your company name.
+    <span class="o-forms-input__error">
+      Please enter your company name.
+    </span>
   </span>
 </label>
 `;
@@ -161,9 +161,9 @@ exports[`CompanyName renders with default props 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your company name.
+    <span class="o-forms-input__error">
+      Please enter your company name.
+    </span>
   </span>
 </label>
 `;
@@ -190,9 +190,9 @@ exports[`CompanyName renders with disabled input 1`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your company name.
+    <span class="o-forms-input__error">
+      Please enter your company name.
+    </span>
   </span>
 </label>
 `;
@@ -219,9 +219,9 @@ exports[`CompanyName renders with disabled input 2`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter your company name.
+    <span class="o-forms-input__error">
+      Please enter your company name.
+    </span>
   </span>
 </label>
 `;

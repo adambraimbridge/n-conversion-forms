@@ -62,9 +62,9 @@ exports[`Province can apply class to hide the component 1`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;
@@ -131,9 +131,9 @@ exports[`Province can apply class to hide the component 2`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;
@@ -201,9 +201,9 @@ exports[`Province can render a disabled select 1`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;
@@ -271,9 +271,9 @@ exports[`Province can render a disabled select 2`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;
@@ -340,9 +340,9 @@ exports[`Province can render an error message 1`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;
@@ -409,9 +409,9 @@ exports[`Province can render an error message 2`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;
@@ -480,9 +480,9 @@ exports[`Province can render an initial selected value 1`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;
@@ -551,9 +551,9 @@ exports[`Province can render an initial selected value 2`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;
@@ -620,9 +620,9 @@ exports[`Province render a select with a label 1`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;
@@ -689,9 +689,9 @@ exports[`Province render a select with a label 2`] = `
         Yukon Territory
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your province.
+    <span class="o-forms-input__error">
+      Please select your province.
+    </span>
   </span>
 </label>
 `;

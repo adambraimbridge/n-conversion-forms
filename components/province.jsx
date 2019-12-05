@@ -49,9 +49,8 @@ export function Province ({
 						})
 					}
 				</select>
+				<span className="o-forms-input__error">Please select your province.</span>
 			</span>
-
-			<span className="o-forms-input__error">Please select your province.</span>
 		</label>
 	);
 }

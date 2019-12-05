@@ -43,9 +43,8 @@ export function Industry ({
 						return <option key={code} value={code}>{description}</option>;
 					})}
 				</select>
+				<span className="o-forms-input__error" >Please select your company’s industry</span>
 			</span>
-
-			<span className="o-forms-input__error" >Please select your company’s industry</span>
 		</label>
 	);
 }

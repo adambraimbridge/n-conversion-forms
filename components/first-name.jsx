@@ -44,9 +44,8 @@ export function FirstName ({
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
+				<span className="o-forms-input__error">{errorText}</span>
 			</span>
-
-			<span className="o-forms-input__error">{errorText}</span>
 		</label>
 	);
 }

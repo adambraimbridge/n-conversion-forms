@@ -40,9 +40,8 @@ export function LastName ({
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
+				<span className="o-forms-input__error">{errorText}</span>
 			</span>
-
-			<span className="o-forms-input__error">{errorText}</span>
 		</label>
 	);
 }

@@ -26,13 +26,13 @@ exports[`Delivery Postcode render a disable input 1`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -63,13 +63,13 @@ exports[`Delivery Postcode render a disable input 2`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -99,13 +99,13 @@ exports[`Delivery Postcode render a postcode input with a label 1`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -135,13 +135,13 @@ exports[`Delivery Postcode render a postcode input with a label 2`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -171,13 +171,13 @@ exports[`Delivery Postcode render different styles 1`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -207,13 +207,13 @@ exports[`Delivery Postcode render different styles 2`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;

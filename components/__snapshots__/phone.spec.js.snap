@@ -31,9 +31,9 @@ exports[`Phone render a disabled phone input 1`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This phone number is not valid
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
   </span>
 </label>
 `;
@@ -69,9 +69,9 @@ exports[`Phone render a disabled phone input 2`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This phone number is not valid
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
   </span>
 </label>
 `;
@@ -106,9 +106,9 @@ exports[`Phone render a phone input with a label 1`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This phone number is not valid
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
   </span>
 </label>
 `;
@@ -143,9 +143,9 @@ exports[`Phone render a phone input with a label 2`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This phone number is not valid
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
   </span>
 </label>
 `;
@@ -180,9 +180,9 @@ exports[`Phone render a phone input with a label for B2B 1`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This phone number is not valid
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
   </span>
 </label>
 `;
@@ -217,9 +217,9 @@ exports[`Phone render a phone input with a label for B2B 2`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This phone number is not valid
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
   </span>
 </label>
 `;
@@ -254,9 +254,9 @@ exports[`Phone render a phone input with error styling 1`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This phone number is not valid
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
   </span>
 </label>
 `;
@@ -291,9 +291,9 @@ exports[`Phone render a phone input with error styling 2`] = `
            pattern="whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    This phone number is not valid
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
   </span>
 </label>
 `;

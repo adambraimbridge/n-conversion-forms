@@ -47,7 +47,7 @@ describe('First name', () => {
 			hasError: true,
 		};
 		const component = mount(FirstName(props));
-		const element = component.find('#fieldId').children('.o-forms-input__error').first();
+		const element = component.find('#fieldId .o-forms-input__error').first();
 		expect(element.text()).toBe(props.errorText);
 	});
 

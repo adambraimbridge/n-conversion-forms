@@ -25,13 +25,13 @@ exports[`Billing Postcode can render a disable input 1`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -61,13 +61,13 @@ exports[`Billing Postcode can render a disable input 2`] = `
            disabled
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -97,13 +97,13 @@ exports[`Billing Postcode can render a pattern attribute 1`] = `
            pattern="Whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -133,13 +133,13 @@ exports[`Billing Postcode can render a pattern attribute 2`] = `
            pattern="Whatever"
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -168,13 +168,13 @@ exports[`Billing Postcode can render as an Error 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -203,13 +203,13 @@ exports[`Billing Postcode can render as an Error 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -238,13 +238,13 @@ exports[`Billing Postcode can render as an hidden field 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -273,13 +273,13 @@ exports[`Billing Postcode can render as an hidden field 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -308,13 +308,13 @@ exports[`Billing Postcode render a postcode input with a label 1`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;
@@ -343,13 +343,13 @@ exports[`Billing Postcode render a postcode input with a label 2`] = `
            required
            value
     >
-  </span>
-  <span class="o-forms-input__error">
-    Please enter a valid
-    <span data-reference="postcode">
-      ZipCode
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        ZipCode
+      </span>
+      .
     </span>
-    .
   </span>
 </label>
 `;

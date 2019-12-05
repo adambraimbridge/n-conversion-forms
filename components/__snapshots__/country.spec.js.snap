@@ -787,9 +787,9 @@ exports[`Country renders with default props 1`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -1581,9 +1581,9 @@ exports[`Country renders with default props 2`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -2375,9 +2375,9 @@ exports[`Country renders with hasError 1`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -3169,9 +3169,9 @@ exports[`Country renders with hasError 2`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -3963,9 +3963,9 @@ exports[`Country renders with isB2b 1`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country/region
+    <span class="o-forms-input__error">
+      Please select your country/region
+    </span>
   </span>
 </label>
 `;
@@ -4757,9 +4757,9 @@ exports[`Country renders with isB2b 2`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country/region
+    <span class="o-forms-input__error">
+      Please select your country/region
+    </span>
   </span>
 </label>
 `;
@@ -5552,9 +5552,9 @@ exports[`Country renders with isDisabled 1`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -6347,9 +6347,9 @@ exports[`Country renders with isDisabled 2`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -6435,9 +6435,9 @@ exports[`Country renders with large filterList 1`] = `
         Barbados
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -6523,9 +6523,9 @@ exports[`Country renders with large filterList 2`] = `
         Barbados
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -6554,9 +6554,9 @@ exports[`Country renders with small filterList 1`] = `
         United Kingdom
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -6585,9 +6585,9 @@ exports[`Country renders with small filterList 2`] = `
         United Kingdom
       </option>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -7381,9 +7381,9 @@ exports[`Country renders with value 1`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;
@@ -8177,9 +8177,9 @@ exports[`Country renders with value 2`] = `
         </option>
       </optgroup>
     </select>
-  </span>
-  <span class="o-forms-input__error">
-    Please select your country
+    <span class="o-forms-input__error">
+      Please select your country
+    </span>
   </span>
 </label>
 `;

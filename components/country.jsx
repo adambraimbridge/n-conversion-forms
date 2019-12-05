@@ -51,8 +51,8 @@ export function Country ({
 			</span>
 			<span className={selectWrapperClassName}>
 				{createSelect(countries)}
+				<span className="o-forms-input__error">{error}</span>
 			</span>
-			<span className="o-forms-input__error">{error}</span>
 		</label>
 	);
 }

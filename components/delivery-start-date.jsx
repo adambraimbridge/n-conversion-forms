@@ -42,9 +42,8 @@ export function DeliveryStartDate ({
 
 			<span className={inputWrapperClassNames}>
 				<input {...inputProps} />
+				<span className="o-forms-input__error">Please select a valid start date</span>
 			</span>
-
-			<span className="o-forms-input__error">Please select a valid start date</span>
 
 			<p>Your print subscription will start from: <strong className="js-start-date-text">{date}</strong></p>
 

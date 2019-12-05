@@ -53,9 +53,8 @@ export function State ({
 						})
 					}
 				</select>
+				<span className="o-forms-input__error">Please select your state</span>
 			</span>
-
-			<span className="o-forms-input__error">Please select your state</span>
 		</label>
 	);
 }

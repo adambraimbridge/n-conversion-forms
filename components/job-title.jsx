@@ -32,8 +32,8 @@ export function JobTitle ({
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
+				<span className="o-forms-input__error">Please enter your job title.</span>
 			</span>
-			<span className="o-forms-input__error">Please enter your job title.</span>
 		</label>
 	);
 }
