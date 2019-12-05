@@ -66,7 +66,6 @@ describe('delivery-option', () => {
 		const $ = context.template({ options: [{ value }]});
 		expect($('input').attr('id')).to.equal(value);
 		expect($('input').attr('value')).to.equal(value);
-		expect($('label').attr('for')).to.equal(value);
 	});
 
 	it('should select the correct radio button', () => {
