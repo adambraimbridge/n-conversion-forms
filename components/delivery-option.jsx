@@ -43,7 +43,7 @@ export function DeliveryOption ({
 							name: 'deliveryOption',
 							value: value,
 							className: 'ncf__delivery-option__input',
-							...(isSelected && { defaultChecked: true })
+							defaultChecked: isSelected
 						};
 
 						const deliveryOptionValue = deliveryOptions[value];
