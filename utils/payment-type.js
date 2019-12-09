@@ -27,11 +27,8 @@ class PaymentType {
 		this.$directDebitGuarantee = this.$paymentType.querySelector('.ncf #directDebitGuarantee');
 		if (this.$directDebitGuarantee) {
 			// HACK require here so server side code use the static methods
-			const expander = require('o-expander');
-			this.expander = expander.init(this.$directDebitGuarantee, {
-				contentClassName: 'ncf__directdebit-guarantee-list',
-				toggleSelector: '.ncf__directdebit-guarantee-toggle'
-			});
+			const expander = require('o-expander').default;
+			this.expander = expander.init(this.$directDebitGuarantee);
 		}
 
 		// Set up change handler to show panel and initialise the current panel

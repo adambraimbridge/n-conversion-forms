@@ -1,5 +1,7 @@
 @import 'o-expander/main';
 
+@include oExpander();
+
 @mixin buttonImageOverriding() {
 	color: transparent;
 	background-repeat: no-repeat;
@@ -63,12 +65,10 @@
 		text-align: center;
 
 		&-list {
-			@include oExpanderContent;
 			text-align: left;
 		}
 
 		&-toggle {
-			@include oExpanderToggle;
 			color: oColorsByName('teal');
 		}
 	}

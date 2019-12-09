@@ -6,7 +6,9 @@ const expanderInstance = 'expanderInstance';
 const initStub = sandbox.stub().returns(expanderInstance);
 const PaymentType = proxyquire('../../utils/payment-type', {
 	'o-expander': {
-		init: initStub
+		default: {
+			init: initStub
+		}
 	}
 });
 

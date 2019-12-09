@@ -570,12 +570,12 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
       <p>
         Your payments are protected by the Direct Debit
         <button type="button"
-                class="ncf__directdebit-guarantee-toggle"
+                class="ncf__directdebit-guarantee-toggle o-expander__toggle"
         >
           guarantee
         </button>
       </p>
-      <ul class="ncf__directdebit-guarantee-list">
+      <ul class="ncf__directdebit-guarantee-list o-expander__content">
         <li>
           This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.
         </li>
@@ -703,12 +703,12 @@ exports[`PaymentType render with enableDirectdebit 2`] = `
       <p>
         Your payments are protected by the Direct Debit
         <button type="button"
-                class="ncf__directdebit-guarantee-toggle"
+                class="ncf__directdebit-guarantee-toggle o-expander__toggle"
         >
           guarantee
         </button>
       </p>
-      <ul class="ncf__directdebit-guarantee-list">
+      <ul class="ncf__directdebit-guarantee-list o-expander__content">
         <li>
           This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.
         </li>
