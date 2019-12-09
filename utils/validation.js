@@ -150,8 +150,8 @@ class Validation {
 		if (this.customValidation.size > 0 && !this.debounceCustomValidation) {
 			this.debounceCustomValidation = true;
 
-			this.customValidation.forEach(validator => {
-				validator();
+			this.customValidation.forEach(async validator => {
+				await validator();
 			});
 
 			setTimeout(() => {
