@@ -45,13 +45,13 @@ export function AcceptTerms ({
 	};
 
 	const b2bTerms = isB2b && (
-		<span id="terms-b2b" className="o-forms-input__label" aria-hidden="true">
+		<span id="terms-b2b" className="o-forms-input__label">
 			By submitting this form, you indicate your consent to also being contacted by Financial Times by email, post, or phone about our other products, services or special offers unless you untick this box.
 		</span>
 	);
 
 	const defaultTerms = !isB2b && (
-		<span id="terms-default" className="o-forms-input__label" aria-hidden="true">
+		<span id="terms-default" className="o-forms-input__label">
 			I confirm I am {ageRestriction} years or older and have read and agree to the{' '}
 			<a
 				className="ncf__link--external"
@@ -65,22 +65,22 @@ export function AcceptTerms ({
 
 	const corpSignupTerms = isCorpSignup && (
 		<React.Fragment>
-			<span className="terms-corp-signup o-forms-input__label" aria-hidden="true">Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.</span>
-			<span className="terms-corp-signup o-forms-input__label" aria-hidden="true">Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.</span>
-			<span className="terms-corp-signup o-forms-input__label" aria-hidden="true">myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.</span>
-			{ isTrial && (<span className="terms-corp-signup o-forms-input__label" aria-hidden="true">This trial is to demonstrate the value of a group subscription and we’ll contact you during your trial.</span>) }
+			<span className="terms-corp-signup o-forms-input__label">Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.</span>
+			<span className="terms-corp-signup o-forms-input__label">Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.</span>
+			<span className="terms-corp-signup o-forms-input__label">myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.</span>
+			{ isTrial && (<span className="terms-corp-signup o-forms-input__label">This trial is to demonstrate the value of a group subscription and we’ll contact you during your trial.</span>) }
 		</React.Fragment>
 	);
 
 	const transitionTerms = isTransition && (
 		<React.Fragment>
-			<span className="terms-transition o-forms-input__label" aria-hidden="true">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a className="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="_blank" rel="noopener">customer service through chat, phone or email</a>.</span>
+			<span className="terms-transition o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a className="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="_blank" rel="noopener">customer service through chat, phone or email</a>.</span>
 			{
 				transitionType === 'immediate'
-					? (<span className="terms-transition terms-transition--immediate o-forms-input__label" aria-hidden="true">By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.</span>)
-					: (<span className="terms-transition terms-transition--other o-forms-input__label" aria-hidden="true">By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.</span>)
+					? (<span className="terms-transition terms-transition--immediate o-forms-input__label">By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.</span>)
+					: (<span className="terms-transition terms-transition--other o-forms-input__label">By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.</span>)
 			}
-			<span className="terms-transition o-forms-input__label" aria-hidden="true">Find out more about our cancellation policy in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
+			<span className="terms-transition o-forms-input__label">Find out more about our cancellation policy in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
 		</React.Fragment>
 	);
 
@@ -90,20 +90,20 @@ export function AcceptTerms ({
 				isPrintProduct
 					? (
 						<React.Fragment>
-							<span className="terms-print o-forms-input__label" aria-hidden="true">Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).</span>
-							<span className="terms-print o-forms-input__label" aria-hidden="true">Find out more about your delivery start date in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener">Terms &amp; Conditions</a>.</span>
+							<span className="terms-print o-forms-input__label">Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).</span>
+							<span className="terms-print o-forms-input__label">Find out more about your delivery start date in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener">Terms &amp; Conditions</a>.</span>
 						</React.Fragment>
 					)
 					: (
 						<React.Fragment>
-							<span className="terms-signup o-forms-input__label" aria-hidden="true">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a className="ncf__link--external" href="https://help.ft.com/help/contact-us/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener">customer service through chat, phone or email</a>.</span>
-							<span className="terms-signup o-forms-input__label" aria-hidden="true">By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.</span>
-							<span className="terms-signup o-forms-input__label" aria-hidden="true">Find out more about our cancellation policy in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener">Terms &amp; Conditions</a>.</span>
+							<span className="terms-signup o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a className="ncf__link--external" href="https://help.ft.com/help/contact-us/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener">customer service through chat, phone or email</a>.</span>
+							<span className="terms-signup o-forms-input__label">By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.</span>
+							<span className="terms-signup o-forms-input__label">Find out more about our cancellation policy in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener">Terms &amp; Conditions</a>.</span>
 						</React.Fragment>
 					)
 			}
 
-			{ specialTerms && (<span id="terms-special" className="o-forms-input__label" aria-hidden="true">{specialTerms}</span>) }
+			{ specialTerms && (<span id="terms-special" className="o-forms-input__label">{specialTerms}</span>) }
 		</React.Fragment>
 	);
 
