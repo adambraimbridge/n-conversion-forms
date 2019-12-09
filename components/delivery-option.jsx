@@ -52,14 +52,8 @@ export function DeliveryOption ({
 							<label key={index} className="ncf__delivery-option__item">
 								<input {...inputProps} />
 								<span className="o-forms-input__label ncf__delivery-option__label">
-									{
-										deliveryOptionValue && (
-											<React.Fragment>
-												<span className="ncf__delivery-option__title">{deliveryOptionValue.title}</span>
-												<div className="ncf__delivery-option__description">{deliveryOptionValue.description}</div>
-											</React.Fragment>
-										)
-									}
+									<span className="ncf__delivery-option__title">{deliveryOptionValue.title}</span>
+									<div className="ncf__delivery-option__description">{deliveryOptionValue.description}</div>
 								</span>
 							</label>
 						);
@@ -72,7 +66,7 @@ export function DeliveryOption ({
 
 DeliveryOption.propTypes = {
 	options: PropTypes.arrayOf(PropTypes.shape({
-		value: PropTypes.string,
+		value: PropTypes.oneOf(['PV', 'HD', 'EV']),
 		isSelected: PropTypes.boolean
 	})),
 	isSingle: PropTypes.boolean
