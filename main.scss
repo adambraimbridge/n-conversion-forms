@@ -1,3 +1,4 @@
+$system-code: 'n-conversion-forms';
 @import 'o-icons/main';
 @import 'o-colors/main';
 @import 'o-normalise/main';
@@ -18,15 +19,24 @@
 @import './styles/customer-care';
 
 @include oFonts();
-@include oFormsBaseFeatures();
-@include oFormsRadioCheckboxFeatures();
-@include oFormsRadioButtonsStyledFeature();
-@include oFormsSuffixFeature();
-@include oFormsSectionFeature();
-@include oFormsInlineFeature();
-@include oFormsWideFeature();
+@include oForms($opts: (
+	'elements': (
+		'text',
+		'password',
+		'checkbox',
+		'select',
+		'radio-box',
+		'radio-round'
+	),
+	'features': (
+		'disabled',
+		'inline',
+		'right',
+		'suffix',
+		'error-summary'
+	)
+));
 @include oMessage();
-@include oFormsRadioCheckboxRightModifier();
 @include oSteppedProgress();
 
 // Custom styles
@@ -106,11 +116,6 @@
 					margin-left: 20px;
 				}
 			}
-		}
-
-		label small {
-			color: oColorsMix(black, white, 70);
-			font-weight: normal;
 		}
 	}
 
@@ -345,15 +350,15 @@
 	@include ncfBanner();
 	@include ncfCustomerCarePanel();
 
+	&__hidden {
+		display: none !important;
+	}
+
 	.o-normalise-visually-hidden {
 		@include oNormaliseVisuallyHidden;
 	}
+}
 
-	// Override o-forms padding set at certain screen sizes
-	// This should be removed when Origami remove this from o-forms
-	.o-forms {
-		@include oGridRespondTo(S) {
-			padding: 0;
-		}
-	}
+.ncf__password-field .ncf__password-field--show-password {
+	margin-top: 7px;
 }

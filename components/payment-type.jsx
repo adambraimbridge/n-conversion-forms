@@ -41,19 +41,22 @@ export function PaymentType ({
 				type: 'radio',
 				name: inputId,
 				value: type.id,
-				className: 'o-forms__radio-button',
 				id: type.id,
+				'aria-label': type.label,
 				...(value === type.id && { defaultChecked: true })
 			};
 			const className = classNames([
+				'o-forms-input--radio-box__container',
 				'ncf__payment-type',
 				`ncf__payment-type--${type.id}`,
-				{ 'n-ui-hide': type.hide }
+				{ 'ncf__hidden': type.hide }
 			]);
 			return (
 				<div key={type.id} className={className}>
-					<input {...inputProps}/>
-					<label htmlFor={type.id} className="o-forms__label">{type.label}</label>
+					<label>
+						<input {...inputProps}/>
+						<span className="o-forms-input__label" aria-hidden="true">{type.label}</span>
+					</label>
 				</div>
 			);
 		});
@@ -94,12 +97,12 @@ export function PaymentType ({
 	return (
 		<React.Fragment>
 			{createSecuritySeal()}
-			<div id={fieldId} className="o-forms o-forms--wide ncf__field">
-				<div className="ncf__payment-type-selector">
+			<div id={fieldId} className="o-forms-field">
+				<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
 					{createPaymentTypes()}
 				</div>
 
-				<div className="o-forms__errortext">Please enter a valid payment type</div>
+				<div className="o-forms-input__error">Please enter a valid payment type</div>
 
 				{createDirectDebitPanel()}
 

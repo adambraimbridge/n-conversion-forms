@@ -11,25 +11,31 @@ export function JobTitle ({
 	inputName = 'jobTitle',
 }) {
 
-	const fieldClassName = classNames([
-		'o-forms o-forms--wide ncf__field js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassName = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
-	return (<div
-		id={fieldId}
-		className={fieldClassName} data-ui-item="form-field" data-ui-item-name="jobTitle" data-validate="required">
-		<label htmlFor="jobTitle" className="o-forms__label">Job title</label>
-		<input type="text" id={inputId} name={inputName} placeholder="Enter your job title"
-			className="o-forms__text js-field__input js-item__value"
-			data-trackable="job-title"
-			aria-required="true" required
-			disabled={isDisabled}
-			defaultValue={value} />
-		<div className="o-forms__errortext">Please enter your job title.</div>
-	</div>
+	return (
+		<label id={fieldId} className="o-forms-field" data-validate="required">
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">Job title</span>
+			</span>
+			<span className={inputWrapperClassName}>
+				<input type="text"
+					id={inputId}
+					name={inputName}
+					placeholder="Enter your job title"
+					data-trackable="job-title"
+					aria-required="true" required
+					disabled={isDisabled}
+					defaultValue={value}
+				/>
+				<span className="o-forms-input__error">Please enter your job title.</span>
+			</span>
+		</label>
 	);
-
 }
 
 JobTitle.propTypes = {

@@ -1,7 +1,6 @@
 const { expect } = require('chai');
 const { fetchPartial } = require('../helpers');
 
-const FIELD = '.ncf__field';
 const SELECTOR_BUTTON = 'button';
 const SELECTOR_BACK_BUTTON = 'a.ncf__button';
 const SELECTOR_FIELD_CENTER = '.ncf__field--center';
@@ -47,13 +46,13 @@ describe('submit template', () => {
 			isFullWidth: true
 		});
 
-		expect($(FIELD).hasClass('ncf__field--full-width-buttons')).to.be.true;
+		expect($('.ncf__field--full-width-buttons').length).to.equal(1);
 	});
 
 	it('should not have the buttons be full width by default', () => {
 		const $ = context.template();
 
-		expect($(FIELD).hasClass('ncf__field--full-width-buttons')).not.to.be.true;
+		expect($('.ncf__field--full-width-buttons').length).to.equal(0);
 	});
 
 	it('should not show a back button by default', () => {

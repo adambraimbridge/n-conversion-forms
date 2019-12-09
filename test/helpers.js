@@ -6,7 +6,7 @@ const Handlebars = require('@financial-times/n-handlebars').handlebars;
 
 const readFile = promisify(fs.readFile);
 const PARTIAL_DIR = __dirname + '/../partials/';
-const ERROR_CLASS = 'o-forms--error';
+const ERROR_CLASS = 'o-forms-input--invalid';
 const options = [
 	{ value: 'testValue1', label: 'testLabel1' },
 	{ value: 'testValue2', label: 'testValue2' },
@@ -203,7 +203,7 @@ const shouldError = function (context, errorParams = { hasError: true }) {
 	it('should not have error class by default', () => {
 		const $ = context.template({});
 
-		expect($(ERROR_CLASS).length).to.equal(0);
+		expect($(`.${ERROR_CLASS}`).length).to.equal(0);
 	});
 
 	it('should have error class if hasError is passed', () => {

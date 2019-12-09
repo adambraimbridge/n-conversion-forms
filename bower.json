@@ -37,7 +37,7 @@
     "o-header-services": "^4.0.0"
   },
   "dependencies": {
-    "o-forms": "^6.0.0",
+    "o-forms": "^8.1.1",
     "n-ui-foundations": "^3.0.1",
     "o-buttons": "^6.0.2",
     "o-message": "^4.0.0",

@@ -49,7 +49,7 @@ Renders the billing country field.
 
 + `value`: string - The name of the county.
 + `isDisabled`: boolean - Whether the field is disabled or not.
-+ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `hasError`: boolean - If true it adds `o-forms-input--invalid` class to display error.
 + `filterList`: object - list of country objects: `label`, `name`, `code`
 
 ## Billing postcode
@@ -116,7 +116,7 @@ NOTE: `isBillingCountry` flag is deprecated, use `billing-country` instead
 
 + `value`: string - The name of the county.
 + `isDisabled`: boolean - Whether the field is disabled or not.
-+ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `hasError`: boolean - If true it adds `o-forms-input--invalid` class to display error.
 + `filterList`: object - list of country objects: `label`, `name`, `code`
 + `isBillingCountry`: boolean - DEPRECATED, use billing-country instead.
 
@@ -132,7 +132,7 @@ Renders the county field.
 
 + `value`: string - The name of the county.
 + `isDisabled`: boolean - Whether the field is disabled or not.
-+ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `hasError`: boolean - If true it adds `o-forms-input--invalid` class to display error.
 
 ## Customer Care
 
@@ -157,7 +157,7 @@ Renders an inline yes / no radio group for users to enter if they are a decision
 
 ### Options
 + `value`: string - Pass 'yes' or 'no' to check an option, default is unchecked.
-+ `hasError`: boolean - if true it adds `o-forms--error` class to display error.
++ `hasError`: boolean - if true it adds `o-forms-input--invalid` class to display error.
 
 ## Delivery Address
 
@@ -171,7 +171,7 @@ Renders the 3 delivery address fields (line 1/2/3).
 
 + `values`: Array - An array containing the 3 lines of the address.
 + `isDisabled`: boolean - Whether the field is disabled or not.
-+ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `hasError`: boolean - If true it adds `o-forms-input--invalid` class to display error.
 
 ## Delivery City/town
 
@@ -185,7 +185,7 @@ Renders the delivery city/town field.
 
 + `value`: string - The name of the city or town.
 + `isDisabled`: boolean - Whether the field is disabled or not.
-+ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `hasError`: boolean - If true it adds `o-forms-input--invalid` class to display error.
 
 ## Delivery Instructions
 
@@ -201,7 +201,7 @@ Renders the delivery instructions text area.
 + `rows`: string - The number of rows to render this textarea with.
 + `value`: string - The delivery instructions.
 + `isDisabled`: boolean - Whether the field is disabled or not.
-+ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `hasError`: boolean - If true it adds `o-forms-input--invalid` class to display error.
 
 ## Delivery Option
 
@@ -251,7 +251,7 @@ Renders a date field with a given start date (and accompanying copy).
 + `max`: string - The latest start date in `YYYY-MM-DD` format.
 + `date`: string - The date in `dddd Do MMMM YYYY` format.
 + `isDisabled`: boolean - Whether the field is disabled or not.
-+ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `hasError`: boolean - If true it adds `o-forms-input--invalid` class to display error.
 
 ## Error Page
 
@@ -324,7 +324,7 @@ A form field for adding a user's first name.
 ### Options
 
 + `value`: string - Text to pre-populate the `firstname` field.
-+ `hasError`: boolean - true - adds `o-forms--error` class
++ `hasError`: boolean - true - adds `o-forms-input--invalid` class
 + `isDisabled`: boolean - true - disables the form field
 
 ```handlebars
@@ -338,7 +338,7 @@ A form field for adding a user's last name.
 ### Options
 
 + `value`: string - Text to pre-populate the `lastname` field.
-+ `hasError`: boolean - true - adds `o-forms--error` class
++ `hasError`: boolean - true - adds `o-forms-input--invalid` class
 + `isDisabled`: boolean - true - disables the field
 
 ```handlebars
@@ -455,7 +455,7 @@ Displays a phone field with o-forms styling and the name and id `primaryTelephon
 ### Options
 
 + `value`: string - Text to pre-populate the `lastname` field.
-+ `hasError`: boolean - true - adds `o-forms--error` class.
++ `hasError`: boolean - true - adds `o-forms-input--invalid` class.
 + `isDisabled`: boolean - true - disables the field.
 + `isB2b`: boolean - true - displays work email copy.
 + `pattern`: string - Pattern to be used for validation.

@@ -10,12 +10,10 @@ export function DeliveryStartDate ({
 	max = null,
 	isDisabled = false
 }) {
-	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	const inputProps = {
@@ -24,7 +22,6 @@ export function DeliveryStartDate ({
 		name: 'deliveryStartDate',
 		...(min && { min }),
 		...(max && { max }),
-		className: 'o-forms__text js-field__input js-item__value',
 		'data-trackable': 'field-deliveryStartDate',
 		'aria-required': 'true',
 		required: true,
@@ -33,26 +30,25 @@ export function DeliveryStartDate ({
 	};
 
 	return (
-		<div
+		<label
 			id="deliveryStartDateField"
-			className={divClassName}
-			data-ui-item="form-field"
-			data-ui-item-name="deliveryStartDate"
+			className="o-forms-field"
 			data-validate="required"
 		>
-			<label htmlFor="deliveryStartDate" className="o-forms__label">
-				Delivery start date<br />
-				<small>Earliest available delivery date: {date}</small>
-			</label>
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">Delivery start date</span>
+				<span className="o-forms-title__prompt">Earliest available delivery date: {date}</span>
+			</span>
 
-			<input {...inputProps} />
-
-			<div className="o-forms__errortext">Please select a valid start date</div>
+			<span className={inputWrapperClassNames}>
+				<input {...inputProps} />
+				<span className="o-forms-input__error">Please select a valid start date</span>
+			</span>
 
 			<p>Your print subscription will start from: <strong className="js-start-date-text">{date}</strong></p>
 
 			<p>NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.</p>
-		</div>
+		</label>
 	);
 }
 

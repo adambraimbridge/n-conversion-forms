@@ -18,7 +18,7 @@ describe('DeliveryStartDate', () => {
 		startDateFieldStub = { value: '2019-02-16', setAttribute: sandbox.stub(), removeAttribute: sandbox.stub() };
 		startDateTextStub = { innerHTML: 'Saturday 16th of February 2019' };
 
-		document.querySelector.withArgs('#deliveryStartDateField').returns(startDateContainer);
+		document.querySelector.withArgs('#deliveryStartDateField .o-forms-input').returns(startDateContainer);
 		document.querySelector.withArgs('#deliveryStartDate').returns(startDateFieldStub);
 		document.querySelector.withArgs('.js-start-date-text').returns(startDateTextStub);
 	});
@@ -86,7 +86,7 @@ describe('DeliveryStartDate', () => {
 
 		it('should clear errors and return true if the fetch call succeeds', async () => {
 			await setup();
-			expect(startDateContainer.classList.remove.calledWith('o-forms--error')).to.be.true;
+			expect(startDateContainer.classList.remove.calledWith('o-forms-input--invalid')).to.be.true;
 			expect(startDateChangeResult).to.be.true;
 		});
 
@@ -96,7 +96,7 @@ describe('DeliveryStartDate', () => {
 
 			let startDateChangeResult = await startDateUtil.handleDeliveryStartDateChange('/api/path', () => {});
 
-			expect(startDateContainer.classList.add.calledWith('o-forms--error')).to.be.true;
+			expect(startDateContainer.classList.add.calledWith('o-forms-input--invalid')).to.be.true;
 			expect(startDateChangeResult).to.be.false;
 		});
 	});

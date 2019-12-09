@@ -14,32 +14,35 @@ export function Position ({
 	options = defaultOptions
 }) {
 
-	const fieldClassName = classNames([
-		'o-forms o-forms--wide ncf__field js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--select',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
-	return (<div
-		id={fieldId}
-		className={fieldClassName}
-		data-ui-item="select"
-		data-ui-item-name="position"
-		data-validate="required">
-		<label htmlFor="position" className="o-forms__label">What’s your job position?</label>
-		<select id={selectId} name={selectName} className="o-forms__select js-field__input js-item__value"
-			data-trackable="field-position"
-			aria-required="true" required
-			disabled={isDisabled}
-			defaultValue={value}
-		>
-			<option value="">Please select a job position</option>
-			{options.map(({ code, description }) => {
-				return <option key={code} value={code}>{description}</option>;
-			})}
-		</select >
-		<div className="o-forms__errortext" >Please select your position</div >
-	</div >);
-
+	return (
+		<label id={fieldId} className="o-forms-field" data-validate="required">
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">What’s your job position?</span>
+			</span>
+			<span className={inputWrapperClassNames}>
+				<select id={selectId}
+					name={selectName}
+					data-trackable="field-position"
+					aria-required="true"
+					required
+					disabled={isDisabled}
+					defaultValue={value}
+				>
+					<option value="">Please select a job position</option>
+					{options.map(({ code, description }) => {
+						return <option key={code} value={code}>{description}</option>;
+					})}
+				</select>
+				<span className="o-forms-input__error">Please select your position</span>
+			</span>
+		</label>
+	);
 }
 
 Position.propTypes = {

@@ -1,21 +1,22 @@
-<div id="positionField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="position" data-validate="required">
+<label id="positionField" class="o-forms-field" data-validate="required">
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">What’s your job position?</span>
+	</span>
 
-	<label for="position" class="o-forms__label">What’s your job position?</label>
+	<span class="o-forms-input o-forms-input--select{{#if hasError}} o-forms-input--invalid{{/if}}">
+		{{#ncf-common-data import="demographics.positions.positions" export="options"}}
 
-	{{#ncf-common-data import="demographics.positions.positions" export="options"}}
+		<select id="position" name="position"
+				data-trackable="field-position"
+				aria-required="true" required
+				{{#if isDisabled}}disabled{{/if}}>
+			<option value="">Please select a job position</option>
+			{{#each options as |option|}}
+			<option {{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}} value="{{option.code}}">{{option.description}}</option>
+			{{/each}}
+		</select>
 
-	<select id="position" name="position" class="o-forms__select js-field__input js-item__value"
-					data-trackable="field-position"
-					aria-required="true" required
-					{{#if isDisabled}}disabled{{/if}}>
-		<option value="">Please select a job position</option>
-		{{#each options as |option|}}
-		<option {{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}} value="{{option.code}}">{{option.description}}</option>
-		{{/each}}
-	</select>
-
-{{/ncf-common-data}}
-
-	<div class="o-forms__errortext">Please select your position</div>
-
-</div>
+		{{/ncf-common-data}}
+		<span class="o-forms-input__error">Please select your position</span>
+	</span>
+</label>

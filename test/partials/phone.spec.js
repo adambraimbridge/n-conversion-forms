@@ -28,7 +28,7 @@ describe('phone template', () => {
 		const label = 'Phone number';
 		const $ = context.template({});
 
-		expect($('label').text().trim()).to.equal(label);
+		expect($('.o-forms-title__main').text().trim()).to.equal(label);
 	});
 
 	it('should have the b2b label if isB2b is set', () => {
@@ -37,19 +37,19 @@ describe('phone template', () => {
 			isB2b: true
 		});
 
-		expect($('label').text().trim()).to.equal(label);
+		expect($('.o-forms-title__main').text().trim()).to.equal(label);
 	});
 
 	it('should have a data-min attribute for o-forms validation', () => {
 		const $ = context.template({});
 
-		expect($('input').attr('data-min')).to.equal('5');
+		expect($('input').attr('minlength')).to.equal('5');
 	});
 
 	it('should have a data-max attribute for o-forms validation', () => {
 		const $ = context.template({});
 
-		expect($('input').attr('data-max')).to.equal('15');
+		expect($('input').attr('maxlength')).to.equal('15');
 	});
 
 	shouldError(context);

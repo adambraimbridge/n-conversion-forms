@@ -1,25 +1,24 @@
-<div id="billingPostcodeField"
-		class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}{{#if isHidden}} n-ui-hide{{/if}}"
-		data-ui-item="form-field"
-		data-ui-item-name="deliveryPostcode"
-		data-validate="required">
+<label id="billingPostcodeField"
+	class="o-forms-field{{#if isHidden}} n-ui-hide{{/if}}"
+	data-validate="required">
 
-	<label for="billingPostcode" class="o-forms__label">
-		Billing <span data-reference="postcode">{{postcodeReference}}</span>
-	</label>
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">
+			Billing <span data-reference="postcode">{{postcodeReference}}</span>
+		</span>
+	</span>
 
-	<input type="text"
+	<span class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<input type="text"
 			id="billingPostcode"
 			name="billingPostcode"
 			placeholder="Enter your {{postcodeReference}}"
 			autocomplete="postal-code"
-			class="o-forms__text js-field__input js-item__value"
 			data-trackable="billing-postcode"
 			aria-required="true" required
 			{{#if pattern}}pattern="{{pattern}}"{{/if}}
 			{{#if isDisabled}}disabled{{/if}}
-			value="{{value}}">
-
-	<div class="o-forms__errortext">Please enter a valid <span data-reference="postcode">{{postcodeReference}}</span>.</div>
-
-</div>
+			value="{{value}}" />
+		<span class="o-forms-input__error">Please enter a valid <span data-reference="postcode">{{postcodeReference}}</span>.</span>
+	</span>
+</label>

@@ -1,31 +1,29 @@
-<div id="emailField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-validate="required,email">
-
-	<label for="email" class="o-forms__label">
-		{{#if isB2b}}
-		Work email address
-		{{else}}
-		Email address
-		{{/if}}
-	</label>
-	<small id="email-description" class="o-forms__additional-info">
-		{{#if description}}
-		{{description}}
-		{{else}}
-		Please enter an email address
-		{{/if}}
-	</small>
-
-	<input type="email" id="email" name="email" placeholder="Enter your email address"
-				autocomplete="email"
-				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
-				data-trackable="field-email"
-				aria-required="true"
-				aria-describedby="email-description"
-				required
-				{{#if isDisabled}}disabled{{/if}}
-				value="{{value}}"
-	/>
-
-	<div class="o-forms__errortext">This email address is not valid</div>
-
-</div>
+<label id="emailField" class="o-forms-field" data-validate="required,email">
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">
+			{{#if isB2b}}
+			Work email address
+			{{else}}
+			Email address
+			{{/if}}
+		</span>
+		<span class="o-forms-title__prompt">
+			{{#if description}}
+			{{description}}
+			{{else}}
+			Please enter an email address
+			{{/if}}
+		</span>
+	</span>
+	<span class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<input type="email" id="email" name="email" placeholder="Enter your email address"
+			autocomplete="email"
+			data-trackable="field-email"
+			aria-required="true"
+			required
+			{{#if isDisabled}}disabled{{/if}}
+			value="{{value}}"
+		/>
+		<span class="o-forms-input__error">This email address is not valid</span>
+	</span>
+</label>
