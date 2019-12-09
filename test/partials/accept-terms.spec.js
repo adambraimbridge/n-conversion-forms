@@ -4,11 +4,11 @@ const {
 	shouldError
 } = require('../helpers');
 
-const SELECTOR_STANDARD_TERMS = 'label #terms-default';
+const SELECTOR_STANDARD_TERMS = '#terms-default';
 const SELECTOR_PRINT_TERMS = 'label .terms-print';
 const SELECTOR_SIGNUP_TERMS = 'label .terms-signup';
-const SELECTOR_SPECIAL_TERMS = 'label #terms-special';
-const SELECTOR_B2B_TERMS = 'label #terms-b2b';
+const SELECTOR_SPECIAL_TERMS = '#terms-special';
+const SELECTOR_B2B_TERMS = '#terms-b2b';
 const SELECTOR_CORP_TERMS = 'label .terms-corp-signup';
 const SELECTOR_TRANSITION_TERMS = 'label .terms-transition';
 const SELECTOR_ACCEPT_TERMS_FIELD = '#acceptTermsField';
