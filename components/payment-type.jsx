@@ -97,7 +97,7 @@ export function PaymentType ({
 	return (
 		<React.Fragment>
 			{createSecuritySeal()}
-			<div id={fieldId} className="o-forms-field ncf__field">
+			<div id={fieldId} className="o-forms-field">
 				<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
 					{createPaymentTypes()}
 				</div>
