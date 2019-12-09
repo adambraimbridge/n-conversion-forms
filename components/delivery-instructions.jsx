@@ -32,9 +32,9 @@ export function DeliveryInstructions ({
 	};
 
 	return (
-		<label id={fieldId} className="o-forms-field" data-validate="required">
+		<label id={fieldId} className="o-forms-field o-forms-field--optional" data-validate="required">
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">Delivery instructions <small>(optional)</small></span>
+				<span className="o-forms-title__main">Delivery instructions</span>
 				<span className="o-forms-title__prompt">
 					These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
 				</span>

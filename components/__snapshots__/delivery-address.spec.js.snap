@@ -23,13 +23,10 @@ exports[`DeliveryAddress renders default props 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -43,13 +40,10 @@ exports[`DeliveryAddress renders default props 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -89,13 +83,10 @@ exports[`DeliveryAddress renders default props 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -109,13 +100,10 @@ exports[`DeliveryAddress renders default props 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -155,13 +143,10 @@ exports[`DeliveryAddress renders with an error 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -175,13 +160,10 @@ exports[`DeliveryAddress renders with an error 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -221,13 +203,10 @@ exports[`DeliveryAddress renders with an error 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -241,13 +220,10 @@ exports[`DeliveryAddress renders with an error 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -287,13 +263,10 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -307,13 +280,10 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -353,13 +323,10 @@ exports[`DeliveryAddress renders with custom line 1 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -373,13 +340,10 @@ exports[`DeliveryAddress renders with custom line 1 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -419,13 +383,10 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -439,13 +400,10 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -485,13 +443,10 @@ exports[`DeliveryAddress renders with custom line 2 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -505,13 +460,10 @@ exports[`DeliveryAddress renders with custom line 2 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -551,13 +503,10 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -571,13 +520,10 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -617,13 +563,10 @@ exports[`DeliveryAddress renders with custom line 3 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -637,13 +580,10 @@ exports[`DeliveryAddress renders with custom line 3 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -684,13 +624,10 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -705,13 +642,10 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -753,13 +687,10 @@ exports[`DeliveryAddress renders with disabled input elements 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -774,13 +705,10 @@ exports[`DeliveryAddress renders with disabled input elements 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field">
+  <label class="o-forms-field o-forms-field--optional">
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
-        <small>
-          (optional)
-        </small>
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">

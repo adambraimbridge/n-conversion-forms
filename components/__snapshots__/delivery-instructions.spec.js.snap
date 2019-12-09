@@ -2,15 +2,12 @@
 
 exports[`DeliveryInstructions renders with a custom value 1`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -36,15 +33,12 @@ exports[`DeliveryInstructions renders with a custom value 1`] = `
 
 exports[`DeliveryInstructions renders with a custom value 2`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -70,15 +64,12 @@ exports[`DeliveryInstructions renders with a custom value 2`] = `
 
 exports[`DeliveryInstructions renders with a disabled input element 1`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -104,15 +95,12 @@ exports[`DeliveryInstructions renders with a disabled input element 1`] = `
 
 exports[`DeliveryInstructions renders with a disabled input element 2`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -138,15 +126,12 @@ exports[`DeliveryInstructions renders with a disabled input element 2`] = `
 
 exports[`DeliveryInstructions renders with an error 1`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -171,15 +156,12 @@ exports[`DeliveryInstructions renders with an error 1`] = `
 
 exports[`DeliveryInstructions renders with an error 2`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -204,15 +186,12 @@ exports[`DeliveryInstructions renders with an error 2`] = `
 
 exports[`DeliveryInstructions renders with default props 1`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -237,15 +216,12 @@ exports[`DeliveryInstructions renders with default props 1`] = `
 
 exports[`DeliveryInstructions renders with default props 2`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -270,15 +246,12 @@ exports[`DeliveryInstructions renders with default props 2`] = `
 
 exports[`DeliveryInstructions renders with maxlength 1`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -304,15 +277,12 @@ exports[`DeliveryInstructions renders with maxlength 1`] = `
 
 exports[`DeliveryInstructions renders with maxlength 2`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -338,15 +308,12 @@ exports[`DeliveryInstructions renders with maxlength 2`] = `
 
 exports[`DeliveryInstructions renders with rows 1`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
@@ -372,15 +339,12 @@ exports[`DeliveryInstructions renders with rows 1`] = `
 
 exports[`DeliveryInstructions renders with rows 2`] = `
 <label id="deliveryInstructionsField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       Delivery instructions
-      <small>
-        (optional)
-      </small>
     </span>
     <span class="o-forms-title__prompt">
       These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.

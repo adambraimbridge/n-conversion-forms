@@ -36,9 +36,9 @@ export function DeliveryAddress ({
 					/>
 				</span>
 			</label>
-			<label className="o-forms-field">
+			<label className="o-forms-field o-forms-field--optional">
 				<span className="o-forms-title">
-					<span className="o-forms-title__main">Address line 2 <small>(optional)</small></span>
+					<span className="o-forms-title__main">Address line 2</span>
 				</span>
 				<span className={inputWrapperClassNames}>
 					<input
@@ -53,9 +53,9 @@ export function DeliveryAddress ({
 					/>
 				</span>
 			</label>
-			<label className="o-forms-field">
+			<label className="o-forms-field o-forms-field--optional">
 				<span className="o-forms-title">
-					<span className="o-forms-title__main">Address line 3 <small>(optional)</small></span>
+					<span className="o-forms-title__main">Address line 3</span>
 				</span>
 				<span className={inputWrapperClassNames}>
 					<input

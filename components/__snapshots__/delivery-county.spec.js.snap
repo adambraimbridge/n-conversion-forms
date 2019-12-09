@@ -2,15 +2,12 @@
 
 exports[`DeliveryCounty renders with a custom value 1`] = `
 <label id="deliveryCountyField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       County
-      <small>
-        (optional)
-      </small>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -28,15 +25,12 @@ exports[`DeliveryCounty renders with a custom value 1`] = `
 
 exports[`DeliveryCounty renders with a custom value 2`] = `
 <label id="deliveryCountyField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       County
-      <small>
-        (optional)
-      </small>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -54,15 +48,12 @@ exports[`DeliveryCounty renders with a custom value 2`] = `
 
 exports[`DeliveryCounty renders with a disabled input element 1`] = `
 <label id="deliveryCountyField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       County
-      <small>
-        (optional)
-      </small>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -81,15 +72,12 @@ exports[`DeliveryCounty renders with a disabled input element 1`] = `
 
 exports[`DeliveryCounty renders with a disabled input element 2`] = `
 <label id="deliveryCountyField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       County
-      <small>
-        (optional)
-      </small>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -108,15 +96,12 @@ exports[`DeliveryCounty renders with a disabled input element 2`] = `
 
 exports[`DeliveryCounty renders with an error 1`] = `
 <label id="deliveryCountyField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       County
-      <small>
-        (optional)
-      </small>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -134,15 +119,12 @@ exports[`DeliveryCounty renders with an error 1`] = `
 
 exports[`DeliveryCounty renders with an error 2`] = `
 <label id="deliveryCountyField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       County
-      <small>
-        (optional)
-      </small>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -160,15 +142,12 @@ exports[`DeliveryCounty renders with an error 2`] = `
 
 exports[`DeliveryCounty renders with default props 1`] = `
 <label id="deliveryCountyField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       County
-      <small>
-        (optional)
-      </small>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -186,15 +165,12 @@ exports[`DeliveryCounty renders with default props 1`] = `
 
 exports[`DeliveryCounty renders with default props 2`] = `
 <label id="deliveryCountyField"
-       class="o-forms-field"
+       class="o-forms-field o-forms-field--optional"
        data-validate="required"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       County
-      <small>
-        (optional)
-      </small>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">

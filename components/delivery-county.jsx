@@ -17,11 +17,11 @@ export function DeliveryCounty ({
 	return (
 		<label
 			id="deliveryCountyField"
-			className="o-forms-field"
+			className="o-forms-field o-forms-field--optional"
 			data-validate="required"
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">County <small>(optional)</small></span>
+				<span className="o-forms-title__main">County</span>
 			</span>
 			<span className={inputWrapperClassName}>
 				<input
