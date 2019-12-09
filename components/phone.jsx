@@ -34,8 +34,6 @@ export function Phone ({
 					name={inputName}
 					placeholder="Enter your phone number"
 					autoComplete="tel"
-					data-min="5" /* Used by o-forms validation */
-					data-max="15" /* Used by o-forms validation */
 					minLength="5"
 					maxLength="15"
 					data-trackable={dataTrackable}

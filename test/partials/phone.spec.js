@@ -43,13 +43,13 @@ describe('phone template', () => {
 	it('should have a data-min attribute for o-forms validation', () => {
 		const $ = context.template({});
 
-		expect($('input').attr('data-min')).to.equal('5');
+		expect($('input').attr('minlength')).to.equal('5');
 	});
 
 	it('should have a data-max attribute for o-forms validation', () => {
 		const $ = context.template({});
 
-		expect($('input').attr('data-max')).to.equal('15');
+		expect($('input').attr('maxlength')).to.equal('15');
 	});
 
 	shouldError(context);
