@@ -36,17 +36,17 @@ export function DeliveryOption ({
 		>
 			<span className="o-forms-input o-forms-input--radio-round">
 				{
-					options.map((option, index) => {
+					options.map(({value, isSelected}, index) => {
 						const inputProps = {
 							type: 'radio',
-							id: option.value,
+							id: value,
 							name: 'deliveryOption',
-							value: option.value,
+							value: value,
 							className: 'ncf__delivery-option__input',
-							...(option.isSelected && { defaultChecked: true })
+							...(isSelected && { defaultChecked: true })
 						};
 
-						const deliveryOptionValue = deliveryOptions[option.value];
+						const deliveryOptionValue = deliveryOptions[value];
 
 						return (
 							<label key={index} className="ncf__delivery-option__item">
