@@ -23,7 +23,20 @@ function initDemo () {
 			<ncf.DeliveryCity />
 			<ncf.DeliveryCounty />
 			<ncf.DeliveryInstructions />
-			<ncf.DeliveryOption />
+			<ncf.DeliveryOption options={[
+				{
+					value: 'PV',
+					isSelected: true
+				},
+				{
+					value: 'HD',
+					isSelected: false
+				},
+				{
+					value: 'EV',
+					isSelected: false
+				}
+			]} />
 			<ncf.DeliveryPostcode postcodeReference={'delivery postcode'}/>
 			<ncf.DeliveryStartDate />
 			<ncf.Email />
