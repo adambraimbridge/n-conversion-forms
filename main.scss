@@ -189,7 +189,8 @@ $system-code: 'n-conversion-forms';
 		&--inverse {
 			@include oButtonsContent($opts: (
 				'size': 'big',
-				'theme': 'inverse'
+				'theme': 'inverse',
+				'type': 'secondary'
 			));
 		}
 
