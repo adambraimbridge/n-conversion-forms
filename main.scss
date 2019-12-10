@@ -129,7 +129,7 @@ $system-code: 'n-conversion-forms';
 	}
 
 	&__header {
-		@include oTypographyHeading($level: 5);
+		@include oTypographyHeading($level: 3);
 
 		&--confirmation {
 			@include oTypographySerif($scale: 3);
