@@ -11,10 +11,7 @@
 			{{#if maxlength}}maxlength="{{maxlength}}"{{/if}}
 			{{#if rows}}rows="{{rows}}"{{/if}}
 			data-trackable="field-deliveryInstructions"
-			placeholder="Enter instructions {{#if maxlength}}(Max. {{maxlength}} characters){{/if}}:
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+			placeholder="{{#if placeholder}}{{placeholder}}{{else}}Enter instructions {{#if maxlength}}(Max. {{maxlength}} characters){{/if}}:&#x0a;- Door colour, letterbox location&#x0a;- Placement i.e. letterbox delivery&#x0a;- Special handling i.e. place in plastic bag{{/if}}"
 			{{#if isDisabled}}disabled{{/if}}>{{value}}</textarea>
 	</span>
 	<p>

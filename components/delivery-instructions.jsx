@@ -9,6 +9,7 @@ export function DeliveryInstructions ({
 	maxlength = null,
 	rows = null,
 	isDisabled = false,
+	placeholder = '',
 	value = ''
 }) {
 	const textAreaWrapperClassNames = classNames([
@@ -18,7 +19,7 @@ export function DeliveryInstructions ({
 	]);
 
 	const maxLengthText = maxlength ? `(Max. ${maxlength} characters)` : '';
-	const placeholder = `Enter instructions ${maxLengthText}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery\u000a- Special handling i.e. place in plastic bag`;
+	const defaultPlaceholder = `Enter instructions ${maxLengthText}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery\u000a- Special handling i.e. place in plastic bag`;
 
 	const textAreaProps = {
 		id: inputId,
@@ -26,7 +27,7 @@ export function DeliveryInstructions ({
 		...(maxlength && { maxLength: maxlength }),
 		...(rows && { rows }),
 		'data-trackable': 'field-deliveryInstructions',
-		placeholder,
+		placeholder: placeholder ? placeholder : defaultPlaceholder,
 		disabled: isDisabled,
 		defaultValue: value
 	};
