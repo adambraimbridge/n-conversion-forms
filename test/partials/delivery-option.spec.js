@@ -17,12 +17,16 @@ describe('delivery-option', () => {
 	});
 
 	it('should draw a single option', () => {
-		const $ = context.template({ options: [{}]});
+		const $ = context.template({ options: [{ value: 'HD' }]});
 		expect($('input').length).to.equal(1);
 	});
 
 	it('should draw multiple options', () => {
-		const $ = context.template({ options: [{}, {}, {}]});
+		const $ = context.template({ options: [
+			{ value: 'HD' },
+			{ value: 'PV' },
+			{ value: 'EV' }
+		]});
 		expect($('input').length).to.equal(3);
 	});
 
