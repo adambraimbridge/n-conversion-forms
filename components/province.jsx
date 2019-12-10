@@ -17,7 +17,7 @@ export function Province ({
 }) {
 	const fieldClassNames = classNames([
 		'o-forms-field',
-		{ 'n-ui-hide': isHidden }
+		{ 'ncf__hidden': isHidden }
 	]);
 
 	const inputWrapperClassNames = classNames([

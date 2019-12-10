@@ -367,8 +367,8 @@ exports[`PaymentType render with enableCreditcard 1`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
-  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
-    <div class="ncf__zuora-payment-overlay n-ui-hide">
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit ncf__hidden">
+    <div class="ncf__zuora-payment-overlay ncf__hidden">
     </div>
     <div id="zuora_payment"
          class="ncf__zuora-payment"
@@ -461,8 +461,8 @@ exports[`PaymentType render with enableCreditcard 2`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
-  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
-    <div class="ncf__zuora-payment-overlay n-ui-hide">
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit ncf__hidden">
+    <div class="ncf__zuora-payment-overlay ncf__hidden">
     </div>
     <div id="zuora_payment"
          class="ncf__zuora-payment"
@@ -555,7 +555,7 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
-  <div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit n-ui-hide">
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit ncf__hidden">
     <div id="directDebitGuarantee"
          class="ncf__directdebit-guarantee"
          data-o-component="o-expander"
@@ -594,8 +594,8 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
       </ul>
     </div>
   </div>
-  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
-    <div class="ncf__zuora-payment-overlay n-ui-hide">
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit ncf__hidden">
+    <div class="ncf__zuora-payment-overlay ncf__hidden">
     </div>
     <div id="zuora_payment"
          class="ncf__zuora-payment"
@@ -688,7 +688,7 @@ exports[`PaymentType render with enableDirectdebit 2`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
-  <div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit n-ui-hide">
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit ncf__hidden">
     <div id="directDebitGuarantee"
          class="ncf__directdebit-guarantee"
          data-o-component="o-expander"
@@ -727,8 +727,8 @@ exports[`PaymentType render with enableDirectdebit 2`] = `
       </ul>
     </div>
   </div>
-  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
-    <div class="ncf__zuora-payment-overlay n-ui-hide">
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit ncf__hidden">
+    <div class="ncf__zuora-payment-overlay ncf__hidden">
     </div>
     <div id="zuora_payment"
          class="ncf__zuora-payment"

@@ -31,7 +31,7 @@ class FormElement {
 	 * Hides the form element.
 	 */
 	hide () {
-		this.$el.classList.add('n-ui-hide');
+		this.$el.classList.add('ncf__hidden');
 	}
 
 
@@ -39,7 +39,7 @@ class FormElement {
 	 * Shows the form element.
 	 */
 	show () {
-		this.$el.classList.remove('n-ui-hide');
+		this.$el.classList.remove('ncf__hidden');
 	}
 
 	/**

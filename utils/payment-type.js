@@ -103,9 +103,9 @@ class PaymentType {
 		for (let i = 0; i < content.length; i++) {
 			const element = content[i];
 			if (element.classList.contains(`ncf__payment-type-panel--${type}`)) {
-				element.classList.remove('n-ui-hide');
+				element.classList.remove('ncf__hidden');
 			} else {
-				element.classList.add('n-ui-hide');
+				element.classList.add('ncf__hidden');
 			}
 		}
 	}

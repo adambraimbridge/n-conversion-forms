@@ -2,7 +2,7 @@
 
 exports[`Province can apply class to hide the component 1`] = `
 <label id="provinceField"
-       class="o-forms-field n-ui-hide"
+       class="o-forms-field ncf__hidden"
        data-validate="required"
 >
   <span class="o-forms-title">
@@ -71,7 +71,7 @@ exports[`Province can apply class to hide the component 1`] = `
 
 exports[`Province can apply class to hide the component 2`] = `
 <label id="provinceField"
-       class="o-forms-field n-ui-hide"
+       class="o-forms-field ncf__hidden"
        data-validate="required"
 >
   <span class="o-forms-title">

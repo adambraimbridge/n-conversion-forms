@@ -216,7 +216,7 @@ exports[`Billing Postcode can render as an Error 2`] = `
 
 exports[`Billing Postcode can render as an hidden field 1`] = `
 <label id="billingPostcodeField"
-       class="o-forms-field n-ui-hide"
+       class="o-forms-field ncf__hidden"
        data-validate="required"
 >
   <span class="o-forms-title">
@@ -251,7 +251,7 @@ exports[`Billing Postcode can render as an hidden field 1`] = `
 
 exports[`Billing Postcode can render as an hidden field 2`] = `
 <label id="billingPostcodeField"
-       class="o-forms-field n-ui-hide"
+       class="o-forms-field ncf__hidden"
        data-validate="required"
 >
   <span class="o-forms-title">

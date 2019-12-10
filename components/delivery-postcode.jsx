@@ -18,7 +18,7 @@ export function DeliveryPostcode ({
 
 	let deliveryPostcodeFieldClassNames = classNames([
 		'o-forms-field',
-		{ 'n-ui-hide': isHidden }
+		{ 'ncf__hidden': isHidden }
 	]);
 
 	return (

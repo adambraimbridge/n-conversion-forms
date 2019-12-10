@@ -148,7 +148,7 @@ exports[`Delivery Postcode render a postcode input with a label 2`] = `
 
 exports[`Delivery Postcode render different styles 1`] = `
 <label id="deliveryPostcodeField"
-       class="o-forms-field n-ui-hide"
+       class="o-forms-field ncf__hidden"
        data-validate="required"
 >
   <span class="o-forms-title">
@@ -184,7 +184,7 @@ exports[`Delivery Postcode render different styles 1`] = `
 
 exports[`Delivery Postcode render different styles 2`] = `
 <label id="deliveryPostcodeField"
-       class="o-forms-field n-ui-hide"
+       class="o-forms-field ncf__hidden"
        data-validate="required"
 >
   <span class="o-forms-title">

@@ -16,7 +16,7 @@ const SELECTOR_MESSAGE_CONTENT = '.o-message__content-detail';
 const SELECTOR_CONTAINER = '.o-message';
 const SELECTOR_MESSAGE_CONTAINER = '.ncf__message';
 const SELECTOR_TITLE = '.o-message__content-highlight';
-const HIDDEN_CLASS = 'n-ui-hide';
+const HIDDEN_CLASS = 'ncf__hidden';
 
 let context = {};
 
