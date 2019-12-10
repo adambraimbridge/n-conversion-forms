@@ -38,7 +38,7 @@ export function DeliveryOption ({
 				{
 					options
 						.filter(({value}) => Object.keys(deliveryOptions).includes(value))
-						.map(({value, isSelected}, index) => {
+						.map(({value, isSelected}) => {
 							const inputProps = {
 								type: 'radio',
 								id: value,
@@ -51,7 +51,7 @@ export function DeliveryOption ({
 							const deliveryOptionValue = deliveryOptions[value];
 
 							return (
-								<label key={index} className="ncf__delivery-option__item">
+								<label key={value} className="ncf__delivery-option__item">
 									<input {...inputProps} />
 									<span className="o-forms-input__label ncf__delivery-option__label">
 										<span className="ncf__delivery-option__title">{deliveryOptionValue.title}</span>
