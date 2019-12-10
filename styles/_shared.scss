@@ -1,4 +1,5 @@
 @mixin bigRadioButton($className) {
+	// Overrides o-forms styling for round radio buttons
 	.o-forms-input--radio-round .o-forms-input__label {
 		box-sizing: border-box;
 		padding: 14px 20px;
@@ -22,6 +23,7 @@
 		}
 	}
 
+	// Overrides o-forms styling for round radio buttons in the checked state.
 	/* stylelint-disable-next-line */
 	.o-forms-input--radio-round input[type=radio]:checked + .o-forms-input__label {
 		background-color: oColorsByName('teal');
