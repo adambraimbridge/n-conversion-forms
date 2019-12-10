@@ -282,16 +282,6 @@ exports[`DeliveryOption renders without unrecognised delivery options 1`] = `
     </label>
     <label class="ncf__delivery-option__item">
       <input type="radio"
-             id="FOOBAR"
-             name="deliveryOption"
-             value="FOOBAR"
-             class="ncf__delivery-option__input"
-      >
-      <span class="o-forms-input__label ncf__delivery-option__label">
-      </span>
-    </label>
-    <label class="ncf__delivery-option__item">
-      <input type="radio"
              id="EV"
              name="deliveryOption"
              value="EV"
@@ -348,16 +338,6 @@ exports[`DeliveryOption renders without unrecognised delivery options 2`] = `
         <div class="ncf__delivery-option__description">
           Free delivery to your home or office before 7am.
         </div>
-      </span>
-    </label>
-    <label class="ncf__delivery-option__item">
-      <input type="radio"
-             id="FOOBAR"
-             name="deliveryOption"
-             value="FOOBAR"
-             class="ncf__delivery-option__input"
-      >
-      <span class="o-forms-input__label ncf__delivery-option__label">
       </span>
     </label>
     <label class="ncf__delivery-option__item">

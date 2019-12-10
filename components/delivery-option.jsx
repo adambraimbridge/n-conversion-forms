@@ -36,28 +36,30 @@ export function DeliveryOption ({
 		>
 			<span className="o-forms-input o-forms-input--radio-round">
 				{
-					options.map(({value, isSelected}, index) => {
-						const inputProps = {
-							type: 'radio',
-							id: value,
-							name: 'deliveryOption',
-							value: value,
-							className: 'ncf__delivery-option__input',
-							defaultChecked: isSelected
-						};
+					options
+						.filter(({value}) => Object.keys(deliveryOptions).includes(value))
+						.map(({value, isSelected}, index) => {
+							const inputProps = {
+								type: 'radio',
+								id: value,
+								name: 'deliveryOption',
+								value: value,
+								className: 'ncf__delivery-option__input',
+								defaultChecked: isSelected
+							};
 
-						const deliveryOptionValue = deliveryOptions[value];
+							const deliveryOptionValue = deliveryOptions[value];
 
-						return (
-							<label key={index} className="ncf__delivery-option__item">
-								<input {...inputProps} />
-								<span className="o-forms-input__label ncf__delivery-option__label">
-									<span className="ncf__delivery-option__title">{deliveryOptionValue.title}</span>
-									<div className="ncf__delivery-option__description">{deliveryOptionValue.description}</div>
-								</span>
-							</label>
-						);
-					})
+							return (
+								<label key={index} className="ncf__delivery-option__item">
+									<input {...inputProps} />
+									<span className="o-forms-input__label ncf__delivery-option__label">
+										<span className="ncf__delivery-option__title">{deliveryOptionValue.title}</span>
+										<div className="ncf__delivery-option__description">{deliveryOptionValue.description}</div>
+									</span>
+								</label>
+							);
+						})
 				}
 			</span>
 		</div>
