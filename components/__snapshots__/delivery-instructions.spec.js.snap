@@ -17,10 +17,7 @@ exports[`DeliveryInstructions renders with a custom value 1`] = `
     <textarea id="deliveryInstructions"
               name="deliveryInstructions"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
       foobar
     </textarea>
@@ -48,10 +45,7 @@ exports[`DeliveryInstructions renders with a custom value 2`] = `
     <textarea id="deliveryInstructions"
               name="deliveryInstructions"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
       foobar
     </textarea>
@@ -79,10 +73,7 @@ exports[`DeliveryInstructions renders with a disabled input element 1`] = `
     <textarea id="deliveryInstructions"
               name="deliveryInstructions"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
               disabled
     >
     </textarea>
@@ -110,10 +101,7 @@ exports[`DeliveryInstructions renders with a disabled input element 2`] = `
     <textarea id="deliveryInstructions"
               name="deliveryInstructions"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
               disabled
     >
     </textarea>
@@ -141,10 +129,7 @@ exports[`DeliveryInstructions renders with an error 1`] = `
     <textarea id="deliveryInstructions"
               name="deliveryInstructions"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
     </textarea>
   </span>
@@ -171,10 +156,7 @@ exports[`DeliveryInstructions renders with an error 2`] = `
     <textarea id="deliveryInstructions"
               name="deliveryInstructions"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
     </textarea>
   </span>
@@ -201,10 +183,7 @@ exports[`DeliveryInstructions renders with default props 1`] = `
     <textarea id="deliveryInstructions"
               name="deliveryInstructions"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
     </textarea>
   </span>
@@ -231,10 +210,7 @@ exports[`DeliveryInstructions renders with default props 2`] = `
     <textarea id="deliveryInstructions"
               name="deliveryInstructions"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
     </textarea>
   </span>
@@ -262,10 +238,7 @@ exports[`DeliveryInstructions renders with maxlength 1`] = `
               name="deliveryInstructions"
               maxlength="200"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions (Max. 200 characters):
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
     </textarea>
   </span>
@@ -293,10 +266,7 @@ exports[`DeliveryInstructions renders with maxlength 2`] = `
               name="deliveryInstructions"
               maxlength="200"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions (Max. 200 characters):
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
     </textarea>
   </span>
@@ -324,10 +294,7 @@ exports[`DeliveryInstructions renders with rows 1`] = `
               name="deliveryInstructions"
               rows="20"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
     </textarea>
   </span>
@@ -355,10 +322,7 @@ exports[`DeliveryInstructions renders with rows 2`] = `
               name="deliveryInstructions"
               rows="20"
               data-trackable="field-deliveryInstructions"
-              placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+              placeholder="test"
     >
     </textarea>
   </span>
