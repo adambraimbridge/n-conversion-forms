@@ -64,7 +64,7 @@ export function PaymentType ({
 
 	const createDirectDebitPanel = () => {
 		return enableDirectdebit && (
-			<div className="ncf__payment-type-panel ncf__payment-type-panel--directdebit n-ui-hide">
+			<div className="ncf__payment-type-panel ncf__payment-type-panel--directdebit ncf__hidden">
 				<div id="directDebitGuarantee" className="ncf__directdebit-guarantee" data-o-component="o-expander" data-o-expander-shrink-to="hidden" data-o-expander-expanded-toggle-text="guarantee" data-o-expander-collapsed-toggle-text="guarantee" role="tabpanel">
 					<p>Direct Debit is only supported in the UK</p>
 					<p>Your payments are protected by the Direct Debit <button type="button" className="ncf__directdebit-guarantee-toggle o-expander__toggle">guarantee</button></p>
@@ -82,8 +82,8 @@ export function PaymentType ({
 
 	const createZuoraPanel = () => {
 		return (enableDirectdebit || enableCreditcard) && (
-			<div className="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
-				<div className="ncf__zuora-payment-overlay n-ui-hide"></div>
+			<div className="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit ncf__hidden">
+				<div className="ncf__zuora-payment-overlay ncf__hidden"></div>
 				<div id="zuora_payment" className="ncf__zuora-payment">
 					<iframe id="z_hppm_iframe" title="Zuora Payment" overflow="visible" scrolling="no" frameBorder="0" allowtransparency="true"
 						className="z_hppm_iframe" style={{display: 'block'}}>

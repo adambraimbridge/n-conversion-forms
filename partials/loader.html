@@ -1,4 +1,4 @@
-<div class="ncf__loader {{#if showLoader}}is-visible{{else}}n-ui-hide{{/if}}"
+<div class="ncf__loader {{#if showLoader}}is-visible{{else}}ncf__hidden{{/if}}"
 	role="dialog" aria-labelledby="loader-aria-label" aria-describedby="loader-aria-description"
 	aria-modal="true" {{#if showLoader}}tabindex="1"{{/if}}>
 	<div class="ncf__loader__content">
@@ -7,7 +7,7 @@
 				{{title}}
 			</div>
 		{{else}}
-			<div class="n-ui-hide" id="loader-aria-label">Loading</div>
+			<div class="ncf__hidden" id="loader-aria-label">Loading</div>
 		{{/if}}
 		<div class="ncf__loader__content__main" id="loader-aria-description">
 			{{#if @partial-block}}

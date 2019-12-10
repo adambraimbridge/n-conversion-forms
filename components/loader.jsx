@@ -10,12 +10,12 @@ export function Loader ({
 	const label = title ? (
 		<div className="ncf__loader__content__title" id="loader-aria-label">{title}</div>
 	) : (
-		<div className="n-ui-hide" id="loader-aria-label">Loading</div>
+		<div className="ncf__hidden" id="loader-aria-label">Loading</div>
 	);
 	const className = classNames([
 		'ncf__loader',
 		{ 'is-visible': showLoader },
-		{ 'n-ui-hide': !showLoader }
+		{ 'ncf__hidden': !showLoader }
 	]);
 	const props = {
 		className,

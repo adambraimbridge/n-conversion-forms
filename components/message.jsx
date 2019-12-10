@@ -21,7 +21,7 @@ export function Message ({ title, message, additional = [], actions = null, name
 
 	const ncfClassNames = classNames(
 		'ncf__message',
-		{ 'n-ui-hide': isHidden }
+		{ 'ncf__hidden': isHidden }
 	);
 
 	const callToActionsList = actions ? (
