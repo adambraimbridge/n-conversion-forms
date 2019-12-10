@@ -1,5 +1,5 @@
 @mixin bigRadioButton($className) {
-	.o-forms-input--radio-round input[type=radio] + .o-forms-input__label {
+	.o-forms-input--radio-round .o-forms-input__label {
 		box-sizing: border-box;
 		padding: 14px 20px;
 		min-height: 110px;
@@ -22,6 +22,7 @@
 		}
 	}
 
+	/* stylelint-disable-next-line */
 	.o-forms-input--radio-round input[type=radio]:checked + .o-forms-input__label {
 		background-color: oColorsByName('teal');
 		color: oColorsByName('white');
