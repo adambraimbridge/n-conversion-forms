@@ -13,46 +13,37 @@ export function Responsibility ({
 	selectName = 'responsibility',
 	options = defaultOptions
 }) {
-	const fieldClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassName = classNames([
+		'o-forms-input',
+		'o-forms-input--select',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	return (
-		<div
-			id={fieldId}
-			className={fieldClassName}
-			data-ui-item="select"
-			data-ui-item-name="responsibility"
-			data-validate="required"
-		>
-			<label
-				htmlFor="responsibility"
-				className="o-forms__label"
-			>Which best describes your job responsibility?</label>
+		<label id={fieldId} className="o-forms-field" data-validate="required">
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">Which best describes your job responsibility?</span>
+			</span>
 
-			<select
-				id={selectId}
-				name={selectName}
-				className="o-forms__select js-field__input js-item__value"
-				data-trackable="field-responsibility"
-				aria-required="true"
-				required
-				disabled={isDisabled}
-				defaultValue={value}
-			>
-				<option value="">Please select a job responsibility</option>
+			<span className={inputWrapperClassName}>
+				<select
+					id={selectId}
+					name={selectName}
+					data-trackable="field-responsibility"
+					aria-required="true"
+					required
+					disabled={isDisabled}
+					defaultValue={value}
+				>
+					<option value="">Please select a job responsibility</option>
 
-				{options.map(({ code, description }) => {
-					return <option key={code} value={code}>{description}</option>;
-				})}
-			</select>
-
-			<div className="o-forms__errortext" >Please select your responsibility</div>
-		</div>
+					{options.map(({ code, description }) => {
+						return <option key={code} value={code}>{description}</option>;
+					})}
+				</select>
+				<span className="o-forms-input__error">Please select your responsibility</span>
+			</span>
+		</label>
 	);
 }
 

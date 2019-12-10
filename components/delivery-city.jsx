@@ -7,38 +7,32 @@ export function DeliveryCity ({
 	value = '',
 	isDisabled = false
 }) {
-	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassName = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	return (
-		<div
-			id="deliveryCityField"
-			className={divClassName}
-			data-ui-item="form-field"
-			data-ui-item-name="deliveryCity"
-			data-validate="required"
-		>
-			<label htmlFor="deliveryCity" className="o-forms__label">City/town</label>
-
-			<input
-				type="text"
-				id="deliveryCity"
-				name="deliveryCity"
-				className="o-forms__text js-field__input js-item__value"
-				data-trackable="field-deliveryCity"
-				autoComplete="address-level2"
-				placeholder="e.g. Bath"
-				aria-required="true"
-				required
-				disabled={isDisabled}
-				defaultValue={value}
-			/>
-		</div>
+		<label id="deliveryCityField" className="o-forms-field" data-validate="required">
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">City/town</span>
+			</span>
+			<span className={inputWrapperClassName}>
+				<input
+					type="text"
+					id="deliveryCity"
+					name="deliveryCity"
+					data-trackable="field-deliveryCity"
+					autoComplete="address-level2"
+					placeholder="e.g. Bath"
+					aria-required="true"
+					required
+					disabled={isDisabled}
+					defaultValue={value}
+				/>
+			</span>
+		</label>
 	);
 }
 

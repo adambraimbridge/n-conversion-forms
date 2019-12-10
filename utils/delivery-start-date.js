@@ -16,7 +16,7 @@ class DeliveryStartDate {
 			throw new Error('Please supply the DOM element');
 		}
 
-		this.$container = element.querySelector('#deliveryStartDateField');
+		this.$container = element.querySelector('#deliveryStartDateField .o-forms-input');
 		this.$deliveryStartDate = element.querySelector('#deliveryStartDate');
 		this.$deliveryStartDateText = element.querySelector('.js-start-date-text');
 
@@ -35,7 +35,7 @@ class DeliveryStartDate {
 	async handleDeliveryStartDateChange (url, getData) {
 		if (this.$deliveryStartDate.value) {
 			try {
-				this.$container.classList.remove('o-forms--error');
+				this.$container.classList.remove('o-forms-input--invalid');
 				const result = await fetch(url, {
 					method: 'POST',
 					credentials: 'include',
@@ -53,7 +53,7 @@ class DeliveryStartDate {
 
 				return true;
 			} catch (error) {
-				this.$container.classList.add('o-forms--error');
+				this.$container.classList.add('o-forms-input--invalid');
 				return false;
 			}
 		}

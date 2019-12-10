@@ -3,7 +3,6 @@ const {
 	fetchPartial,
 	shouldBeDisableable,
 	shouldBeRequired,
-	shouldError
 } = require('../helpers');
 
 let context = {};
@@ -36,7 +35,17 @@ describe('delivery-address template', () => {
 
 	shouldBeRequired(context, '#deliveryAddressLine1');
 
-	shouldError(context);
+	it('should not have error class by default', () => {
+		const $ = context.template({});
+
+		expect($('.o-forms-input--invalid').length).to.equal(0);
+	});
+
+	it('should have error class if hasError is passed', () => {
+		const $ = context.template({ hasError: true });
+
+		expect($('.o-forms-input--invalid').length).to.equal(3);
+	});
 
 	shouldBeDisableable(context, 'input');
 });

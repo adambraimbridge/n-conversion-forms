@@ -14,32 +14,39 @@ export function Industry ({
 	options = defaultOptions
 }) {
 
-	const fieldClassName = classNames([
-		'o-forms o-forms--wide ncf__field js-field',
-		{ 'o-forms--error': hasError }
+	const inpiutWrapperClassName = classNames([
+		'o-forms-input',
+		'o-forms-input--select',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
-	return (<div
-		id={fieldId}
-		className={fieldClassName}
-		data-ui-item="select"
-		data-ui-item-name="industry"
-		data-validate="required">
-		<label htmlFor="industry" className="o-forms__label">In which industry do you work?</label>
-		<select id={selectId} name={selectName} className="o-forms__select js-field__input js-item__value"
-			data-trackable="field-industry"
-			aria-required="true" required
-			disabled={isDisabled}
-			defaultValue={value}
+	return (
+		<label
+			id={fieldId}
+			className="o-forms-field"
+			data-validate="required"
 		>
-			<option value="">Please select an industry</option>
-			{options.map(({ code, description }) => {
-				return <option key={code} value={code}>{description}</option>;
-			})}
-		</select >
-		<div className="o-forms__errortext" >Please select your company’s industry</div >
-	</div >);
-
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">In which industry do you work?</span>
+			</span>
+			<span className={inpiutWrapperClassName}>
+				<select id={selectId}
+					name={selectName}
+					data-trackable="field-industry"
+					aria-required="true"
+					required
+					disabled={isDisabled}
+					defaultValue={value}
+				>
+					<option value="">Please select an industry</option>
+					{options.map(({ code, description }) => {
+						return <option key={code} value={code}>{description}</option>;
+					})}
+				</select>
+				<span className="o-forms-input__error" >Please select your company’s industry</span>
+			</span>
+		</label>
+	);
 }
 
 Industry.propTypes = {

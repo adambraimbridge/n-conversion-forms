@@ -9,28 +9,22 @@ export function Country ({
 	hasError = false,
 	inputId = 'country',
 	isB2b = false,
-	isBillingCountry = false,
 	isDisabled = false,
 	value
 }) {
-	const className = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		'js-unknown-user-field',
-		{ 'o-forms--error': hasError }
+	const selectWrapperClassName = classNames([
+		'o-forms-input',
+		'o-forms-input--select',
+		{ 'o-forms-input--invalid': hasError }
 	]);
-	const itemName = isBillingCountry ? 'billingCountry' : 'country';
-	const label = `${isBillingCountry ? 'Billing Country' : 'Country'}${isB2b ? '/Region' : ''}`;
+	const label = `Country${isB2b ? '/Region' : ''}`;
 	const error = `Please select your country${isB2b ? '/region' : ''}`;
-	const props = {
+	const selectProps = {
 		id: inputId,
-		className: 'o-forms__select js-field__input js-item__value',
 		'aria-required': true,
 		required: true,
-		name: isBillingCountry ? 'billingCountry' : 'country',
-		'data-trackable': isBillingCountry ? 'field-billing-country' : 'field-country',
+		name: 'country',
+		'data-trackable': 'field-country',
 		disabled: isDisabled,
 	};
 	const countries = getCountries({ filter: filterList, value });
@@ -44,18 +38,22 @@ export function Country ({
 		</optgroup>
 	);
 	const createSelect = countries => (
-		<select {...props}>
+		<select {...selectProps}>
 			<option value="">Please select a country{isB2b ? '/region' : ''}</option>
 			{countries.map(country => country.label ? createOptGroup(country) : createOption(country))}
 		</select>
 	);
 
 	return (
-		<div id={fieldId} className={className} data-ui-item="select" data-ui-item-name={itemName} data-ui-item-store-previous="true" data-validate="required">
-			<label htmlFor={inputId} className="o-forms__label">{label}</label>
-			{createSelect(countries)}
-			<div className="o-forms__errortext">{error}</div>
-		</div>
+		<label id={fieldId} className="o-forms-field js-unknown-user-field" data-validate="required">
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">{label}</span>
+			</span>
+			<span className={selectWrapperClassName}>
+				{createSelect(countries)}
+				<span className="o-forms-input__error">{error}</span>
+			</span>
+		</label>
 	);
 }
 
@@ -69,7 +67,6 @@ Country.propTypes = {
 	hasError: PropTypes.bool,
 	inputId: PropTypes.string,
 	isB2b: PropTypes.bool,
-	isBillingCountry: PropTypes.bool,
 	isDisabled: PropTypes.bool,
 	value: PropTypes.string
 };

@@ -26,7 +26,7 @@ describe('email template', () => {
 		const label = 'Email address';
 		const $ = context.template({});
 
-		expect($('label').text().trim()).to.equal(label);
+		expect($('.o-forms-title__main').text().trim()).to.equal(label);
 	});
 
 	it('should have the b2b label if isB2b set', () => {
@@ -35,14 +35,14 @@ describe('email template', () => {
 			isB2b: true
 		});
 
-		expect($('label').text().trim()).to.equal(label);
+		expect($('.o-forms-title__main').text().trim()).to.equal(label);
 	});
 
 	it('should have a default description', () => {
 		const description = 'Please enter an email address';
 		const $ = context.template({});
 
-		expect($('#email-description').text().trim()).to.equal(description);
+		expect($('.o-forms-title__prompt').text().trim()).to.equal(description);
 	});
 
 	it('should be able to over write the description', () => {
@@ -51,7 +51,7 @@ describe('email template', () => {
 			description
 		});
 
-		expect($('#email-description').text().trim()).to.equal(description);
+		expect($('.o-forms-title__prompt').text().trim()).to.equal(description);
 	});
 
 	shouldBeRequired(context, 'input');

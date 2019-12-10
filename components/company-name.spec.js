@@ -21,12 +21,12 @@ describe('CompanyName', () => {
 		expect(CompanyName).toRenderAs(context, props);
 	});
 
-	it('renders a field with custom div id', () => {
+	it('renders a field with custom field id', () => {
 		const props = { fieldId: 'customFieldId' };
 
 		const component = mount(CompanyName(props));
 
-		const element = component.find('div#customFieldId');
+		const element = component.find('#customFieldId');
 
 		expect(element.exists()).toBe(true);
 	});

@@ -1,30 +1,25 @@
-<div id="primaryTelephoneField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}"  data-ui-item="form-field" data-ui-item-name="primaryTelephone" data-validate="required,number">
-
-	<label for="primaryTelephone" class="o-forms__label">
-		{{#if isB2b}}
-		Work phone number
-		{{else}}
-		Phone number
-		{{/if}}
-	</label>
-	<small class="o-forms__additional-info" id="phone-description">
-		5 to 15 characters (numbers only)
-	</small>
-
-	<input type="tel" id="primaryTelephone" name="primaryTelephone" placeholder="Enter your phone number"
-				autocomplete="tel"
-				class="o-forms__text js-field__input js-item__value"
-				data-min="5" {{!-- Used by o-forms validation --}}
-				data-max="15" {{!-- Used by o-forms validation --}}
-				minLength="5"
-				maxLength="15"
-				data-trackable="field-phone"
-				aria-describedby="phone-description"
-				aria-required="true" required
-				{{#if pattern}}pattern="{{pattern}}"{{/if}}
-				{{#if isDisabled}}disabled{{/if}}
-				value="{{value}}">
-
-	<div class="o-forms__errortext">This phone number is not valid</div>
-
-</div>
+<label id="primaryTelephoneField" class="o-forms-field" data-validate="required,number">
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">
+			{{#if isB2b}}
+			Work phone number
+			{{else}}
+			Phone number
+			{{/if}}
+		</span>
+		<span class="o-forms-title__prompt">5 to 15 characters (numbers only)</span>
+	</span>
+	<span class="o-forms-input o-forms-input--text{{#if hasError}} o-forms-input--invalid{{/if}}">
+		<input type="tel" id="primaryTelephone" name="primaryTelephone" placeholder="Enter your phone number"
+			autocomplete="tel"
+			minlength="5"
+			maxlength="15"
+			data-trackable="field-phone"
+			aria-describedby="phone-description"
+			aria-required="true" required
+			{{#if pattern}}pattern="{{pattern}}"{{/if}}
+			{{#if isDisabled}}disabled{{/if}}
+			value="{{value}}" />
+		<span class="o-forms-input__error">This phone number is not valid</span>
+	</span>
+</label>

@@ -11,17 +11,14 @@ export function BillingCountry ({
 	isDisabled = false,
 	value
 }) {
-	const className = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		'js-unknown-user-field',
-		{ 'o-forms--error': hasError }
+	const selectWrapperClassName = classNames([
+		'o-forms-input',
+		'o-forms-input--select',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 	const props = {
 		id: inputId,
-		className: 'o-forms__select js-field__input js-item__value',
+		className: 'js-field__input js-item__value',
 		'aria-required': true,
 		required: true,
 		name: inputId,
@@ -46,11 +43,15 @@ export function BillingCountry ({
 	);
 
 	return (
-		<div id={fieldId} className={className} data-ui-item="select" data-ui-item-name="billingCountry" data-ui-item-store-previous="true" data-validate="required">
-			<label htmlFor={inputId} className="o-forms__label">Billing Country</label>
-			{createSelect(countries)}
-			<div className="o-forms__errortext">Please select your country</div>
-		</div>
+		<label id={fieldId} className="o-forms-field" data-validate="required">
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">Billing Country</span>
+			</span>
+			<span className={selectWrapperClassName}>
+				{createSelect(countries)}
+				<span className="o-forms-input__error">Please select your country</span>
+			</span>
+		</label>
 	);
 }
 

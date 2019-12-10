@@ -28,7 +28,7 @@ describe('billing country template', () => {
 		const $ = context.template({
 			isBillingCountry: true
 		});
-		expect($('label').text()).to.equal('Billing Country');
+		expect($('.o-forms-title__main').text()).to.equal('Billing Country');
 	});
 
 	describe('selection', () => {

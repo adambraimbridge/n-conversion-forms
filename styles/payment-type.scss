@@ -1,5 +1,7 @@
 @import 'o-expander/main';
 
+@include oExpander();
+
 @mixin buttonImageOverriding() {
 	color: transparent;
 	background-repeat: no-repeat;
@@ -8,49 +10,50 @@
 }
 
 @mixin ncfPaymentType() {
+	// #1 - Need to be this specific to override specific o-forms styles.
+	//      Helps us override the floating of the radio box so that we can have it
+	//      full width.
+	// #2 - Need to be this specific to override specific o-forms styles.
+	//      Helps us override the text colour (via buttonImageOverriding()) so
+	//      that it is transparent.
 	&__payment-type {
-		grid-row: 1;
-		padding: oTypographySpacingSize(2) 0;
+		.o-forms-input--radio-box & { // #1
+			display: block;
+			margin-bottom: oSpacingByName('s4');
 
-		img {
-			height: 15px;
-		}
+			&:last-child {
+				margin-bottom: 0;
+			}
 
-		label {
-			height: 15px;
-			width: calc(100% - 5px);
+			label {
+				float: none;
+				width: 100%;
+			}
 		}
 
 		&-selector {
-			display: inline-block;
-			width: 100%;
+			margin-top: 0;
 		}
 
-		// Being overly specific to override a specific o-forms styles
-		// this fixes a 3px misalignment in the payment types
-		.o-forms__label:first-of-type {
-			margin: 3px 0 3px 3px;
-		}
-
-		&--paypal {
-			.o-forms__label {
+		.o-forms-input--radio-box &--paypal { // #2
+			[type=radio] + .o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fpp-logo-100px.png?width=300&source=next&fit=scale-down);
 			}
 
-			.o-forms__radio-button:checked + .o-forms__label {
+			[type=radio]:checked + .o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fpp-logo-white.png?width=300&source=next&fit=scale-down);
 			}
 		}
 
-		&--directdebit {
-			.o-forms__label {
+		.o-forms-input--radio-box &--directdebit { // #2
+			[type=radio] + .o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fdirect_debit.png?width=300&source=next&fit=scale-down);
 			}
 
-			.o-forms__radio-button:checked + .o-forms__label {
+			[type=radio]:checked + .o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2Fassets%2Fthird-party%2Fdirect_debit-white.png?width=300&source=next&fit=scale-down);
 			}
@@ -62,13 +65,11 @@
 		text-align: center;
 
 		&-list {
-			@include oExpanderContent;
 			text-align: left;
 		}
 
 		&-toggle {
-			@include oExpanderToggle;
-			color: oColorsGetPaletteColor('teal');
+			color: oColorsByName('teal');
 		}
 	}
 

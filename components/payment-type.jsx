@@ -41,19 +41,22 @@ export function PaymentType ({
 				type: 'radio',
 				name: inputId,
 				value: type.id,
-				className: 'o-forms__radio-button',
 				id: type.id,
+				'aria-label': type.label,
 				...(value === type.id && { defaultChecked: true })
 			};
 			const className = classNames([
+				'o-forms-input--radio-box__container',
 				'ncf__payment-type',
 				`ncf__payment-type--${type.id}`,
-				{ 'n-ui-hide': type.hide }
+				{ 'ncf__hidden': type.hide }
 			]);
 			return (
 				<div key={type.id} className={className}>
-					<input {...inputProps}/>
-					<label htmlFor={type.id} className="o-forms__label">{type.label}</label>
+					<label>
+						<input {...inputProps}/>
+						<span className="o-forms-input__label" aria-hidden="true">{type.label}</span>
+					</label>
 				</div>
 			);
 		});
@@ -61,11 +64,11 @@ export function PaymentType ({
 
 	const createDirectDebitPanel = () => {
 		return enableDirectdebit && (
-			<div className="ncf__payment-type-panel ncf__payment-type-panel--directdebit n-ui-hide">
+			<div className="ncf__payment-type-panel ncf__payment-type-panel--directdebit ncf__hidden">
 				<div id="directDebitGuarantee" className="ncf__directdebit-guarantee" data-o-component="o-expander" data-o-expander-shrink-to="hidden" data-o-expander-expanded-toggle-text="guarantee" data-o-expander-collapsed-toggle-text="guarantee" role="tabpanel">
 					<p>Direct Debit is only supported in the UK</p>
-					<p>Your payments are protected by the Direct Debit <button type="button" className="ncf__directdebit-guarantee-toggle">guarantee</button></p>
-					<ul className="ncf__directdebit-guarantee-list">
+					<p>Your payments are protected by the Direct Debit <button type="button" className="ncf__directdebit-guarantee-toggle o-expander__toggle">guarantee</button></p>
+					<ul className="ncf__directdebit-guarantee-list o-expander__content">
 						<li>This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.</li>
 						<li>If there are any changes to the amount, date or frequency of your Direct Debit GoCardless re: The Financial Times will notify you 3 working days in advance of your account being debited or as otherwise agreed. If you request GoCardless Ltd re: The Financial Times to collect a payment, confirmation of the amount and date will be given to you at the time of the request.</li>
 						<li>If an error is made in the payment of your Direct Debit, by GoCardless Ltd re: The Financial Times or your bank or building society, you are entitled to a full and immediate refund of the amount paid from your bank or building society.</li>
@@ -79,8 +82,8 @@ export function PaymentType ({
 
 	const createZuoraPanel = () => {
 		return (enableDirectdebit || enableCreditcard) && (
-			<div className="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
-				<div className="ncf__zuora-payment-overlay n-ui-hide"></div>
+			<div className="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit ncf__hidden">
+				<div className="ncf__zuora-payment-overlay ncf__hidden"></div>
 				<div id="zuora_payment" className="ncf__zuora-payment">
 					<iframe id="z_hppm_iframe" title="Zuora Payment" overflow="visible" scrolling="no" frameBorder="0" allowtransparency="true"
 						className="z_hppm_iframe" style={{display: 'block'}}>
@@ -94,12 +97,12 @@ export function PaymentType ({
 	return (
 		<React.Fragment>
 			{createSecuritySeal()}
-			<div id={fieldId} className="o-forms o-forms--wide ncf__field">
-				<div className="ncf__payment-type-selector">
+			<div id={fieldId} className="o-forms-field">
+				<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
 					{createPaymentTypes()}
 				</div>
 
-				<div className="o-forms__errortext">Please enter a valid payment type</div>
+				<div className="o-forms-input__error">Please enter a valid payment type</div>
 
 				{createDirectDebitPanel()}
 

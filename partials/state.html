@@ -1,24 +1,25 @@
+<label id="stateField" class="o-forms-field{{#if isHidden}} ncf__hidden{{/if}}" data-validate="required">
+	<span class="o-forms-title">
+		<span class="o-forms-title__main">{{#if isBillingState}}Billing {{/if}}State</span>
+	</span>
 
-<div id="stateField" class="o-forms o-forms--wide su-field js-field{{#if hasError}} o-forms--error{{/if}}{{#if isHidden}} n-ui-hide{{/if}}" data-validate="required">
+	<span class="o-forms-input o-forms-input--select{{#if hasError}} o-forms-input--invalid{{/if}}">
+		{{#ncf-common-data export='states' import='americanStates.states' }}
+		<select id="state" aria-required="true" required
+			{{#if isBillingState}}
+			name="billingState"
+			{{else}}
+			name="state"
+			{{/if}}
+			data-trackable="field-state"
+			{{#if isDisabled}}disabled{{/if}}>
 
-	<label for="state" class="o-forms__label">{{#if isBillingState}}Billing {{/if}}State</label>
-
-	{{#ncf-common-data export='states' import='americanStates.states' }}
-	<select id="state" class="o-forms__select js-field__input js-item__value" aria-required="true" required
-		{{#if isBillingState}}
-		name="billingState"
-		{{else}}
-		name="state"
-		{{/if}}
-		data-trackable="field-state"
-		{{#if isDisabled}}disabled{{/if}}>
-
-		<option disabled value="">Please select a state</option>
-		{{#each states as |option|}}
-		<option {{#ifEquals ../value option.code}} selected{{/ifEquals}} value="{{option.code}}">{{option.name}}</option>
-		{{/each}}
-	</select>
-	{{/ncf-common-data }}
-
-	<div class="o-forms__errortext">Please select your state</div>
-</div>
+			<option disabled value="">Please select a state</option>
+			{{#each states as |option|}}
+			<option {{#ifEquals ../value option.code}} selected{{/ifEquals}} value="{{option.code}}">{{option.name}}</option>
+			{{/each}}
+		</select>
+		{{/ncf-common-data }}
+		<span class="o-forms-input__error">Please select your state</span>
+	</span>
+</label>

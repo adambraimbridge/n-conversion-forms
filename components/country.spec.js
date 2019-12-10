@@ -55,14 +55,6 @@ describe('Country', () => {
 		expect(Country).toRenderAs(context, props);
 	});
 
-	it('renders with isBillingCountry', () => {
-		const props = {
-			isBillingCountry: true
-		};
-
-		expect(Country).toRenderAs(context, props);
-	});
-
 	it('renders with isDisabled', () => {
 		const props = {
 			isDisabled: true

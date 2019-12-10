@@ -1,3 +1,4 @@
+$system-code: 'n-conversion-forms-demo';
 $o-brand: 'internal';
 @import 'o-layout/main';
 @import 'o-header-services/main';
@@ -8,8 +9,6 @@ $o-brand: 'internal';
 body {
 	margin: 0;
 }
-
-.n-ui-hide { display: none; }
 
 .demo {
 	&__iframe {

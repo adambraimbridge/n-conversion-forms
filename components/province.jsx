@@ -15,46 +15,43 @@ export function Province ({
 	isDisabled = false,
 	provinces = defaultProvinces
 }) {
-	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		{ 'o-forms--error': hasError },
-		{ 'n-ui-hide': isHidden }
+	const fieldClassNames = classNames([
+		'o-forms-field',
+		{ 'ncf__hidden': isHidden }
+	]);
+
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--select',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	return (
-		<div
-			id={fieldId}
-			className={divClassName}
-			data-ui-item="form-field"
-			data-ui-item-name="province"
-			data-validate="required"
-		>
-			<label htmlFor="province" className="o-forms__label">{ isBillingProvince ? 'Billing ' : '' }Province</label>
+		<label id={fieldId} className={fieldClassNames} data-validate="required">
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">{ isBillingProvince ? 'Billing ' : '' }Province</span>
+			</span>
+			<span className={inputWrapperClassNames}>
+				<select
+					id={selectId}
+					aria-required="true"
+					required
+					name={isBillingProvince ? 'billingProvince' : 'province'}
+					data-trackable="field-province"
+					disabled={isDisabled}
+					defaultValue={value}
+				>
+					<option disabled value="">Please select a province</option>
 
-			<select
-				id={selectId}
-				className="o-forms__select js-field__input js-item__value"
-				aria-required="true"
-				required
-				name={isBillingProvince ? 'billingProvince' : 'province'}
-				data-trackable="field-province"
-				disabled={isDisabled}
-				defaultValue={value}
-			>
-				<option disabled value="">Please select a province</option>
-
-				{
-					provinces.map(({ code, name }) => {
-						return (<option key={code} value={code}>{name}</option>);
-					})
-				}
-			</select>
-
-			<div className="o-forms__errortext">Please select your province.</div>
-		</div>
+					{
+						provinces.map(({ code, name }) => {
+							return (<option key={code} value={code}>{name}</option>);
+						})
+					}
+				</select>
+				<span className="o-forms-input__error">Please select your province.</span>
+			</span>
+		</label>
 	);
 }
 

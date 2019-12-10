@@ -8,36 +8,34 @@ export function DeliveryCounty ({
 	isDisabled = false
 
 }) {
-	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		'js-field',
-		{ 'o-forms--error': hasError }
+	const inputWrapperClassName = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	return (
-		<div
+		<label
 			id="deliveryCountyField"
-			className={divClassName}
-			data-ui-item="form-field"
-			data-ui-item-name="deliveryCounty"
+			className="o-forms-field o-forms-field--optional"
 			data-validate="required"
 		>
-			<label htmlFor="deliveryCounty" className="o-forms__label">County <small>(optional)</small></label>
-
-			<input
-				type="text"
-				id="deliveryCounty"
-				name="deliveryCounty"
-				className="o-forms__text js-field__input js-item__value"
-				data-trackable="field-deliveryCounty"
-				autoComplete="address-level3"
-				placeholder="e.g. Somerset"
-				disabled={isDisabled}
-				defaultValue={value}
-			/>
-		</div>
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">County</span>
+			</span>
+			<span className={inputWrapperClassName}>
+				<input
+					type="text"
+					id="deliveryCounty"
+					name="deliveryCounty"
+					data-trackable="field-deliveryCounty"
+					autoComplete="address-level3"
+					placeholder="e.g. Somerset"
+					disabled={isDisabled}
+					defaultValue={value}
+				/>
+			</span>
+		</label>
 	);
 }
 

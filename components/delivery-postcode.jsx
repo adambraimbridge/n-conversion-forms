@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export function DeliveryPostcode ({
 	postcodeReference,
@@ -9,47 +10,48 @@ export function DeliveryPostcode ({
 	hasError = false,
 	isHidden = false
 }) {
-	let DeliveryPostcodeFieldClassNames = 'o-forms o-forms--wide ncf__field js-field';
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--text',
+		{ 'o-forms-input--invalid': hasError }
+	]);
 
-	if (hasError) {
-		DeliveryPostcodeFieldClassNames += ' o-forms--error';
-	}
-
-	if (isHidden) {
-		DeliveryPostcodeFieldClassNames += ' n-ui-hide';
-	}
+	let deliveryPostcodeFieldClassNames = classNames([
+		'o-forms-field',
+		{ 'ncf__hidden': isHidden }
+	]);
 
 	return (
-		<div
+		<label
 			id="deliveryPostcodeField"
-			className={DeliveryPostcodeFieldClassNames}
-			data-ui-item="form-field"
-			data-ui-item-name="deliveryPostcode"
+			className={deliveryPostcodeFieldClassNames}
 			data-validate="required"
 		>
 
-			<label htmlFor="deliveryPostcode" className="o-forms__label">
-				Delivery <span data-reference="postcode">{postcodeReference}</span>
-			</label>
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">
+					Delivery <span data-reference="postcode">{postcodeReference}</span>
+				</span>
+			</span>
 
-			<input type="text"
-				id="deliveryPostcode"
-				name="deliveryPostcode"
-				defaultValue={`${value}`}
-				placeholder={`Enter your ${postcodeReference}`}
-				autoComplete="postal-code"
-				className="o-forms__text js-field__input js-item__value"
-				data-trackable="delivery-postcode"
-				aria-required="true"
-				required
-				pattern={pattern}
-				disabled={isDisabled} />
-
-			<div className="o-forms__errortext">
-				Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
-			</div>
-
-		</div>
+			<span className={inputWrapperClassNames}>
+				<input type="text"
+					id="deliveryPostcode"
+					name="deliveryPostcode"
+					defaultValue={`${value}`}
+					placeholder={`Enter your ${postcodeReference}`}
+					autoComplete="postal-code"
+					data-trackable="delivery-postcode"
+					aria-required="true"
+					required
+					pattern={pattern}
+					disabled={isDisabled}
+				/>
+				<span className="o-forms-input__error">
+					Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
+				</span>
+			</span>
+		</label>
 	);
 }
 

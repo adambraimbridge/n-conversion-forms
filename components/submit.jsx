@@ -10,11 +10,10 @@ export function Submit ({
 	label = 'Continue'
 }) {
 	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'ncf__field',
-		{ 'ncf__field--center': isCentered },
-		{ 'ncf__field--flex': backButtonUrl }
+		// The space at the beginning is so that we match what the handlebars
+		// template does. Not great I know. :/
+		{ ' ncf__field--center': isCentered },
+		{ ' ncf__field--flex': backButtonUrl }
 	]);
 
 	const backButton = backButtonUrl

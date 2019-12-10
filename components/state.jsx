@@ -14,44 +14,48 @@ export function State ({
 	isDisabled = false,
 	states = defaultStates
 }) {
-	const divClassName = classNames([
-		'o-forms',
-		'o-forms--wide',
-		'su-field',
-		'js-field',
-		{ 'o-forms--error': hasError },
-		{ 'n-ui-hide': isHidden }
+	const fieldClassNames = classNames([
+		'o-forms-field',
+		{ 'ncf__hidden': isHidden }
+	]);
+
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--select',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	return (
-		<div
+		<label
 			id={fieldId}
-			className={divClassName}
+			className={fieldClassNames}
 			data-validate="required"
 		>
-			<label htmlFor="state" className="o-forms__label">{ isBillingState ? 'Billing ' : '' }State</label>
+			<span className="o-forms-title">
+				<span className="o-forms-title__main">{ isBillingState ? 'Billing ' : '' }State</span>
+			</span>
 
-			<select
-				id={selectId}
-				className="o-forms__select js-field__input js-item__value"
-				aria-required="true"
-				required
-				name={isBillingState ? 'billingState' : 'state'}
-				data-trackable="field-state"
-				disabled={isDisabled}
-				defaultValue={value}
-			>
-				<option disabled value="">Please select a state</option>
+			<span className={inputWrapperClassNames}>
+				<select
+					id={selectId}
+					aria-required="true"
+					required
+					name={isBillingState ? 'billingState' : 'state'}
+					data-trackable="field-state"
+					disabled={isDisabled}
+					defaultValue={value}
+				>
+					<option disabled value="">Please select a state</option>
 
-				{
-					states.map(({ code, name }) => {
-						return (<option key={code} value={code}>{name}</option>);
-					})
-				}
-			</select>
-
-			<div className="o-forms__errortext">Please select your state</div>
-		</div>
+					{
+						states.map(({ code, name }) => {
+							return (<option key={code} value={code}>{name}</option>);
+						})
+					}
+				</select>
+				<span className="o-forms-input__error">Please select your state</span>
+			</span>
+		</label>
 	);
 }
 

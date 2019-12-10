@@ -5,21 +5,25 @@
 	@include oGridRespondTo($until: M) {
 
 		&__customer-care {
-			background: oColorsGetPaletteColor('teal');
-			color: oColorsGetPaletteColor('white');
+			background: oColorsByName('teal');
+			color: oColorsByName('white');
 		}
 
 		&__customer-care &__icon {
-			background: oColorsGetPaletteColor('white');
-			border-color: oColorsGetPaletteColor('white');
+			background: oColorsByName('white');
+			border-color: oColorsByName('white');
 			&::before {
-				@include oIconsGetIcon('phone', oColorsGetPaletteColor('teal'), 40);
-				color: oColorsGetPaletteColor('teal');
+				@include oIconsContent(
+					$icon-name: 'phone',
+					$color: oColorsByName('teal'),
+					$size: 40
+				);
+				color: oColorsByName('teal');
 			}
 		}
 
 		&__customer-care &__link {
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 		}
 
 	}

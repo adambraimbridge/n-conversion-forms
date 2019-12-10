@@ -22,51 +22,60 @@ export function Password ({
 	// Use inputId if inputName is not explicitly passed.
 	inputName = inputName || inputId;
 
-	const PasswordFieldClassNames = classNames([
-		'o-forms o-forms--wide',
-		'ncf__field',
-		'js-field',
+	const fieldClassNames = classNames([
+		'o-forms-field',
+		'ncf__password-field',
 		{
-			'o-forms--error': hasError,
 			'js-unknown-user-field': unknownUser
+		}
+	]);
+
+	const inputWrapperClassNames = classNames([
+		'o-forms-input',
+		'o-forms-input--password',
+		'o-forms-input--checkbox',
+		'o-forms-input--suffix',
+		{
+			'o-forms-input--invalid': hasError,
 		}
 	]);
 
 	return (
 		<div
 			id={fieldId}
-			className={PasswordFieldClassNames}
-			data-ui-item="form-field"
-			data-ui-item-name="password"
+			className={fieldClassNames}
 			data-validate="required,password"
 		>
 
-			<label htmlFor={inputId} className="o-forms__label">{label}</label>
-			{showDescription ?
-				(<small id="password-description" className="o-forms__additional-info">
-					{description}
-				</small>) : null}
+			<label htmlFor={inputId} className="o-forms-title">
+				<span className="o-forms-title__main">
+					{label}
+				</span>
+				{showDescription ?
+					(<span className="o-forms-title__prompt">
+						{description}
+					</span>) : null}
+			</label>
 
-			<div className="o-forms__affix-wrapper js-show-password">
+			<div className={inputWrapperClassNames}>
 				<input
 					type="password"
 					id={inputId}
 					name={inputName}
 					placeholder={placeholder}
-					className="no-mouseflow o-forms__text o-forms__text--suffixed js-field__input js-show-password__password-input js-item__value"
 					autoComplete="new-password"
 					data-trackable="field-password"
-					aria-describedby={showDescription ? 'password-description' : undefined}
 					aria-required="true" required
 					pattern={pattern}
 					disabled={isDisabled} />
 				{hasShowPassword ?
-					(<span className="o-forms__suffix">
-						<input type="checkbox" id={showPasswordId} name={showPasswordName} className="o-forms__checkbox js-show-password__checkbox" data-trackable="field-show-password" />
-						<label htmlFor={showPasswordId} className="o-forms__label">Show password</label>
-					</span>) : null}
+					(<label className="ncf__password-field--show-password">
+						<input type="checkbox" id={showPasswordId} name={showPasswordName} data-trackable="field-show-password" aria-label="Show password" />
+						<span className="o-forms-input__label" aria-hidden="true">Show password</span>
+					</label>) : null}
+
+				<div className="o-forms-input__error">Please enter a valid password</div>
 			</div>
-			<div className="o-forms__errortext">Please enter a valid password</div>
 		</div>
 	);
 }

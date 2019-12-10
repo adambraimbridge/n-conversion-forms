@@ -22,9 +22,9 @@
 	}
 
 	&__app-banner {
-		background: oColorsGetPaletteColor('wheat');
-		border-top: 1px solid oColorsGetPaletteColor('black-10');
-		border-bottom: 1px solid oColorsGetPaletteColor('black-10');
+		background: oColorsByName('wheat');
+		border-top: 1px solid oColorsByName('black-10');
+		border-bottom: 1px solid oColorsByName('black-10');
 
 		&-inner {
 			display: grid;
@@ -59,7 +59,7 @@
 		}
 
 		&-header {
-			@include oTypographySize(0);
+			@include oTypographySerif($scale: 0, $include-font-family: false);
 			font-weight: oFontsWeight('semibold');
 			margin: 0 0 4px;
 		}

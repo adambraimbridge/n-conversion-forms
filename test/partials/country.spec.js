@@ -25,11 +25,11 @@ describe('country template', () => {
 	});
 
 	describe('isB2b', () => {
-		it('should have the correct label', () => {
+		it('should have the correct label text', () => {
 			const $ = context.template({
 				isB2b: true
 			});
-			expect($('label').html()).to.equal('Country/Region');
+			expect($('.o-forms-title__main').html()).to.equal('Country/Region');
 		});
 
 		it('should have the correct default option', () => {
@@ -43,22 +43,7 @@ describe('country template', () => {
 			const $ = context.template({
 				isB2b: true
 			});
-			expect($('.o-forms__errortext').html()).to.equal('Please select your country/region');
-		});
-	});
-
-	/* isBillingCountry is deprecated, use billing-country partial instead */
-	describe('isBillingCountry', () => {
-		it('should be have the name country by default', () => {
-			const $ = context.template({});
-			expect($('select').attr('name')).to.equal('country');
-		});
-
-		it('should be have the name billingCountry if isBillingCountry', () => {
-			const $ = context.template({
-				isBillingCountry: true
-			});
-			expect($('select').attr('name')).to.equal('billingCountry');
+			expect($('.o-forms-input__error').html()).to.equal('Please select your country/region');
 		});
 	});
 

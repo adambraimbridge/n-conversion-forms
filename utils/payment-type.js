@@ -27,11 +27,8 @@ class PaymentType {
 		this.$directDebitGuarantee = this.$paymentType.querySelector('.ncf #directDebitGuarantee');
 		if (this.$directDebitGuarantee) {
 			// HACK require here so server side code use the static methods
-			const expander = require('o-expander');
-			this.expander = expander.init(this.$directDebitGuarantee, {
-				contentClassName: 'ncf__directdebit-guarantee-list',
-				toggleSelector: '.ncf__directdebit-guarantee-toggle'
-			});
+			const expander = require('o-expander').default;
+			this.expander = expander.init(this.$directDebitGuarantee);
 		}
 
 		// Set up change handler to show panel and initialise the current panel
@@ -48,8 +45,8 @@ class PaymentType {
 	 * @param {String} type Payment type to hide
 	 */
 	hide (type) {
-		const container = this.$paymentType.querySelector(`#${type}`).parentElement;
-		container.classList.add('n-ui-hide');
+		const container = this.$paymentType.querySelector(`#${type}`).parentElement.parentElement;
+		container.classList.add('ncf__hidden');
 	}
 
 	/**
@@ -58,22 +55,22 @@ class PaymentType {
 	 * @param {String} type Payment type to show
 	 */
 	show (type) {
-		const container = this.$paymentType.querySelector(`#${type}`).parentElement;
-		container.classList.remove('n-ui-hide');
+		const container = this.$paymentType.querySelector(`#${type}`).parentElement.parentElement;
+		container.classList.remove('ncf__hidden');
 	}
 
 	/**
 	 * Display an error message on the paymentType
 	 */
 	displayError () {
-		this.$paymentType.classList.add('o-forms--error');
+		this.$paymentType.classList.add('o-forms-input--invalid');
 	}
 
 	/**
 	 * Remove an error from display
 	 */
 	removeError () {
-		this.$paymentType.classList.remove('o-forms--error');
+		this.$paymentType.classList.remove('o-forms-input--invalid');
 	}
 
 	/**
@@ -106,9 +103,9 @@ class PaymentType {
 		for (let i = 0; i < content.length; i++) {
 			const element = content[i];
 			if (element.classList.contains(`ncf__payment-type-panel--${type}`)) {
-				element.classList.remove('n-ui-hide');
+				element.classList.remove('ncf__hidden');
 			} else {
-				element.classList.add('n-ui-hide');
+				element.classList.add('ncf__hidden');
 			}
 		}
 	}

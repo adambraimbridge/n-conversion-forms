@@ -18,15 +18,25 @@
 @import './styles/customer-care';
 
 @include oFonts();
-@include oFormsBaseFeatures();
-@include oFormsRadioCheckboxFeatures();
-@include oFormsRadioButtonsStyledFeature();
-@include oFormsSuffixFeature();
-@include oFormsSectionFeature();
-@include oFormsInlineFeature();
-@include oFormsWideFeature();
+@include oForms($opts: (
+	'elements': (
+		'text',
+		'password',
+		'checkbox',
+		'select',
+		'radio-box',
+		'radio-round',
+		'textarea'
+	),
+	'features': (
+		'disabled',
+		'inline',
+		'right',
+		'suffix',
+		'error-summary'
+	)
+));
 @include oMessage();
-@include oFormsRadioCheckboxRightModifier();
 @include oSteppedProgress();
 
 // Custom styles
@@ -34,7 +44,7 @@
 	@include oTypographySans($scale: 0);
 
 	&__wrapper {
-		background: oColorsGetPaletteColor('white');
+		background: oColorsByName('white');
 		padding: 20px;
 
 		@include oGridRespondTo($from: S) {
@@ -51,7 +61,7 @@
 	}
 
 	&__paragraph {
-		padding: oTypographySpacingSize(4) 0;
+		padding: oSpacingByName('s4') 0;
 		margin: 0;
 
 		&--reduced-padding {
@@ -59,7 +69,7 @@
 		}
 
 		&--subscription-confirmation {
-			margin: oTypographySpacingSize(4) 0 oTypographySpacingSize(2);
+			margin: oSpacingByName('s4') 0 oSpacingByName('s2');
 		}
 	}
 
@@ -76,7 +86,7 @@
 
 	&__fieldset-descriptor {
 		margin: 0;
-		@include oTypographySize(-1);
+		@include oTypographySans($scale: -1, $include-font-family: false);
 	}
 
 	&__field {
@@ -107,16 +117,11 @@
 				}
 			}
 		}
-
-		label small {
-			color: oColorsMix(black, white, 70);
-			font-weight: normal;
-		}
 	}
 
 	&__terms {
 		@include oTypographySans($scale: 0);
-		color: oColorsGetPaletteColor('black-80');
+		color: oColorsByName('black-80');
 
 		&--small {
 			@include oTypographySans($scale: -1);
@@ -124,7 +129,7 @@
 	}
 
 	&__header {
-		@include oTypographyProductHeadingLevel5;
+		@include oTypographyHeading($level: 3);
 
 		&--confirmation {
 			@include oTypographySerif($scale: 3);
@@ -133,9 +138,9 @@
 
 	&__headed-paragraph {
 		.ncf__header {
-			@include oTypographySize(2);
+			@include oTypographySans($scale: 2, $include-font-family: false);
 			padding: 0;
-			margin: 0 0 oTypographySpacingSize(1);
+			margin: 0 0 oSpacingByName('s1');
 		}
 
 		.ncf__paragraph {
@@ -145,15 +150,15 @@
 
 	&__header2 {
 		&--afterline {
-			@include oTypographySize(1);
-			font-weight: oFontsWeight('semibold');
+			@include oTypographySans($scale: 1, $include-font-family: false, $weight: 'semibold');
 
 			&:after {
-				@include oTypographyPadding($top: 3, $bottom: 0);
+				padding-top: oSpacingByName('s3');
+				padding-bottom: 0;
 				content: '';
 				display: block;
 				width: 90px;
-				border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+				border-bottom: oSpacingByName('s1') solid oColorsByName('black');
 			}
 		}
 	}
@@ -163,43 +168,45 @@
 	}
 
 	&__link--external {
-		@include oTypographyLinkExternal;
+		@include oTypographyLink($external: true);
 	}
 
 	&__button {
-		@include oButtons;
-		@include oButtonsSize('big');
 
 		&--submit {
-			@include oButtonsTheme('primary');
+			@include oButtonsContent($opts: (
+				'size': 'big',
+				'type': 'primary'
+			));
 		}
 
 		&--mono {
-			@include oButtonsSize('default');
-			@include oButtonsTheme('mono');
+			@include oButtonsContent($opts: (
+				'theme': 'mono',
+			));
 		}
 
 		&--inverse {
-			@include oButtonsTheme('inverse');
+			@include oButtonsContent($opts: (
+				'size': 'big',
+				'theme': 'inverse',
+				'type': 'secondary'
+			));
 		}
 
 		&--secondary {
-			@include oButtonsTheme('secondary');
-		}
-
-		&--full-width {
-			display: block;
-			width: 100%;
-			margin: 0 0 10px;
-		}
-
-		&--baseline {
-			vertical-align: baseline;
+			@include oButtonsContent($opts: (
+				'size': 'big',
+				'type': 'secondary'
+			));
 		}
 
 		&--google {
-			@include oButtonsTheme('secondary');
-			background-color: oColorsGetPaletteColor('white');
+			@include oButtonsContent($opts: (
+				'size': 'big',
+				'type': 'secondary'
+			));
+			background-color: oColorsByName('white');
 			padding-left: 40px;
 
 			&::before {
@@ -210,6 +217,10 @@
 				width: 18px;
 				height: 18px;
 			}
+		}
+
+		&--baseline {
+			vertical-align: baseline;
 		}
 	}
 
@@ -222,8 +233,8 @@
 	}
 
 	&__icon {
-		background: oColorsGetPaletteColor('paper');
-		border: 2px solid oColorsGetPaletteColor('black-40');
+		background: oColorsByName('paper');
+		border: 2px solid oColorsByName('black-40');
 		border-radius: 9999px;
 		display: block;
 		height: 20px;
@@ -232,37 +243,53 @@
 	}
 
 	&__icon--tick {
-		background: oColorsGetPaletteColor('teal');
-		border-color: oColorsGetPaletteColor('teal');
+		background: oColorsByName('teal');
+		border-color: oColorsByName('teal');
 		&::before {
-			@include oIconsGetIcon('tick', oColorsGetPaletteColor('white'), 20);
+			@include oIconsContent(
+				$icon-name: 'tick',
+				$color: oColorsByName('white'),
+				$size: 20
+			);
 			content: '';
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 		}
 	}
 
 	&__icon--phone {
-		background: oColorsGetPaletteColor('teal');
-		border-color: oColorsGetPaletteColor('teal');
+		background: oColorsByName('teal');
+		border-color: oColorsByName('teal');
 		&::before {
-			@include oIconsGetIcon('phone', oColorsGetPaletteColor('white'), 20);
+			@include oIconsContent(
+				$icon-name: 'phone',
+				$color: oColorsByName('white'),
+				$size: 20
+			);
 			content: '';
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 		}
 	}
 
 	&__icon--error {
-		background: oColorsGetPaletteColor('crimson');
-		border-color: oColorsGetPaletteColor('crimson');
+		background: oColorsByName('crimson');
+		border-color: oColorsByName('crimson');
 		&::before {
-			@include oIconsGetIcon('warning', oColorsGetPaletteColor('white'), 20);
+			@include oIconsContent(
+				$icon-name: 'warning',
+				$color: oColorsByName('white'),
+				$size: 20
+			);
 			content: '';
-			color: oColorsGetPaletteColor('white');
+			color: oColorsByName('white');
 		}
 	}
 
 	&__icon--inline-edit {
-		@include oIconsGetIcon('edit', oColorsGetPaletteColor('black'), 20);
+		@include oIconsContent(
+			$icon-name: 'edit',
+			$color: oColorsByName('black'),
+			$size: 20
+		);
 		border: 0;
 		vertical-align: middle;
 	}
@@ -277,7 +304,11 @@
 	}
 
 	&__icon-download {
-		@include oIconsGetIcon('download', oColorsGetPaletteColor('black-70'), 32);
+		@include oIconsContent(
+			$icon-name: 'download',
+			$color: oColorsByName('black-70'),
+			$size: 32
+		);
 		border: 0;
 		vertical-align: middle;
 	}
@@ -292,7 +323,7 @@
 		}
 		&-description {
 			margin: 0 0 10px;
-			@include oTypographySize(-1);
+			@include oTypographySans($scale: -1, $include-font-family: false);
 		}
 
 		&-title {
@@ -320,15 +351,15 @@
 	@include ncfBanner();
 	@include ncfCustomerCarePanel();
 
+	&__hidden {
+		display: none !important;
+	}
+
 	.o-normalise-visually-hidden {
 		@include oNormaliseVisuallyHidden;
 	}
+}
 
-	// Override o-forms padding set at certain screen sizes
-	// This should be removed when Origami remove this from o-forms
-	.o-forms {
-		@include oGridRespondTo(S) {
-			padding: 0;
-		}
-	}
+.ncf__password-field .ncf__password-field--show-password {
+	margin-top: 7px;
 }

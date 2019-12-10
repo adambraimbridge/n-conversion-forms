@@ -1,8 +1,8 @@
 const { expect } = require('chai');
 const { fetchPartial } = require('../helpers');
 
-const CLASS_ALERT = 'o-message--alert-inner';
-const CLASS_NOTICE = 'o-message--notice-inner';
+const CLASS_ALERT = 'o-message--alert';
+const CLASS_NOTICE = 'o-message--notice';
 const CLASS_ERROR = 'o-message--error';
 const CLASS_ACTIONS_PRIMARY = 'o-message__actions__primary';
 const CLASS_ACTIONS_SECONDARY = 'o-message__actions__secondary';
@@ -16,7 +16,7 @@ const SELECTOR_MESSAGE_CONTENT = '.o-message__content-detail';
 const SELECTOR_CONTAINER = '.o-message';
 const SELECTOR_MESSAGE_CONTAINER = '.ncf__message';
 const SELECTOR_TITLE = '.o-message__content-highlight';
-const HIDDEN_CLASS = 'n-ui-hide';
+const HIDDEN_CLASS = 'ncf__hidden';
 
 let context = {};
 

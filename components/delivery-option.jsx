@@ -7,7 +7,7 @@ export function DeliveryOption ({
 	isSingle = false
 }) {
 	const divClassName = classNames([
-		'o-forms__group',
+		'o-forms-field',
 		'ncf__delivery-option',
 		{ 'ncf__delivery-option--single': isSingle }
 	]);
@@ -31,44 +31,46 @@ export function DeliveryOption ({
 		<div
 			id="deliveryOptionField"
 			className={divClassName}
+			role="group"
+			aria-label="Delivery options"
 		>
-			{
-				options.map((option, index) => {
-					const inputProps = {
-						type: 'radio',
-						id: option.value,
-						name: 'deliveryOption',
-						value: option.value,
-						className: 'o-forms__radio o-forms__radio--right ncf__delivery-option__input',
-						...(option.isSelected && { defaultChecked: true })
-					};
+			<span className="o-forms-input o-forms-input--radio-round">
+				{
+					options.map(({value, isSelected}) => {
+						if (!Object.keys(deliveryOptions).includes(value)) {
+							return null;
+						}
 
-					const deliveryOptionValue = deliveryOptions[option.value];
+						const inputProps = {
+							type: 'radio',
+							id: value,
+							name: 'deliveryOption',
+							value: value,
+							className: 'ncf__delivery-option__input',
+							defaultChecked: isSelected
+						};
 
-					return (
-						<div key={index} className="ncf__delivery-option__item">
-							<input {...inputProps} />
-							<label htmlFor={option.value} className="o-forms__label ncf__delivery-option__label">
-								{
-									deliveryOptionValue && (
-										<React.Fragment>
-											<span className="ncf__delivery-option__title">{deliveryOptionValue.title}</span>
-											<div className="ncf__delivery-option__description">{deliveryOptionValue.description}</div>
-										</React.Fragment>
-									)
-								}
+						const deliveryOptionValue = deliveryOptions[value];
+
+						return (
+							<label key={value} className="ncf__delivery-option__item">
+								<input {...inputProps} />
+								<span className="o-forms-input__label ncf__delivery-option__label">
+									<span className="ncf__delivery-option__title">{deliveryOptionValue.title}</span>
+									<div className="ncf__delivery-option__description">{deliveryOptionValue.description}</div>
+								</span>
 							</label>
-						</div>
-					);
-				})
-			}
+						);
+					})
+				}
+			</span>
 		</div>
 	);
 }
 
 DeliveryOption.propTypes = {
 	options: PropTypes.arrayOf(PropTypes.shape({
-		value: PropTypes.string,
+		value: PropTypes.oneOf(['PV', 'HD', 'EV']),
 		isSelected: PropTypes.boolean
 	})),
 	isSingle: PropTypes.boolean

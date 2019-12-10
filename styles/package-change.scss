@@ -1,5 +1,3 @@
-@include oGridGenerate;
-
 @mixin ncfPackageChange() {
 	&__package-change {
 		@include oTypographySans($scale: 0);
@@ -38,19 +36,19 @@
 		}
 
 		&__discount {
-			color: oColorsGetPaletteColor('claret-70');
+			color: oColorsByName('claret-70');
 		}
 
 		&__weekly-price {
 			justify-self: end;
 			grid-column: span 3;
-			@include oTypographySize($scale: -1);
-			color: oColorsGetPaletteColor('black-60');
+			@include oTypographySans($scale: -1, $include-font-family: false);
+			color: oColorsByName('black-60');
 		}
 
 		&__annual-copy {
 			padding-top: 8px;
-			@include oTypographySize($scale: -1);
+			@include oTypographySans($scale: -1, $include-font-family: false);
 		}
 	}
 }
