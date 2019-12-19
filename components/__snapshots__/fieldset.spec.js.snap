@@ -5,7 +5,7 @@ exports[`Fieldset renders a custom descriptor paragraph 1`] = `
   <p class="ncf__fieldset-descriptor">
     Descriptor text
   </p>
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -17,7 +17,7 @@ exports[`Fieldset renders a custom descriptor paragraph 2`] = `
   <p class="ncf__fieldset-descriptor">
     Descriptor text
   </p>
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -31,7 +31,7 @@ exports[`Fieldset renders a custom header in specific heading level tags 1`] = `
       Header text
     </div>
   </h2>
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -45,7 +45,7 @@ exports[`Fieldset renders a custom header in specific heading level tags 2`] = `
       Header text
     </div>
   </h2>
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -54,10 +54,10 @@ exports[`Fieldset renders a custom header in specific heading level tags 2`] = `
 
 exports[`Fieldset renders a custom legend 1`] = `
 <fieldset class="ncf__fieldset">
-  <legend class="o-forms__label">
+  <legend class="ncf__legend">
     Customise your experience
   </legend>
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -66,10 +66,10 @@ exports[`Fieldset renders a custom legend 1`] = `
 
 exports[`Fieldset renders a custom legend 2`] = `
 <fieldset class="ncf__fieldset">
-  <legend class="o-forms__label">
+  <legend class="ncf__legend">
     Customise your experience
   </legend>
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -78,10 +78,10 @@ exports[`Fieldset renders a custom legend 2`] = `
 
 exports[`Fieldset renders a custom legend which is visually hidden 1`] = `
 <fieldset class="ncf__fieldset">
-  <legend class="o-forms__label o-normalise-visually-hidden">
+  <legend class="ncf__legend o-normalise-visually-hidden">
     Customise your experience
   </legend>
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -90,10 +90,10 @@ exports[`Fieldset renders a custom legend which is visually hidden 1`] = `
 
 exports[`Fieldset renders a custom legend which is visually hidden 2`] = `
 <fieldset class="ncf__fieldset">
-  <legend class="o-forms__label o-normalise-visually-hidden">
+  <legend class="ncf__legend o-normalise-visually-hidden">
     Customise your experience
   </legend>
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -104,7 +104,7 @@ exports[`Fieldset renders a fieldset element with a custom name value 1`] = `
 <fieldset name="customise-experience"
           class="ncf__fieldset"
 >
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -115,7 +115,7 @@ exports[`Fieldset renders a fieldset element with a custom name value 2`] = `
 <fieldset name="customise-experience"
           class="ncf__fieldset"
 >
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -124,7 +124,7 @@ exports[`Fieldset renders a fieldset element with a custom name value 2`] = `
 
 exports[`Fieldset renders a fieldset element with default props 1`] = `
 <fieldset class="ncf__fieldset">
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>
@@ -133,7 +133,7 @@ exports[`Fieldset renders a fieldset element with default props 1`] = `
 
 exports[`Fieldset renders a fieldset element with default props 2`] = `
 <fieldset class="ncf__fieldset">
-  <div class="o-forms__group">
+  <div class="ncf__fields">
     <div id="fields_test">
     </div>
   </div>

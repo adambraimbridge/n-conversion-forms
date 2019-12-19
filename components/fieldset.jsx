@@ -17,7 +17,7 @@ export function Fieldset ({
 	};
 
 	const legendClassName = classNames([
-		'o-forms__label',
+		'ncf__legend',
 		{ 'o-normalise-visually-hidden': hideLegend }
 	]);
 
@@ -39,13 +39,13 @@ export function Fieldset ({
 
 	return (
 		<fieldset {...fieldsetProps}>
-			{ legendElement }
 
-			{ headingLevelElement }
+				{ legendElement }
 
-			{ descriptorElement }
+				{ headingLevelElement }
 
-			<div className="o-forms__group">
+				{ descriptorElement }
+			<div className="ncf__fields">
 				{ children }
 			</div>
 		</fieldset>
