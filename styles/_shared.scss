@@ -28,6 +28,7 @@
 	.o-forms-input--radio-round input[type=radio]:checked + .o-forms-input__label {
 		background-color: oColorsByName('teal');
 		color: oColorsByName('white');
+		position: relative;
 
 		// radio button styling
 		&::before {
