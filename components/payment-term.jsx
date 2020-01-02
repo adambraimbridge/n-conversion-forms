@@ -31,6 +31,7 @@ export function PaymentTerm ({
 	const createPaymentTerm = (option) => {
 		const className = classNames([
 			'ncf__payment-term__item',
+			'o-forms-input--radio-round',
 			{ 'ncf__payment-term__item--discount': option.discount }
 		]);
 		const props = {
@@ -38,7 +39,7 @@ export function PaymentTerm ({
 			id: option.value,
 			name: inputName,
 			value: option.value,
-			className: 'o-forms__radio o-forms__radio--right ncf__payment-term__input',
+			className: 'o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input',
 			...(option.selected && { defaultChecked: true })
 		};
 		const showTrialCopyInTitle = (option.isTrial && !isPrintOrBundle);
@@ -66,7 +67,7 @@ export function PaymentTerm ({
 		return (
 			<div key={option.value} className={className}>
 				<input {...props} />
-				<label htmlFor={option.value} className="o-forms__label ncf__payment-term__label">
+				<label htmlFor={option.value} className="o-forms-input__label ncf__payment-term__label">
 					{createDiscount()}
 
 					<span className="ncf__payment-term__title">{showTrialCopyInTitle ? 'Try the FT - ': ''}{nameMap[option.name].title}</span>

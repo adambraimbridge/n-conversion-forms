@@ -17,9 +17,9 @@
 	//      Helps us override the text colour (via buttonImageOverriding()) so
 	//      that it is transparent.
 	&__payment-type {
-		.o-forms-input--radio-box & { // #1
+		.o-forms-field .o-forms-input--radio-box & { // #1
 			display: block;
-			margin-bottom: oSpacingByName('s4');
+			margin-bottom: oSpacingByName('s3');
 
 			&:last-child {
 				margin-bottom: 0;

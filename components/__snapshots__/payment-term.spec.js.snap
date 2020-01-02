@@ -4,15 +4,15 @@ exports[`PaymentTerm annual option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Annual
@@ -50,15 +50,15 @@ exports[`PaymentTerm annual option render option 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Annual
@@ -96,15 +96,15 @@ exports[`PaymentTerm annual option render option with discount 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+  <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
         Save 25% off
@@ -145,15 +145,15 @@ exports[`PaymentTerm annual option render option with discount 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+  <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
         Save 25% off
@@ -194,15 +194,15 @@ exports[`PaymentTerm annual option render option with isTrial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Annual
@@ -244,15 +244,15 @@ exports[`PaymentTerm annual option render option with isTrial 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Annual
@@ -294,16 +294,16 @@ exports[`PaymentTerm annual option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
            checked
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Annual
@@ -341,16 +341,16 @@ exports[`PaymentTerm annual option render option with selected 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
            checked
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Annual
@@ -388,15 +388,15 @@ exports[`PaymentTerm annual option render option with trial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Annual
@@ -439,15 +439,15 @@ exports[`PaymentTerm annual option render option with trial 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Annual
@@ -490,15 +490,15 @@ exports[`PaymentTerm annual option render option with weeklyPrice 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Annual
@@ -542,15 +542,15 @@ exports[`PaymentTerm annual option render option with weeklyPrice 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="annual"
            name="paymentTerm"
            value="annual"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="annual"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Annual
@@ -594,15 +594,15 @@ exports[`PaymentTerm monthly option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Monthly
@@ -639,15 +639,15 @@ exports[`PaymentTerm monthly option render option 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Monthly
@@ -684,15 +684,15 @@ exports[`PaymentTerm monthly option render option with discount 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+  <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
         Save 25% off
@@ -732,15 +732,15 @@ exports[`PaymentTerm monthly option render option with discount 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+  <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
         Save 25% off
@@ -780,15 +780,15 @@ exports[`PaymentTerm monthly option render option with isTrial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Monthly
@@ -830,15 +830,15 @@ exports[`PaymentTerm monthly option render option with isTrial 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Monthly
@@ -880,16 +880,16 @@ exports[`PaymentTerm monthly option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
            checked
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Monthly
@@ -926,16 +926,16 @@ exports[`PaymentTerm monthly option render option with selected 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
            checked
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Monthly
@@ -972,15 +972,15 @@ exports[`PaymentTerm monthly option render option with trial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Monthly
@@ -1023,15 +1023,15 @@ exports[`PaymentTerm monthly option render option with trial 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Monthly
@@ -1074,15 +1074,15 @@ exports[`PaymentTerm monthly option render option with weeklyPrice 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Monthly
@@ -1119,15 +1119,15 @@ exports[`PaymentTerm monthly option render option with weeklyPrice 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="monthly"
            name="paymentTerm"
            value="monthly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="monthly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Monthly
@@ -1164,15 +1164,15 @@ exports[`PaymentTerm quarterly option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Quarterly
@@ -1209,15 +1209,15 @@ exports[`PaymentTerm quarterly option render option 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Quarterly
@@ -1254,15 +1254,15 @@ exports[`PaymentTerm quarterly option render option with discount 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+  <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
         Save 25% off
@@ -1302,15 +1302,15 @@ exports[`PaymentTerm quarterly option render option with discount 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+  <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
         Save 25% off
@@ -1350,15 +1350,15 @@ exports[`PaymentTerm quarterly option render option with isTrial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Quarterly
@@ -1400,15 +1400,15 @@ exports[`PaymentTerm quarterly option render option with isTrial 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Quarterly
@@ -1450,16 +1450,16 @@ exports[`PaymentTerm quarterly option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
            checked
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Quarterly
@@ -1496,16 +1496,16 @@ exports[`PaymentTerm quarterly option render option with selected 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
            checked
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Quarterly
@@ -1542,15 +1542,15 @@ exports[`PaymentTerm quarterly option render option with trial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Quarterly
@@ -1593,15 +1593,15 @@ exports[`PaymentTerm quarterly option render option with trial 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Try the FT - Quarterly
@@ -1644,15 +1644,15 @@ exports[`PaymentTerm quarterly option render option with weeklyPrice 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Quarterly
@@ -1689,15 +1689,15 @@ exports[`PaymentTerm quarterly option render option with weeklyPrice 2`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item">
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
     <input type="radio"
            id="quarterly"
            name="paymentTerm"
            value="quarterly"
-           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
     >
     <label for="quarterly"
-           class="o-forms__label ncf__payment-term__label"
+           class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
         Quarterly

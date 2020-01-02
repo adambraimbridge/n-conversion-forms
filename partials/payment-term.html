@@ -1,8 +1,8 @@
 <div id="paymentTermField" class="o-forms__group ncf__payment-term">
 	{{#each options}}
-	<div class="ncf__payment-term__item{{#if discount}} ncf__payment-term__item--discount{{/if}}">
-		<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__payment-term__input"{{#if this.selected}} checked{{/if}}>
-		<label for="{{this.value}}" class="o-forms__label ncf__payment-term__label">
+	<div class="ncf__payment-term__item o-forms-input--radio-round{{#if discount}} ncf__payment-term__item--discount{{/if}}">
+		<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"{{#if this.selected}} checked{{/if}}>
+		<label for="{{this.value}}" class="o-forms-input__label ncf__payment-term__label">
 			{{#if discount}}
 			<span class="ncf__payment-term__discount">Save {{this.discount}}</span>
 			{{/if}}
