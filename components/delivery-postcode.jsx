@@ -83,5 +83,5 @@ DeliveryPostcode.propTypes = {
 	isDisabled: PropTypes.bool,
 	hasError: PropTypes.bool,
 	isHidden: PropTypes.bool,
-	additonalFieldInformation: PropTypes.string
+	additonalFieldInformation: PropTypes.array
 };
