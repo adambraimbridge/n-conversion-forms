@@ -194,7 +194,7 @@ class Validation {
 	 * @returns {DOMElements} The array-like containing the invalid form elements.
 	 */
 	getInvalidEls () {
-		return this.$requiredEls.filter($el => !$el.checkValidity());
+		return this.$requiredEls.filter($el => !$el.input.checkValidity()).map($el => $el.input);
 	}
 
 }
