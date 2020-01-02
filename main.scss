@@ -199,6 +199,7 @@
 
 		&--mono {
 			@include oButtonsContent($opts: (
+				'type': 'secondary',
 				'theme': 'mono',
 			));
 		}
