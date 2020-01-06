@@ -14,7 +14,12 @@ export function DeliveryCity ({
 	]);
 
 	return (
-		<label id="deliveryCityField" className="o-forms-field" data-validate="required">
+		<label
+			id="deliveryCityField"
+			className="o-forms-field"
+			data-validate="required"
+			htmlFor="deliveryCity"
+		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">City/town</span>
 			</span>

@@ -4,6 +4,7 @@ exports[`Province can apply class to hide the component 1`] = `
 <label id="provinceField"
        class="o-forms-field ncf__hidden"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -73,6 +74,7 @@ exports[`Province can apply class to hide the component 2`] = `
 <label id="provinceField"
        class="o-forms-field ncf__hidden"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -142,6 +144,7 @@ exports[`Province can render a disabled select 1`] = `
 <label id="provinceField"
        class="o-forms-field"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -212,6 +215,7 @@ exports[`Province can render a disabled select 2`] = `
 <label id="provinceField"
        class="o-forms-field"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -282,6 +286,7 @@ exports[`Province can render an error message 1`] = `
 <label id="provinceField"
        class="o-forms-field"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -351,6 +356,7 @@ exports[`Province can render an error message 2`] = `
 <label id="provinceField"
        class="o-forms-field"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -420,6 +426,7 @@ exports[`Province can render an initial selected value 1`] = `
 <label id="provinceField"
        class="o-forms-field"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -491,6 +498,7 @@ exports[`Province can render an initial selected value 2`] = `
 <label id="provinceField"
        class="o-forms-field"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -562,6 +570,7 @@ exports[`Province render a select with a label 1`] = `
 <label id="provinceField"
        class="o-forms-field"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -631,6 +640,7 @@ exports[`Province render a select with a label 2`] = `
 <label id="provinceField"
        class="o-forms-field"
        data-validate="required"
+       for="province"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

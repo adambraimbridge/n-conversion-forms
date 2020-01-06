@@ -4,6 +4,7 @@ exports[`Email with confirmation render a email input for B2B 1`] = `
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -35,6 +36,7 @@ exports[`Email with confirmation render a email input for B2B 2`] = `
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -66,6 +68,7 @@ exports[`Email with confirmation render a email input with default params 1`] = 
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -97,6 +100,7 @@ exports[`Email with confirmation render a email input with default params 2`] = 
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -128,6 +132,7 @@ exports[`Email with confirmation render a email input with default value 1`] = `
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -159,6 +164,7 @@ exports[`Email with confirmation render a email input with default value 2`] = `
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -190,6 +196,7 @@ exports[`Email with confirmation render a email input with disabled fields 1`] =
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -222,6 +229,7 @@ exports[`Email with confirmation render a email input with disabled fields 2`] =
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -254,6 +262,7 @@ exports[`Email with confirmation render a email input with email error 1`] = `
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -285,6 +294,7 @@ exports[`Email with confirmation render a email input with email error 2`] = `
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -316,6 +326,7 @@ exports[`Email with confirmation render a email input with given description 1`]
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -347,6 +358,7 @@ exports[`Email with confirmation render a email input with given description 2`]
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -378,6 +390,7 @@ exports[`Email with confirmation render a email input with read only fields 1`] 
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -409,6 +422,7 @@ exports[`Email with confirmation render a email input with read only fields 2`] 
 <label id="emailField"
        class="o-forms-field"
        data-validate="required,email"
+       for="email"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

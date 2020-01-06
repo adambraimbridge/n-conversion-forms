@@ -30,6 +30,7 @@ export function State ({
 			id={fieldId}
 			className={fieldClassNames}
 			data-validate="required"
+			htmlFor={selectId}
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">{ isBillingState ? 'Billing ' : '' }State</span>

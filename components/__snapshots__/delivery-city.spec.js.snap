@@ -4,6 +4,7 @@ exports[`DeliveryCity renders with a custom value 1`] = `
 <label id="deliveryCityField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryCity"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -29,6 +30,7 @@ exports[`DeliveryCity renders with a custom value 2`] = `
 <label id="deliveryCityField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryCity"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -54,6 +56,7 @@ exports[`DeliveryCity renders with a disabled input element 1`] = `
 <label id="deliveryCityField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryCity"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -80,6 +83,7 @@ exports[`DeliveryCity renders with a disabled input element 2`] = `
 <label id="deliveryCityField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryCity"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -106,6 +110,7 @@ exports[`DeliveryCity renders with an error 1`] = `
 <label id="deliveryCityField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryCity"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -131,6 +136,7 @@ exports[`DeliveryCity renders with an error 2`] = `
 <label id="deliveryCityField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryCity"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -156,6 +162,7 @@ exports[`DeliveryCity renders with default props 1`] = `
 <label id="deliveryCityField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryCity"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -181,6 +188,7 @@ exports[`DeliveryCity renders with default props 2`] = `
 <label id="deliveryCityField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryCity"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

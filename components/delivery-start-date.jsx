@@ -34,6 +34,7 @@ export function DeliveryStartDate ({
 			id="deliveryStartDateField"
 			className="o-forms-field"
 			data-validate="required"
+			htmlFor={inputProps.id}
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Delivery start date</span>

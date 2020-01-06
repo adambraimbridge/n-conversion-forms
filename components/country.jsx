@@ -45,7 +45,12 @@ export function Country ({
 	);
 
 	return (
-		<label id={fieldId} className="o-forms-field js-unknown-user-field" data-validate="required">
+		<label
+			id={fieldId}
+			className="o-forms-field js-unknown-user-field"
+			data-validate="required"
+			htmlFor={selectProps.id}
+		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">{label}</span>
 			</span>

@@ -30,7 +30,12 @@ export function CompanyName ({
 	};
 
 	return (
-		<label id={fieldId} className="o-forms-field" data-validate="required">
+		<label
+			id={fieldId}
+			className="o-forms-field"
+			data-validate="required"
+			htmlFor={inputProps.id}
+		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Company name</span>
 			</span>

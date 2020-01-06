@@ -33,7 +33,12 @@ export function DeliveryInstructions ({
 	};
 
 	return (
-		<label id={fieldId} className="o-forms-field o-forms-field--optional" data-validate="required">
+		<label
+			id={fieldId}
+			className="o-forms-field o-forms-field--optional"
+			data-validate="required"
+			htmlFor={inputId}
+		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Delivery instructions</span>
 				<span className="o-forms-title__prompt">

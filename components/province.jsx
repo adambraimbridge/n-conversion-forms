@@ -27,7 +27,12 @@ export function Province ({
 	]);
 
 	return (
-		<label id={fieldId} className={fieldClassNames} data-validate="required">
+		<label
+			id={fieldId}
+			className={fieldClassNames}
+			data-validate="required"
+			htmlFor={selectId}
+		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">{ isBillingProvince ? 'Billing ' : '' }Province</span>
 			</span>

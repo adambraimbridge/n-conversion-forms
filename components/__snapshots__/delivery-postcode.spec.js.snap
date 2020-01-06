@@ -4,6 +4,7 @@ exports[`Delivery Postcode render a disable input 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -41,6 +42,7 @@ exports[`Delivery Postcode render a disable input 2`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -78,6 +80,7 @@ exports[`Delivery Postcode render a postcode input with a label 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -114,6 +117,7 @@ exports[`Delivery Postcode render a postcode input with a label 2`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -150,6 +154,7 @@ exports[`Delivery Postcode render different styles 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field ncf__hidden"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -186,6 +191,7 @@ exports[`Delivery Postcode render different styles 2`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field ncf__hidden"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

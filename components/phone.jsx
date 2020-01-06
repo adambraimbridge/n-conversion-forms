@@ -22,7 +22,12 @@ export function Phone ({
 	]);
 
 	return (
-		<label id={fieldId} className="o-forms-field" data-validate="required,number">
+		<label
+			id={fieldId}
+			htmlFor={inputId}
+			className="o-forms-field"
+			data-validate="required,number"
+		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">{labelText}</span>
 				<span className="o-forms-title__prompt">5 to 15 characters (numbers only)</span>

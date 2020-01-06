@@ -43,7 +43,12 @@ export function BillingCountry ({
 	);
 
 	return (
-		<label id={fieldId} className="o-forms-field" data-validate="required">
+		<label
+			id={fieldId}
+			className="o-forms-field"
+			data-validate="required"
+			htmlFor={inputId}
+		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Billing Country</span>
 			</span>

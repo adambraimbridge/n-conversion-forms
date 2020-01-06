@@ -4,6 +4,7 @@ exports[`JobTitle can render a disable input 1`] = `
 <label id="jobTitleField"
        class="o-forms-field"
        data-validate="required"
+       for="jobTitle"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -32,6 +33,7 @@ exports[`JobTitle can render a disable input 2`] = `
 <label id="jobTitleField"
        class="o-forms-field"
        data-validate="required"
+       for="jobTitle"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -60,6 +62,7 @@ exports[`JobTitle can render an error message 1`] = `
 <label id="jobTitleField"
        class="o-forms-field"
        data-validate="required"
+       for="jobTitle"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -87,6 +90,7 @@ exports[`JobTitle can render an error message 2`] = `
 <label id="jobTitleField"
        class="o-forms-field"
        data-validate="required"
+       for="jobTitle"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -114,6 +118,7 @@ exports[`JobTitle can render an initial selected value 1`] = `
 <label id="jobTitleField"
        class="o-forms-field"
        data-validate="required"
+       for="jobTitle"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -141,6 +146,7 @@ exports[`JobTitle can render an initial selected value 2`] = `
 <label id="jobTitleField"
        class="o-forms-field"
        data-validate="required"
+       for="jobTitle"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -168,6 +174,7 @@ exports[`JobTitle render a select with a label 1`] = `
 <label id="jobTitleField"
        class="o-forms-field"
        data-validate="required"
+       for="jobTitle"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -195,6 +202,7 @@ exports[`JobTitle render a select with a label 2`] = `
 <label id="jobTitleField"
        class="o-forms-field"
        data-validate="required"
+       for="jobTitle"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

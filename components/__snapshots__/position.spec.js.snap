@@ -4,6 +4,7 @@ exports[`Position can render a disable select 1`] = `
 <label id="positionField"
        class="o-forms-field"
        data-validate="required"
+       for="position"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -96,6 +97,7 @@ exports[`Position can render a disable select 2`] = `
 <label id="positionField"
        class="o-forms-field"
        data-validate="required"
+       for="position"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -188,6 +190,7 @@ exports[`Position can render an error message 1`] = `
 <label id="positionField"
        class="o-forms-field"
        data-validate="required"
+       for="position"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -279,6 +282,7 @@ exports[`Position can render an error message 2`] = `
 <label id="positionField"
        class="o-forms-field"
        data-validate="required"
+       for="position"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -370,6 +374,7 @@ exports[`Position can render an initial selected value 1`] = `
 <label id="positionField"
        class="o-forms-field"
        data-validate="required"
+       for="position"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -463,6 +468,7 @@ exports[`Position can render an initial selected value 2`] = `
 <label id="positionField"
        class="o-forms-field"
        data-validate="required"
+       for="position"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -556,6 +562,7 @@ exports[`Position render a select with a label 1`] = `
 <label id="positionField"
        class="o-forms-field"
        data-validate="required"
+       for="position"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -647,6 +654,7 @@ exports[`Position render a select with a label 2`] = `
 <label id="positionField"
        class="o-forms-field"
        data-validate="required"
+       for="position"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

@@ -30,6 +30,7 @@ export function BillingPostcode ({
 			id={fieldId}
 			className={BillingPostcodeFieldClassNames}
 			data-validate="required"
+			htmlFor={inputId}
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">
