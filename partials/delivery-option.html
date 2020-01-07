@@ -6,21 +6,21 @@
 				<input type="radio" id="{{this.value}}" name="deliveryOption" value="{{this.value}}" class="ncf__delivery-option__input"{{#if this.isSelected}} checked{{/if}}>
 				<span class="o-forms-input__label ncf__delivery-option__label">
 					{{#ifEquals this.value 'PV'}}
-					<span class="ncf__delivery-option__title">Paper vouchers</span>
+					<span class="ncf__delivery-option__title o-forms-title__main">Paper vouchers</span>
 					<div class="ncf__delivery-option__description">
 						13-week voucher pack delivered quarterly and redeemable at retailers nationwide.
 					</div>
 					{{/ifEquals}}
 
 					{{#ifEquals this.value 'HD'}}
-					<span class="ncf__delivery-option__title">Home delivery</span>
+					<span class="ncf__delivery-option__title o-forms-title__main">Home delivery</span>
 					<div class="ncf__delivery-option__description">
 						Free delivery to your home or office before 7am.
 					</div>
 					{{/ifEquals}}
 
 					{{#ifEquals this.value 'EV'}}
-					<span class="ncf__delivery-option__title">Electronic vouchers</span>
+					<span class="ncf__delivery-option__title o-forms-title__main">Electronic vouchers</span>
 					<div class="ncf__delivery-option__description">
 						Delivered via email and card, redeemable at retailers nationwide.
 					</div>

@@ -56,7 +56,7 @@ export function DeliveryOption ({
 							<label key={value} className="ncf__delivery-option__item" htmlFor={value}>
 								<input {...inputProps} />
 								<span className="o-forms-input__label ncf__delivery-option__label">
-									<span className="ncf__delivery-option__title">{deliveryOptionValue.title}</span>
+									<span className="ncf__delivery-option__title o-forms-title__main">{deliveryOptionValue.title}</span>
 									<div className="ncf__delivery-option__description">{deliveryOptionValue.description}</div>
 								</span>
 							</label>
