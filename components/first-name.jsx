@@ -28,6 +28,7 @@ export function FirstName ({
 			id={fieldId}
 			className="o-forms-field"
 			data-validate="required"
+			htmlFor={inputId}
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">{label}</span>

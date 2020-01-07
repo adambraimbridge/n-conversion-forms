@@ -2,7 +2,7 @@
 	<span class="o-forms-input o-forms-input--radio-round">
 		{{#each options}}
 			{{#ifEqualsSome this.value 'PV' 'HD' 'EV'}}
-			<label class="ncf__delivery-option__item">
+			<label class="ncf__delivery-option__item" for="{{this.value}}">
 				<input type="radio" id="{{this.value}}" name="deliveryOption" value="{{this.value}}" class="ncf__delivery-option__input"{{#if this.isSelected}} checked{{/if}}>
 				<span class="o-forms-input__label ncf__delivery-option__label">
 					{{#ifEquals this.value 'PV'}}

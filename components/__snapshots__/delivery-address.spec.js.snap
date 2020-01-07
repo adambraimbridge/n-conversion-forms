@@ -4,7 +4,9 @@ exports[`DeliveryAddress renders default props 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -23,7 +25,9 @@ exports[`DeliveryAddress renders default props 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -40,7 +44,9 @@ exports[`DeliveryAddress renders default props 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -64,7 +70,9 @@ exports[`DeliveryAddress renders default props 2`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -83,7 +91,9 @@ exports[`DeliveryAddress renders default props 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -100,7 +110,9 @@ exports[`DeliveryAddress renders default props 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -124,7 +136,9 @@ exports[`DeliveryAddress renders with an error 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -143,7 +157,9 @@ exports[`DeliveryAddress renders with an error 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -160,7 +176,9 @@ exports[`DeliveryAddress renders with an error 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -184,7 +202,9 @@ exports[`DeliveryAddress renders with an error 2`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -203,7 +223,9 @@ exports[`DeliveryAddress renders with an error 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -220,7 +242,9 @@ exports[`DeliveryAddress renders with an error 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -244,7 +268,9 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -263,7 +289,9 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -280,7 +308,9 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -304,7 +334,9 @@ exports[`DeliveryAddress renders with custom line 1 value 2`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -323,7 +355,9 @@ exports[`DeliveryAddress renders with custom line 1 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -340,7 +374,9 @@ exports[`DeliveryAddress renders with custom line 1 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -364,7 +400,9 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -383,7 +421,9 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -400,7 +440,9 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -424,7 +466,9 @@ exports[`DeliveryAddress renders with custom line 2 value 2`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -443,7 +487,9 @@ exports[`DeliveryAddress renders with custom line 2 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -460,7 +506,9 @@ exports[`DeliveryAddress renders with custom line 2 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -484,7 +532,9 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -503,7 +553,9 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -520,7 +572,9 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -544,7 +598,9 @@ exports[`DeliveryAddress renders with custom line 3 value 2`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -563,7 +619,9 @@ exports[`DeliveryAddress renders with custom line 3 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -580,7 +638,9 @@ exports[`DeliveryAddress renders with custom line 3 value 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -604,7 +664,9 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -624,7 +686,9 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -642,7 +706,9 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
@@ -667,7 +733,9 @@ exports[`DeliveryAddress renders with disabled input elements 2`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field">
+  <label class="o-forms-field"
+         for="deliveryAddressLine1"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 1
@@ -687,7 +755,9 @@ exports[`DeliveryAddress renders with disabled input elements 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 2
@@ -705,7 +775,9 @@ exports[`DeliveryAddress renders with disabled input elements 2`] = `
       >
     </span>
   </label>
-  <label class="o-forms-field o-forms-field--optional">
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3

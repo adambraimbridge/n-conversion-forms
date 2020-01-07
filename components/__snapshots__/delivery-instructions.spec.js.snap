@@ -4,6 +4,7 @@ exports[`DeliveryInstructions renders with a custom value 1`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -32,6 +33,7 @@ exports[`DeliveryInstructions renders with a custom value 2`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -60,6 +62,7 @@ exports[`DeliveryInstructions renders with a disabled input element 1`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -88,6 +91,7 @@ exports[`DeliveryInstructions renders with a disabled input element 2`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -116,6 +120,7 @@ exports[`DeliveryInstructions renders with an error 1`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -143,6 +148,7 @@ exports[`DeliveryInstructions renders with an error 2`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -170,6 +176,7 @@ exports[`DeliveryInstructions renders with default props 1`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -197,6 +204,7 @@ exports[`DeliveryInstructions renders with default props 2`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -224,6 +232,7 @@ exports[`DeliveryInstructions renders with maxlength 1`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -252,6 +261,7 @@ exports[`DeliveryInstructions renders with maxlength 2`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -280,6 +290,7 @@ exports[`DeliveryInstructions renders with rows 1`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -308,6 +319,7 @@ exports[`DeliveryInstructions renders with rows 2`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryInstructions"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

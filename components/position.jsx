@@ -21,7 +21,12 @@ export function Position ({
 	]);
 
 	return (
-		<label id={fieldId} className="o-forms-field" data-validate="required">
+		<label
+			id={fieldId}
+			className="o-forms-field"
+			data-validate="required"
+			htmlFor={selectId}
+		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">What’s your job position?</span>
 			</span>

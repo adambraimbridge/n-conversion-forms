@@ -110,7 +110,7 @@ export function AcceptTerms ({
 	return (
 		<div {...divProps}>
 			<span className={inputWrapperClassName}>
-				<label>
+				<label htmlFor={inputProps.id}>
 					<input {...inputProps} />
 					{ b2bTerms }
 

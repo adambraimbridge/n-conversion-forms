@@ -26,6 +26,7 @@ export function DeliveryPostcode ({
 			id="deliveryPostcodeField"
 			className={deliveryPostcodeFieldClassNames}
 			data-validate="required"
+			htmlFor="deliveryPostcode"
 		>
 
 			<span className="o-forms-title">

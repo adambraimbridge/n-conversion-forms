@@ -4,6 +4,7 @@ exports[`Billing Postcode can render a disable input 1`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -40,6 +41,7 @@ exports[`Billing Postcode can render a disable input 2`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -76,6 +78,7 @@ exports[`Billing Postcode can render a pattern attribute 1`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -112,6 +115,7 @@ exports[`Billing Postcode can render a pattern attribute 2`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -148,6 +152,7 @@ exports[`Billing Postcode can render as an Error 1`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -183,6 +188,7 @@ exports[`Billing Postcode can render as an Error 2`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -218,6 +224,7 @@ exports[`Billing Postcode can render as an hidden field 1`] = `
 <label id="billingPostcodeField"
        class="o-forms-field ncf__hidden"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -253,6 +260,7 @@ exports[`Billing Postcode can render as an hidden field 2`] = `
 <label id="billingPostcodeField"
        class="o-forms-field ncf__hidden"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -288,6 +296,7 @@ exports[`Billing Postcode render a postcode input with a label 1`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -323,6 +332,7 @@ exports[`Billing Postcode render a postcode input with a label 2`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="billingPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

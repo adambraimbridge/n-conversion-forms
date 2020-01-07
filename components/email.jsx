@@ -27,6 +27,7 @@ export function Email ({
 			id={fieldId}
 			className="o-forms-field"
 			data-validate="required,email"
+			htmlFor={inputId}
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">{labelText}</span>

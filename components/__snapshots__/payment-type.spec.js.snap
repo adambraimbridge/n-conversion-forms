@@ -8,7 +8,7 @@ exports[`PaymentType render with default props 1`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -23,7 +23,7 @@ exports[`PaymentType render with default props 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -38,7 +38,7 @@ exports[`PaymentType render with default props 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -53,7 +53,7 @@ exports[`PaymentType render with default props 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -82,7 +82,7 @@ exports[`PaymentType render with default props 2`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -97,7 +97,7 @@ exports[`PaymentType render with default props 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -112,7 +112,7 @@ exports[`PaymentType render with default props 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -127,7 +127,7 @@ exports[`PaymentType render with default props 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -156,7 +156,7 @@ exports[`PaymentType render with enableApplepay 1`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -171,7 +171,7 @@ exports[`PaymentType render with enableApplepay 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -186,7 +186,7 @@ exports[`PaymentType render with enableApplepay 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -201,7 +201,7 @@ exports[`PaymentType render with enableApplepay 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -230,7 +230,7 @@ exports[`PaymentType render with enableApplepay 2`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -245,7 +245,7 @@ exports[`PaymentType render with enableApplepay 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -260,7 +260,7 @@ exports[`PaymentType render with enableApplepay 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -275,7 +275,7 @@ exports[`PaymentType render with enableApplepay 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -304,7 +304,7 @@ exports[`PaymentType render with enableCreditcard 1`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -319,7 +319,7 @@ exports[`PaymentType render with enableCreditcard 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -334,7 +334,7 @@ exports[`PaymentType render with enableCreditcard 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -349,7 +349,7 @@ exports[`PaymentType render with enableCreditcard 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -398,7 +398,7 @@ exports[`PaymentType render with enableCreditcard 2`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -413,7 +413,7 @@ exports[`PaymentType render with enableCreditcard 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -428,7 +428,7 @@ exports[`PaymentType render with enableCreditcard 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -443,7 +443,7 @@ exports[`PaymentType render with enableCreditcard 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -492,7 +492,7 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -507,7 +507,7 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -522,7 +522,7 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -537,7 +537,7 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -625,7 +625,7 @@ exports[`PaymentType render with enableDirectdebit 2`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -640,7 +640,7 @@ exports[`PaymentType render with enableDirectdebit 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -655,7 +655,7 @@ exports[`PaymentType render with enableDirectdebit 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -670,7 +670,7 @@ exports[`PaymentType render with enableDirectdebit 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -758,7 +758,7 @@ exports[`PaymentType render with enablePaypal 1`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -773,7 +773,7 @@ exports[`PaymentType render with enablePaypal 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -788,7 +788,7 @@ exports[`PaymentType render with enablePaypal 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -803,7 +803,7 @@ exports[`PaymentType render with enablePaypal 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -832,7 +832,7 @@ exports[`PaymentType render with enablePaypal 2`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -847,7 +847,7 @@ exports[`PaymentType render with enablePaypal 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -862,7 +862,7 @@ exports[`PaymentType render with enablePaypal 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -877,7 +877,7 @@ exports[`PaymentType render with enablePaypal 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -906,7 +906,7 @@ exports[`PaymentType render with value 1`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -921,7 +921,7 @@ exports[`PaymentType render with value 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -937,7 +937,7 @@ exports[`PaymentType render with value 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -952,7 +952,7 @@ exports[`PaymentType render with value 1`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"
@@ -981,7 +981,7 @@ exports[`PaymentType render with value 2`] = `
 >
   <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
-      <label>
+      <label for="creditcard">
         <input type="radio"
                name="paymentType"
                value="creditcard"
@@ -996,7 +996,7 @@ exports[`PaymentType render with value 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
-      <label>
+      <label for="paypal">
         <input type="radio"
                name="paymentType"
                value="paypal"
@@ -1012,7 +1012,7 @@ exports[`PaymentType render with value 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
-      <label>
+      <label for="directdebit">
         <input type="radio"
                name="paymentType"
                value="directdebit"
@@ -1027,7 +1027,7 @@ exports[`PaymentType render with value 2`] = `
       </label>
     </div>
     <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
-      <label>
+      <label for="applepay">
         <input type="radio"
                name="paymentType"
                value="applepay"

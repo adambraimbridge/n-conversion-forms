@@ -4,6 +4,7 @@ exports[`DeliveryCounty renders with a custom value 1`] = `
 <label id="deliveryCountyField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryCounty"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -27,6 +28,7 @@ exports[`DeliveryCounty renders with a custom value 2`] = `
 <label id="deliveryCountyField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryCounty"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -50,6 +52,7 @@ exports[`DeliveryCounty renders with a disabled input element 1`] = `
 <label id="deliveryCountyField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryCounty"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -74,6 +77,7 @@ exports[`DeliveryCounty renders with a disabled input element 2`] = `
 <label id="deliveryCountyField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryCounty"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -98,6 +102,7 @@ exports[`DeliveryCounty renders with an error 1`] = `
 <label id="deliveryCountyField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryCounty"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -121,6 +126,7 @@ exports[`DeliveryCounty renders with an error 2`] = `
 <label id="deliveryCountyField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryCounty"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -144,6 +150,7 @@ exports[`DeliveryCounty renders with default props 1`] = `
 <label id="deliveryCountyField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryCounty"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -167,6 +174,7 @@ exports[`DeliveryCounty renders with default props 2`] = `
 <label id="deliveryCountyField"
        class="o-forms-field o-forms-field--optional"
        data-validate="required"
+       for="deliveryCounty"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

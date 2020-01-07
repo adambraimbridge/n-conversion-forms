@@ -20,7 +20,7 @@ export function Responsibility ({
 	]);
 
 	return (
-		<label id={fieldId} className="o-forms-field" data-validate="required">
+		<label id={fieldId} className="o-forms-field" data-validate="required" htmlFor={selectId}>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Which best describes your job responsibility?</span>
 			</span>

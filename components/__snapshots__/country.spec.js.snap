@@ -4,6 +4,7 @@ exports[`Country renders with default props 1`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -798,6 +799,7 @@ exports[`Country renders with default props 2`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -1592,6 +1594,7 @@ exports[`Country renders with hasError 1`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -2386,6 +2389,7 @@ exports[`Country renders with hasError 2`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -3180,6 +3184,7 @@ exports[`Country renders with isB2b 1`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -3974,6 +3979,7 @@ exports[`Country renders with isB2b 2`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -4768,6 +4774,7 @@ exports[`Country renders with isDisabled 1`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -5563,6 +5570,7 @@ exports[`Country renders with isDisabled 2`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -6358,6 +6366,7 @@ exports[`Country renders with large filterList 1`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -6446,6 +6455,7 @@ exports[`Country renders with large filterList 2`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -6534,6 +6544,7 @@ exports[`Country renders with small filterList 1`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -6565,6 +6576,7 @@ exports[`Country renders with small filterList 2`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -6596,6 +6608,7 @@ exports[`Country renders with value 1`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -7392,6 +7405,7 @@ exports[`Country renders with value 2`] = `
 <label id="countryField"
        class="o-forms-field js-unknown-user-field"
        data-validate="required"
+       for="country"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">

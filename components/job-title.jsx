@@ -18,7 +18,12 @@ export function JobTitle ({
 	]);
 
 	return (
-		<label id={fieldId} className="o-forms-field" data-validate="required">
+		<label
+			id={fieldId}
+			className="o-forms-field"
+			data-validate="required"
+			htmlFor={inputId}
+		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Job title</span>
 			</span>

@@ -17,7 +17,7 @@ export function DeliveryAddress ({
 
 	return (
 		<div id="deliveryAddressFields" data-validate="required">
-			<label className="o-forms-field">
+			<label className="o-forms-field" htmlFor="deliveryAddressLine1">
 				<span className="o-forms-title">
 					<span className="o-forms-title__main">Address line 1</span>
 				</span>
@@ -36,7 +36,7 @@ export function DeliveryAddress ({
 					/>
 				</span>
 			</label>
-			<label className="o-forms-field o-forms-field--optional">
+			<label className="o-forms-field o-forms-field--optional" htmlFor="deliveryAddressLine2">
 				<span className="o-forms-title">
 					<span className="o-forms-title__main">Address line 2</span>
 				</span>
@@ -53,7 +53,7 @@ export function DeliveryAddress ({
 					/>
 				</span>
 			</label>
-			<label className="o-forms-field o-forms-field--optional">
+			<label className="o-forms-field o-forms-field--optional" htmlFor="deliveryAddressLine3">
 				<span className="o-forms-title">
 					<span className="o-forms-title__main">Address line 3</span>
 				</span>

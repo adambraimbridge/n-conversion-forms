@@ -19,6 +19,7 @@ export function DeliveryCounty ({
 			id="deliveryCountyField"
 			className="o-forms-field o-forms-field--optional"
 			data-validate="required"
+			htmlFor="deliveryCounty"
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">County</span>

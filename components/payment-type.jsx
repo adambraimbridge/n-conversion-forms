@@ -53,7 +53,7 @@ export function PaymentType ({
 			]);
 			return (
 				<div key={type.id} className={className}>
-					<label>
+					<label htmlFor={inputProps.id}>
 						<input {...inputProps}/>
 						<span className="o-forms-input__label" aria-hidden="true">{type.label}</span>
 					</label>

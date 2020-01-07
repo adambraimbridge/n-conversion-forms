@@ -45,11 +45,11 @@ export function DecisionMaker ({
 
 			<span className={radioButtonsWrapperClassNames}>
 				<div className="o-forms-input--radio-box__container">
-					<label>
+					<label htmlFor={decisionMakerYesInputProps.id}>
 						<input {...decisionMakerYesInputProps} />
 						<span className="o-forms-input__label" aria-hidden="true">Yes</span>
 					</label>
-					<label>
+					<label htmlFor={decisionMakerNoInputProps.id}>
 						<input {...decisionMakerNoInputProps} />
 						<span className="o-forms-input__label o-forms-input__label--negative" aria-hidden="true">No</span>
 					</label>

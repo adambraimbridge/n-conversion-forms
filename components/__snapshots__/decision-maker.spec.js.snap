@@ -16,7 +16,7 @@ exports[`DecisionMaker renders with 'no' as default state for radio buttons 1`] 
   </span>
   <span class="o-forms-input o-forms-input--radio-box o-forms-input--inline">
     <div class="o-forms-input--radio-box__container">
-      <label>
+      <label for="decisionMakerYes">
         <input type="radio"
                id="decisionMakerYes"
                name="decisionMaker"
@@ -29,7 +29,7 @@ exports[`DecisionMaker renders with 'no' as default state for radio buttons 1`] 
           Yes
         </span>
       </label>
-      <label>
+      <label for="decisionMakerNo">
         <input type="radio"
                id="decisionMakerNo"
                name="decisionMaker"
@@ -67,7 +67,7 @@ exports[`DecisionMaker renders with 'no' as default state for radio buttons 2`] 
   </span>
   <span class="o-forms-input o-forms-input--radio-box o-forms-input--inline">
     <div class="o-forms-input--radio-box__container">
-      <label>
+      <label for="decisionMakerYes">
         <input type="radio"
                id="decisionMakerYes"
                name="decisionMaker"
@@ -80,7 +80,7 @@ exports[`DecisionMaker renders with 'no' as default state for radio buttons 2`] 
           Yes
         </span>
       </label>
-      <label>
+      <label for="decisionMakerNo">
         <input type="radio"
                id="decisionMakerNo"
                name="decisionMaker"
@@ -118,7 +118,7 @@ exports[`DecisionMaker renders with an error 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--radio-box o-forms-input--inline o-forms-input--invalid">
     <div class="o-forms-input--radio-box__container">
-      <label>
+      <label for="decisionMakerYes">
         <input type="radio"
                id="decisionMakerYes"
                name="decisionMaker"
@@ -132,7 +132,7 @@ exports[`DecisionMaker renders with an error 1`] = `
           Yes
         </span>
       </label>
-      <label>
+      <label for="decisionMakerNo">
         <input type="radio"
                id="decisionMakerNo"
                name="decisionMaker"
@@ -169,7 +169,7 @@ exports[`DecisionMaker renders with an error 2`] = `
   </span>
   <span class="o-forms-input o-forms-input--radio-box o-forms-input--inline o-forms-input--invalid">
     <div class="o-forms-input--radio-box__container">
-      <label>
+      <label for="decisionMakerYes">
         <input type="radio"
                id="decisionMakerYes"
                name="decisionMaker"
@@ -183,7 +183,7 @@ exports[`DecisionMaker renders with an error 2`] = `
           Yes
         </span>
       </label>
-      <label>
+      <label for="decisionMakerNo">
         <input type="radio"
                id="decisionMakerNo"
                name="decisionMaker"
@@ -220,7 +220,7 @@ exports[`DecisionMaker renders with default props 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--radio-box o-forms-input--inline">
     <div class="o-forms-input--radio-box__container">
-      <label>
+      <label for="decisionMakerYes">
         <input type="radio"
                id="decisionMakerYes"
                name="decisionMaker"
@@ -234,7 +234,7 @@ exports[`DecisionMaker renders with default props 1`] = `
           Yes
         </span>
       </label>
-      <label>
+      <label for="decisionMakerNo">
         <input type="radio"
                id="decisionMakerNo"
                name="decisionMaker"
@@ -271,7 +271,7 @@ exports[`DecisionMaker renders with default props 2`] = `
   </span>
   <span class="o-forms-input o-forms-input--radio-box o-forms-input--inline">
     <div class="o-forms-input--radio-box__container">
-      <label>
+      <label for="decisionMakerYes">
         <input type="radio"
                id="decisionMakerYes"
                name="decisionMaker"
@@ -285,7 +285,7 @@ exports[`DecisionMaker renders with default props 2`] = `
           Yes
         </span>
       </label>
-      <label>
+      <label for="decisionMakerNo">
         <input type="radio"
                id="decisionMakerNo"
                name="decisionMaker"
