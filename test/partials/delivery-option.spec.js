@@ -5,6 +5,7 @@ const {
 
 let context = {};
 const TITLE_SELECTOR = '.ncf__delivery-option__title';
+const isValidDeliveryOption = true;
 
 describe('delivery-option', () => {
 	before(async () => {
@@ -17,15 +18,15 @@ describe('delivery-option', () => {
 	});
 
 	it('should draw a single option', () => {
-		const $ = context.template({ options: [{ value: 'HD' }]});
+		const $ = context.template({ options: [{ value: 'HD', isValidDeliveryOption }]});
 		expect($('input').length).to.equal(1);
 	});
 
 	it('should draw multiple options', () => {
 		const $ = context.template({ options: [
-			{ value: 'HD' },
-			{ value: 'PV' },
-			{ value: 'EV' }
+			{ value: 'HD', isValidDeliveryOption },
+			{ value: 'PV', isValidDeliveryOption },
+			{ value: 'EV', isValidDeliveryOption }
 		]});
 		expect($('input').length).to.equal(3);
 	});
@@ -39,7 +40,8 @@ describe('delivery-option', () => {
 		it('should show the correct title copy', () => {
 			const value = 'PV';
 			const $ = context.template({ options: [{
-				value
+				value,
+				isValidDeliveryOption
 			}]});
 			expect($(TITLE_SELECTOR).text()).to.equal('Paper vouchers');
 		});
@@ -49,7 +51,8 @@ describe('delivery-option', () => {
 		it('should show the correct title copy', () => {
 			const value = 'HD';
 			const $ = context.template({ options: [{
-				value
+				value,
+				isValidDeliveryOption
 			}]});
 			expect($(TITLE_SELECTOR).text()).to.contain('Home delivery');
 		});
@@ -59,7 +62,8 @@ describe('delivery-option', () => {
 		it('should show the correct title copy', () => {
 			const value = 'EV';
 			const $ = context.template({ options: [{
-				value
+				value,
+				isValidDeliveryOption
 			}]});
 			expect($(TITLE_SELECTOR).text()).to.contain('Electronic vouchers');
 		});
@@ -67,14 +71,14 @@ describe('delivery-option', () => {
 
 	it('should populate the value', () => {
 		const value = 'PV';
-		const $ = context.template({ options: [{ value }]});
+		const $ = context.template({ options: [{ value, isValidDeliveryOption }]});
 		expect($('input').attr('id')).to.equal(value);
 		expect($('input').attr('value')).to.equal(value);
 	});
 
 	it('should select the correct radio button', () => {
-		const option1 = { value: 'PV' };
-		const option2 = { value: 'HD', isSelected: true };
+		const option1 = { value: 'PV', isValidDeliveryOption };
+		const option2 = { value: 'HD', isValidDeliveryOption, isSelected: true };
 		const $ = context.template({ options: [option1, option2]});
 		expect($('input[checked]').attr('value')).to.equal(option2.value);
 	});

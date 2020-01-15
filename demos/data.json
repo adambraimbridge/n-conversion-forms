@@ -107,14 +107,17 @@
       "isSingle": true,
       "options": [
         {
-          "value": "PV"
+          "value": "PV",
+          "isValidDeliveryOption": true
         },
         {
           "value": "HD",
-          "isSelected": true
+          "isSelected": true,
+          "isValidDeliveryOption": true
         },
         {
-          "value": "EV"
+          "value": "EV",
+          "isValidDeliveryOption": true
         }
       ]
     }

@@ -36,8 +36,8 @@ export function DeliveryOption ({
 		>
 			<span className="o-forms-input o-forms-input--radio-round">
 				{
-					options.map(({value, isSelected}) => {
-						if (!Object.keys(deliveryOptions).includes(value)) {
+					options.map(({ value, isValidDeliveryOption, isSelected}) => {
+						if (!isValidDeliveryOption) {
 							return null;
 						}
 
