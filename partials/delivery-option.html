@@ -1,7 +1,7 @@
 <div id="deliveryOptionField" class="o-forms-field ncf__delivery-option{{#if isSingle}} ncf__delivery-option--single{{/if}}" role="group" aria-label="Delivery options">
 	<span class="o-forms-input o-forms-input--radio-round">
 		{{#each options}}
-			{{#ifEqualsSome this.value 'PV' 'HD' 'EV'}}
+			{{#if this.isValidDeliveryOption}}
 			<label class="ncf__delivery-option__item" for="{{this.value}}">
 				<input type="radio" id="{{this.value}}" name="deliveryOption" value="{{this.value}}" class="ncf__delivery-option__input"{{#if this.isSelected}} checked{{/if}}>
 				<span class="o-forms-input__label ncf__delivery-option__label">
@@ -27,7 +27,7 @@
 					{{/ifEquals}}
 				</span>
 			</label>
-			{{/ifEqualsSome}}
+			{{/if}}
 		{{/each}}
 	</span>
 </div>

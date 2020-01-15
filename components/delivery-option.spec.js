@@ -16,15 +16,18 @@ describe('DeliveryOption', () => {
 			options: [
 				{
 					value: 'PV',
-					isSelected: true
+					isSelected: true,
+					isValidDeliveryOption: true
 				},
 				{
 					value: 'HD',
-					isSelected: false
+					isSelected: false,
+					isValidDeliveryOption: true
 				},
 				{
 					value: 'EV',
-					isSelected: false
+					isSelected: false,
+					isValidDeliveryOption: true
 				}
 			]
 		};
@@ -37,15 +40,18 @@ describe('DeliveryOption', () => {
 			options: [
 				{
 					value: 'PV',
-					isSelected: true
+					isSelected: true,
+					isValidDeliveryOption: true
 				},
 				{
 					value: 'HD',
-					isSelected: false
+					isSelected: false,
+					isValidDeliveryOption: true
 				},
 				{
 					value: 'EV',
-					isSelected: false
+					isSelected: false,
+					isValidDeliveryOption: true
 				}
 			],
 			isSingle: true
@@ -59,19 +65,23 @@ describe('DeliveryOption', () => {
 			options: [
 				{
 					value: 'PV',
-					isSelected: true
+					isSelected: true,
+					isValidDeliveryOption: true
 				},
 				{
 					value: 'HD',
-					isSelected: false
+					isSelected: false,
+					isValidDeliveryOption: true
 				},
 				{
 					value: 'FOOBAR',
-					isSelected: false
+					isSelected: false,
+					isValidDeliveryOption: false
 				},
 				{
 					value: 'EV',
-					isSelected: false
+					isSelected: false,
+					isValidDeliveryOption: true
 				}
 			]
 		};
