@@ -46,6 +46,11 @@ class Loader {
 	 */
 	setContent ({ title, content}) {
 		if (title) {
+			if (!this.$loaderContentTitle) {
+				this.$loaderContentTitle = document.createElement('div');
+				this.$loaderContentTitle.classList.add('ncf__loader__content__title');
+				this.$loaderContent.insertBefore(this.$loaderContentTitle, this.$loaderContentMain);
+			}
 			this.$loaderContentTitle.innerHTML = title;
 		}
 		if (content) {
