@@ -17,6 +17,7 @@ describe('Loader', () => {
 				remove: sandbox.stub()
 			},
 			focus: sandbox.stub(),
+			insertBefore: sandbox.stub(),
 			removeAttribute: sandbox.stub()
 		};
 		documentStub = {
@@ -24,6 +25,7 @@ describe('Loader', () => {
 			querySelector: sandbox.stub(),
 			removeEventListener: sandbox.stub()
 		};
+		global.document.createElement = sandbox.stub().returns(elementStub);
 	});
 
 	afterEach(() => {
@@ -60,6 +62,11 @@ describe('Loader', () => {
 		});
 
 		describe('setContent', () => {
+			it('should create the title element if it doesn\'t exist yet', () => {
+				loader.$loaderContentTitle = null;
+				loader.setContent({ title: 'Hooray!'});
+				expect(elementStub.insertBefore.calledWith(elementStub)).to.be.true;
+			});
 			it('should set the title of the partial', () => {
 				loader.setContent({ title: 'Hooray!'});
 				expect(elementStub.innerHTML).to.equal('Hooray!');
