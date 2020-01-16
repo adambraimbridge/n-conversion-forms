@@ -83,5 +83,5 @@ Country.propTypes = {
 	isB2b: PropTypes.bool,
 	isDisabled: PropTypes.bool,
 	value: PropTypes.string,
-	additonalFieldInformation: PropTypes.array
+	additonalFieldInformation: PropTypes.node
 };
