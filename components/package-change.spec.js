@@ -1,23 +1,16 @@
 import { PackageChange } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('PackageChange', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('package-change.html');
-	});
-
 	it('render with defaults', () => {
 		const props = {
 			changePackageUrl: 'https://www.ft.com',
 			currentPackage: 'Trial'
 		};
 
-		expect(PackageChange).toRenderAs(context, props);
+		expect(PackageChange).toRenderCorrectly(props);
 	});
 
 	['annual'].forEach(term => {
@@ -33,7 +26,7 @@ describe('PackageChange', () => {
 					}]
 				};
 
-				expect(PackageChange).toRenderAs(context, props);
+				expect(PackageChange).toRenderCorrectly(props);
 			});
 
 			it('render with discount', () => {
@@ -48,7 +41,7 @@ describe('PackageChange', () => {
 					}]
 				};
 
-				expect(PackageChange).toRenderAs(context, props);
+				expect(PackageChange).toRenderCorrectly(props);
 			});
 
 			it('render with trialPrice', () => {
@@ -63,7 +56,7 @@ describe('PackageChange', () => {
 					}]
 				};
 
-				expect(PackageChange).toRenderAs(context, props);
+				expect(PackageChange).toRenderCorrectly(props);
 			});
 		});
 	});
