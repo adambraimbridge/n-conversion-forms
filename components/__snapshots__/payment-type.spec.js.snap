@@ -380,7 +380,7 @@ exports[`PaymentType render with enableCreditcard 1`] = `
               frameborder="0"
               allowtransparency="true"
               class="z_hppm_iframe"
-              style="display:block"
+              style="display:block;width:100%"
       >
       </iframe>
     </div>
@@ -474,7 +474,7 @@ exports[`PaymentType render with enableCreditcard 2`] = `
               frameborder="0"
               allowtransparency="true"
               class="z_hppm_iframe"
-              style="display:block"
+              style="display:block;width:100%"
       >
       </iframe>
     </div>
@@ -607,7 +607,7 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
               frameborder="0"
               allowtransparency="true"
               class="z_hppm_iframe"
-              style="display:block"
+              style="display:block;width:100%"
       >
       </iframe>
     </div>
@@ -740,7 +740,7 @@ exports[`PaymentType render with enableDirectdebit 2`] = `
               frameborder="0"
               allowtransparency="true"
               class="z_hppm_iframe"
-              style="display:block"
+              style="display:block;width:100%"
       >
       </iframe>
     </div>

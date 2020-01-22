@@ -86,7 +86,7 @@ export function PaymentType ({
 				<div className="ncf__zuora-payment-overlay ncf__hidden"></div>
 				<div id="zuora_payment" className="ncf__zuora-payment">
 					<iframe id="z_hppm_iframe" title="Zuora Payment" overflow="visible" scrolling="no" frameBorder="0" allowtransparency="true"
-						className="z_hppm_iframe" style={{display: 'block'}}>
+						className="z_hppm_iframe" style={{display: 'block', width: "100%"}}>
 					</iframe>
 				</div>
 				<script src="https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora-min.js"></script>
