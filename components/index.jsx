@@ -42,3 +42,4 @@ export { Section } from'./section';
 export { State } from'./state';
 export { Submit } from'./submit';
 export { TrialBanner } from'./trial-banner';
+export { EducationJobTitle } from './education-job-title';
