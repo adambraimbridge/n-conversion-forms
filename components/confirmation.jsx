@@ -63,7 +63,10 @@ export function Confirmation ({
 			</div>
 
 			<p className="ncf__paragraph">
-				We’ve sent confirmation of your new subscription to {email}. Here’s a summary of your {offer} subscription:
+				We’ve sent confirmation to {email}. Make sure you check your spam folder if you don’t receive it.
+			</p>
+			<p className="ncf__paragraph">
+				Here’s a summary of your {offer} subscription:
 			</p>
 
 			{ detailElements }
