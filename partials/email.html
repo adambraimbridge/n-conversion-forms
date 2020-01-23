@@ -2,7 +2,11 @@
 	<span class="o-forms-title">
 		<span class="o-forms-title__main">
 			{{#if isB2b}}
-			Work email address
+				{{#unless isEducationalLicence}}
+				Work email address
+				{{else}}
+				Email address
+				{{/unless}}
 			{{else}}
 			Email address
 			{{/if}}

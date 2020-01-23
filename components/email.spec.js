@@ -41,6 +41,16 @@ describe('Email with confirmation', () => {
 		expect(Email).toRenderAs(context, props);
 	});
 
+	it('render default label if B2B and educational licence', () => {
+		const props = {
+			pattern: 'whatever',
+			isB2b: true,
+			educationalLicence: true,
+		};
+
+		expect(Email).toRenderAs(context, props);
+	});
+
 	it('render a email input with given description', () => {
 		const props = {
 			description: 'some description',

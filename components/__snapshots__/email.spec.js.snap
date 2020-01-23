@@ -449,3 +449,67 @@ exports[`Email with confirmation render a email input with read only fields 2`] 
   </span>
 </label>
 `;
+
+exports[`Email with confirmation render default label if B2B and educational licence 1`] = `
+<label id="emailField"
+       class="o-forms-field"
+       data-validate="required,email"
+       for="email"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Work email address
+    </span>
+    <span class="o-forms-title__prompt">
+      Please enter an email address
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="email"
+           id="email"
+           name="email"
+           placeholder="Enter your email address"
+           autocomplete="email"
+           data-trackable="field-email"
+           aria-required="true"
+           required
+           value
+    >
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Email with confirmation render default label if B2B and educational licence 2`] = `
+<label id="emailField"
+       class="o-forms-field"
+       data-validate="required,email"
+       for="email"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Work email address
+    </span>
+    <span class="o-forms-title__prompt">
+      Please enter an email address
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="email"
+           id="email"
+           name="email"
+           placeholder="Enter your email address"
+           autocomplete="email"
+           data-trackable="field-email"
+           aria-required="true"
+           required
+           value
+    >
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
+  </span>
+</label>
+`;

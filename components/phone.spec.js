@@ -29,6 +29,16 @@ describe('Phone', () => {
 		expect(Phone).toRenderAs(context, props);
 	});
 
+	it('render default label if B2B and educational licence', () => {
+		const props = {
+			pattern: 'whatever',
+			isB2b: true,
+			educationalLicence: true,
+		};
+
+		expect(Phone).toRenderAs(context, props);
+	});
+
 	it('render a disabled phone input', () => {
 		const props = {
 			pattern: 'whatever',

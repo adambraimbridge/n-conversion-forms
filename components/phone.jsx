@@ -12,8 +12,9 @@ export function Phone ({
 	inputId = 'primaryTelephone',
 	inputName = 'primaryTelephone',
 	dataTrackable = 'field-phone',
+	isEducationalLicence = false,
 }) {
-	const labelText = isB2b ? 'Work phone number' : 'Phone number';
+	const labelText = isB2b && !isEducationalLicence ? 'Work phone number' : 'Phone number';
 	const descriptionId = 'phone-description';
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -65,4 +66,5 @@ Phone.propTypes = {
 	inputId: propTypes.string,
 	inputName: propTypes.string,
 	dataTrackable: propTypes.string,
+	isEducationalLicence: propTypes.bool,
 };

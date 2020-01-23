@@ -289,3 +289,75 @@ exports[`Phone render a phone input with error styling 2`] = `
   </span>
 </label>
 `;
+
+exports[`Phone render default label if B2B and educational licence 1`] = `
+<label id="primaryTelephoneField"
+       for="primaryTelephone"
+       class="o-forms-field"
+       data-validate="required,number"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Work phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Phone render default label if B2B and educational licence 2`] = `
+<label id="primaryTelephoneField"
+       for="primaryTelephone"
+       class="o-forms-field"
+       data-validate="required,number"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Work phone number
+    </span>
+    <span class="o-forms-title__prompt">
+      5 to 15 characters (numbers only)
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="tel"
+           id="primaryTelephone"
+           name="primaryTelephone"
+           placeholder="Enter your phone number"
+           autocomplete="tel"
+           minlength="5"
+           maxlength="15"
+           data-trackable="field-phone"
+           aria-describedby="phone-description"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+    <span class="o-forms-input__error">
+      This phone number is not valid
+    </span>
+  </span>
+</label>
+`;
