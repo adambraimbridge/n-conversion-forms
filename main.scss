@@ -341,7 +341,7 @@
 			vertical-align: middle;
 		}
 		&-description {
-			margin: 0 0 10px;
+			margin: -10px 0 10px;
 			@include oTypographySans($scale: -1, $include-font-family: false);
 		}
 
