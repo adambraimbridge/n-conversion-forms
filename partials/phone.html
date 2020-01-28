@@ -7,7 +7,11 @@
 	<span class="o-forms-title">
 		<span class="o-forms-title__main">
 			{{#if isB2b}}
-			Work phone number
+				{{#if isEducationalLicence}}
+				Phone number
+				{{else}}
+				Work phone number
+				{{/if}}
 			{{else}}
 			Phone number
 			{{/if}}

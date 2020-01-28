@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Education job title renders a disabled select element 1`] = `
+<label id="jobTitleField"
+       class="o-forms-field"
+       data-validate="required"
+       for="jobTitle"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Occupation
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="jobTitle"
+            name="jobTitle"
+            data-trackable="job-title"
+            aria-required="true"
+            required
+            disabled
+    >
+      <option selected
+              value
+      >
+        Select your occupation
+      </option>
+      <option>
+        Faculty/Other
+      </option>
+      <option>
+        Student
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please enter your occupation.
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Education job title renders a disabled select element 2`] = `
+<label id="jobTitleField"
+       class="o-forms-field"
+       data-validate="required"
+       for="jobTitle"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Occupation
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="jobTitle"
+            name="jobTitle"
+            data-trackable="job-title"
+            aria-required="true"
+            required
+            disabled
+    >
+      <option selected
+              value
+      >
+        Select your occupation
+      </option>
+      <option>
+        Faculty/Other
+      </option>
+      <option>
+        Student
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please enter your occupation.
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Education job title renders a select element with a selected option 1`] = `
+<label id="jobTitleField"
+       class="o-forms-field"
+       data-validate="required"
+       for="jobTitle"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Occupation
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="jobTitle"
+            name="jobTitle"
+            data-trackable="job-title"
+            aria-required="true"
+            required
+    >
+      <option value>
+        Select your occupation
+      </option>
+      <option>
+        Faculty/Other
+      </option>
+      <option>
+        Student
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please enter your occupation.
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Education job title renders a select element with a selected option 2`] = `
+<label id="jobTitleField"
+       class="o-forms-field"
+       data-validate="required"
+       for="jobTitle"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Occupation
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="jobTitle"
+            name="jobTitle"
+            data-trackable="job-title"
+            aria-required="true"
+            required
+    >
+      <option value>
+        Select your occupation
+      </option>
+      <option>
+        Faculty/Other
+      </option>
+      <option>
+        Student
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please enter your occupation.
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Education job title renders an error message 1`] = `
+<label id="jobTitleField"
+       class="o-forms-field"
+       data-validate="required"
+       for="jobTitle"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Occupation
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select o-forms-input--invalid">
+    <select id="jobTitle"
+            name="jobTitle"
+            data-trackable="job-title"
+            aria-required="true"
+            required
+    >
+      <option selected
+              value
+      >
+        Select your occupation
+      </option>
+      <option>
+        Faculty/Other
+      </option>
+      <option>
+        Student
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please enter your occupation.
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Education job title renders an error message 2`] = `
+<label id="jobTitleField"
+       class="o-forms-field"
+       data-validate="required"
+       for="jobTitle"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Occupation
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select o-forms-input--invalid">
+    <select id="jobTitle"
+            name="jobTitle"
+            data-trackable="job-title"
+            aria-required="true"
+            required
+    >
+      <option selected
+              value
+      >
+        Select your occupation
+      </option>
+      <option>
+        Faculty/Other
+      </option>
+      <option>
+        Student
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please enter your occupation.
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Education job title renders an select element with default params 1`] = `
+<label id="jobTitleField"
+       class="o-forms-field"
+       data-validate="required"
+       for="jobTitle"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Occupation
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="jobTitle"
+            name="jobTitle"
+            data-trackable="job-title"
+            aria-required="true"
+            required
+    >
+      <option selected
+              value
+      >
+        Select your occupation
+      </option>
+      <option>
+        Faculty/Other
+      </option>
+      <option>
+        Student
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please enter your occupation.
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Education job title renders an select element with default params 2`] = `
+<label id="jobTitleField"
+       class="o-forms-field"
+       data-validate="required"
+       for="jobTitle"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Occupation
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="jobTitle"
+            name="jobTitle"
+            data-trackable="job-title"
+            aria-required="true"
+            required
+    >
+      <option selected
+              value
+      >
+        Select your occupation
+      </option>
+      <option>
+        Faculty/Other
+      </option>
+      <option>
+        Student
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please enter your occupation.
+    </span>
+  </span>
+</label>
+`;
