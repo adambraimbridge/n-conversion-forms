@@ -37,7 +37,7 @@
     "o-header-services": "^4.0.0"
   },
   "dependencies": {
-    "o-forms": "^8.1.1",
+    "o-forms": "^8.1.9",
     "o-buttons": "^6.0.2",
     "o-message": "^4.0.1",
     "o-colors": "^5.0.2",
