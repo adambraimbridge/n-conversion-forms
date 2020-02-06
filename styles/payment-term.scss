@@ -5,6 +5,10 @@
 	&__payment-term {
 		&__item {
 			position: relative;
+			margin-bottom: oSpacingByName('s3');
+		}
+		&:last-child {
+			margin-bottom: 0;
 		}
 		&__discount {
 			background-color: oColorsByName('claret-60');
