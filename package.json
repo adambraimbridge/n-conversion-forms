@@ -8,8 +8,8 @@
     "precommit": "node_modules/.bin/secret-squirrel",
     "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
     "prepush": "make verify -j3",
-    "prepare": "npx snyk protect || npx snyk protect -d || true",
-    "transpile": "babel components/*.jsx -d dist --copy-files"
+    "prepare": "(npx snyk protect || npx snyk protect -d || true) && npm run build",
+    "build": "babel components/*.jsx -d dist --copy-files"
   },
   "repository": {
     "type": "git",
