@@ -109,20 +109,17 @@ export function AcceptTerms ({
 
 	return (
 		<div {...divProps}>
-			<span className="o-forms-title n-ui-hide">
+			<h2 className="ncf__header">Terms and Conditions</h2>
+			{/* <span className="o-forms-title n-ui-hide">
 				<span className="o-forms-title__main">Terms</span>
-			</span>
+			</span> */}
 			<span className={inputWrapperClassName}>
 				<label htmlFor={inputProps.id}>
 					<input {...inputProps} />
 					{ b2bTerms }
-
 					{ defaultTerms }
-
 					{ corpSignupTerms }
-
 					{ transitionTerms }
-
 					{ signupTerms }
 				</label>
 				<span className="o-forms-input__error">Please accept our terms &amp; conditions</span>
