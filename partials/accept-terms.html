@@ -1,5 +1,4 @@
-<div id="acceptTermsField" class="o-forms-field ncf__validation-error" data-validate="required,checked" {{#if isSignup}}data-trackable="sign-up-terms"{{/if}}{{#if isRegister}}data-trackable="register-up-terms"{{/if}}>
-	<h2 className="ncf__header">Terms &amp; Conditions</h2>
+<div id="acceptTermsField" class="o-forms-field o-layout-typography ncf__validation-error" data-validate="required,checked" {{#if isSignup}}data-trackable="sign-up-terms"{{/if}}{{#if isRegister}}data-trackable="register-up-terms"{{/if}}>
 	<ul class="o-typography-list o-typography-list--unordered">
 		<li>
 			{{#if isB2b }}
@@ -81,6 +80,6 @@
 		<span class="o-forms-input__label">
 			I agree to the terms &amp; conditions.
 		</span>
+		<p class="o-forms-input__error">Please accept our terms &amp; conditions</p>
 	</label>
-	<p class="o-forms-input__error">Please accept our terms &amp; conditions</p>
 </div>
