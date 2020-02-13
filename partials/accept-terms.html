@@ -13,7 +13,7 @@
 				</p>
 			{{/if}}
 		</li>
-		
+
 		{{#if isCorpSignup}}
 			<li>
 				<p>Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.</p>
@@ -30,7 +30,7 @@
 				</li>
 			{{/if}}
 		{{/if}}
-		
+
 		{{#if isTransition}}
 			<li>
 				<p>I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a class="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="_blank" rel="noopener noreferrer">customer service through chat, phone or email</a>.</p>
@@ -48,7 +48,7 @@
 				<p>Find out more about our cancellation policy in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</p>
 			</li>
 		{{/if}}
-		
+
 		{{#if isSignup}}
 			{{#if isPrintProduct}}
 				<li>
@@ -74,7 +74,7 @@
 				</li>
 			{{/if}}
 		{{/if}}
-		
+
 	</ul>
 	<label class="o-forms-input o-forms-input--checkbox{{#if hasError}} o-forms-input--invalid{{/if}}">
 		<input type="checkbox" name="termsAcceptance" value="true" data-trackable="field-terms" aria-required="true" required {{#if isChecked}}checked{{/if}} />
