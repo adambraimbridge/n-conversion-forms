@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const DEFAULT_AGE_RESTRICTION = "16";
+const DEFAULT_AGE_RESTRICTION = '16';
 
 export function AcceptTerms({
 	hasError = false,
@@ -24,7 +24,7 @@ export function AcceptTerms({
 		className: 'o-forms-field o-layout-typography ncf__validation-error',
 		'data-validate': 'required,checked',
 		...(isSignup && { 'data-trackable': 'sign-up-terms' }),
-		...(isRegister && { 'data-trackable': 'register-up-terms' }),
+		...(isRegister && { 'data-trackable': 'register-up-terms' })
 	};
 
 	const labelClassName = classNames([
