@@ -96,21 +96,21 @@ export function AcceptTerms({
 	const corpSignupTerms = isCorpSignup && (
 		<>
 			<li>
-				<p id="terms-corp-signup">
+				<p className="terms-corp-signup">
 					Your organisation’s administrator(s) may view basic usage
 					and profile data about your account and have the ability to
 					set up myFT topic follows on your behalf.
 				</p>
 			</li>
 			<li>
-				<p id="terms-corp-signup">
+				<p className="terms-corp-signup">
 					Basic usage and profile data about your account can include;
 					for example, your job title and profile information, the
 					date you last visited, volume of content consumed, etc.
 				</p>
 			</li>
 			<li>
-				<p id="terms-corp-signup">
+				<p className="terms-corp-signup">
 					myFT topics may be selected on your behalf by your company
 					administrator or FT representative for you to follow. You
 					can unfollow these topics or unsubscribe from the myFT
@@ -119,7 +119,7 @@ export function AcceptTerms({
 			</li>
 			{isTrial && (
 				<li>
-					<p id="terms-corp-signup">
+					<p className="terms-corp-signup">
 						This trial is to demonstrate the value of a group
 						subscription and we’ll contact you during your trial.
 					</p>
@@ -188,7 +188,7 @@ export function AcceptTerms({
 			{isPrintProduct ? (
 				<>
 					<li>
-						<p id="terms-print">
+						<p className="terms-print">
 							Credit for delivery suspensions is only available
 							for hand-delivered subscriptions and is limited to a
 							maximum of 24 issues per yearly subscription terms
@@ -196,7 +196,7 @@ export function AcceptTerms({
 						</p>
 					</li>
 					<li>
-						<p id="terms-print">
+						<p className="terms-print">
 							Find out more about your delivery start date in our{" "}
 							<a
 								className="ncf__link--external"
@@ -213,7 +213,7 @@ export function AcceptTerms({
 			) : (
 				<>
 					<li>
-						<p id="terms-signup">
+						<p className="terms-signup">
 							I give consent for my chosen payment method to be
 							charged automatically at the end of each
 							subscription term until I cancel it by contacting{" "}
@@ -229,7 +229,7 @@ export function AcceptTerms({
 						</p>
 					</li>
 					<li>
-						<p id="terms-signup">
+						<p className="terms-signup">
 							By placing my order, my subscription will start
 							immediately. Cancellation notice would take effect
 							at the end of the subscription period and previously
@@ -237,7 +237,7 @@ export function AcceptTerms({
 						</p>
 					</li>
 					<li>
-						<p id="terms-signup">
+						<p className="terms-signup">
 							Find out more about our cancellation policy in our{" "}
 							<a
 								className="ncf__link--external"

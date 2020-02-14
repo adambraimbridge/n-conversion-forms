@@ -5,11 +5,11 @@ const {
 } = require('../helpers');
 
 const SELECTOR_STANDARD_TERMS = '#terms-default';
-const SELECTOR_PRINT_TERMS = '#terms-print';
-const SELECTOR_SIGNUP_TERMS = '#terms-signup';
+const SELECTOR_PRINT_TERMS = '.terms-print';
+const SELECTOR_SIGNUP_TERMS = '.terms-signup';
 const SELECTOR_SPECIAL_TERMS = '#terms-special';
 const SELECTOR_B2B_TERMS = '#terms-b2b';
-const SELECTOR_CORP_TERMS = '#terms-corp-signup';
+const SELECTOR_CORP_TERMS = '.terms-corp-signup';
 const SELECTOR_TRANSITION_TERMS = '.terms-transition';
 const SELECTOR_REGISTER_TERMS = '#terms-register';
 const SELECTOR_ACCEPT_TERMS_FIELD = '#acceptTermsField';

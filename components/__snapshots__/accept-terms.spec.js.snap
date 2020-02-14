@@ -94,7 +94,7 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -107,12 +107,12 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -166,7 +166,7 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -179,12 +179,12 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -238,7 +238,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -251,12 +251,12 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -315,7 +315,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -328,12 +328,12 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -392,12 +392,12 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 1`]
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -451,12 +451,12 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 2`]
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -510,12 +510,12 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -569,12 +569,12 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -628,12 +628,12 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -687,12 +687,12 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
       </p>
     </li>
     <li>
-      <p id="terms-print">
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -746,7 +746,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -759,12 +759,12 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -818,7 +818,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -831,12 +831,12 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -890,7 +890,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -903,12 +903,12 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -962,7 +962,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -975,12 +975,12 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1034,7 +1034,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -1047,12 +1047,12 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1106,7 +1106,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -1119,12 +1119,12 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
       </p>
     </li>
     <li>
-      <p id="terms-signup">
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1321,17 +1321,17 @@ exports[`AcceptTerms renders appropriately if is corporate signup 1`] = `
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
       </p>
     </li>
@@ -1376,17 +1376,17 @@ exports[`AcceptTerms renders appropriately if is corporate signup 2`] = `
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
       </p>
     </li>
@@ -1431,17 +1431,17 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
       </p>
     </li>
@@ -1486,17 +1486,17 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
       </p>
     </li>
@@ -1541,22 +1541,22 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 1`] 
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         This trial is to demonstrate the value of a group subscription and we’ll contact you during your trial.
       </p>
     </li>
@@ -1601,22 +1601,22 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 2`] 
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
       </p>
     </li>
     <li>
-      <p id="terms-corp-signup">
+      <p class="terms-corp-signup">
         This trial is to demonstrate the value of a group subscription and we’ll contact you during your trial.
       </p>
     </li>
