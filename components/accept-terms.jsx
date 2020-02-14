@@ -20,72 +20,97 @@ export function AcceptTerms({
 	specialTerms = null
 }) {
 	const divProps = {
-		id: "acceptTermsField",
-		className: "o-forms-field o-layout-typography ncf__validation-error",
-		"data-validate": "required,checked",
-		...(isSignup && { "data-trackable": "sign-up-terms" }),
-		...(isRegister && { "data-trackable": "register-up-terms" })
+		id: 'acceptTermsField',
+		className: 'o-forms-field o-layout-typography ncf__validation-error',
+		'data-validate': 'required,checked',
+		...(isSignup && { 'data-trackable': 'sign-up-terms' }),
+		...(isRegister && { 'data-trackable': 'register-up-terms' }),
 	};
 
 	const labelClassName = classNames([
-		"o-forms-input",
-		"o-forms-input--checkbox",
-		{ "o-forms-input--invalid": hasError }
+		'o-forms-input',
+		'o-forms-input--checkbox',
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	const inputProps = {
-		id: "termsAcceptance",
-		type: "checkbox",
-		name: "termsAcceptance",
-		value: "true",
-		"data-trackable": "field-terms",
-		"aria-required": "true",
+		id: 'termsAcceptance',
+		type: 'checkbox',
+		name: 'termsAcceptance',
+		value: 'true',
+		'data-trackable': 'field-terms',
+		'aria-required': 'true',
 		required: true,
 		...(isChecked && { defaultChecked: true })
 	};
 
+	const registerTerms = (
+		<label className={labelClassName}>
+			<input {...inputProps} />
+			<span className="o-forms-input__label" id="terms-register">
+				I confirm I am {ageRestriction} years or older and have read and
+				agree to the{" "}
+				<a
+					className="ncf__link--external"
+					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+					target={isEmbedded ? "_top" : "_blank"}
+					rel="noopener noreferrer"
+					data-trackable="terms-and-conditions"
+				>
+					Terms &amp; Conditions
+				</a>
+				.
+			</span>
+			<p className="o-forms-input__error">Please accept our terms &amp; conditions</p>
+		</label>
+	)
+
 	const b2bTerms = isB2b ? (
-		<p id="terms-b2b">
-			By submitting this form, you indicate your consent to also being
-			contacted by Financial Times by email, post, or phone about our
-			other products, services or special offers unless you untick this
-			box.
-		</p>
+		<li>
+			<p id="terms-b2b">
+				By submitting this form, you indicate your consent to also being
+				contacted by Financial Times by email, post, or phone about our
+				other products, services or special offers unless you untick this
+				box.
+			</p>
+		</li>
 	) : (
-		<p id="terms-default">
-			I confirm I am {ageRestriction} years or older and have read and
-			agree to the{" "}
-			<a
-				className="ncf__link--external"
-				href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-				target={isEmbedded ? "_top" : "_blank"}
-				rel="noopener noreferrer"
-				data-trackable="terms-and-conditions"
-			>
-				Terms &amp; Conditions
-			</a>
-			.
-		</p>
+		<li>
+			<p id="terms-default">
+				I confirm I am {ageRestriction} years or older and have read and
+				agree to the{" "}
+				<a
+					className="ncf__link--external"
+					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+					target={isEmbedded ? "_top" : "_blank"}
+					rel="noopener noreferrer"
+					data-trackable="terms-and-conditions"
+				>
+					Terms &amp; Conditions
+				</a>
+				.
+			</p>
+		</li>
 	);
 
 	const corpSignupTerms = isCorpSignup && (
 		<>
 			<li>
-				<p>
+				<p id="terms-corp-signup">
 					Your organisation’s administrator(s) may view basic usage
 					and profile data about your account and have the ability to
 					set up myFT topic follows on your behalf.
 				</p>
 			</li>
 			<li>
-				<p>
+				<p id="terms-corp-signup">
 					Basic usage and profile data about your account can include;
 					for example, your job title and profile information, the
 					date you last visited, volume of content consumed, etc.
 				</p>
 			</li>
 			<li>
-				<p>
+				<p id="terms-corp-signup">
 					myFT topics may be selected on your behalf by your company
 					administrator or FT representative for you to follow. You
 					can unfollow these topics or unsubscribe from the myFT
@@ -94,7 +119,7 @@ export function AcceptTerms({
 			</li>
 			{isTrial && (
 				<li>
-					<p>
+					<p id="terms-corp-signup">
 						This trial is to demonstrate the value of a group
 						subscription and we’ll contact you during your trial.
 					</p>
@@ -106,12 +131,12 @@ export function AcceptTerms({
 	const transitionTerms = isTransition && (
 		<>
 			<li>
-				<p>
+				<p className="terms-transition">
 					I give consent for my chosen payment method to be charged
 					automatically at the end of each subscription term until I
 					cancel it by contacting{" "}
 					<a
-						class="ncf__link--external"
+						className="ncf__link--external"
 						href="https://help.ft.com/help/contact-us/"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -123,7 +148,7 @@ export function AcceptTerms({
 			</li>
 			{transitionType === "immediate" ? (
 				<li>
-					<p>
+					<p className="terms-transition terms-transition--immediate">
 						By placing my order, my subscription will start
 						immediately. Cancellation notice would take effect at
 						the end of the subscription period and previously paid
@@ -132,7 +157,7 @@ export function AcceptTerms({
 				</li>
 			) : (
 				<li>
-					<p>
+					<p className="terms-transition terms-transition--other">
 						By placing my order, I acknowledge that my subscription
 						will start on the date given above. Any cancellation
 						notice received after that date will take effect at the
@@ -142,10 +167,10 @@ export function AcceptTerms({
 				</li>
 			)}
 			<li>
-				<p>
+				<p className="terms-transition">
 					Find out more about our cancellation policy in our{" "}
 					<a
-						class="ncf__link--external"
+						className="ncf__link--external"
 						href="http://help.ft.com/help/legal-privacy/terms-conditions/"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -163,7 +188,7 @@ export function AcceptTerms({
 			{isPrintProduct ? (
 				<>
 					<li>
-						<p>
+						<p id="terms-print">
 							Credit for delivery suspensions is only available
 							for hand-delivered subscriptions and is limited to a
 							maximum of 24 issues per yearly subscription terms
@@ -171,12 +196,12 @@ export function AcceptTerms({
 						</p>
 					</li>
 					<li>
-						<p>
+						<p id="terms-print">
 							Find out more about your delivery start date in our{" "}
 							<a
-								class="ncf__link--external"
+								className="ncf__link--external"
 								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-								target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}"
+								target={isEmbedded ? "_top" : "_blank"}
 								rel="noopener noreferrer"
 							>
 								Terms &amp; Conditions
@@ -188,14 +213,14 @@ export function AcceptTerms({
 			) : (
 				<>
 					<li>
-						<p>
+						<p id="terms-signup">
 							I give consent for my chosen payment method to be
 							charged automatically at the end of each
 							subscription term until I cancel it by contacting{" "}
 							<a
-								class="ncf__link--external"
+								className="ncf__link--external"
 								href="https://help.ft.com/help/contact-us/"
-								target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}"
+								target={isEmbedded ? "_top" : "_blank"}
 								rel="noopener noreferrer"
 							>
 								customer service through chat, phone or email
@@ -204,7 +229,7 @@ export function AcceptTerms({
 						</p>
 					</li>
 					<li>
-						<p>
+						<p id="terms-signup">
 							By placing my order, my subscription will start
 							immediately. Cancellation notice would take effect
 							at the end of the subscription period and previously
@@ -212,12 +237,12 @@ export function AcceptTerms({
 						</p>
 					</li>
 					<li>
-						<p>
+						<p id="terms-signup">
 							Find out more about our cancellation policy in our{" "}
 							<a
-								class="ncf__link--external"
+								className="ncf__link--external"
 								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-								target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}"
+								target={isEmbedded ? "_top" : "_blank"}
 								rel="noopener noreferrer"
 							>
 								Terms &amp; Conditions
@@ -230,7 +255,7 @@ export function AcceptTerms({
 
 			{specialTerms && (
 				<li>
-					<p id="terms-special">{{ specialTerms }}</p>
+					<p id="terms-special">{specialTerms}</p>
 				</li>
 			)}
 		</>
@@ -238,19 +263,26 @@ export function AcceptTerms({
 
 	return (
 		<div {...divProps}>
-			<ul class="o-typography-list o-typography-list--unordered">
-				{b2bTerms}
-				{corpSignupTerms}
-				{transitionTerms}
-				{signupTerms}
-			</ul>
-			<label className={labelClassName}>
-				<input {...inputProps} />
-				<span class="o-forms-input__label">
-					I agree to the terms &amp; conditions.
-				</span>
-				<p class="o-forms-input__error">Please accept our terms &amp; conditions</p>
-			</label>
+			{isRegister ? 
+				registerTerms 
+				: (
+					<>
+						<ul className="o-typography-list o-typography-list--unordered">	
+							{b2bTerms}
+							{corpSignupTerms}
+							{transitionTerms}
+							{signupTerms}
+						</ul>
+						<label className={labelClassName}>
+							<input {...inputProps} />
+							<span className="o-forms-input__label">
+								I agree to the terms &amp; conditions.
+							</span>
+							<p className="o-forms-input__error">Please accept our terms &amp; conditions</p>
+						</label>
+					</>
+				)
+			}
 		</div>
 	);
 }

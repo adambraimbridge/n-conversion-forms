@@ -32,7 +32,7 @@ unit-test:
 	mocha --recursive --reporter spec test
 
 jest:
-	jest
+	jest --updateSnapshot
 
 a11y-demo:
 	export TEST_URL=http://localhost:5005; \
@@ -42,4 +42,4 @@ smoke:
 	n-test smoke --host http://localhost:5005
 
 test-update-snapshots:
-	NODE_ENV=test jest --updateSnapshot
+	NODE_ENV=test jest --update-snapshot --watch ./components/accept-terms.spec.js
