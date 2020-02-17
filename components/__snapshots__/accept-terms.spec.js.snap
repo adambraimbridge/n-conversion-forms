@@ -6,7 +6,9 @@ exports[`AcceptTerms renders appropriately if a registration 1`] = `
      data-validate="required,checked"
      data-trackable="register-up-terms"
 >
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -42,7 +44,9 @@ exports[`AcceptTerms renders appropriately if a registration 2`] = `
      data-validate="required,checked"
      data-trackable="register-up-terms"
 >
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -125,7 +129,9 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -197,7 +203,9 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -274,7 +282,9 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -351,7 +361,9 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -410,7 +422,9 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 1`]
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -469,7 +483,9 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 2`]
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -528,7 +544,9 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -587,7 +605,9 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -646,7 +666,9 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -705,7 +727,9 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -777,7 +801,9 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -849,7 +875,9 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -921,7 +949,9 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -993,7 +1023,9 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1065,7 +1097,9 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1137,7 +1171,9 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1177,7 +1213,9 @@ exports[`AcceptTerms renders appropriately if input is checked 1`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1218,7 +1256,9 @@ exports[`AcceptTerms renders appropriately if input is checked 2`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1250,7 +1290,9 @@ exports[`AcceptTerms renders appropriately if is B2B 1`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1281,7 +1323,9 @@ exports[`AcceptTerms renders appropriately if is B2B 2`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1336,7 +1380,9 @@ exports[`AcceptTerms renders appropriately if is corporate signup 1`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1391,7 +1437,9 @@ exports[`AcceptTerms renders appropriately if is corporate signup 2`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1446,7 +1494,9 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1501,7 +1551,9 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1561,7 +1613,9 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 1`] 
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1621,7 +1675,9 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 2`] 
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1661,7 +1717,9 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1701,7 +1759,9 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1741,7 +1801,9 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1781,7 +1843,9 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1821,7 +1885,9 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1861,7 +1927,9 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1901,7 +1969,9 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -1941,7 +2011,9 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2012,7 +2084,9 @@ exports[`AcceptTerms renders appropriately if is transition 1`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2083,7 +2157,9 @@ exports[`AcceptTerms renders appropriately if is transition 2`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2154,7 +2230,9 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2225,7 +2303,9 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2296,7 +2376,9 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2367,7 +2449,9 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2407,7 +2491,9 @@ exports[`AcceptTerms renders with an error 1`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
+  <label class="o-forms-input o-forms-input--checkbox o-forms-input--invalid"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2447,7 +2533,9 @@ exports[`AcceptTerms renders with an error 2`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
+  <label class="o-forms-input o-forms-input--checkbox o-forms-input--invalid"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2487,7 +2575,9 @@ exports[`AcceptTerms renders with default props 1`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
@@ -2527,7 +2617,9 @@ exports[`AcceptTerms renders with default props 2`] = `
       </p>
     </li>
   </ul>
-  <label class="o-forms-input o-forms-input--checkbox">
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
     <input type="checkbox"
            id="termsAcceptance"
            name="termsAcceptance"
