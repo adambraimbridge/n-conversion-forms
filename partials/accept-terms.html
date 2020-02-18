@@ -1,6 +1,6 @@
 <div id="acceptTermsField" class="o-forms-field o-layout-typography ncf__validation-error" data-validate="required,checked" {{#if isSignup}}data-trackable="sign-up-terms"{{/if}}{{#if isRegister}}data-trackable="register-up-terms"{{/if}}>
 	{{#if isRegister}}
-		<label class="o-forms-input o-forms-input--checkbox{{#if hasError}} o-forms-input--invalid{{/if}}" for="termsAcceptance">
+		<label class="o-forms-input o-forms-input--checkbox{{#if hasError}} o-forms-input--invalid{{/if}}">
 			<input type="checkbox" id="termsAcceptance" name="termsAcceptance" value="true" data-trackable="field-terms" aria-required="true" required {{#if isChecked}}checked{{/if}} />
 			<span class="o-forms-input__label" id="terms-register">
 				I confirm I am {{#if ageRestriction}}{{ageRestriction}}{{else}}16{{/if}} years or older and have read and agree to the
@@ -85,7 +85,7 @@
 			{{/if}}
 
 		</ul>
-		<label class="o-forms-input o-forms-input--checkbox{{#if hasError}} o-forms-input--invalid{{/if}}" for="termsAcceptance">
+		<label class="o-forms-input o-forms-input--checkbox{{#if hasError}} o-forms-input--invalid{{/if}}">
 			<input type="checkbox" id="termsAcceptance" name="termsAcceptance" value="true" data-trackable="field-terms" aria-required="true" required {{#if isChecked}}checked{{/if}} />
 			<span class="o-forms-input__label">
 				I agree to the terms &amp; conditions.

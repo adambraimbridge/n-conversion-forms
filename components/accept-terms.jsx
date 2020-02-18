@@ -45,7 +45,7 @@ export function AcceptTerms({
 	};
 
 	const registerTerms = (
-		<label className={labelClassName} htmlFor="termsAcceptance">
+		<label className={labelClassName}>
 			<input {...inputProps} />
 			<span className="o-forms-input__label" id="terms-register">
 				I confirm I am {ageRestriction} years or older and have read and
@@ -273,7 +273,7 @@ export function AcceptTerms({
 							{transitionTerms}
 							{signupTerms}
 						</ul>
-						<label className={labelClassName} htmlFor="termsAcceptance">
+						<label className={labelClassName}>
 							<input {...inputProps} />
 							<span className="o-forms-input__label">
 								I agree to the terms &amp; conditions.
