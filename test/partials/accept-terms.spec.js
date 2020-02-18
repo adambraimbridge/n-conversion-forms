@@ -5,13 +5,12 @@ const {
 } = require('../helpers');
 
 const SELECTOR_STANDARD_TERMS = '#terms-default';
-const SELECTOR_PRINT_TERMS = '.terms-print';
-const SELECTOR_SIGNUP_TERMS = '.terms-signup';
+const SELECTOR_PRINT_TERMS = 'label .terms-print';
+const SELECTOR_SIGNUP_TERMS = 'label .terms-signup';
 const SELECTOR_SPECIAL_TERMS = '#terms-special';
 const SELECTOR_B2B_TERMS = '#terms-b2b';
-const SELECTOR_CORP_TERMS = '.terms-corp-signup';
-const SELECTOR_TRANSITION_TERMS = '.terms-transition';
-const SELECTOR_REGISTER_TERMS = '#terms-register';
+const SELECTOR_CORP_TERMS = 'label .terms-corp-signup';
+const SELECTOR_TRANSITION_TERMS = 'label .terms-transition';
 const SELECTOR_ACCEPT_TERMS_FIELD = '#acceptTermsField';
 const SELECTOR_CHECKBOX = 'input';
 const SELECTOR_ANCHOR = 'a';
@@ -71,7 +70,7 @@ describe('accept-terms template', () => {
 		it('should have default terms', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {register: 1});
+			expectTerms($, {standard: 1});
 		});
 	});
 
@@ -212,7 +211,7 @@ describe('accept-terms template', () => {
 	shouldError(context);
 });
 
-function expectTerms ($, { standard=0, print=0, signup=0, special=0, b2b=0, corp=0, transition=0, register=0 }) {
+function expectTerms ($, { standard=0, print=0, signup=0, special=0, b2b=0, corp=0, transition=0 }) {
 	expect($(SELECTOR_STANDARD_TERMS).length).to.equal(standard);
 	expect($(SELECTOR_PRINT_TERMS).length).to.equal(print);
 	expect($(SELECTOR_SIGNUP_TERMS).length).to.equal(signup);
@@ -220,5 +219,4 @@ function expectTerms ($, { standard=0, print=0, signup=0, special=0, b2b=0, corp
 	expect($(SELECTOR_B2B_TERMS).length).to.equal(b2b);
 	expect($(SELECTOR_CORP_TERMS).length).to.equal(corp);
 	expect($(SELECTOR_TRANSITION_TERMS).length).to.equal(transition);
-	expect($(SELECTOR_REGISTER_TERMS).length).to.equal(register);
 }
