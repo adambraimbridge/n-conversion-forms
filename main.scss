@@ -12,6 +12,7 @@
 @import './styles/payment-term';
 @import './styles/payment-type';
 @import './styles/loader';
+@import './styles/accept-terms';
 @import './styles/message';
 @import './styles/continue-reading';
 @import './styles/banner';
@@ -371,6 +372,7 @@
 	@include ncfContinueReading();
 	@include ncfBanner();
 	@include ncfCustomerCarePanel();
+	@include ncfAcceptTermsList();
 
 	&__hidden {
 		display: none !important;
