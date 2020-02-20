@@ -2,114 +2,89 @@
 
 exports[`AcceptTerms renders appropriately if a registration 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="register-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label"
+          id="terms-register"
+    >
+      I confirm I am 16 years or older and have read and agree to the
+      <a class="ncf__link--external"
+         href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-trackable="terms-and-conditions"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
     </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
-        I confirm I am 16 years or older and have read and agree to the
-        <a class="ncf__link--external"
-           href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="terms-and-conditions"
-        >
-          Terms &amp; Conditions
-        </a>
-        .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
+    <p class="o-forms-input__error">
       Please accept our terms &amp; conditions
-    </span>
-  </span>
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a registration 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="register-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label"
+          id="terms-register"
+    >
+      I confirm I am 16 years or older and have read and agree to the
+      <a class="ncf__link--external"
+         href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-trackable="terms-and-conditions"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
     </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
-        I confirm I am 16 years or older and have read and agree to the
-        <a class="ncf__link--external"
-           href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="terms-and-conditions"
-        >
-          Terms &amp; Conditions
-        </a>
-        .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
+    <p class="o-forms-input__error">
       Please accept our terms &amp; conditions
-    </span>
-  </span>
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -120,8 +95,10 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -131,11 +108,15 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -145,39 +126,39 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -188,8 +169,10 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -199,11 +182,15 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -213,39 +200,39 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup and has special terms 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -256,8 +243,10 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -267,11 +256,15 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -281,44 +274,44 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span id="terms-special"
-            class="o-forms-input__label"
-      >
+      </p>
+    </li>
+    <li>
+      <p id="terms-special">
         Special terms text
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup and has special terms 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -329,8 +322,10 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -340,11 +335,15 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -354,44 +353,44 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span id="terms-special"
-            class="o-forms-input__label"
-      >
+      </p>
+    </li>
+    <li>
+      <p id="terms-special">
         Special terms text
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup for the print product 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -402,11 +401,15 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 1`]
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -416,39 +419,39 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 1`]
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup for the print product 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -459,11 +462,15 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 2`]
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -473,39 +480,39 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 2`]
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup for the print product and is embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -516,11 +523,15 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -530,39 +541,39 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup for the print product and is embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -573,11 +584,15 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -587,39 +602,39 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup for the print product and is not embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -630,11 +645,15 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -644,39 +663,39 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup for the print product and is not embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -687,11 +706,15 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).
-      </span>
-      <span class="terms-print o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-print">
         Find out more about your delivery start date in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -701,39 +724,39 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -744,8 +767,10 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -755,11 +780,15 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -769,39 +798,39 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -812,8 +841,10 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -823,11 +854,15 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -837,39 +872,39 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product and is embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -880,8 +915,10 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -891,11 +928,15 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -905,39 +946,39 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product and is embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -948,8 +989,10 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -959,11 +1002,15 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -973,39 +1020,39 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product and is not embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1016,8 +1063,10 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -1027,11 +1076,15 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1041,39 +1094,39 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product and is not embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1084,8 +1137,10 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -1095,11 +1150,15 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-signup">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1109,39 +1168,38 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if input is checked 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-             checked
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1152,39 +1210,39 @@ exports[`AcceptTerms renders appropriately if input is checked 1`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+           checked
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if input is checked 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-             checked
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1195,104 +1253,105 @@ exports[`AcceptTerms renders appropriately if input is checked 2`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+           checked
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is B2B 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-b2b"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-b2b">
         By submitting this form, you indicate your consent to also being contacted by Financial Times by email, post, or phone about our other products, services or special offers unless you untick this box.
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is B2B 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-b2b"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-b2b">
         By submitting this form, you indicate your consent to also being contacted by Financial Times by email, post, or phone about our other products, services or special offers unless you untick this box.
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is corporate signup 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1303,47 +1362,53 @@ exports[`AcceptTerms renders appropriately if is corporate signup 1`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is corporate signup 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1354,47 +1419,53 @@ exports[`AcceptTerms renders appropriately if is corporate signup 2`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is corporate signup and not trial 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1405,47 +1476,53 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is corporate signup and not trial 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1456,47 +1533,53 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is corporate signup and trial 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1507,50 +1590,58 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 1`] 
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         This trial is to demonstrate the value of a group subscription and we’ll contact you during your trial.
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is corporate signup and trial 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1561,50 +1652,58 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 2`] 
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
-      </span>
-      <span class="terms-corp-signup o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-corp-signup">
         This trial is to demonstrate the value of a group subscription and we’ll contact you during your trial.
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1615,38 +1714,38 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1657,38 +1756,38 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and custom age restriction is provided 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 21 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1699,38 +1798,38 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and custom age restriction is provided 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 21 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1741,38 +1840,38 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and is embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1783,38 +1882,38 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and is embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1825,38 +1924,38 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and is not embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1867,38 +1966,38 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and is not embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1909,38 +2008,38 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is transition 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1951,8 +2050,10 @@ exports[`AcceptTerms renders appropriately if is transition 1`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -1962,11 +2063,15 @@ exports[`AcceptTerms renders appropriately if is transition 1`] = `
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-transition terms-transition--other o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition terms-transition--other">
         By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -1976,38 +2081,38 @@ exports[`AcceptTerms renders appropriately if is transition 1`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is transition 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2018,8 +2123,10 @@ exports[`AcceptTerms renders appropriately if is transition 2`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -2029,11 +2136,15 @@ exports[`AcceptTerms renders appropriately if is transition 2`] = `
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-transition terms-transition--other o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition terms-transition--other">
         By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2043,38 +2154,38 @@ exports[`AcceptTerms renders appropriately if is transition 2`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is transition with transition type of immediate 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2085,8 +2196,10 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -2096,11 +2209,15 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-transition terms-transition--immediate o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition terms-transition--immediate">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2110,38 +2227,38 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is transition with transition type of immediate 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2152,8 +2269,10 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -2163,11 +2282,15 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-transition terms-transition--immediate o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition terms-transition--immediate">
         By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2177,38 +2300,38 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is transition with transition type other than immediate 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2219,8 +2342,10 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -2230,11 +2355,15 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-transition terms-transition--other o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition terms-transition--other">
         By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2244,38 +2373,38 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders appropriately if is transition with transition type other than immediate 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2286,8 +2415,10 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           Terms &amp; Conditions
         </a>
         .
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
@@ -2297,11 +2428,15 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           customer service through chat, phone or email
         </a>
         .
-      </span>
-      <span class="terms-transition terms-transition--other o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition terms-transition--other">
         By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.
-      </span>
-      <span class="terms-transition o-forms-input__label">
+      </p>
+    </li>
+    <li>
+      <p class="terms-transition">
         Find out more about our cancellation policy in our
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2311,38 +2446,38 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders with an error 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2353,38 +2488,38 @@ exports[`AcceptTerms renders with an error 1`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox o-forms-input--invalid"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders with an error 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2395,38 +2530,38 @@ exports[`AcceptTerms renders with an error 2`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox o-forms-input--invalid"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders with default props 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2437,38 +2572,38 @@ exports[`AcceptTerms renders with default props 1`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
 
 exports[`AcceptTerms renders with default props 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field ncf__validation-error"
+     class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <span class="o-forms-title n-ui-hide">
-    <span class="o-forms-title__main">
-      Terms
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--checkbox">
-    <label for="termsAcceptance">
-      <input type="checkbox"
-             id="termsAcceptance"
-             name="termsAcceptance"
-             value="true"
-             data-trackable="field-terms"
-             aria-required="true"
-             required
-      >
-      <span id="terms-default"
-            class="o-forms-input__label"
-      >
+  <ul class="o-typography-list o-typography-list--unordered">
+    <li>
+      <p id="terms-default">
         I confirm I am 16 years or older and have read and agree to the
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -2479,11 +2614,26 @@ exports[`AcceptTerms renders with default props 2`] = `
           Terms &amp; Conditions
         </a>
         .
-      </span>
-    </label>
-    <span class="o-forms-input__error">
-      Please accept our terms &amp; conditions
+      </p>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the terms &amp; conditions.
     </span>
-  </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
 </div>
 `;
