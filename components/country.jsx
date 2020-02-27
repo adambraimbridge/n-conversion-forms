@@ -10,6 +10,7 @@ export function Country ({
 	inputId = 'country',
 	isB2b = false,
 	isDisabled = false,
+	disableInstruction = false,
 	value,
 	additonalFieldInformation
 }) {
@@ -40,7 +41,7 @@ export function Country ({
 	);
 	const createSelect = countries => (
 		<select {...selectProps}>
-			<option value="">Please select a country{isB2b ? '/region' : ''}</option>
+			<option value="" disabled={disableInstruction}>Please select a country{isB2b ? '/region' : ''}</option>
 			{countries.map(country => country.label ? createOptGroup(country) : createOption(country))}
 		</select>
 	);

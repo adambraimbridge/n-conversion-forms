@@ -8,6 +8,7 @@ export function Industry ({
 	value,
 	isDisabled = false,
 	hasError = false,
+	disableInstruction = false,
 	fieldId = 'industryField',
 	selectId = 'industry',
 	selectName = 'industry',
@@ -39,7 +40,7 @@ export function Industry ({
 					disabled={isDisabled}
 					defaultValue={value}
 				>
-					<option value="">Please select an industry</option>
+					<option value="" disabled={disableInstruction}>Please select an industry</option>
 					{options.map(({ code, description }) => {
 						return <option key={code} value={code}>{description}</option>;
 					})}

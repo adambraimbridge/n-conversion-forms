@@ -10,7 +10,7 @@
 			data-trackable="field-country"
 			{{#if isDisabled}}disabled{{/if}}>
 
-			<option value>Please select a country{{#if isB2b}}/region{{/if}}</option>
+			<option {{#if disableInstruction}}disabled=true{{/if}} value>Please select a country{{#if isB2b}}/region{{/if}}</option>
 			{{#each countries as |country|}}
 				{{#if this.label}}
 				<optgroup label="{{country.label}}">
