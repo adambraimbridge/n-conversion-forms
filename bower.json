@@ -50,6 +50,6 @@
     "o-normalise": "^2.0.1"
   },
   "resolutions": {
-    "ftdomdelegate": "3.0.0"
+    "ftdomdelegate": "^3.0.0"
   }
 }
