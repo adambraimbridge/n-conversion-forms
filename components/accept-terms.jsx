@@ -141,7 +141,7 @@ export function AcceptTerms({
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						customer service through chat, phone or email
+						customer care through chat, phone or email
 					</a>
 					.
 				</span>
@@ -223,7 +223,7 @@ export function AcceptTerms({
 								target={isEmbedded ? "_top" : "_blank"}
 								rel="noopener noreferrer"
 							>
-								customer service through chat, phone or email
+								customer care through chat, phone or email
 							</a>
 							.
 						</span>
