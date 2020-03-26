@@ -73,7 +73,7 @@ describe('CompanyName', () => {
 
 		const component = mount(CompanyName(props));
 
-		expect(component.find('.o-forms-title__main').at(0).props().children).toEqual('Company name');
+		expect(component.find('.o-forms-title__main').text()).toEqual('Company name');
 	});
 
 	it('renders with custom label wording', () => {
@@ -81,7 +81,7 @@ describe('CompanyName', () => {
 
 		const component = mount(CompanyName(props));
 
-		expect(component.find('.o-forms-title__main').at(0).props().children).toEqual('Organisation name');
+		expect(component.find('.o-forms-title__main').text()).toEqual('Organisation name');
 	});
 
 });

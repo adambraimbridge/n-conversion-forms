@@ -88,7 +88,7 @@ describe('Industry', () => {
 
 		const component = mount(Industry(props));
 
-		expect(component.find('.o-forms-title__main').at(0).props().children).toEqual('In which industry do you work?');
+		expect(component.find('.o-forms-title__main').text()).toEqual('In which industry do you work?');
 	});
 
 	it('renders with custom label wording', () => {
@@ -96,6 +96,6 @@ describe('Industry', () => {
 
 		const component = mount(Industry(props));
 
-		expect(component.find('.o-forms-title__main').at(0).props().children).toEqual('Industry');
+		expect(component.find('.o-forms-title__main').text()).toEqual('Industry');
 	});
 });
