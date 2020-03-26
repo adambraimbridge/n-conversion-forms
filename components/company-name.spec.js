@@ -67,4 +67,21 @@ describe('CompanyName', () => {
 
 		expect(CompanyName).toRenderAs(context, props);
 	});
+
+	it('renders with "Company name"', () => {
+		const props = {};
+
+		const component = mount(CompanyName(props));
+
+		expect(component.find('.o-forms-title__main').at(0).props().children).toEqual('Company name');
+	});
+
+	it('renders with "Organisation name"', () => {
+		const props = {accountsPage: true};
+
+		const component = mount(CompanyName(props));
+
+		expect(component.find('.o-forms-title__main').at(0).props().children).toEqual('Organisation name');
+	});
+
 });
