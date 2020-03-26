@@ -11,7 +11,8 @@ export function Industry ({
 	fieldId = 'industryField',
 	selectId = 'industry',
 	selectName = 'industry',
-	options = defaultOptions
+	options = defaultOptions,
+	fieldLabel = 'In which industry do you work?'
 }) {
 
 	const inpiutWrapperClassName = classNames([
@@ -28,7 +29,7 @@ export function Industry ({
 			htmlFor={selectId}
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">In which industry do you work?</span>
+				<span className="o-forms-title__main">{fieldLabel}</span>
 			</span>
 			<span className={inpiutWrapperClassName}>
 				<select id={selectId}

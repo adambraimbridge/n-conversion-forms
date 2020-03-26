@@ -68,7 +68,7 @@ describe('CompanyName', () => {
 		expect(CompanyName).toRenderAs(context, props);
 	});
 
-	it('renders with "Company name"', () => {
+	it('renders with default label wording', () => {
 		const props = {};
 
 		const component = mount(CompanyName(props));
@@ -76,7 +76,7 @@ describe('CompanyName', () => {
 		expect(component.find('.o-forms-title__main').at(0).props().children).toEqual('Company name');
 	});
 
-	it('renders with "Organisation name"', () => {
+	it('renders with custom label wording', () => {
 		const props = {fieldLabel : 'Organisation name'};
 
 		const component = mount(CompanyName(props));
