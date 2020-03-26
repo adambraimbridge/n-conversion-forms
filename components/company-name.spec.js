@@ -77,7 +77,7 @@ describe('CompanyName', () => {
 	});
 
 	it('renders with "Organisation name"', () => {
-		const props = {accountsPage: true};
+		const props = {fieldLabel : 'Organisation name'};
 
 		const component = mount(CompanyName(props));
 
