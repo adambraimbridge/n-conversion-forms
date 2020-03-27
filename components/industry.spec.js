@@ -82,4 +82,20 @@ describe('Industry', () => {
 
 		expect(field.exists()).toBe(true);
 	});
+
+	it('renders with default label wording', () => {
+		const props = {};
+
+		const component = mount(Industry(props));
+
+		expect(component.find('.o-forms-title__main').text()).toEqual('In which industry do you work?');
+	});
+
+	it('renders with custom label wording', () => {
+		const props = {fieldLabel : 'Industry'};
+
+		const component = mount(Industry(props));
+
+		expect(component.find('.o-forms-title__main').text()).toEqual('Industry');
+	});
 });
