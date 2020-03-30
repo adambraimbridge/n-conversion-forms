@@ -39,7 +39,7 @@ export function Message ({ title, message, additional = [], actions = null, name
 					<div className="o-message__content">
 						<p className="o-message__content-main">
 							{title ? <span className="o-message__content-highlight">{title}</span> : null}
-							<span className="o-message__content-detail">{message}</span>
+							<span className="o-message__content-detail" dangerouslySetInnerHTML={{__html: message }}></span>
 						</p>
 						{additionalMessages}
 						{callToActionsList}
