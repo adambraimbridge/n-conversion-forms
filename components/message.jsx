@@ -5,7 +5,7 @@ import classNames from 'classnames';
 export function Message ({ title, message, additional = [], actions = null, name, isNotice, isError, isSuccess, isInform, isStaticMessage, isHidden }) {
 
 	const additionalMessages = additional.map((text, index) => {
-		return <p className="o-message__content--additional" key={index}>{text}</p>;
+		return <p className="o-message__content--additional" key={index} dangerouslySetInnerHTML={{__html: text }}></p>;
 	});
 
 	const oMessageClassNames = classNames({
