@@ -21,7 +21,10 @@ export function Form ({
 }
 
 Form.propTypes = {
-	children: PropTypes.children,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	]),
 	action: PropTypes.string,
 	method: PropTypes.string
 };
