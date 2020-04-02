@@ -53,7 +53,10 @@ export function Fieldset ({
 }
 
 Fieldset.propTypes = {
-	children: PropTypes.children,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	]),
 	name: PropTypes.string,
 	legend: PropTypes.string,
 	hideLegend: PropTypes.bool,
