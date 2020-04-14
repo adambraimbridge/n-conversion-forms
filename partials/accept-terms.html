@@ -60,9 +60,15 @@
 
 			{{#if isSignup}}
 				{{#if isPrintProduct}}
-					<li>
-						<span class="terms-print">Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).</span>
-					</li>
+					{{#if isTrial}}
+						<li>
+							<span class="terms-print">Credits for delivery suspension or delivery failure are not available during introductory offer periods.</span>
+						</li>
+					{{else}}
+						<li>
+							<span class="terms-print">Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).</span>
+						</li>
+					{{/if}}
 					<li>
 						<span class="terms-print">Find out more about your delivery start date in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener noreferrer">Terms &amp; Conditions</a>.</span>
 					</li>

@@ -8,7 +8,7 @@ function initDemo () {
 
 	const element =
 		<React.Fragment>
-			<ncf.AcceptTerms />
+			<ncf.AcceptTerms isSignup={true} isPrintProduct={true} isTrial={true}/>
 			<ncf.AppBanner />
 			<ncf.BillingCountry></ncf.BillingCountry>
 			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
