@@ -63,7 +63,7 @@ export function AcceptTerms({
 			</span>
 			<p className="o-forms-input__error">Please accept our terms &amp; conditions</p>
 		</label>
-	)
+	);
 
 	const b2bTerms = isB2b ? (
 		<li>
@@ -183,16 +183,19 @@ export function AcceptTerms({
 		</>
 	);
 
+	const printSignupTermText = isTrial ?
+		'Credits for delivery suspension or delivery failure are not available during introductory offer periods.'
+	:
+		'Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).'
+	;
+
 	const signupTerms = isSignup && (
 		<>
 			{isPrintProduct ? (
 				<>
 					<li>
 						<span className="terms-print">
-							Credit for delivery suspensions is only available
-							for hand-delivered subscriptions and is limited to a
-							maximum of 24 issues per yearly subscription terms
-							(4 issues per yearly FT Weekend subscription term).
+							{printSignupTermText}
 						</span>
 					</li>
 					<li>
@@ -263,11 +266,11 @@ export function AcceptTerms({
 
 	return (
 		<div {...divProps}>
-			{isRegister ? 
-				registerTerms 
+			{isRegister ?
+				registerTerms
 				: (
 					<>
-						<ul className="o-typography-list ncf__accept-terms-list">	
+						<ul className="o-typography-list ncf__accept-terms-list">
 							{b2bTerms}
 							{corpSignupTerms}
 							{transitionTerms}
