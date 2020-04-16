@@ -149,6 +149,7 @@ function generateCountryArray(length, { includeAllFrequent = true } = {}) {
 	return Array.from(Array(length), (item, index) => ({
 		code: `C-${index}`,
 	})).concat(
+		// prettier-ignore
 		includeAllFrequent
 			? [
 					{ code: 'JPN' },
@@ -156,7 +157,7 @@ function generateCountryArray(length, { includeAllFrequent = true } = {}) {
 					{ code: 'USA' },
 					{ code: 'CAN' },
 					{ code: 'GBR' },
-			  ]
+			]
 			: []
 	);
 }

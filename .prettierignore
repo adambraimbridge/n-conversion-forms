@@ -3,6 +3,7 @@ package-lock.json
 /pa11y_screenCapture/*
 /public
 /partials
+/styles
 /tmp/
 /.idea/
 /.sass-cache/
