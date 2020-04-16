@@ -34,7 +34,7 @@ exports[`DeliveryStartDate renders with a custom date 1`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -73,7 +73,7 @@ exports[`DeliveryStartDate renders with a custom date 2`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -112,7 +112,7 @@ exports[`DeliveryStartDate renders with a custom input max value 1`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -151,7 +151,7 @@ exports[`DeliveryStartDate renders with a custom input max value 2`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -190,7 +190,7 @@ exports[`DeliveryStartDate renders with a custom input min value 1`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -229,7 +229,7 @@ exports[`DeliveryStartDate renders with a custom input min value 2`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -267,7 +267,7 @@ exports[`DeliveryStartDate renders with a custom input value 1`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -305,7 +305,7 @@ exports[`DeliveryStartDate renders with a custom input value 2`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -344,7 +344,7 @@ exports[`DeliveryStartDate renders with a disabled input 1`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -383,7 +383,7 @@ exports[`DeliveryStartDate renders with a disabled input 2`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -421,7 +421,7 @@ exports[`DeliveryStartDate renders with an error 1`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -459,7 +459,7 @@ exports[`DeliveryStartDate renders with an error 2`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -497,7 +497,7 @@ exports[`DeliveryStartDate renders with default props 1`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
@@ -535,7 +535,7 @@ exports[`DeliveryStartDate renders with default props 2`] = `
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+    NB. This will be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
   </p>
 </label>
 `;
