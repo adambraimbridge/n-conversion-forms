@@ -20,7 +20,6 @@ npm-debug.log
 /pa11y_screenCapture/
 package-lock.json
 .editorconfig
-.eslintrc.js
 .pa11yci.js
 .stylelintrc
 dist
