@@ -11,7 +11,7 @@ describe('Password', () => {
 
 	beforeEach(() => {
 		passwordElement = { type: '' };
-		checkboxElement = { addEventListener: ()=>{}, checked: false };
+		checkboxElement = { addEventListener: () => {}, checked: false };
 		document = {
 			querySelector: (selector) => {
 				if (selector.indexOf('#password') !== -1) {
@@ -19,7 +19,7 @@ describe('Password', () => {
 				} else {
 					return checkboxElement;
 				}
-			}
+			},
 		};
 		password = new Password(document);
 		sandbox = sinon.createSandbox();
@@ -32,7 +32,7 @@ describe('Password', () => {
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if document element isn\'t passed in.', () => {
+		it("should throw an error if document element isn't passed in.", () => {
 			expect(() => {
 				new Password();
 			}).to.throw();

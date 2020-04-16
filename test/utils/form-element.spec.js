@@ -18,15 +18,15 @@ describe('FormElement', () => {
 					querySelectorAll: () => {},
 					querySelector: () => {
 						return {
-							value: 'test'
+							value: 'test',
 						};
 					},
 					classList: {
 						add: addStub,
-						remove: removeStub
-					}
+						remove: removeStub,
+					},
 				};
-			}
+			},
 		};
 		formElement = new FormElement(document);
 		sandbox = sinon.createSandbox();
@@ -37,7 +37,7 @@ describe('FormElement', () => {
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if document element isn\'t passed in.', () => {
+		it("should throw an error if document element isn't passed in.", () => {
 			expect(() => {
 				new FormElement();
 			}).to.throw();
@@ -45,7 +45,7 @@ describe('FormElement', () => {
 
 		it('should throw an error if form element does not exist on the page', () => {
 			expect(() => {
-				document.querySelector = () => { };
+				document.querySelector = () => {};
 				new FormElement(document);
 			}).to.throw();
 		});

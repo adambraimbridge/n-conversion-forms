@@ -6,52 +6,51 @@ It allows for the retrieval of the correct terminology of postcode based on the 
 
 ## Contents
 
-* [Implementation](#implementation)
-* [Methods](#methods)
-
+- [Implementation](#implementation)
+- [Methods](#methods)
 
 ## Implementation
 
 ```javascript
-	const postcode = new Postcode(document, query);
+const postcode = new Postcode(document, query);
 ```
 
-| Parameter | Required | Description                   |
-| --------- | -------- | ----------------------------- |
-| document  | yes      | property of the window object |
+| Parameter | Required | Description                                        |
+| --------- | -------- | -------------------------------------------------- |
+| document  | yes      | property of the window object                      |
 | query     | no       | id of the field. Defaults to `.ncf #postCodeField` |
 
 ## Methods
 
-* [changePostcodeReferenceForCountry](#changePostcodeReferenceForCountry)
-* [getPostcodeReferenceByCountry](#getPostcodeReferenceByCountry)
+- [changePostcodeReferenceForCountry](#changePostcodeReferenceForCountry)
+- [getPostcodeReferenceByCountry](#getPostcodeReferenceByCountry)
 
 ### changePostcodeReferenceForCountry
 
 Changes the delivery post code field label, placeholder and error message so that the correct terminology is used for the given country.
 
 ```javascript
-	postcode.changePostcodeReferenceForCountry = 'USA';
+postcode.changePostcodeReferenceForCountry = 'USA';
 ```
 
-| Parameter | Required | Example                   |
-| --------- | -------- | ----------------------------- |
-| Three letter ISO 3166-1 country code | yes | 'USA' -> 'Enter your zip code' |
+| Parameter                            | Required | Example                        |
+| ------------------------------------ | -------- | ------------------------------ |
+| Three letter ISO 3166-1 country code | yes      | 'USA' -> 'Enter your zip code' |
 
 ### getPostcodeReferenceByCountry
 
 Returns the correct terminology for the word postcode of the given country.
 
 ```javascript
-	const postcode = postcode.getPostcodeReferenceByCountry('USA');
+const postcode = postcode.getPostcodeReferenceByCountry('USA');
 ```
 
-| Parameter   | Required | Description |
-| ----------- | -------- | ----------- |
+| Parameter   | Required | Description                          |
+| ----------- | -------- | ------------------------------------ |
 | countryCode | yes      | Three letter ISO 3166-1 country code |
 
 #### Possible Responses:
 
-* USA -> zip code
-* CAN -> postal code
-* Default -> post code
+- USA -> zip code
+- CAN -> postal code
+- Default -> post code

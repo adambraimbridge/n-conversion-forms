@@ -9,9 +9,11 @@ app.use('/public', express.static('public'));
 app.use('/dist', express.static('dist'));
 
 app.get('/', (req, res) => {
-	res.send(jsxTemplate({
-		title: 'n-conversion-forms-jsx-demo'
-	}));
+	res.send(
+		jsxTemplate({
+			title: 'n-conversion-forms-jsx-demo',
+		})
+	);
 });
 
 app.listen(PORT, () => {

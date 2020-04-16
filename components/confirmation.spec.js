@@ -34,11 +34,13 @@ describe('Confirmation', () => {
 	it('renders with complete details', () => {
 		const props = {
 			offer: OFFER_TEXT,
-			details: [{
-				title: 'Details title text',
-				data: 'Details title data',
-				description: 'Details title description'
-			}]
+			details: [
+				{
+					title: 'Details title text',
+					data: 'Details title data',
+					description: 'Details title description',
+				},
+			],
 		};
 
 		expect(Confirmation).toRenderAs(context, props);
@@ -47,17 +49,22 @@ describe('Confirmation', () => {
 	it('renders with details missing a description', () => {
 		const props = {
 			offer: OFFER_TEXT,
-			details: [{
-				title: 'Details title text',
-				data: 'Details title data'
-			}]
+			details: [
+				{
+					title: 'Details title text',
+					data: 'Details title data',
+				},
+			],
 		};
 
 		expect(Confirmation).toRenderAs(context, props);
 	});
 
 	it('renders with direct debit mandate URL', () => {
-		const props = { offer: OFFER_TEXT, directDebitMandateUrl: 'https://foo.com' };
+		const props = {
+			offer: OFFER_TEXT,
+			directDebitMandateUrl: 'https://foo.com',
+		};
 
 		expect(Confirmation).toRenderAs(context, props);
 	});

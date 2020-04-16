@@ -2,8 +2,7 @@ import { BillingPostcode } from './index';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
 
-const context = {
-};
+const context = {};
 
 expect.extend(expectToRenderAs);
 
@@ -18,7 +17,6 @@ describe('Billing Postcode', () => {
 		};
 
 		expect(BillingPostcode).toRenderAs(context, props);
-
 	});
 
 	it('can render a disable input', () => {
@@ -28,17 +26,15 @@ describe('Billing Postcode', () => {
 		};
 
 		expect(BillingPostcode).toRenderAs(context, props);
-
 	});
 
 	it('can render a pattern attribute', () => {
 		const props = {
 			postcodeReference: 'ZipCode',
-			pattern: 'Whatever'
+			pattern: 'Whatever',
 		};
 
 		expect(BillingPostcode).toRenderAs(context, props);
-
 	});
 
 	it('can render as an Error', () => {

@@ -6,7 +6,7 @@ const {
 	unregisterHelper,
 	shouldBeDisableable,
 	shouldBeRequired,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};
@@ -26,7 +26,7 @@ describe('billing country template', () => {
 
 	it('should have billing label', () => {
 		const $ = context.template({
-			isBillingCountry: true
+			isBillingCountry: true,
 		});
 		expect($('.o-forms-title__main').text()).to.equal('Billing Country');
 	});
@@ -42,7 +42,7 @@ describe('billing country template', () => {
 		it('should select nothing if value is not an option', () => {
 			const value = 'thisIsNotAnOption';
 			const $ = context.template({
-				value
+				value,
 			});
 
 			expect($('select option[selected]').length).to.equal(0);
@@ -57,12 +57,14 @@ describe('billing country template', () => {
 
 	describe('options', () => {
 		it('should show only default option if no countries', () => {
-			registerHelper('ncf-countries', ({fn}) => fn(this));
+			registerHelper('ncf-countries', ({ fn }) => fn(this));
 			const $ = context.template({});
 
 			expect($('select').find('option').length).to.equal(1);
 			expect($('select option').first().attr('value')).to.equal('');
-			expect($('select option').first().text()).to.equal('Please select a country');
+			expect($('select option').first().text()).to.equal(
+				'Please select a country'
+			);
 		});
 
 		it('should generate options if passed', () => {
@@ -72,8 +74,10 @@ describe('billing country template', () => {
 		});
 
 		it('should generate options with the correct label and value', () => {
-			const countries = [{ code: 'test', name: 'test'}];
-			registerHelper('ncf-countries', ({fn}) => fn(Object.assign({}, { countries }, this)));
+			const countries = [{ code: 'test', name: 'test' }];
+			registerHelper('ncf-countries', ({ fn }) =>
+				fn(Object.assign({}, { countries }, this))
+			);
 			const $ = context.template({});
 			const secondOption = $('select option').get(1);
 
@@ -101,7 +105,7 @@ describe('billing country template', () => {
 		it('should select only country in frequently used if selected', () => {
 			const value = 'GBR';
 			const $ = context.template({
-				value
+				value,
 			});
 			const first = $('select optgroup').get(0);
 

@@ -6,7 +6,7 @@ const {
 	shouldBeHiddable,
 	shouldBeRequired,
 	shouldPopulateValue,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};
@@ -23,7 +23,7 @@ describe('billing postcode template', () => {
 
 	it('should be post code by default', () => {
 		const $ = context.template({
-			postcodeReference: 'postcode'
+			postcodeReference: 'postcode',
 		});
 		expect($.text()).to.contain('postcode');
 	});

@@ -2,7 +2,7 @@ const {
 	fetchPartial,
 	shouldBeDisableable,
 	shouldPopulateValue,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};

@@ -6,7 +6,7 @@ const {
 	unregisterHelper,
 	shouldBeDisableable,
 	shouldBeRequired,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};
@@ -21,7 +21,11 @@ describe('industry template', () => {
 	});
 
 	beforeEach(() => {
-		options = [{code: 'code-a', description: 'A' }, {code: 'code-b', description: 'B' }, {code: 'code-c', description: 'C' }];
+		options = [
+			{ code: 'code-a', description: 'A' },
+			{ code: 'code-b', description: 'B' },
+			{ code: 'code-c', description: 'C' },
+		];
 	});
 
 	after(() => {
@@ -34,7 +38,9 @@ describe('industry template', () => {
 		expect($('select').find('option').length).to.equal(1);
 
 		expect($('select option').first().attr('value')).to.equal('');
-		expect($('select option').first().text()).to.equal('Please select an industry');
+		expect($('select option').first().text()).to.equal(
+			'Please select an industry'
+		);
 	});
 
 	it('should generate options including the default', () => {
@@ -60,7 +66,7 @@ describe('industry template', () => {
 	it('should select nothing if value is not an option', () => {
 		const value = 'thisIsNotAnOption';
 		const $ = context.template({
-			value
+			value,
 		});
 
 		expect($('select option[selected]').length).to.equal(0);

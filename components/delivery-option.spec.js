@@ -17,19 +17,19 @@ describe('DeliveryOption', () => {
 				{
 					value: 'PV',
 					isSelected: true,
-					isValidDeliveryOption: true
+					isValidDeliveryOption: true,
 				},
 				{
 					value: 'HD',
 					isSelected: false,
-					isValidDeliveryOption: true
+					isValidDeliveryOption: true,
 				},
 				{
 					value: 'EV',
 					isSelected: false,
-					isValidDeliveryOption: true
-				}
-			]
+					isValidDeliveryOption: true,
+				},
+			],
 		};
 
 		expect(DeliveryOption).toRenderAs(context, props);
@@ -41,20 +41,20 @@ describe('DeliveryOption', () => {
 				{
 					value: 'PV',
 					isSelected: true,
-					isValidDeliveryOption: true
+					isValidDeliveryOption: true,
 				},
 				{
 					value: 'HD',
 					isSelected: false,
-					isValidDeliveryOption: true
+					isValidDeliveryOption: true,
 				},
 				{
 					value: 'EV',
 					isSelected: false,
-					isValidDeliveryOption: true
-				}
+					isValidDeliveryOption: true,
+				},
 			],
-			isSingle: true
+			isSingle: true,
 		};
 
 		expect(DeliveryOption).toRenderAs(context, props);
@@ -66,24 +66,24 @@ describe('DeliveryOption', () => {
 				{
 					value: 'PV',
 					isSelected: true,
-					isValidDeliveryOption: true
+					isValidDeliveryOption: true,
 				},
 				{
 					value: 'HD',
 					isSelected: false,
-					isValidDeliveryOption: true
+					isValidDeliveryOption: true,
 				},
 				{
 					value: 'FOOBAR',
 					isSelected: false,
-					isValidDeliveryOption: false
+					isValidDeliveryOption: false,
 				},
 				{
 					value: 'EV',
 					isSelected: false,
-					isValidDeliveryOption: true
-				}
-			]
+					isValidDeliveryOption: true,
+				},
+			],
 		};
 
 		expect(DeliveryOption).toRenderAs(context, props);

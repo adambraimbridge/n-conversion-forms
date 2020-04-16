@@ -8,10 +8,7 @@ const defaultOptions = demographics.responsibilities.responsibilities;
 const context = {};
 expect.extend(expectToRenderAs);
 
-const {
-	registerHelper,
-	unregisterHelper,
-} = require('../test/helpers');
+const { registerHelper, unregisterHelper } = require('../test/helpers');
 
 describe('Responsibility', () => {
 	let options;
@@ -28,11 +25,10 @@ describe('Responsibility', () => {
 
 	it('render a select with a label', () => {
 		const props = {
-			options: defaultOptions
+			options: defaultOptions,
 		};
 
 		expect(Responsibility).toRenderAs(context, props);
-
 	});
 
 	it('can render an initial selected value', () => {
@@ -47,7 +43,7 @@ describe('Responsibility', () => {
 	it('can render a disable select', () => {
 		const props = {
 			options: defaultOptions,
-			isDisabled: true
+			isDisabled: true,
 		};
 
 		expect(Responsibility).toRenderAs(context, props);

@@ -11,7 +11,7 @@ describe('registration-confirmation template', () => {
 	it('should populate the email', () => {
 		const email = 'test@example.com';
 		const $ = context.template({
-			email
+			email,
 		});
 
 		expect($.text()).to.contain(email);

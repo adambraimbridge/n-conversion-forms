@@ -11,12 +11,15 @@ expect.extend(expectToRenderAs);
 
 describe('Loader', () => {
 	beforeAll(async () => {
-		context.template = await fetchPartialAsString('loader.html', CHILDREN_STRING);
+		context.template = await fetchPartialAsString(
+			'loader.html',
+			CHILDREN_STRING
+		);
 	});
 
 	it('renders with default props', () => {
 		const props = {
-			children: CHILDREN
+			children: CHILDREN,
 		};
 
 		expect(Loader).toRenderAs(context, props);
@@ -25,7 +28,7 @@ describe('Loader', () => {
 	it('renders with showLoader', () => {
 		const props = {
 			children: CHILDREN,
-			showLoader: true
+			showLoader: true,
 		};
 
 		expect(Loader).toRenderAs(context, props);
@@ -34,7 +37,7 @@ describe('Loader', () => {
 	it('renders with title', () => {
 		const props = {
 			children: CHILDREN,
-			title: 'TITLE'
+			title: 'TITLE',
 		};
 
 		expect(Loader).toRenderAs(context, props);

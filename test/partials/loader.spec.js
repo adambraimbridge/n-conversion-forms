@@ -4,9 +4,12 @@ const { fetchPartial } = require('../helpers');
 let context = {};
 
 describe('loader template', () => {
-
 	before(async () => {
-		context.template = await fetchPartial('loader.html', false, '<div>Foo Bar</div>');
+		context.template = await fetchPartial(
+			'loader.html',
+			false,
+			'<div>Foo Bar</div>'
+		);
 	});
 
 	it('should have the loader element', () => {
@@ -25,7 +28,9 @@ describe('loader template', () => {
 	it('should allow content in the partial', () => {
 		const $ = context.template();
 
-		expect($('.ncf__loader__content__main').html().trim()).to.equal('<div>Foo Bar</div>');
+		expect($('.ncf__loader__content__main').html().trim()).to.equal(
+			'<div>Foo Bar</div>'
+		);
 	});
 
 	it('should show loader when showLoader is set to true', () => {
@@ -51,7 +56,9 @@ describe('loader template', () => {
 			expect($container.attr('aria-modal')).to.equal('true');
 			expect($container.attr('aria-labelledby')).to.equal('loader-aria-label');
 			expect($('#loader-aria-label').length).to.equal(1);
-			expect($container.attr('aria-describedby')).to.equal('loader-aria-description');
+			expect($container.attr('aria-describedby')).to.equal(
+				'loader-aria-description'
+			);
 			expect($('#loader-aria-description').length).to.equal(1);
 		});
 
@@ -70,8 +77,9 @@ describe('loader template', () => {
 		it('should have the correct content in the aria description', () => {
 			const $ = context.template();
 
-			expect($('#loader-aria-description').html().trim()).to.equal('<div>Foo Bar</div>');
+			expect($('#loader-aria-description').html().trim()).to.equal(
+				'<div>Foo Bar</div>'
+			);
 		});
 	});
-
 });

@@ -12,7 +12,7 @@ class Loader {
 	 * @throws If the document not passed
 	 * @throws When the loader element not found
 	 */
-	constructor (element) {
+	constructor(element) {
 		if (!element) {
 			throw new Error('Please supply a DOM element');
 		}
@@ -23,8 +23,12 @@ class Loader {
 		this.element = element;
 		this.$loader = element.querySelector('.ncf__loader');
 		this.$loaderContent = element.querySelector('.ncf__loader__content');
-		this.$loaderContentTitle = element.querySelector('.ncf__loader__content__title');
-		this.$loaderContentMain = element.querySelector('.ncf__loader__content__main');
+		this.$loaderContentTitle = element.querySelector(
+			'.ncf__loader__content__title'
+		);
+		this.$loaderContentMain = element.querySelector(
+			'.ncf__loader__content__main'
+		);
 
 		if (!this.$loader) {
 			throw new Error('Please include the loader partial on the page');
@@ -34,7 +38,7 @@ class Loader {
 	/**
 	 * Clear the content.
 	 */
-	clearContent () {
+	clearContent() {
 		this.$loaderContent.innerHTML = '';
 	}
 
@@ -44,12 +48,15 @@ class Loader {
 	 * @param {string} title The HTML markup/string containing the title of the message.
 	 * @param {string} content The HTML markup/string containing the main content of the message.
 	 */
-	setContent ({ title, content}) {
+	setContent({ title, content }) {
 		if (title) {
 			if (!this.$loaderContentTitle) {
 				this.$loaderContentTitle = document.createElement('div');
 				this.$loaderContentTitle.classList.add('ncf__loader__content__title');
-				this.$loaderContent.insertBefore(this.$loaderContentTitle, this.$loaderContentMain);
+				this.$loaderContent.insertBefore(
+					this.$loaderContentTitle,
+					this.$loaderContentMain
+				);
 			}
 			this.$loaderContentTitle.innerHTML = title;
 		}
@@ -63,7 +70,7 @@ class Loader {
 	 *
 	 * @param {object} content The optional content to set *before* showing the loader.
 	 */
-	show (content) {
+	show(content) {
 		this._previouslyFocused = document.activeElement;
 
 		if (content) {
@@ -81,7 +88,7 @@ class Loader {
 	 *
 	 * @param {object} content The optional content to set *before* showing the loader.
 	 */
-	showAndPreventTabbing (content) {
+	showAndPreventTabbing(content) {
 		this.show(content);
 
 		this.element.addEventListener('keydown', this.interceptTab);
@@ -90,7 +97,7 @@ class Loader {
 	/**
 	 * Hide the loader
 	 */
-	hide () {
+	hide() {
 		this.$loader.classList.add(this.HIDDEN_CLASS);
 		this.$loader.classList.remove(this.VISIBLE_CLASS);
 		this.$loader.removeAttribute('tabindex');
@@ -107,7 +114,7 @@ class Loader {
 	 * Intercepts Tab key events that normally navigate through the content on the page.
 	 * @param {object} event The event object for the keypress.
 	 */
-	interceptTab (event) {
+	interceptTab(event) {
 		if (event.keyCode === 9) {
 			event.preventDefault();
 		}
@@ -118,9 +125,11 @@ class Loader {
 	 * @param {DOMElement} element Show loader over this
 	 * @param {Object} content Content for the loader in standard format
 	 */
-	showOnElement (element, content) {
+	showOnElement(element, content) {
 		const existingLoader = element.querySelector('.ncf__loader');
-		const loader = new DOMParser().parseFromString(this.template(content), 'text/html').querySelector('.ncf__loader');
+		const loader = new DOMParser()
+			.parseFromString(this.template(content), 'text/html')
+			.querySelector('.ncf__loader');
 
 		if (!existingLoader) {
 			element.appendChild(loader);
@@ -133,7 +142,7 @@ class Loader {
 	 * Remove loader from a given element
 	 * @param {DOMElement} element Loader inside
 	 */
-	removeFromElement (element) {
+	removeFromElement(element) {
 		element.querySelector('.ncf__loader').remove();
 	}
 
@@ -142,7 +151,7 @@ class Loader {
 	 * @param {String} title
 	 * @param {String} content
 	 */
-	template ({ title='Loading', content='' }) {
+	template({ title = 'Loading', content = '' }) {
 		return `
 		<div class="ncf__loader is-visible ncf__loader--element"
 			role="dialog"
@@ -160,6 +169,6 @@ class Loader {
 			</div>
 		</div>`;
 	}
-};
+}
 
 module.exports = Loader;

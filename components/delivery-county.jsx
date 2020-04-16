@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryCounty ({
+export function DeliveryCounty({
 	hasError = false,
 	value = '',
-	isDisabled = false
+	isDisabled = false,
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -44,5 +44,5 @@ DeliveryCounty.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool,
-	maxlength: PropTypes.number
+	maxlength: PropTypes.number,
 };

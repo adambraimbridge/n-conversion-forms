@@ -10,10 +10,13 @@ const ERROR_CLASS = 'o-forms-input--invalid';
 const options = [
 	{ value: 'testValue1', label: 'testLabel1' },
 	{ value: 'testValue2', label: 'testValue2' },
-	{ value: 'testValue3', label: 'testLabel3' }
+	{ value: 'testValue3', label: 'testLabel3' },
 ];
-const optionsWithDefault = options.map((option, index) => ({ ...option, isSelected: index === 1 }));
-const selectedOption = optionsWithDefault.find(option => option.isSelected);
+const optionsWithDefault = options.map((option, index) => ({
+	...option,
+	isSelected: index === 1,
+}));
+const selectedOption = optionsWithDefault.find((option) => option.isSelected);
 const handlebars = Handlebars();
 
 const registerPartial = (name, partial) => {
@@ -24,15 +27,19 @@ const registerHelper = (name, helper) => {
 	return handlebars.registerHelper(name, helper);
 };
 
-const unregisterPartial = name => {
+const unregisterPartial = (name) => {
 	return handlebars.unregisterPartial(name);
 };
 
-const unregisterHelper = name => {
+const unregisterHelper = (name) => {
 	return handlebars.unregisterHelper(name);
 };
 
-const fetchPartial = async (name, returnString = false, partialBlockString = '') => {
+const fetchPartial = async (
+	name,
+	returnString = false,
+	partialBlockString = ''
+) => {
 	let file = await readFile(PARTIAL_DIR + name, 'utf8');
 	// HACK ALERT: this is necessary to make testing @partial-block work. It does mean that any test where
 	//  a @partial-block helper isn't registered will blow up, but that will just have to be worked around
@@ -55,7 +62,7 @@ const shouldPopulateOptions = function (context) {
 
 	it('should generate options if passed', () => {
 		const $ = context.template({
-			options
+			options,
 		});
 
 		expect($('select').find('option').length).to.equal(options.length);
@@ -63,7 +70,7 @@ const shouldPopulateOptions = function (context) {
 
 	it('should generate options with the correct label and value', () => {
 		const $ = context.template({
-			options
+			options,
 		});
 
 		expect($('select option').first().attr('value')).to.equal('testValue1');
@@ -72,12 +79,11 @@ const shouldPopulateOptions = function (context) {
 };
 
 const shouldSelectOption = function (context) {
-
 	it('should select the correct option if value passed', () => {
 		const value = options[1].value;
 		const $ = context.template({
 			options,
-			value
+			value,
 		});
 
 		expect($('select option[selected]').attr('value')).to.equal(value);
@@ -87,7 +93,7 @@ const shouldSelectOption = function (context) {
 		const value = 'thisIsNotAnOption';
 		const $ = context.template({
 			options,
-			value
+			value,
 		});
 
 		expect($('select option[selected]').length).to.equal(0);
@@ -95,20 +101,24 @@ const shouldSelectOption = function (context) {
 
 	it('should select default if no value is set', () => {
 		const $ = context.template({
-			options: optionsWithDefault
+			options: optionsWithDefault,
 		});
 
-		expect($('select option[selected]').attr('value')).to.equal(selectedOption.value);
+		expect($('select option[selected]').attr('value')).to.equal(
+			selectedOption.value
+		);
 	});
 
 	it('should not select default if actual value is set', () => {
 		const value = options[2].value;
 		const $ = context.template({
 			options: optionsWithDefault,
-			value
+			value,
 		});
 
-		expect($('select option[selected]').attr('value')).not.to.equal(selectedOption.value);
+		expect($('select option[selected]').attr('value')).not.to.equal(
+			selectedOption.value
+		);
 		expect($('select option[selected]').attr('value')).to.equal(value);
 	});
 
@@ -117,7 +127,7 @@ const shouldSelectOption = function (context) {
 
 		const $ = context.template({
 			options: optionsWithDefault,
-			value
+			value,
 		});
 
 		expect($('select option[selected]').length).to.equal(0);
@@ -134,7 +144,7 @@ const shouldPopulateValue = function (context) {
 	it('should populate the correct value', () => {
 		const value = 'ThisIsAValue';
 		const $ = context.template({
-			value
+			value,
 		});
 
 		expect($('input').val()).to.equal(value);
@@ -180,7 +190,7 @@ const shouldAllowPattern = function (context, selector) {
 
 	it('should not have a pattern if passed', () => {
 		const $ = context.template({
-			pattern: 'test'
+			pattern: 'test',
 		});
 
 		expect($(selector).attr('pattern')).to.equal('test');
@@ -189,7 +199,9 @@ const shouldAllowPattern = function (context, selector) {
 
 const shouldContainPartials = function (context, partials) {
 	it('should contain partials', () => {
-		partials.forEach(({ id, partial }) => registerPartial(partial, `<div id="${id}"></div>`));
+		partials.forEach(({ id, partial }) =>
+			registerPartial(partial, `<div id="${id}"></div>`)
+		);
 
 		const $ = context.template({});
 
@@ -228,5 +240,5 @@ module.exports = {
 	shouldBeRequired,
 	shouldAllowPattern,
 	shouldContainPartials,
-	shouldError
+	shouldError,
 };

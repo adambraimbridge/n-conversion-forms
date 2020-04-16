@@ -9,7 +9,7 @@ class DeliveryOption {
 	 * @param {Element} element Usually the window.document
 	 * @throws If the element not passed
 	 */
-	constructor (element) {
+	constructor(element) {
 		if (!element) {
 			throw new Error('Please supply the DOM element');
 		}
@@ -17,7 +17,9 @@ class DeliveryOption {
 		this.$form = element.querySelector('form.ncf');
 
 		if (!this.$form.deliveryOption) {
-			throw new Error('Please include the delivery option partial on the page.');
+			throw new Error(
+				'Please include the delivery option partial on the page.'
+			);
 		}
 	}
 
@@ -25,7 +27,7 @@ class DeliveryOption {
 	 * Binds the given callback to the field's onchange event.
 	 * @param {Function} callback The callback function to call when a change event occurs.
 	 */
-	handleDeliveryOptionChange (callback) {
+	handleDeliveryOptionChange(callback) {
 		if (this.$form.deliveryOption.length === undefined) {
 			this.$form.deliveryOption.addEventListener('change', callback);
 		} else {
@@ -34,7 +36,6 @@ class DeliveryOption {
 			}
 		}
 	}
-
-};
+}
 
 module.exports = DeliveryOption;

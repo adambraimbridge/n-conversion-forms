@@ -14,23 +14,25 @@ describe('PackageChange', () => {
 	it('render with defaults', () => {
 		const props = {
 			changePackageUrl: 'https://www.ft.com',
-			currentPackage: 'Trial'
+			currentPackage: 'Trial',
 		};
 
 		expect(PackageChange).toRenderAs(context, props);
 	});
 
-	['annual'].forEach(term => {
+	['annual'].forEach((term) => {
 		describe(`${term}`, () => {
 			it('render with defaults', () => {
 				const props = {
 					changePackageUrl: 'https://www.ft.com',
 					currentPackage: 'Trial',
-					terms: [{
-						name: term,
-						price: '£1.00',
-						weeklyPrice: '£1.00'
-					}]
+					terms: [
+						{
+							name: term,
+							price: '£1.00',
+							weeklyPrice: '£1.00',
+						},
+					],
 				};
 
 				expect(PackageChange).toRenderAs(context, props);
@@ -40,12 +42,14 @@ describe('PackageChange', () => {
 				const props = {
 					changePackageUrl: 'https://www.ft.com',
 					currentPackage: 'Trial',
-					terms: [{
-						name: term,
-						price: '£1.00',
-						weeklyPrice: '£1.00',
-						discount: '25%'
-					}]
+					terms: [
+						{
+							name: term,
+							price: '£1.00',
+							weeklyPrice: '£1.00',
+							discount: '25%',
+						},
+					],
 				};
 
 				expect(PackageChange).toRenderAs(context, props);
@@ -55,12 +59,14 @@ describe('PackageChange', () => {
 				const props = {
 					changePackageUrl: 'https://www.ft.com',
 					currentPackage: 'Trial',
-					terms: [{
-						name: term,
-						price: '£1.00',
-						weeklyPrice: '£1.00',
-						trialPrice: '£1.00'
-					}]
+					terms: [
+						{
+							name: term,
+							price: '£1.00',
+							weeklyPrice: '£1.00',
+							trialPrice: '£1.00',
+						},
+					],
 				};
 
 				expect(PackageChange).toRenderAs(context, props);

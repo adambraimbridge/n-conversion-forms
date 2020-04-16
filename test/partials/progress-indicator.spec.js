@@ -20,7 +20,7 @@ describe('progress-indicator template', () => {
 
 	it('should display one item if passed', () => {
 		const $ = context.template({
-			items: [{name: 'test', url: '/test'}]
+			items: [{ name: 'test', url: '/test' }],
 		});
 
 		expect($(`.${CLASS_PROGRESS_ITEM}`).length).to.equal(1);
@@ -29,9 +29,9 @@ describe('progress-indicator template', () => {
 	it('should display all items if multiple passed', () => {
 		const $ = context.template({
 			items: [
-				{name: 'test', url: '/test'},
-				{isComplete: true, name: 'test1', url: '/test1'}
-			]
+				{ name: 'test', url: '/test' },
+				{ isComplete: true, name: 'test1', url: '/test1' },
+			],
 		});
 
 		expect($(`.${CLASS_PROGRESS_ITEM}`).length).to.equal(2);
@@ -40,7 +40,7 @@ describe('progress-indicator template', () => {
 
 	it('should mark the progress item complete', () => {
 		const $ = context.template({
-			items: [{isComplete: true}]
+			items: [{ isComplete: true }],
 		});
 
 		expect($(`.${CLASS_PROGRESS_ITEM}`).hasClass(CLASS_COMPLETE)).to.be.true;
@@ -48,7 +48,7 @@ describe('progress-indicator template', () => {
 
 	it('should mark the progress item current', () => {
 		const $ = context.template({
-			items: [{isCurrent: true}]
+			items: [{ isCurrent: true }],
 		});
 
 		expect($(`.${CLASS_PROGRESS_ITEM}`).hasClass(CLASS_CURRENT)).to.be.true;
@@ -59,8 +59,8 @@ describe('progress-indicator template', () => {
 			items: [
 				{ isComplete: true, name: 'test', url: '/test' },
 				{ isCurrent: true, name: 'test1', url: '/test1' },
-				{ name: 'test2', url: '/test2' }
-			]
+				{ name: 'test2', url: '/test2' },
+			],
 		});
 
 		expect($(`a.${CLASS_PROGRESS_ITEM}`).length).to.equal(1);

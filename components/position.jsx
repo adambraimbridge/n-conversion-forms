@@ -4,20 +4,19 @@ import classNames from 'classnames';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.positions.positions;
 
-export function Position ({
+export function Position({
 	value,
 	isDisabled = false,
 	hasError = false,
 	fieldId = 'positionField',
 	selectId = 'position',
 	selectName = 'position',
-	options = defaultOptions
+	options = defaultOptions,
 }) {
-
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -31,7 +30,8 @@ export function Position ({
 				<span className="o-forms-title__main">What’s your job position?</span>
 			</span>
 			<span className={inputWrapperClassNames}>
-				<select id={selectId}
+				<select
+					id={selectId}
 					name={selectName}
 					data-trackable="field-position"
 					aria-required="true"
@@ -41,10 +41,16 @@ export function Position ({
 				>
 					<option value="">Please select a job position</option>
 					{options.map(({ code, description }) => {
-						return <option key={code} value={code}>{description}</option>;
+						return (
+							<option key={code} value={code}>
+								{description}
+							</option>
+						);
 					})}
 				</select>
-				<span className="o-forms-input__error">Please select your position</span>
+				<span className="o-forms-input__error">
+					Please select your position
+				</span>
 			</span>
 		</label>
 	);
@@ -57,8 +63,10 @@ Position.propTypes = {
 	fieldId: PropTypes.string,
 	selectId: PropTypes.string,
 	selectName: PropTypes.string,
-	options: PropTypes.arrayOf(PropTypes.shape({
-		code: PropTypes.string,
-		description: PropTypes.string,
-	}))
+	options: PropTypes.arrayOf(
+		PropTypes.shape({
+			code: PropTypes.string,
+			description: PropTypes.string,
+		})
+	),
 };

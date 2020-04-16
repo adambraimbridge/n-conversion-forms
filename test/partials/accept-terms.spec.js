@@ -1,8 +1,5 @@
 const { expect } = require('chai');
-const {
-	fetchPartial,
-	shouldError
-} = require('../helpers');
+const { fetchPartial, shouldError } = require('../helpers');
 
 const SELECTOR_STANDARD_TERMS = '.terms-default';
 const SELECTOR_PRINT_TERMS = '.terms-print';
@@ -27,7 +24,9 @@ describe('accept-terms template', () => {
 		const ageRestrictionText = '16 years';
 		const $ = context.template({});
 
-		expect($(SELECTOR_STANDARD_TERMS).text().trim()).to.contain(ageRestrictionText);
+		expect($(SELECTOR_STANDARD_TERMS).text().trim()).to.contain(
+			ageRestrictionText
+		);
 	});
 
 	it('should use the given restricted age in the copy', () => {
@@ -35,10 +34,12 @@ describe('accept-terms template', () => {
 		const ageRestrictionText = `${ageRestriction} years`;
 
 		const $ = context.template({
-			ageRestriction
+			ageRestriction,
 		});
 
-		expect($(SELECTOR_STANDARD_TERMS).text().trim()).to.contain(ageRestrictionText);
+		expect($(SELECTOR_STANDARD_TERMS).text().trim()).to.contain(
+			ageRestrictionText
+		);
 	});
 
 	describe('not register or signup', () => {
@@ -53,86 +54,90 @@ describe('accept-terms template', () => {
 		it('should have default terms and nothing else', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard: 1});
+			expectTerms($, { standard: 1 });
 		});
 	});
 
 	describe('register', () => {
 		const params = {
-			isRegister: true
+			isRegister: true,
 		};
 
 		it('should use the register data tracking if isRegister is true', () => {
 			const $ = context.template(params);
 
-			expect($(SELECTOR_ACCEPT_TERMS_FIELD).data('trackable')).to.equal('register-up-terms');
+			expect($(SELECTOR_ACCEPT_TERMS_FIELD).data('trackable')).to.equal(
+				'register-up-terms'
+			);
 		});
 
 		it('should have default terms', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {register: 1});
+			expectTerms($, { register: 1 });
 		});
 	});
 
 	describe('signup', () => {
 		const params = {
-			isSignup: true
+			isSignup: true,
 		};
 
 		it('should use the signup data tracking if the isSignup is true', () => {
 			const $ = context.template(params);
 
-			expect($(SELECTOR_ACCEPT_TERMS_FIELD).data('trackable')).to.equal('sign-up-terms');
+			expect($(SELECTOR_ACCEPT_TERMS_FIELD).data('trackable')).to.equal(
+				'sign-up-terms'
+			);
 		});
 
 		it('should have default and signup terms by default', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard:1, signup:3});
+			expectTerms($, { standard: 1, signup: 3 });
 		});
 
 		it('should have print related copy if a print product', () => {
 			const $ = context.template({
 				...params,
-				isPrintProduct: true
+				isPrintProduct: true,
 			});
 
-			expectTerms($, {standard:1, print:2});
+			expectTerms($, { standard: 1, print: 2 });
 		});
 
 		it('should have special terms copy if supplied', () => {
 			const specialTerms = 'These are some special terms can be supplied';
 			const $ = context.template({
 				...params,
-				specialTerms
+				specialTerms,
 			});
 
 			expect($(SELECTOR_SPECIAL_TERMS).text().trim()).to.contain(specialTerms);
-			expectTerms($, {standard:1, signup:3, special:1});
+			expectTerms($, { standard: 1, signup: 3, special: 1 });
 		});
 	});
 
 	describe('b2b', () => {
 		const params = {
-			isB2b: true
+			isB2b: true,
 		};
 
 		it('should have just the b2b terms', () => {
 			const $ = context.template(params);
 
-			expectTerms($, { b2b:1 });
+			expectTerms($, { b2b: 1 });
 		});
 	});
 
 	describe('transition', () => {
 		const params = {
-			isTransition: true
+			isTransition: true,
 		};
 
 		it('should have the default and transition terms', () => {
 			const $ = context.template(params);
-			expectTerms($, { standard:1, transition: 3 });
+			expectTerms($, { standard: 1, transition: 3 });
 		});
 
 		it('should show immediate terms if transitionType is immediate', () => {
@@ -148,7 +153,7 @@ describe('accept-terms template', () => {
 
 	describe('Corp Signup', () => {
 		const params = {
-			isCorpSignup: true
+			isCorpSignup: true,
 		};
 
 		it('should have default and corp-signup terms', () => {
@@ -160,7 +165,7 @@ describe('accept-terms template', () => {
 			it('should have disclaimer if isTrial is TRUE', () => {
 				const params = {
 					isCorpSignup: true,
-					isTrial: true
+					isTrial: true,
 				};
 
 				const $ = context.template(params);
@@ -171,7 +176,7 @@ describe('accept-terms template', () => {
 			it('should have NOT have disclaimer if isTrial is FALSE', () => {
 				const params = {
 					isCorpSignup: true,
-					isTrial: false
+					isTrial: false,
 				};
 
 				const $ = context.template(params);
@@ -195,7 +200,7 @@ describe('accept-terms template', () => {
 
 	it('should be checked if set', () => {
 		const $ = context.template({
-			isChecked: true
+			isChecked: true,
 		});
 
 		expect($(SELECTOR_CHECKBOX).attr('checked')).to.equal('checked');
@@ -212,7 +217,19 @@ describe('accept-terms template', () => {
 	shouldError(context);
 });
 
-function expectTerms ($, { standard=0, print=0, signup=0, special=0, b2b=0, corp=0, transition=0, register=0 }) {
+function expectTerms(
+	$,
+	{
+		standard = 0,
+		print = 0,
+		signup = 0,
+		special = 0,
+		b2b = 0,
+		corp = 0,
+		transition = 0,
+		register = 0,
+	}
+) {
 	expect($(SELECTOR_STANDARD_TERMS).length).to.equal(standard);
 	expect($(SELECTOR_PRINT_TERMS).length).to.equal(print);
 	expect($(SELECTOR_SIGNUP_TERMS).length).to.equal(signup);

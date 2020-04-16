@@ -3,7 +3,7 @@ const {
 	fetchPartial,
 	shouldBeDisableable,
 	shouldPopulateValue,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};
@@ -16,7 +16,7 @@ describe('delivery-start-date template', () => {
 	it('should set a min and max value if set', () => {
 		const $ = context.template({
 			max: '2019-04-13',
-			min: '2019-02-16'
+			min: '2019-02-16',
 		});
 
 		expect($('input').attr('max')).to.equal('2019-04-13');

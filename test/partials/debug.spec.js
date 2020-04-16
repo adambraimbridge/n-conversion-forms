@@ -8,7 +8,7 @@ describe('debug template', () => {
 		context.template = await fetchPartial('debug.html');
 	});
 
-	it('shouldn\'t show anything if isTest=false and showHelpers=false', () => {
+	it("shouldn't show anything if isTest=false and showHelpers=false", () => {
 		const $ = context.template();
 
 		expect($.text()).to.equal('');
@@ -53,7 +53,10 @@ describe('debug template', () => {
 	});
 
 	it('should append links to the helpers if passed', () => {
-		const $ = context.template({ showHelpers: true, links: { test: 'test', test1: 'test1' } });
+		const $ = context.template({
+			showHelpers: true,
+			links: { test: 'test', test1: 'test1' },
+		});
 
 		expect($('.ncf__link').length).to.equal(2);
 	});

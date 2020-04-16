@@ -7,4 +7,4 @@ if (document.querySelector('.ncf__loader')) {
 
 // Make the textarea display all the rows it's given.
 const $textarea = document.getElementById('example-code');
-$textarea.rows = ($textarea.value.match(/\n/gi).length) + 1;
+$textarea.rows = $textarea.value.match(/\n/gi).length + 1;

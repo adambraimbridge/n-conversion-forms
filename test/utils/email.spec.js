@@ -12,9 +12,11 @@ describe('Email', () => {
 	let sandbox;
 
 	beforeEach(() => {
-		emailElement = { addEventListener: ()=>{} };
-		emailConfirmElement = { addEventListener: ()=>{} };
-		emailConfirmFieldElement = { classList: { add: ()=>{}, remove: ()=>{} } };
+		emailElement = { addEventListener: () => {} };
+		emailConfirmElement = { addEventListener: () => {} };
+		emailConfirmFieldElement = {
+			classList: { add: () => {}, remove: () => {} },
+		};
 		csrfFieldElement = { value: '1234567890' };
 
 		document = {
@@ -28,7 +30,7 @@ describe('Email', () => {
 				} else {
 					return emailElement;
 				}
-			}
+			},
 		};
 		sandbox = sinon.createSandbox();
 		sandbox.spy(emailElement, 'addEventListener');
@@ -43,7 +45,7 @@ describe('Email', () => {
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if document element isn\'t passed in.', () => {
+		it("should throw an error if document element isn't passed in.", () => {
 			expect(() => {
 				new Email();
 			}).to.throw();
@@ -51,7 +53,7 @@ describe('Email', () => {
 
 		it('should throw an error if email confirm element does not exist on the page', () => {
 			expect(() => {
-				document.querySelector = () => { };
+				document.querySelector = () => {};
 				new Email(document);
 			}).to.throw();
 		});
@@ -79,7 +81,7 @@ describe('Email', () => {
 	});
 
 	describe('checkMatch', () => {
-		it('should add the error class if the fields don\'t match', () => {
+		it("should add the error class if the fields don't match", () => {
 			emailElement.value = 'password';
 			emailConfirmElement.value = 'pass';
 
@@ -153,12 +155,12 @@ describe('Email', () => {
 				method: 'POST',
 				credentials: 'include',
 				headers: {
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
 					email: 'test@example.com',
-					csrfToken: '1234567890'
-				})
+					csrfToken: '1234567890',
+				}),
 			});
 		});
 
@@ -182,7 +184,7 @@ describe('Email', () => {
 			expect(onNotFound.called).to.be.false;
 		});
 
-		it('should call the onNotFound callback if the user doesn\'t exist', async () => {
+		it("should call the onNotFound callback if the user doesn't exist", async () => {
 			fetchMock.mock(url, 'false');
 
 			emailElement.value = 'test@example.com';
@@ -192,5 +194,4 @@ describe('Email', () => {
 			expect(onNotFound.called).to.be.true;
 		});
 	});
-
 });

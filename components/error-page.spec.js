@@ -13,12 +13,15 @@ expect.extend(expectToRenderAs);
 
 describe('ErrorPage', () => {
 	beforeAll(async () => {
-		context.template = await fetchPartialAsString('error-page.html', CHILDREN_STRING);
+		context.template = await fetchPartialAsString(
+			'error-page.html',
+			CHILDREN_STRING
+		);
 	});
 
 	it('renders with default props', () => {
 		const props = {
-			children: CHILDREN
+			children: CHILDREN,
 		};
 
 		expect(ErrorPage).toRenderAs(context, props);
@@ -27,7 +30,7 @@ describe('ErrorPage', () => {
 	it('renders with header', () => {
 		const props = {
 			children: CHILDREN,
-			header: 'HEADER'
+			header: 'HEADER',
 		};
 
 		expect(ErrorPage).toRenderAs(context, props);
@@ -36,7 +39,7 @@ describe('ErrorPage', () => {
 	it('renders with message', () => {
 		const props = {
 			children: CHILDREN,
-			message: 'MESSAGE'
+			message: 'MESSAGE',
 		};
 
 		expect(ErrorPage).toRenderAs(context, props);

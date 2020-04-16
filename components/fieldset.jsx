@@ -2,52 +2,45 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Fieldset ({
+export function Fieldset({
 	children = null,
 	name = null,
 	legend = null,
 	hideLegend = false,
 	headingLevel: HeadingLevel = null,
 	header = null,
-	descriptor = null
+	descriptor = null,
 }) {
 	const fieldsetProps = {
 		...(name && { name }),
-		className: 'ncf__fieldset'
+		className: 'ncf__fieldset',
 	};
 
 	const legendClassName = classNames([
 		'ncf__legend',
-		{ 'o-normalise-visually-hidden': hideLegend }
+		{ 'o-normalise-visually-hidden': hideLegend },
 	]);
 
-	const legendElement = legend
-		? (<legend className={legendClassName}>{ legend }</legend>)
-		: null;
+	const legendElement = legend ? (
+		<legend className={legendClassName}>{legend}</legend>
+	) : null;
 
-	const headingLevelElement = HeadingLevel
-		? (
-			<HeadingLevel className="ncf__header">
-				{ header }
-			</HeadingLevel>
-		)
-		: null;
+	const headingLevelElement = HeadingLevel ? (
+		<HeadingLevel className="ncf__header">{header}</HeadingLevel>
+	) : null;
 
-	const descriptorElement = descriptor
-		? (<p className="ncf__fieldset-descriptor">{ descriptor }</p>)
-		: null;
+	const descriptorElement = descriptor ? (
+		<p className="ncf__fieldset-descriptor">{descriptor}</p>
+	) : null;
 
 	return (
 		<fieldset {...fieldsetProps}>
+			{legendElement}
 
-				{ legendElement }
+			{headingLevelElement}
 
-				{ headingLevelElement }
-
-				{ descriptorElement }
-			<div className="ncf__fields">
-				{ children }
-			</div>
+			{descriptorElement}
+			<div className="ncf__fields">{children}</div>
 		</fieldset>
 	);
 }
@@ -55,12 +48,12 @@ export function Fieldset ({
 Fieldset.propTypes = {
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node
+		PropTypes.node,
 	]),
 	name: PropTypes.string,
 	legend: PropTypes.string,
 	hideLegend: PropTypes.bool,
 	headingLevel: PropTypes.string,
 	header: PropTypes.elementType,
-	descriptor: PropTypes.string
+	descriptor: PropTypes.string,
 };

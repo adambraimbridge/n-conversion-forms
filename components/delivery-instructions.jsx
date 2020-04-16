@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryInstructions ({
+export function DeliveryInstructions({
 	fieldId = 'deliveryInstructionsField',
 	hasError = false,
 	inputId = 'deliveryInstructions',
@@ -10,12 +10,12 @@ export function DeliveryInstructions ({
 	rows = null,
 	isDisabled = false,
 	placeholder = '',
-	value = ''
+	value = '',
 }) {
 	const textAreaWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--textarea',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	const maxLengthText = maxlength ? `(Max. ${maxlength} characters)` : '';
@@ -29,7 +29,7 @@ export function DeliveryInstructions ({
 		'data-trackable': 'field-deliveryInstructions',
 		placeholder: placeholder ? placeholder : defaultPlaceholder,
 		disabled: isDisabled,
-		defaultValue: value
+		defaultValue: value,
 	};
 
 	return (
@@ -42,7 +42,10 @@ export function DeliveryInstructions ({
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Delivery instructions</span>
 				<span className="o-forms-title__prompt">
-					These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+					These may be printed on your newspaper. Don’t add sensitive
+					information like access codes. If you do so, it is at your own risk.
+					To provide additional secure information, login to your account via
+					FT.com.
 				</span>
 			</span>
 
@@ -50,7 +53,10 @@ export function DeliveryInstructions ({
 				<textarea {...textAreaProps} />
 			</span>
 
-			<p>Please note that we can only deliver to the ground floor level of your property.</p>
+			<p>
+				Please note that we can only deliver to the ground floor level of your
+				property.
+			</p>
 		</label>
 	);
 }
@@ -60,5 +66,5 @@ DeliveryInstructions.propTypes = {
 	maxlength: PropTypes.number,
 	rows: PropTypes.number,
 	isDisabled: PropTypes.bool,
-	value: PropTypes.string
+	value: PropTypes.string,
 };

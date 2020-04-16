@@ -11,7 +11,7 @@ describe('continue-reading template', () => {
 	it('should display the given quote', () => {
 		const quote = 'This is the given quote';
 		const $ = context.template({
-			quote
+			quote,
 		});
 
 		expect($.text()).to.contain(quote);
@@ -26,7 +26,7 @@ describe('continue-reading template', () => {
 	it('should display a link if passed', () => {
 		const link = 'https://google.com';
 		const $ = context.template({
-			link
+			link,
 		});
 
 		expect($('a').attr('href')).to.equal(link);
@@ -35,7 +35,7 @@ describe('continue-reading template', () => {
 	it('should not have links with any target attribute', () => {
 		const link = 'https://google.com';
 		const $ = context.template({
-			link
+			link,
 		});
 
 		expect($('a[target]').length).to.equal(0);
@@ -45,7 +45,7 @@ describe('continue-reading template', () => {
 		const link = 'https://google.com';
 		const $ = context.template({
 			link,
-			isEmbedded: true
+			isEmbedded: true,
 		});
 
 		expect($('a[target="_top"]').length).to.be.greaterThan(0);

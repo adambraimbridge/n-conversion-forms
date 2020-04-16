@@ -11,7 +11,7 @@ describe('confirmation template', () => {
 	it('should populate the email', () => {
 		const email = 'test@example.com';
 		const $ = context.template({
-			email
+			email,
 		});
 
 		expect($.text()).to.contain(email);
@@ -20,7 +20,7 @@ describe('confirmation template', () => {
 	it('should display the offer name', () => {
 		const offer = 'Test Offer Name';
 		const $ = context.template({
-			offer
+			offer,
 		});
 
 		expect($.text()).to.contain(offer);
@@ -32,18 +32,16 @@ describe('confirmation template', () => {
 			{ title: 'test2', data: 'tes2' },
 		];
 		const $ = context.template({
-			details
+			details,
 		});
 
 		expect($('dl dt').length).to.equal(2);
 	});
 
 	it('should display a description', () => {
-		const details = [
-			{ title: 'test1', data: 'test1', description: 'test1' }
-		];
+		const details = [{ title: 'test1', data: 'test1', description: 'test1' }];
 		const $ = context.template({
-			details
+			details,
 		});
 
 		expect($('dl dd').length).to.equal(2);
@@ -52,35 +50,52 @@ describe('confirmation template', () => {
 	it('should display dd mandate link', () => {
 		const directDebitMandateUrl = 'www.ft.com';
 		const $ = context.template({
-			directDebitMandateUrl
+			directDebitMandateUrl,
 		});
 
 		expect($('dl dt').length).to.equal(0);
-		expect(Array.from($('a')).filter(elem => elem.attribs['data-trackable'] && elem.attribs['data-trackable'].includes('dd-mandate-link')).length).to.equal(1);
+		expect(
+			Array.from($('a')).filter(
+				(elem) =>
+					elem.attribs['data-trackable'] &&
+					elem.attribs['data-trackable'].includes('dd-mandate-link')
+			).length
+		).to.equal(1);
 	});
 
 	it('should NOT display dd mandate link if link is not present', () => {
 		const $ = context.template({});
 
 		expect($('dl dt').length).to.equal(0);
-		expect(Array.from($('a')).filter(elem => elem.attribs['data-trackable'] && elem.attribs['data-trackable'].includes('dd-mandate-link')).length).to.equal(0);
+		expect(
+			Array.from($('a')).filter(
+				(elem) =>
+					elem.attribs['data-trackable'] &&
+					elem.attribs['data-trackable'].includes('dd-mandate-link')
+			).length
+		).to.equal(0);
 	});
-
 
 	it('should display redirect to MMA', () => {
 		const details = [];
 		const $ = context.template({
-			details
+			details,
 		});
 
 		expect($('dl dt').length).to.equal(0);
-		expect(Array.from($('a')).filter(elem => elem.attribs['data-trackable'] && elem.attribs['data-trackable'].includes('yourAccount')).length).to.equal(1);
+		expect(
+			Array.from($('a')).filter(
+				(elem) =>
+					elem.attribs['data-trackable'] &&
+					elem.attribs['data-trackable'].includes('yourAccount')
+			).length
+		).to.equal(1);
 	});
 
 	it('should display correct button label for print only offer', () => {
 		const isPrintOnly = true;
 		const $ = context.template({
-			isPrintOnly
+			isPrintOnly,
 		});
 
 		const buttonText = 'Explore our E-Paper';
@@ -90,7 +105,7 @@ describe('confirmation template', () => {
 	it('should display correct button label for non print only offer', () => {
 		const isPrintOnly = false;
 		const $ = context.template({
-			isPrintOnly
+			isPrintOnly,
 		});
 
 		const buttonText = 'Start exploring';
@@ -102,7 +117,7 @@ describe('confirmation template', () => {
 		const hideCta = true;
 		const $ = context.template({
 			isPrintOnly,
-			hideCta
+			hideCta,
 		});
 		expect($.text()).to.not.contain('ncf__button--submit');
 	});
@@ -112,14 +127,14 @@ describe('confirmation template', () => {
 		const hideCta = true;
 		const $ = context.template({
 			isPrintOnly,
-			hideCta
+			hideCta,
 		});
 		expect($.text()).to.not.contain('ncf__button--submit');
 	});
 
 	it('should add a data-signup-is-trial="true" attribute for floodlight pixel tracking', () => {
 		const $ = context.template({
-			isTrial: true
+			isTrial: true,
 		});
 
 		expect($.html()).to.contain('data-signup-is-trial="true"');

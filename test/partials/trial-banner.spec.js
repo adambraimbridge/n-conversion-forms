@@ -16,7 +16,7 @@ describe('trial-banner template', () => {
 
 	it('should check the yes input if yes passed as value', () => {
 		const $ = context.template({
-			trialDuration: '999 day'
+			trialDuration: '999 day',
 		});
 
 		expect($.text()).to.contain('Your free 999 day FT.com trial');

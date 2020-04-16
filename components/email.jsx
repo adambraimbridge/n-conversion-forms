@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Email ({
-	dataTrackable='field-email',
+export function Email({
+	dataTrackable = 'field-email',
 	description = 'Please enter an email address',
-	errorText='This email address is not valid',
+	errorText = 'This email address is not valid',
 	fieldId = 'emailField',
 	hasError = false,
 	inputId = 'email',
@@ -16,11 +16,13 @@ export function Email ({
 	value = '',
 	isEducationalLicence = false,
 }) {
-	const labelText = label || (isB2b && !isEducationalLicence ? 'Work email address' : 'Email address');
+	const labelText =
+		label ||
+		(isB2b && !isEducationalLicence ? 'Work email address' : 'Email address');
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -32,9 +34,9 @@ export function Email ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">{labelText}</span>
-				{description &&
+				{description && (
 					<span className="o-forms-title__prompt">{description}</span>
-				}
+				)}
 			</span>
 			<span className={inputWrapperClassNames}>
 				<input

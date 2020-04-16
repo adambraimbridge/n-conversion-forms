@@ -11,7 +11,7 @@ class Tracking {
 	 * @param {Element} element HTML element to dispatch event on, normally document.body
 	 * @throws If the window or element is not supplied
 	 */
-	constructor (window, element) {
+	constructor(window, element) {
 		if (!window || !element) {
 			throw new Error('Please supply a window and element');
 		}
@@ -29,7 +29,7 @@ class Tracking {
 	 * @returns {Number} Amount of events dispatched
 	 * @throws If the category or action is not supplied
 	 */
-	dispatch (category, action, data = {}) {
+	dispatch(category, action, data = {}) {
 		if (!category || !action) {
 			throw new Error('Please supply a category and action');
 		}
@@ -38,9 +38,11 @@ class Tracking {
 
 		// Clean eventData of empty properties
 		for (const property in eventData) {
-			if (eventData[property] === undefined ||
+			if (
+				eventData[property] === undefined ||
 				eventData[property] === null ||
-				eventData[property] === '') {
+				eventData[property] === ''
+			) {
 				delete eventData[property];
 			}
 		}
@@ -57,11 +59,11 @@ class Tracking {
 	 * @param {Object} data
 	 * @returns {Number} Amount of events dispatched
 	 */
-	dispatchCustomEvent (data = {}) {
+	dispatchCustomEvent(data = {}) {
 		const event = new this.window.CustomEvent('oTracking.event', {
 			bubbles: true,
 			cancelable: true,
-			detail: data
+			detail: data,
 		});
 
 		this.element.dispatchEvent(event);
@@ -73,7 +75,7 @@ class Tracking {
 	 * @param {Object} data
 	 * @returns {Number} Amount of events dispatched
 	 */
-	dispatchImage (data = {}) {
+	dispatchImage(data = {}) {
 		const image = new this.window.Image();
 		const encodedData = encodeURIComponent(JSON.stringify(data));
 
@@ -85,8 +87,8 @@ class Tracking {
 	 * Initalise debug data array
 	 * @returns {Array}
 	 */
-	initDebugData () {
-		return this.window.debugTracking = this.window.debugTracking || [];
+	initDebugData() {
+		return (this.window.debugTracking = this.window.debugTracking || []);
 	}
 
 	/**
@@ -94,17 +96,20 @@ class Tracking {
 	 * @param {Object} data
 	 * @returns {Number} Number of debug messages
 	 */
-	addDebugData (data = {}) {
-		return this.window.debugTracking.push({ time: new this.window.Date(), data });
+	addDebugData(data = {}) {
+		return this.window.debugTracking.push({
+			time: new this.window.Date(),
+			data,
+		});
 	}
 
 	/**
 	 * Return all the debug data
 	 * @returns {Array}
 	 */
-	getDebugData () {
+	getDebugData() {
 		return this.window.debugTracking || [];
 	}
-};
+}
 
 module.exports = Tracking;

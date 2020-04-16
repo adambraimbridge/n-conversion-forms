@@ -28,7 +28,7 @@ class PaymentTerm {
 	 * @throws If the document not passed
 	 * @throws When the paymentTermField element not found
 	 */
-	constructor (element) {
+	constructor(element) {
 		if (!element) {
 			throw new Error('Please supply a DOM element');
 		}
@@ -46,7 +46,7 @@ class PaymentTerm {
 	 * @return {String}
 	 * @throws If nothing has been selected
 	 */
-	getSelected () {
+	getSelected() {
 		const checked = this.$paymentTerm.querySelector('input:checked');
 		if (!checked) {
 			throw new Error('No payment term has been selected');
@@ -58,7 +58,7 @@ class PaymentTerm {
 	 * Register on change an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback=()=>{}) {
+	onChange(callback = () => {}) {
 		return this.$paymentTerm.addEventListener('change', callback);
 	}
 
@@ -66,7 +66,7 @@ class PaymentTerm {
 	 * Update the payment term options
 	 * @param {Array} options Array of objects contain terms information
 	 */
-	updateOptions (options) {
+	updateOptions(options) {
 		const terms = this.$paymentTerm.querySelectorAll(ITEM_CLASS);
 		for (let i = 0; i < terms.length; i++) {
 			const term = terms[i];
@@ -74,7 +74,7 @@ class PaymentTerm {
 			const price = term.querySelector(PRICE_CLASS);
 			const trialPrice = term.querySelector(TRIAL_PRICE_CLASS);
 			const weeklyPrice = term.querySelector(WEEKLY_PRICE_CLASS);
-			const update = options.find(option => option.value === value);
+			const update = options.find((option) => option.value === value);
 
 			if (!update) {
 				throw new Error(`Payment term update not found for "${value}"`);

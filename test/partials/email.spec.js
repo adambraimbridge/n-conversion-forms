@@ -4,7 +4,7 @@ const {
 	shouldBeDisableable,
 	shouldBeRequired,
 	shouldPopulateValue,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};
@@ -32,7 +32,7 @@ describe('email template', () => {
 	it('should have the b2b label if isB2b set', () => {
 		const label = 'Work email address';
 		const $ = context.template({
-			isB2b: true
+			isB2b: true,
 		});
 
 		expect($('.o-forms-title__main').text().trim()).to.equal(label);
@@ -48,7 +48,7 @@ describe('email template', () => {
 	it('should be able to over write the description', () => {
 		const description = 'This is a test description';
 		const $ = context.template({
-			description
+			description,
 		});
 
 		expect($('.o-forms-title__prompt').text().trim()).to.equal(description);

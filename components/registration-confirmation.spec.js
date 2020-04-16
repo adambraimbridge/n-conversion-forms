@@ -8,7 +8,9 @@ expect.extend(expectToRenderAs);
 
 describe('RegistrationConfirmation', () => {
 	beforeAll(async () => {
-		context.template = await fetchPartialAsString('registration-confirmation.html');
+		context.template = await fetchPartialAsString(
+			'registration-confirmation.html'
+		);
 	});
 
 	it('renders with default props', () => {

@@ -19,7 +19,7 @@ describe('Debug', () => {
 
 	it('renders with isTest', () => {
 		const props = {
-			isTest: true
+			isTest: true,
 		};
 
 		expect(Debug).toRenderAs(context, props);
@@ -27,7 +27,7 @@ describe('Debug', () => {
 
 	it('renders with showHelpers', () => {
 		const props = {
-			showHelpers: true
+			showHelpers: true,
 		};
 
 		expect(Debug).toRenderAs(context, props);
@@ -36,8 +36,8 @@ describe('Debug', () => {
 	it('renders with links', () => {
 		const props = {
 			links: {
-				'test': 'https://www.ft.com'
-			}
+				test: 'https://www.ft.com',
+			},
 		};
 
 		expect(Debug).toRenderAs(context, props);

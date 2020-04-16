@@ -22,7 +22,7 @@ describe('Country', () => {
 
 	it('renders with small filterList', () => {
 		const props = {
-			filterList: ['GBR']
+			filterList: ['GBR'],
 		};
 
 		expect(BillingCountry).toRenderAs(context, props);
@@ -31,9 +31,27 @@ describe('Country', () => {
 	it('renders with large filterList', () => {
 		const props = {
 			filterList: [
-				'AFG', 'ALA', 'ALB', 'DZA', 'ASM', 'AND', 'AGO', 'AIA', 'ATA', 'ATG',
-				'ARG', 'ARM', 'ABW', 'AUS', 'AUT', 'AZE', 'BHS', 'BHR', 'BGD', 'BRB',
-			]
+				'AFG',
+				'ALA',
+				'ALB',
+				'DZA',
+				'ASM',
+				'AND',
+				'AGO',
+				'AIA',
+				'ATA',
+				'ATG',
+				'ARG',
+				'ARM',
+				'ABW',
+				'AUS',
+				'AUT',
+				'AZE',
+				'BHS',
+				'BHR',
+				'BGD',
+				'BRB',
+			],
 		};
 
 		expect(BillingCountry).toRenderAs(context, props);
@@ -41,7 +59,7 @@ describe('Country', () => {
 
 	it('renders with hasError', () => {
 		const props = {
-			hasError: true
+			hasError: true,
 		};
 
 		expect(BillingCountry).toRenderAs(context, props);
@@ -49,7 +67,7 @@ describe('Country', () => {
 
 	it('renders with isDisabled', () => {
 		const props = {
-			isDisabled: true
+			isDisabled: true,
 		};
 
 		expect(BillingCountry).toRenderAs(context, props);
@@ -57,7 +75,7 @@ describe('Country', () => {
 
 	it('renders with value', () => {
 		const props = {
-			value: 'GBR'
+			value: 'GBR',
 		};
 
 		expect(BillingCountry).toRenderAs(context, props);

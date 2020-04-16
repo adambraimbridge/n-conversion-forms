@@ -7,11 +7,11 @@ module.exports = {
 		plugins: [new BowerResolvePlugin()],
 		modules: ['bower_components', 'node_modules'],
 		descriptionFiles: ['bower.json', 'package.json'],
-		mainFields: ['browser', 'main']
+		mainFields: ['browser', 'main'],
 	},
 	output: {
 		path: path.resolve(__dirname, '../public'),
-		filename: 'main.js'
+		filename: 'main.js',
 	},
-	devtool: false
+	devtool: false,
 };

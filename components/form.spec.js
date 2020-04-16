@@ -3,10 +3,7 @@ import { Form } from './index';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
 
-const {
-	registerPartial,
-	unregisterPartial,
-} = require('../test/helpers');
+const { registerPartial, unregisterPartial } = require('../test/helpers');
 
 const TEST_FIELDS_ID = 'fields_test';
 
@@ -26,7 +23,7 @@ describe('Form', () => {
 
 	it('renders a form element with default props', () => {
 		const props = {
-			children: (<div id={TEST_FIELDS_ID}></div>)
+			children: <div id={TEST_FIELDS_ID}></div>,
 		};
 
 		expect(Form).toRenderAs(context, props);
@@ -34,8 +31,8 @@ describe('Form', () => {
 
 	it('renders a form element with custom form action value', () => {
 		const props = {
-			children: (<div id={TEST_FIELDS_ID}></div>),
-			action: 'http://foo.com/search'
+			children: <div id={TEST_FIELDS_ID}></div>,
+			action: 'http://foo.com/search',
 		};
 
 		expect(Form).toRenderAs(context, props);
@@ -43,8 +40,8 @@ describe('Form', () => {
 
 	it('renders a form element with custom form method value', () => {
 		const props = {
-			children: (<div id={TEST_FIELDS_ID}></div>),
-			method: 'GET'
+			children: <div id={TEST_FIELDS_ID}></div>,
+			method: 'GET',
 		};
 
 		expect(Form).toRenderAs(context, props);

@@ -1,7 +1,5 @@
 const { expect } = require('chai');
-const {
-	fetchPartial,
-} = require('../helpers');
+const { fetchPartial } = require('../helpers');
 
 let context = {};
 let params;
@@ -13,7 +11,7 @@ describe('payment-type', () => {
 			enableCreditcard: true,
 			enableDirectdebit: true,
 			enablePaypal: true,
-			enableApplepay: true
+			enableApplepay: true,
 		};
 	});
 
@@ -69,7 +67,7 @@ describe('payment-type', () => {
 	it('should show creditcard and applepay', () => {
 		expectPaymentType(context, {
 			creditcard: true,
-			applepay: true
+			applepay: true,
 		});
 	});
 
@@ -78,21 +76,37 @@ describe('payment-type', () => {
 			creditcard: true,
 			directdebit: true,
 			paypal: true,
-			applepay: true
+			applepay: true,
 		});
 	});
 });
 
-function expectPaymentType (context, { creditcard=false, directdebit=false, paypal=false, applepay=false }={}) {
+function expectPaymentType(
+	context,
+	{
+		creditcard = false,
+		directdebit = false,
+		paypal = false,
+		applepay = false,
+	} = {}
+) {
 	const hiddenContainer = '.ncf__hidden';
 	const $ = context.template({
 		enableCreditcard: creditcard,
 		enableDirectdebit: directdebit,
 		enablePaypal: paypal,
-		enableApplepay: applepay
+		enableApplepay: applepay,
 	});
-	expect($(`${hiddenContainer} input[value="creditcard"]`).length === 0).to.equal(creditcard);
-	expect($(`${hiddenContainer} input[value="directdebit"]`).length === 0).to.equal(directdebit);
-	expect($(`${hiddenContainer} input[value="paypal"]`).length === 0).to.equal(paypal);
-	expect($(`${hiddenContainer} input[value="applepay"]`).length === 0).to.equal(applepay);
+	expect(
+		$(`${hiddenContainer} input[value="creditcard"]`).length === 0
+	).to.equal(creditcard);
+	expect(
+		$(`${hiddenContainer} input[value="directdebit"]`).length === 0
+	).to.equal(directdebit);
+	expect($(`${hiddenContainer} input[value="paypal"]`).length === 0).to.equal(
+		paypal
+	);
+	expect($(`${hiddenContainer} input[value="applepay"]`).length === 0).to.equal(
+		applepay
+	);
 }

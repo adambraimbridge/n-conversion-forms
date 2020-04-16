@@ -16,7 +16,7 @@ describe('licence-confirmation template', () => {
 
 	it('should mention trial when isTrial is set', () => {
 		const $ = context.template({
-			isTrial: true
+			isTrial: true,
 		});
 
 		expect($.text()).to.contain('trial');
@@ -25,7 +25,7 @@ describe('licence-confirmation template', () => {
 	it('should not include the duration if isTrial not set', () => {
 		const duration = '30 days';
 		const $ = context.template({
-			duration
+			duration,
 		});
 
 		expect($.text()).not.to.contain(duration);
@@ -35,7 +35,7 @@ describe('licence-confirmation template', () => {
 		const duration = '30 days';
 		const $ = context.template({
 			isTrial: true,
-			duration
+			duration,
 		});
 
 		expect($.text()).to.contain(duration);
@@ -49,7 +49,7 @@ describe('licence-confirmation template', () => {
 
 	it('should add target top to links when the form is embedded', () => {
 		const $ = context.template({
-			isEmbedded: true
+			isEmbedded: true,
 		});
 
 		expect($('a[target="_top"]').length).to.be.greaterThan(0);

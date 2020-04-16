@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const {
 	fetchPartial,
 	registerPartial,
-	unregisterPartial
+	unregisterPartial,
 } = require('../helpers');
 
 let context = {};
@@ -25,7 +25,7 @@ describe('form template', () => {
 
 	it('should respect the method passed in', () => {
 		const $ = context.template({
-			method: 'test'
+			method: 'test',
 		});
 
 		expect($('form').attr('method')).to.equal('test');
@@ -39,10 +39,9 @@ describe('form template', () => {
 
 	it('should respect an action passed in', () => {
 		const $ = context.template({
-			action: '/test'
+			action: '/test',
 		});
 
 		expect($('form').attr('action')).to.equal('/test');
 	});
-
 });

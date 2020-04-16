@@ -7,7 +7,7 @@ const {
 	shouldBeDisableable,
 	shouldBeHiddable,
 	shouldBeRequired,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};
@@ -27,12 +27,14 @@ describe('state template', () => {
 
 	describe('options', () => {
 		it('should show only default option if no states', () => {
-			registerHelper('ncf-common-data', ({fn}) => fn(this));
+			registerHelper('ncf-common-data', ({ fn }) => fn(this));
 			const $ = context.template({});
 
 			expect($('select').find('option').length).to.equal(1);
 			expect($('select option').first().attr('value')).to.equal('');
-			expect($('select option').first().text()).to.equal('Please select a state');
+			expect($('select option').first().text()).to.equal(
+				'Please select a state'
+			);
 		});
 
 		it('should generate options if passed', () => {
@@ -42,8 +44,10 @@ describe('state template', () => {
 		});
 
 		it('should generate options with the correct label and value', () => {
-			const states = [{ code: 'test', name: 'test'}];
-			registerHelper('ncf-common-data', ({fn}) => fn(Object.assign({}, { states }, this)));
+			const states = [{ code: 'test', name: 'test' }];
+			registerHelper('ncf-common-data', ({ fn }) =>
+				fn(Object.assign({}, { states }, this))
+			);
 			const $ = context.template({});
 			const secondOption = $('select option').get(1);
 
@@ -59,7 +63,7 @@ describe('state template', () => {
 
 	it('should be be billing if asked', () => {
 		const $ = context.template({
-			isBillingState: true
+			isBillingState: true,
 		});
 		expect($('select').attr('name')).to.contain('billingState');
 	});

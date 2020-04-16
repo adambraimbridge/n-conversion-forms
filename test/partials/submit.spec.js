@@ -21,7 +21,7 @@ describe('submit template', () => {
 	it('should display label if given', () => {
 		const label = 'Testing';
 		const $ = context.template({
-			label
+			label,
 		});
 
 		expect($(SELECTOR_BUTTON).text().trim()).to.equal(label);
@@ -35,7 +35,7 @@ describe('submit template', () => {
 
 	it('should be centered if set', () => {
 		const $ = context.template({
-			isCentered: true
+			isCentered: true,
 		});
 
 		expect($(SELECTOR_FIELD_CENTER).length).to.equal(1);
@@ -43,7 +43,7 @@ describe('submit template', () => {
 
 	it('should allow the buttons to be full width', () => {
 		const $ = context.template({
-			isFullWidth: true
+			isFullWidth: true,
 		});
 
 		expect($('.ncf__field--full-width-buttons').length).to.equal(1);
@@ -64,7 +64,7 @@ describe('submit template', () => {
 	it('should show a back button if URL supplied', () => {
 		const url = 'https://google.com';
 		const $ = context.template({
-			backButtonUrl: url
+			backButtonUrl: url,
 		});
 
 		expect($(SELECTOR_BACK_BUTTON).attr('href')).to.equal(url);
@@ -76,7 +76,7 @@ describe('submit template', () => {
 		const url = 'https://google.com';
 		const $ = context.template({
 			backButtonText: 'No thanks',
-			backButtonUrl: url
+			backButtonUrl: url,
 		});
 
 		expect($(SELECTOR_BACK_BUTTON).html()).to.equal('No thanks');
@@ -89,7 +89,7 @@ describe('submit template', () => {
 
 	it('should take an id given to it', () => {
 		const $ = context.template({
-			id: 'test'
+			id: 'test',
 		});
 		expect($('#test').length).to.equal(1);
 		expect($('#submitButton').length).to.equal(0);

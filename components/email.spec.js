@@ -11,8 +11,7 @@ describe('Email with confirmation', () => {
 	});
 
 	it('render a email input with default params', () => {
-		const props = {
-		};
+		const props = {};
 
 		expect(Email).toRenderAs(context, props);
 	});
@@ -27,7 +26,7 @@ describe('Email with confirmation', () => {
 
 	it('render a email input with default value', () => {
 		const props = {
-			value: 'test@example.com'
+			value: 'test@example.com',
 		};
 
 		expect(Email).toRenderAs(context, props);
@@ -72,7 +71,7 @@ describe('Email with confirmation', () => {
 	it('render a email input with disabled fields', () => {
 		const props = {
 			isB2b: false,
-			isDisabled: true
+			isDisabled: true,
 		};
 
 		expect(Email).toRenderAs(context, props);

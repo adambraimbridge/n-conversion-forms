@@ -1,28 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function LicenceHeader ({
+export function LicenceHeader({
 	displayName = null,
 	isTrial = false,
-	welcomeText = null
+	welcomeText = null,
 }) {
-	function createMarkup (text) {
+	function createMarkup(text) {
 		return { __html: text };
 	}
 
 	return (
 		<React.Fragment>
 			<h1 className="ncf__header">
-				{ displayName && (`${displayName} | `) }
+				{displayName && `${displayName} | `}
 
-				{
-					isTrial
-						? ('Start your free trial')
-						: ('Join your FT.com subscription')
-				}
+				{isTrial ? 'Start your free trial' : 'Join your FT.com subscription'}
 			</h1>
 
-			{ welcomeText && (<p dangerouslySetInnerHTML={createMarkup(welcomeText)} />) }
+			{welcomeText && <p dangerouslySetInnerHTML={createMarkup(welcomeText)} />}
 		</React.Fragment>
 	);
 }
@@ -30,5 +26,5 @@ export function LicenceHeader ({
 LicenceHeader.propTypes = {
 	displayName: PropTypes.string,
 	isTrial: PropTypes.bool,
-	welcomeText: PropTypes.string
+	welcomeText: PropTypes.string,
 };

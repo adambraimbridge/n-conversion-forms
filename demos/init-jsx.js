@@ -3,15 +3,15 @@ import * as ncf from '../dist/index';
 import ReactDOM from 'react-dom';
 import fixture from './data.json';
 
-function initDemo () {
+function initDemo() {
 	const container = document.querySelector('#demoContent');
 
-	const element =
+	const element = (
 		<React.Fragment>
-			<ncf.AcceptTerms isSignup={true} isPrintProduct={true} isTrial={true}/>
+			<ncf.AcceptTerms isSignup={true} isPrintProduct={true} isTrial={true} />
 			<ncf.AppBanner />
 			<ncf.BillingCountry></ncf.BillingCountry>
-			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
+			<ncf.BillingPostcode postcodeReference={'billing postcode'} />
 			<ncf.CompanyName />
 			<ncf.Confirmation />
 			<ncf.ContinueReading />
@@ -23,21 +23,23 @@ function initDemo () {
 			<ncf.DeliveryCity />
 			<ncf.DeliveryCounty />
 			<ncf.DeliveryInstructions />
-			<ncf.DeliveryOption options={[
-				{
-					value: 'PV',
-					isSelected: true
-				},
-				{
-					value: 'HD',
-					isSelected: false
-				},
-				{
-					value: 'EV',
-					isSelected: false
-				}
-			]} />
-			<ncf.DeliveryPostcode postcodeReference={'delivery postcode'}/>
+			<ncf.DeliveryOption
+				options={[
+					{
+						value: 'PV',
+						isSelected: true,
+					},
+					{
+						value: 'HD',
+						isSelected: false,
+					},
+					{
+						value: 'EV',
+						isSelected: false,
+					},
+				]}
+			/>
+			<ncf.DeliveryPostcode postcodeReference={'delivery postcode'} />
 			<ncf.DeliveryStartDate />
 			<ncf.Email />
 			<ncf.ErrorPage />
@@ -50,7 +52,7 @@ function initDemo () {
 			<ncf.LicenceConfirmation />
 			<ncf.LicenceHeader />
 			<ncf.Loader />
-			<ncf.Message {...fixture['message'].params}/>
+			<ncf.Message {...fixture['message'].params} />
 			<ncf.PackageChange />
 			<ncf.Password />
 			<ncf.PaymentType />
@@ -65,7 +67,7 @@ function initDemo () {
 			<ncf.Submit />
 			<ncf.TrialBanner />
 		</React.Fragment>
-	;
+	);
 	ReactDOM.render(element, container);
 }
 

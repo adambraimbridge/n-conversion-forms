@@ -4,7 +4,7 @@ const {
 	shouldBeDisableable,
 	shouldBeRequired,
 	shouldAllowPattern,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};
@@ -17,7 +17,7 @@ describe('password template', () => {
 	it('should never have a value', () => {
 		const value = 'ThisWontWork';
 		const $ = context.template({
-			value
+			value,
 		});
 
 		expect($('input[type="password"]').val()).to.be.undefined;
@@ -31,7 +31,7 @@ describe('password template', () => {
 
 	it('should add class if unknownUser is true', () => {
 		const $ = context.template({
-			unknownUser: true
+			unknownUser: true,
 		});
 
 		expect($('.js-unknown-user-field').length).to.equal(1);

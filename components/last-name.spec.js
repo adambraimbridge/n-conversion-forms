@@ -18,21 +18,21 @@ describe('Last name', () => {
 
 	it('render a field with value', () => {
 		const props = {
-			value: 'some value'
+			value: 'some value',
 		};
 		expect(LastName).toRenderAs(context, props);
 	});
 
 	it('render a disabled field', () => {
 		const props = {
-			isDisabled: true
+			isDisabled: true,
 		};
 		expect(LastName).toRenderAs(context, props);
 	});
 
 	it('render a field with default error', () => {
 		const props = {
-			hasError: true
+			hasError: true,
 		};
 		expect(LastName).toRenderAs(context, props);
 	});
@@ -52,7 +52,6 @@ describe('Last name', () => {
 		const props = {
 			dataTrackable: 'test-data-trackable',
 			inputId: 'inputId',
-
 		};
 		const component = mount(LastName(props));
 		const actualValue = component.find('#inputId').prop('data-trackable');
@@ -61,7 +60,7 @@ describe('Last name', () => {
 
 	it('render a field with custom id', () => {
 		const props = {
-			fieldId: 'fieldId'
+			fieldId: 'fieldId',
 		};
 		const component = mount(LastName(props));
 		const element = component.find('#fieldId');
@@ -70,7 +69,7 @@ describe('Last name', () => {
 
 	it('render a field with custom input id', () => {
 		const props = {
-			inputId: 'inputId'
+			inputId: 'inputId',
 		};
 		const component = mount(LastName(props));
 		const element = component.find('input#inputId');
@@ -80,7 +79,7 @@ describe('Last name', () => {
 	it('render a field with custom label', () => {
 		const props = {
 			fieldId: 'fieldId',
-			label: 'test label'
+			label: 'test label',
 		};
 		const component = mount(LastName(props));
 		const element = component.find('.o-forms-title__main').first();
@@ -90,7 +89,7 @@ describe('Last name', () => {
 	it('render a field with custom placeholder text', () => {
 		const props = {
 			inputId: 'inputId',
-			placeHolder: 'test placeholder'
+			placeHolder: 'test placeholder',
 		};
 		const component = mount(LastName(props));
 		const actualValue = component.find('#inputId').prop('placeholder');

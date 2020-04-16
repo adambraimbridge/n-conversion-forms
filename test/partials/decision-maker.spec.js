@@ -1,9 +1,6 @@
 const { expect } = require('chai');
 
-const {
-	fetchPartial,
-	shouldError
-} = require('../helpers');
+const { fetchPartial, shouldError } = require('../helpers');
 
 let context = {};
 
@@ -20,7 +17,7 @@ describe('decision-maker template', () => {
 	it('should check the yes input if yes passed as value', () => {
 		const value = 'yes';
 		const $ = context.template({
-			value
+			value,
 		});
 		expect($('input[value="yes"]').attr('checked')).to.equal('checked');
 	});
@@ -28,7 +25,7 @@ describe('decision-maker template', () => {
 	it('should check the no input if no passed as value', () => {
 		const value = 'no';
 		const $ = context.template({
-			value
+			value,
 		});
 		expect($('input[value="no"]').attr('checked')).to.equal('checked');
 	});
@@ -36,7 +33,7 @@ describe('decision-maker template', () => {
 	it('should not check anything if rubbish passed in', () => {
 		const value = 'rubbish';
 		const $ = context.template({
-			value
+			value,
 		});
 		expect($('input[checked]').length).to.equal(0);
 	});

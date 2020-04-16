@@ -25,7 +25,9 @@ describe('delivery-address template', () => {
 		const line2 = 'line2';
 		const line3 = 'line3';
 		const $ = context.template({
-			line1, line2, line3
+			line1,
+			line2,
+			line3,
 		});
 
 		expect($('#deliveryAddressLine1').val()).to.equal(line1);

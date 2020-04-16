@@ -34,7 +34,7 @@ describe('message template', () => {
 	it('should output the message if passed', () => {
 		const message = 'This is an example message for testing';
 		const $ = context.template({
-			message
+			message,
 		});
 
 		expect($(SELECTOR_MESSAGE).text().trim()).to.equal(message);
@@ -42,7 +42,7 @@ describe('message template', () => {
 
 	it('should have the notice message type if isNotice is passed', () => {
 		const $ = context.template({
-			isNotice: true
+			isNotice: true,
 		});
 
 		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_NOTICE);
@@ -56,7 +56,7 @@ describe('message template', () => {
 
 	it('should have the error class if isError is passed', () => {
 		const $ = context.template({
-			isError: true
+			isError: true,
 		});
 
 		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_ERROR);
@@ -67,7 +67,7 @@ describe('message template', () => {
 
 	it('should have the success class if isSuccess is passed', () => {
 		const $ = context.template({
-			isSuccess: true
+			isSuccess: true,
 		});
 
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_ERROR);
@@ -78,7 +78,7 @@ describe('message template', () => {
 
 	it('should have the inform class if isSuccess is passed', () => {
 		const $ = context.template({
-			isInform: true
+			isInform: true,
 		});
 
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_ERROR);
@@ -120,7 +120,9 @@ describe('message template', () => {
 	});
 
 	it('should allow html in the message content', () => {
-		const $ = context.template({ message: '<span id="message-content">Foo</span>' });
+		const $ = context.template({
+			message: '<span id="message-content">Foo</span>',
+		});
 		expect($('#message-content').length).to.equal(1);
 	});
 
@@ -141,7 +143,9 @@ describe('message template', () => {
 	});
 
 	it('should allow html in the additional copy', () => {
-		const $ = context.template({ additional: ['<span id="additional-content">Foo</span>'] });
+		const $ = context.template({
+			additional: ['<span id="additional-content">Foo</span>'],
+		});
 		expect($('#additional-content').length).to.equal(1);
 	});
 
@@ -156,34 +160,50 @@ describe('message template', () => {
 	});
 
 	it('should add multiple actions if specified', () => {
-		const $ = context.template({ actions: [{ link: '#', text: 'Foo' }, { link: '#', text: 'Bar' }] });
+		const $ = context.template({
+			actions: [
+				{ link: '#', text: 'Foo' },
+				{ link: '#', text: 'Bar' },
+			],
+		});
 
 		expect($(`${SELECTOR_ACTIONS} a`).length).to.equal(2);
 	});
 
 	it('should add secondary action if specified', () => {
-		const $ = context.template({ actions: [{ link: '#', text: 'Foo', isSecondary: true }] });
+		const $ = context.template({
+			actions: [{ link: '#', text: 'Foo', isSecondary: true }],
+		});
 
-		expect($(`${SELECTOR_ACTIONS} a`).attr('class')).to.contain(CLASS_ACTIONS_SECONDARY);
+		expect($(`${SELECTOR_ACTIONS} a`).attr('class')).to.contain(
+			CLASS_ACTIONS_SECONDARY
+		);
 	});
 
 	it('should have no name by default', () => {
 		const $ = context.template({ message: 'Foo' });
-		expect($(SELECTOR_MESSAGE_CONTAINER).attr('data-message-name')).to.be.undefined;
+		expect($(SELECTOR_MESSAGE_CONTAINER).attr('data-message-name')).to.be
+			.undefined;
 	});
 
 	it('should have a message-name if passed', () => {
 		const $ = context.template({ message: 'Foo', name: 'Test' });
-		expect($(SELECTOR_MESSAGE_CONTAINER).attr('data-message-name')).to.equal('Test');
+		expect($(SELECTOR_MESSAGE_CONTAINER).attr('data-message-name')).to.equal(
+			'Test'
+		);
 	});
 
 	it('should be shown by default', () => {
 		const $ = context.template({ message: 'Foo' });
-		expect($(SELECTOR_MESSAGE_CONTAINER).attr('class')).to.not.contain(HIDDEN_CLASS);
+		expect($(SELECTOR_MESSAGE_CONTAINER).attr('class')).to.not.contain(
+			HIDDEN_CLASS
+		);
 	});
 
 	it('should apply a hidden class if marked hidden', () => {
 		const $ = context.template({ message: 'Foo', isHidden: true });
-		expect($(SELECTOR_MESSAGE_CONTAINER).attr('class')).to.contain(HIDDEN_CLASS);
+		expect($(SELECTOR_MESSAGE_CONTAINER).attr('class')).to.contain(
+			HIDDEN_CLASS
+		);
 	});
 });

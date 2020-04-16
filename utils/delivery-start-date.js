@@ -11,17 +11,21 @@ class DeliveryStartDate {
 	 * @param {Element} element Usually the window.document
 	 * @throws If the element not passed
 	 */
-	constructor (element) {
+	constructor(element) {
 		if (!element) {
 			throw new Error('Please supply the DOM element');
 		}
 
-		this.$container = element.querySelector('#deliveryStartDateField .o-forms-input');
+		this.$container = element.querySelector(
+			'#deliveryStartDateField .o-forms-input'
+		);
 		this.$deliveryStartDate = element.querySelector('#deliveryStartDate');
 		this.$deliveryStartDateText = element.querySelector('.js-start-date-text');
 
 		if (!this.$deliveryStartDate) {
-			throw new Error('Please include the delivery start date partial on the page.');
+			throw new Error(
+				'Please include the delivery start date partial on the page.'
+			);
 		}
 	}
 
@@ -32,7 +36,7 @@ class DeliveryStartDate {
 	 * @returns {boolean} Whether or not the start date is valid.
 	 * @throws If there was an error calling the endpoint to check this.
 	 */
-	async handleDeliveryStartDateChange (url, getData) {
+	async handleDeliveryStartDateChange(url, getData) {
 		if (this.$deliveryStartDate.value) {
 			try {
 				this.$container.classList.remove('o-forms-input--invalid');
@@ -40,13 +44,14 @@ class DeliveryStartDate {
 					method: 'POST',
 					credentials: 'include',
 					headers: {
-						'Content-Type': 'application/json'
+						'Content-Type': 'application/json',
 					},
-					body: JSON.stringify(Object.assign({}, getData(), {
-						startDate: this.$deliveryStartDate.value
-					}))
-				})
-					.then(fetchres.json);
+					body: JSON.stringify(
+						Object.assign({}, getData(), {
+							startDate: this.$deliveryStartDate.value,
+						})
+					),
+				}).then(fetchres.json);
 
 				this.$deliveryStartDate.value = result.firstDeliveryDate;
 				this.$deliveryStartDateText.innerHTML = result.firstDeliveryDateString;
@@ -57,22 +62,21 @@ class DeliveryStartDate {
 				return false;
 			}
 		}
-	};
+	}
 
 	/**
 	 * Enables the start date field
 	 */
-	enable () {
+	enable() {
 		this.$deliveryStartDate.removeAttribute('disabled');
 	}
 
 	/**
 	 * Disables the start date field
 	 */
-	disable () {
+	disable() {
 		this.$deliveryStartDate.setAttribute('disabled', 'true');
 	}
-
-};
+}
 
 module.exports = DeliveryStartDate;

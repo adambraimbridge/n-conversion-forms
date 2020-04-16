@@ -6,10 +6,14 @@ const Handlebars = require('@financial-times/n-handlebars').standalone;
 const readFile = promisify(fs.readFile);
 const PARTIAL_DIR = __dirname + '/../../partials/';
 
-const fetchPartial = async (name, returnString = false, partialBlockString = '') => {
+const fetchPartial = async (
+	name,
+	returnString = false,
+	partialBlockString = ''
+) => {
 	const hbsStandalone = await Handlebars({
 		directory: '../../',
-		partialsDir: './partials'
+		partialsDir: './partials',
 	});
 	const handlebars = hbsStandalone.handlebars;
 
@@ -29,8 +33,9 @@ const fetchPartial = async (name, returnString = false, partialBlockString = '')
 	return (context) => cheerio.load(template(context));
 };
 
-const fetchPartialAsString = async (name, partialBlockString) => fetchPartial(name, true, partialBlockString);
+const fetchPartialAsString = async (name, partialBlockString) =>
+	fetchPartial(name, true, partialBlockString);
 
 module.exports = {
-	fetchPartialAsString
+	fetchPartialAsString,
 };

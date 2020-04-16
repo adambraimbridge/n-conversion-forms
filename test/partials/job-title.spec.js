@@ -3,7 +3,7 @@ const {
 	shouldBeDisableable,
 	shouldBeRequired,
 	shouldPopulateValue,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};

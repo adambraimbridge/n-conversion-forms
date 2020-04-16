@@ -8,10 +8,7 @@ const defaultStates = americanStates.states;
 const context = {};
 expect.extend(expectToRenderAs);
 
-const {
-	registerHelper,
-	unregisterHelper,
-} = require('../test/helpers');
+const { registerHelper, unregisterHelper } = require('../test/helpers');
 
 describe('State', () => {
 	let states;
@@ -28,11 +25,10 @@ describe('State', () => {
 
 	it('render a select with a label', () => {
 		const props = {
-			states: defaultStates
+			states: defaultStates,
 		};
 
 		expect(State).toRenderAs(context, props);
-
 	});
 
 	it('can render an initial selected value', () => {
@@ -47,7 +43,7 @@ describe('State', () => {
 	it('can render a disabled select', () => {
 		const props = {
 			states: defaultStates,
-			isDisabled: true
+			isDisabled: true,
 		};
 
 		expect(State).toRenderAs(context, props);
@@ -83,7 +79,7 @@ describe('State', () => {
 
 	it('can override ID for select', () => {
 		const props = {
-			selectId: 'selectId'
+			selectId: 'selectId',
 		};
 		const component = mount(State(props));
 		const select = component.find('select#selectId');
@@ -93,7 +89,7 @@ describe('State', () => {
 
 	it('applies context-specific name if is billing state', () => {
 		const props = {
-			isBillingState: true
+			isBillingState: true,
 		};
 		const component = mount(State(props));
 		const selectElementName = component.find('select#state').prop('name');
@@ -103,7 +99,7 @@ describe('State', () => {
 
 	it('applies context-specific name if is not billing state', () => {
 		const props = {
-			isBillingState: false
+			isBillingState: false,
 		};
 		const component = mount(State(props));
 		const selectElementName = component.find('select#state').prop('name');

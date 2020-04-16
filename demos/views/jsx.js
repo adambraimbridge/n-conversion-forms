@@ -1,4 +1,4 @@
-function main ({title}) {
+function main({ title }) {
 	return `
 <!DOCTYPE html>
 <html>

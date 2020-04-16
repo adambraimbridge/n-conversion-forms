@@ -19,21 +19,23 @@ describe('PaymentTerm', () => {
 
 	it('render with isPrintOrBundle', () => {
 		const props = {
-			isPrintOrBundle: true
+			isPrintOrBundle: true,
 		};
 
 		expect(PaymentTerm).toRenderAs(context, props);
 	});
 
-	['annual', 'quarterly', 'monthly'].forEach(type => {
+	['annual', 'quarterly', 'monthly'].forEach((type) => {
 		describe(`${type} option`, () => {
 			it('render option', () => {
 				const props = {
-					options: [{
-						name: type,
-						value: type,
-						price: '£20.00'
-					}]
+					options: [
+						{
+							name: type,
+							value: type,
+							price: '£20.00',
+						},
+					],
 				};
 
 				expect(PaymentTerm).toRenderAs(context, props);
@@ -41,12 +43,14 @@ describe('PaymentTerm', () => {
 
 			it('render option with discount', () => {
 				const props = {
-					options: [{
-						name: type,
-						value: type,
-						price: '£20.00',
-						discount: '25% off'
-					}]
+					options: [
+						{
+							name: type,
+							value: type,
+							price: '£20.00',
+							discount: '25% off',
+						},
+					],
 				};
 
 				expect(PaymentTerm).toRenderAs(context, props);
@@ -54,12 +58,14 @@ describe('PaymentTerm', () => {
 
 			it('render option with isTrial', () => {
 				const props = {
-					options: [{
-						name: type,
-						value: type,
-						price: '£20.00',
-						isTrial: true
-					}]
+					options: [
+						{
+							name: type,
+							value: type,
+							price: '£20.00',
+							isTrial: true,
+						},
+					],
 				};
 
 				expect(PaymentTerm).toRenderAs(context, props);
@@ -67,12 +73,14 @@ describe('PaymentTerm', () => {
 
 			it('render option with selected', () => {
 				const props = {
-					options: [{
-						name: type,
-						value: type,
-						price: '£20.00',
-						selected: true
-					}]
+					options: [
+						{
+							name: type,
+							value: type,
+							price: '£20.00',
+							selected: true,
+						},
+					],
 				};
 
 				expect(PaymentTerm).toRenderAs(context, props);
@@ -80,14 +88,16 @@ describe('PaymentTerm', () => {
 
 			it('render option with trial', () => {
 				const props = {
-					options: [{
-						name: type,
-						value: type,
-						price: '£20.00',
-						isTrial: true,
-						trialDuration: '6 weeks',
-						trialPrice: '£1.00'
-					}]
+					options: [
+						{
+							name: type,
+							value: type,
+							price: '£20.00',
+							isTrial: true,
+							trialDuration: '6 weeks',
+							trialPrice: '£1.00',
+						},
+					],
 				};
 
 				expect(PaymentTerm).toRenderAs(context, props);
@@ -95,12 +105,14 @@ describe('PaymentTerm', () => {
 
 			it('render option with weeklyPrice', () => {
 				const props = {
-					options: [{
-						name: type,
-						value: type,
-						price: '£20.00',
-						weeklyPrice: '0.50p'
-					}]
+					options: [
+						{
+							name: type,
+							value: type,
+							price: '£20.00',
+							weeklyPrice: '0.50p',
+						},
+					],
 				};
 
 				expect(PaymentTerm).toRenderAs(context, props);

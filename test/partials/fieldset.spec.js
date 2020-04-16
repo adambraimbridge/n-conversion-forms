@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const {
 	fetchPartial,
 	registerPartial,
-	unregisterPartial
+	unregisterPartial,
 } = require('../helpers');
 
 const CLASS_VISUALLY_HIDDEN = 'o-normalise-visually-hidden';
@@ -35,7 +35,7 @@ describe('fieldset template', () => {
 
 	it('should have a name if passed', () => {
 		const $ = context.template({
-			name: TEST_LEGEND
+			name: TEST_LEGEND,
 		});
 
 		expect($(SELECTOR_FIELDSET).attr('name')).to.equal(TEST_LEGEND);
@@ -43,7 +43,7 @@ describe('fieldset template', () => {
 
 	it('should have a legend if passed', () => {
 		const $ = context.template({
-			legend: TEST_LEGEND
+			legend: TEST_LEGEND,
 		});
 
 		expect($(SELECTOR_LEGEND).text()).to.equal(TEST_LEGEND);
@@ -51,16 +51,18 @@ describe('fieldset template', () => {
 
 	it('should visually display legend by default', () => {
 		const $ = context.template({
-			legend: TEST_LEGEND
+			legend: TEST_LEGEND,
 		});
 
-		expect($(SELECTOR_LEGEND).attr('class')).to.not.contain(CLASS_VISUALLY_HIDDEN);
+		expect($(SELECTOR_LEGEND).attr('class')).to.not.contain(
+			CLASS_VISUALLY_HIDDEN
+		);
 	});
 
 	it('should visually hide legend when "hideLegend" passed', () => {
 		const $ = context.template({
 			legend: TEST_LEGEND,
-			hideLegend: true
+			hideLegend: true,
 		});
 
 		expect($(SELECTOR_LEGEND).attr('class')).to.contain(CLASS_VISUALLY_HIDDEN);
@@ -68,7 +70,7 @@ describe('fieldset template', () => {
 
 	it('should not have heading class by default', () => {
 		const $ = context.template({
-			legend: TEST_LEGEND
+			legend: TEST_LEGEND,
 		});
 
 		expect($(SELECTOR_LEGEND).attr('class')).to.not.contain(CLASS_HEADER);
@@ -77,7 +79,7 @@ describe('fieldset template', () => {
 	it('should add a header when a headingLevel is passed', () => {
 		const $ = context.template({
 			legend: TEST_LEGEND,
-			headingLevel: 'h1'
+			headingLevel: 'h1',
 		});
 
 		expect($('h1').attr('class')).to.contain(CLASS_HEADER);

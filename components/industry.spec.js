@@ -8,10 +8,7 @@ const defaultOptions = demographics.industries.industries;
 const context = {};
 expect.extend(expectToRenderAs);
 
-const {
-	registerHelper,
-	unregisterHelper,
-} = require('../test/helpers');
+const { registerHelper, unregisterHelper } = require('../test/helpers');
 
 describe('Industry', () => {
 	let options;
@@ -28,11 +25,10 @@ describe('Industry', () => {
 
 	it('render a select with a label', () => {
 		const props = {
-			options: defaultOptions
+			options: defaultOptions,
 		};
 
 		expect(Industry).toRenderAs(context, props);
-
 	});
 
 	it('can render an initial selected value', () => {
@@ -47,7 +43,7 @@ describe('Industry', () => {
 	it('can render a disable select', () => {
 		const props = {
 			options: defaultOptions,
-			isDisabled: true
+			isDisabled: true,
 		};
 
 		expect(Industry).toRenderAs(context, props);
@@ -88,11 +84,13 @@ describe('Industry', () => {
 
 		const component = mount(Industry(props));
 
-		expect(component.find('.o-forms-title__main').text()).toEqual('In which industry do you work?');
+		expect(component.find('.o-forms-title__main').text()).toEqual(
+			'In which industry do you work?'
+		);
 	});
 
 	it('renders with custom label wording', () => {
-		const props = {fieldLabel : 'Industry'};
+		const props = { fieldLabel: 'Industry' };
 
 		const component = mount(Industry(props));
 

@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 const {
 	fetchPartial,
 	shouldBeDisableable,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};
@@ -14,7 +14,7 @@ describe('delivery-instructions template', () => {
 
 	it('should set a maxlength if set', () => {
 		const $ = context.template({
-			maxlength: '200'
+			maxlength: '200',
 		});
 
 		expect($('textarea').attr('maxlength')).to.equal('200');
@@ -29,7 +29,7 @@ describe('delivery-instructions template', () => {
 	it('should populate the correct value', () => {
 		const value = 'ThisIsAValue';
 		const $ = context.template({
-			value
+			value,
 		});
 
 		expect($('textarea').text().trim()).to.equal(value);

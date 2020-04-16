@@ -12,10 +12,17 @@ describe('Apple Pay', () => {
 		iosAction = { remove: sandbox.stub() };
 		androidAction = { remove: sandbox.stub() };
 		element = { querySelector: sandbox.stub() };
-		window = { document: { querySelector: sandbox.stub().returns(element) }, navigator: { userAgent: '' } };
+		window = {
+			document: { querySelector: sandbox.stub().returns(element) },
+			navigator: { userAgent: '' },
+		};
 
-		element.querySelector.withArgs('.ncf__app-banner-action--android').returns(androidAction);
-		element.querySelector.withArgs('.ncf__app-banner-action--ios').returns(iosAction);
+		element.querySelector
+			.withArgs('.ncf__app-banner-action--android')
+			.returns(androidAction);
+		element.querySelector
+			.withArgs('.ncf__app-banner-action--ios')
+			.returns(iosAction);
 	});
 
 	afterEach(() => {
@@ -36,7 +43,7 @@ describe('Apple Pay', () => {
 			}).to.throw();
 		});
 
-		it('should not remove any actions if the user agent isn\'t sniffed', () => {
+		it("should not remove any actions if the user agent isn't sniffed", () => {
 			new AppBanner(window);
 
 			expect(iosAction.remove.called).to.be.false;

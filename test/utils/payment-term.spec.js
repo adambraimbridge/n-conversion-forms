@@ -18,10 +18,10 @@ describe('PaymentTerm', () => {
 			insertBefore: sandbox.stub(),
 			parentElement: elementStub,
 			addEventListener: sandbox.stub(),
-			value: 'test'
+			value: 'test',
 		};
 		documentStub = {
-			querySelector: sandbox.stub()
+			querySelector: sandbox.stub(),
 		};
 	});
 
@@ -95,31 +95,43 @@ describe('PaymentTerm', () => {
 
 			it('should replace the price with the correct updated price', () => {
 				const priceStub = {};
-				elementStub.querySelector.withArgs('.ncf__payment-term__price').returns(priceStub);
-				paymentTerm.updateOptions([{
-					value: 'test',
-					price: '£1.01'
-				}]);
+				elementStub.querySelector
+					.withArgs('.ncf__payment-term__price')
+					.returns(priceStub);
+				paymentTerm.updateOptions([
+					{
+						value: 'test',
+						price: '£1.01',
+					},
+				]);
 				expect(priceStub.innerHTML).to.equal('£1.01');
 			});
 
 			it('should replace the trial price with the correct updated trial price', () => {
 				const trialPriceStub = {};
-				elementStub.querySelector.withArgs('.ncf__payment-term__trial-price').returns(trialPriceStub);
-				paymentTerm.updateOptions([{
-					value: 'test',
-					trialPrice: '£1.01'
-				}]);
+				elementStub.querySelector
+					.withArgs('.ncf__payment-term__trial-price')
+					.returns(trialPriceStub);
+				paymentTerm.updateOptions([
+					{
+						value: 'test',
+						trialPrice: '£1.01',
+					},
+				]);
 				expect(trialPriceStub.innerHTML).to.equal('£1.01');
 			});
 
 			it('should replace the weekly price with the correct updated weekly price', () => {
 				const weeklyPriceStub = {};
-				elementStub.querySelector.withArgs('.ncf__payment-term__weekly-price').returns(weeklyPriceStub);
-				paymentTerm.updateOptions([{
-					value: 'test',
-					weeklyPrice: '£1.01'
-				}]);
+				elementStub.querySelector
+					.withArgs('.ncf__payment-term__weekly-price')
+					.returns(weeklyPriceStub);
+				paymentTerm.updateOptions([
+					{
+						value: 'test',
+						weeklyPrice: '£1.01',
+					},
+				]);
 				expect(weeklyPriceStub.innerHTML).to.equal('£1.01');
 			});
 		});

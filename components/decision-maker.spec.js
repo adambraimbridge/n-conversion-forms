@@ -23,7 +23,7 @@ describe('DecisionMaker', () => {
 		expect(DecisionMaker).toRenderAs(context, props);
 	});
 
-	it('renders with \'no\' as default state for radio buttons', () => {
+	it("renders with 'no' as default state for radio buttons", () => {
 		const props = { value: 'no' };
 
 		expect(DecisionMaker).toRenderAs(context, props);

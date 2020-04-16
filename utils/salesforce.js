@@ -5,8 +5,10 @@ const { countries } = require('n-common-static-data').billingCountries;
  * @param {String} countryCode ISO 3 character country code
  * @returns {String} Country name from Salesforce
  */
-function isoCodeToSalesforceName (countryCode) {
-	const selectedCountry = countries.find(country => country.code === countryCode);
+function isoCodeToSalesforceName(countryCode) {
+	const selectedCountry = countries.find(
+		(country) => country.code === countryCode
+	);
 	if (!selectedCountry) {
 		throw new Error(`ISO code ${countryCode} Salesforce equivalent not found`);
 	}
@@ -18,15 +20,19 @@ function isoCodeToSalesforceName (countryCode) {
  * @param {String} salesforceName Country name from Salesforce
  * @returns {String} ISO 3 character country code
  */
-function salesforceNameToIsoCode (salesforceName) {
-	const selectedCountry = countries.find(country => country.salesforceName === salesforceName);
+function salesforceNameToIsoCode(salesforceName) {
+	const selectedCountry = countries.find(
+		(country) => country.salesforceName === salesforceName
+	);
 	if (!selectedCountry) {
-		throw new Error(`Salesforce Country ${salesforceName} ISO equivalent not found`);
+		throw new Error(
+			`Salesforce Country ${salesforceName} ISO equivalent not found`
+		);
 	}
 	return selectedCountry.code;
 }
 
 module.exports = {
 	isoCodeToSalesforceName,
-	salesforceNameToIsoCode
+	salesforceNameToIsoCode,
 };

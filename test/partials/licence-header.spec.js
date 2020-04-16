@@ -16,7 +16,7 @@ describe('licence-header template', () => {
 
 	it('should mention trial when isTrial is set', () => {
 		const $ = context.template({
-			isTrial: true
+			isTrial: true,
 		});
 
 		expect($.text()).to.contain('trial');
@@ -25,7 +25,7 @@ describe('licence-header template', () => {
 	it('should add a display name when set', () => {
 		const displayName = 'Company Test Name';
 		const $ = context.template({
-			displayName
+			displayName,
 		});
 
 		expect($.text()).to.contain(displayName);
@@ -34,7 +34,7 @@ describe('licence-header template', () => {
 	it('should show welcome test when set', () => {
 		const welcomeText = 'The quick brown fox jumped over the lazy hare';
 		const $ = context.template({
-			welcomeText
+			welcomeText,
 		});
 
 		expect($.text()).to.contain(welcomeText);
@@ -43,16 +43,17 @@ describe('licence-header template', () => {
 	it('should show welcome test when set', () => {
 		const welcomeText = 'The quick brown fox jumped over the lazy hare';
 		const $ = context.template({
-			welcomeText
+			welcomeText,
 		});
 
 		expect($.text()).to.contain(welcomeText);
 	});
 
 	it('should allow html in the welcome text', () => {
-		const welcomeText = 'The quick <strong id="strong">brown</strong> fox jumped over the lazy hare';
+		const welcomeText =
+			'The quick <strong id="strong">brown</strong> fox jumped over the lazy hare';
 		const $ = context.template({
-			welcomeText
+			welcomeText,
 		});
 
 		expect($('#strong').length).to.equal(1);

@@ -4,7 +4,7 @@ const {
 	shouldBeDisableable,
 	shouldBeRequired,
 	shouldPopulateValue,
-	shouldError
+	shouldError,
 } = require('../helpers');
 
 let context = {};
@@ -34,7 +34,7 @@ describe('phone template', () => {
 	it('should have the b2b label if isB2b is set', () => {
 		const label = 'Work phone number';
 		const $ = context.template({
-			isB2b: true
+			isB2b: true,
 		});
 
 		expect($('.o-forms-title__main').text().trim()).to.equal(label);

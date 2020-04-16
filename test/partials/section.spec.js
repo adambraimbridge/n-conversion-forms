@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const {
 	fetchPartial,
 	registerPartial,
-	unregisterPartial
+	unregisterPartial,
 } = require('../helpers');
 
 let context = {};
