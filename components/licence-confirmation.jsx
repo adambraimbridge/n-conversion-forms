@@ -11,13 +11,13 @@ export function LicenceConfirmation ({
 		href: '/myft',
 		className: 'ncf__button ncf__button--submit',
 		...(isEmbedded && { target: '_top' })
-	}
+	};
 
 	const homepageLinkProps = {
 		href: '/',
 		className: 'ncf__link',
 		...(isEmbedded && { target: '_top' })
-	}
+	};
 
 	return (
 		<div className="ncf ncf__wrapper">
