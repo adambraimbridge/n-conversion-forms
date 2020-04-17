@@ -57,4 +57,5 @@ LicenceConfirmation.propTypes = {
 	isEmbedded: PropTypes.bool,
 	duration: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
+	contentId: PropTypes.string,
 };
