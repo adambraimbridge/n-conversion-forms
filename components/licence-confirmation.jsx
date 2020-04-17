@@ -6,6 +6,7 @@ export function LicenceConfirmation ({
 	isEmbedded = false,
 	duration = null,
 	isEducationalLicence = false,
+	contentId = '',
 }) {
 	const myFtLinkProps = {
 		href: '/myft',
@@ -13,8 +14,8 @@ export function LicenceConfirmation ({
 		...(isEmbedded && { target: '_top' })
 	};
 
-	const homepageLinkProps = {
-		href: '/',
+	const readingLinkProps = {
+		href: contentId === '' ? '/' : `/content/${contentId}`,
 		className: 'ncf__link',
 		...(isEmbedded && { target: '_top' })
 	};
@@ -45,7 +46,7 @@ export function LicenceConfirmation ({
 			</p>
 
 			<p className="ncf__paragraph ncf__center">
-				<a {...homepageLinkProps}>Go to the homepage</a>
+				<a {...readingLinkProps}>Go to the homepage</a>
 			</p>
 		</div>
 	);
