@@ -23,6 +23,6 @@
 	</p>
 
 	<p class="ncf__paragraph ncf__center">
-		<a href="/" class="ncf__link"{{#if isEmbedded}} target="_top"{{/if}}>Start reading</a>
+		<a href={{#if contentId}}"/content/{{contentId}}"{{else}}"/"{{/if}} class="ncf__link"{{#if isEmbedded}} target="_top"{{/if}}>Start reading</a>
 	</p>
 </div>
