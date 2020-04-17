@@ -46,7 +46,7 @@ export function LicenceConfirmation ({
 			</p>
 
 			<p className="ncf__paragraph ncf__center">
-				<a {...readingLinkProps}>Go to the homepage</a>
+				<a {...readingLinkProps}>Start reading</a>
 			</p>
 		</div>
 	);
