@@ -6,18 +6,19 @@ export function LicenceConfirmation ({
 	isEmbedded = false,
 	duration = null,
 	isEducationalLicence = false,
+	contentId = '',
 }) {
 	const myFtLinkProps = {
 		href: '/myft',
 		className: 'ncf__button ncf__button--submit',
 		...(isEmbedded && { target: '_top' })
-	}
+	};
 
-	const homepageLinkProps = {
-		href: '/',
+	const readingLinkProps = {
+		href: contentId === '' ? '/' : `/content/${contentId}`,
 		className: 'ncf__link',
 		...(isEmbedded && { target: '_top' })
-	}
+	};
 
 	return (
 		<div className="ncf ncf__wrapper">
@@ -45,7 +46,7 @@ export function LicenceConfirmation ({
 			</p>
 
 			<p className="ncf__paragraph ncf__center">
-				<a {...homepageLinkProps}>Go to the homepage</a>
+				<a {...readingLinkProps}>Start reading</a>
 			</p>
 		</div>
 	);
@@ -56,4 +57,5 @@ LicenceConfirmation.propTypes = {
 	isEmbedded: PropTypes.bool,
 	duration: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
+	contentId: PropTypes.string,
 };
