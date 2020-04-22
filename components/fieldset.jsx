@@ -61,6 +61,6 @@ Fieldset.propTypes = {
 	legend: PropTypes.string,
 	hideLegend: PropTypes.bool,
 	headingLevel: PropTypes.string,
-	header: PropTypes.elementType,
+	header: PropTypes.node,
 	descriptor: PropTypes.string
 };
