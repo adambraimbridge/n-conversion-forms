@@ -73,11 +73,7 @@ export function Country ({
 
 Country.propTypes = {
 	fieldId: PropTypes.string,
-	filterList: PropTypes.arrayOf(PropTypes.shape({
-		code: PropTypes.string,
-		label: PropTypes.string,
-		name: PropTypes.string
-	})),
+	filterList: PropTypes.arrayOf(PropTypes.string),
 	hasError: PropTypes.bool,
 	inputId: PropTypes.string,
 	isB2b: PropTypes.bool,
