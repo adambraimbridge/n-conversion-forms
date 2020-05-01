@@ -14,7 +14,7 @@ export function DeliveryPostcode ({
 	hasError = false,
 	isHidden = false,
 	pattern,
-	additonalFieldInformation,
+	additionalFieldInformation,
 }) {
 
 	const postcodeReference = postcodeLabel[country.toUpperCase()] || 'postcode';
@@ -32,7 +32,7 @@ export function DeliveryPostcode ({
 
 	const fieldErrorClassNames = classNames([
 		'o-forms-input__error',
-		{ 'additional-field-information__with-field-error': additonalFieldInformation }
+		{ 'additional-field-information__with-field-error': additionalFieldInformation }
 	]);
 
 	return (
@@ -65,8 +65,8 @@ export function DeliveryPostcode ({
 				<span className={fieldErrorClassNames}>
 					Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
 				</span>
-				{additonalFieldInformation ? (
-					<p className="additional-field-information">{additonalFieldInformation}</p>
+				{additionalFieldInformation ? (
+					<p className="additional-field-information">{additionalFieldInformation}</p>
 				) : null}
 			</span>
 		</label>
@@ -80,5 +80,5 @@ DeliveryPostcode.propTypes = {
 	isDisabled: PropTypes.bool,
 	hasError: PropTypes.bool,
 	isHidden: PropTypes.bool,
-	additonalFieldInformation: PropTypes.node
+	additionalFieldInformation: PropTypes.node
 };

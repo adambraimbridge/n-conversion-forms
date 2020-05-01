@@ -11,7 +11,7 @@ export function Country ({
 	isB2b = false,
 	isDisabled = false,
 	value,
-	additonalFieldInformation
+	additionalFieldInformation
 }) {
 	const selectWrapperClassName = classNames([
 		'o-forms-input',
@@ -47,7 +47,7 @@ export function Country ({
 
 	const fieldErrorClassNames = classNames([
 		'o-forms-input__error',
-		{ 'additional-field-information__with-field-error': additonalFieldInformation }
+		{ 'additional-field-information__with-field-error': additionalFieldInformation }
 	]);
 
 	return (
@@ -63,8 +63,8 @@ export function Country ({
 			<span className={selectWrapperClassName}>
 				{createSelect(countries)}
 				<span className={fieldErrorClassNames}>{error}</span>
-					{additonalFieldInformation ? (
-						<p className="additional-field-information">{additonalFieldInformation}</p>
+					{additionalFieldInformation ? (
+						<p className="additional-field-information">{additionalFieldInformation}</p>
 					) : null}
 			</span>
 		</label>
@@ -79,5 +79,5 @@ Country.propTypes = {
 	isB2b: PropTypes.bool,
 	isDisabled: PropTypes.bool,
 	value: PropTypes.string,
-	additonalFieldInformation: PropTypes.node
+	additionalFieldInformation: PropTypes.node
 };
