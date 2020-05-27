@@ -41,16 +41,17 @@ export function DeliveryInstructions ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Delivery instructions</span>
+				<span className="o-forms-title__prompt o-spacing-s2">
+					For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we'll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won't be able to contact you or ring your doorbell.
+				</span>
 				<span className="o-forms-title__prompt">
-					These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+					If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
 				</span>
 			</span>
 
 			<span className={textAreaWrapperClassNames}>
 				<textarea {...textAreaProps} />
 			</span>
-
-			<p>Please note that we can only deliver to the ground floor level of your property.</p>
 		</label>
 	);
 }
