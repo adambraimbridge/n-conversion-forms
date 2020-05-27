@@ -41,7 +41,7 @@ export function DeliveryInstructions ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Delivery instructions</span>
-				<span className="o-forms-title__prompt o-spacing-s2">
+				<span className="o-forms-title__prompt">
 					For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we'll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won't be able to contact you or ring your doorbell.
 				</span>
 				<span className="o-forms-title__prompt">
