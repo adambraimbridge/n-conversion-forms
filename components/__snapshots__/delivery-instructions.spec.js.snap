@@ -11,7 +11,10 @@ exports[`DeliveryInstructions renders with a custom value 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -23,9 +26,6 @@ exports[`DeliveryInstructions renders with a custom value 1`] = `
       foobar
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -40,7 +40,10 @@ exports[`DeliveryInstructions renders with a custom value 2`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -52,9 +55,6 @@ exports[`DeliveryInstructions renders with a custom value 2`] = `
       foobar
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -69,7 +69,10 @@ exports[`DeliveryInstructions renders with a disabled input element 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -81,9 +84,6 @@ exports[`DeliveryInstructions renders with a disabled input element 1`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -98,7 +98,10 @@ exports[`DeliveryInstructions renders with a disabled input element 2`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -110,9 +113,6 @@ exports[`DeliveryInstructions renders with a disabled input element 2`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -127,7 +127,10 @@ exports[`DeliveryInstructions renders with an error 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea o-forms-input--invalid">
@@ -138,9 +141,6 @@ exports[`DeliveryInstructions renders with an error 1`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -155,7 +155,10 @@ exports[`DeliveryInstructions renders with an error 2`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea o-forms-input--invalid">
@@ -166,9 +169,6 @@ exports[`DeliveryInstructions renders with an error 2`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -183,7 +183,10 @@ exports[`DeliveryInstructions renders with default props 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -194,9 +197,6 @@ exports[`DeliveryInstructions renders with default props 1`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -211,7 +211,10 @@ exports[`DeliveryInstructions renders with default props 2`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -222,9 +225,6 @@ exports[`DeliveryInstructions renders with default props 2`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -239,7 +239,10 @@ exports[`DeliveryInstructions renders with maxlength 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -251,9 +254,6 @@ exports[`DeliveryInstructions renders with maxlength 1`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -268,7 +268,10 @@ exports[`DeliveryInstructions renders with maxlength 2`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -280,9 +283,6 @@ exports[`DeliveryInstructions renders with maxlength 2`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -297,7 +297,10 @@ exports[`DeliveryInstructions renders with rows 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -309,9 +312,6 @@ exports[`DeliveryInstructions renders with rows 1`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
 
@@ -326,7 +326,10 @@ exports[`DeliveryInstructions renders with rows 2`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+      For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+    </span>
+    <span class="o-forms-title__prompt">
+      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -338,8 +341,5 @@ exports[`DeliveryInstructions renders with rows 2`] = `
     >
     </textarea>
   </span>
-  <p>
-    Please note that we can only deliver to the ground floor level of your property.
-  </p>
 </label>
 `;
