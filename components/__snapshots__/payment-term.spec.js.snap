@@ -23,6 +23,9 @@ exports[`PaymentTerm annual option render option 1`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -69,6 +72,9 @@ exports[`PaymentTerm annual option render option 2`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -107,7 +113,7 @@ exports[`PaymentTerm annual option render option with discount 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Annual
@@ -118,6 +124,9 @@ exports[`PaymentTerm annual option render option with discount 1`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -156,7 +165,7 @@ exports[`PaymentTerm annual option render option with discount 2`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Annual
@@ -167,6 +176,9 @@ exports[`PaymentTerm annual option render option with discount 2`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -314,6 +326,9 @@ exports[`PaymentTerm annual option render option with selected 1`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -361,6 +376,9 @@ exports[`PaymentTerm annual option render option with selected 2`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -509,12 +527,9 @@ exports[`PaymentTerm annual option render option with weeklyPrice 1`] = `
           £20.00
         </span>
         payment
-        <br>
-        That’s just
-        <span class="ncf__payment-term__weekly-price">
-          0.50p
-        </span>
-        per week
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -561,12 +576,9 @@ exports[`PaymentTerm annual option render option with weeklyPrice 2`] = `
           £20.00
         </span>
         payment
-        <br>
-        That’s just
-        <span class="ncf__payment-term__weekly-price">
-          0.50p
-        </span>
-        per week
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -612,6 +624,9 @@ exports[`PaymentTerm monthly option render option 1`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -657,6 +672,9 @@ exports[`PaymentTerm monthly option render option 2`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -695,7 +713,7 @@ exports[`PaymentTerm monthly option render option with discount 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Monthly
@@ -705,6 +723,9 @@ exports[`PaymentTerm monthly option render option with discount 1`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -743,7 +764,7 @@ exports[`PaymentTerm monthly option render option with discount 2`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Monthly
@@ -753,6 +774,9 @@ exports[`PaymentTerm monthly option render option with discount 2`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -899,6 +923,9 @@ exports[`PaymentTerm monthly option render option with selected 1`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -945,6 +972,9 @@ exports[`PaymentTerm monthly option render option with selected 2`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1092,6 +1122,9 @@ exports[`PaymentTerm monthly option render option with weeklyPrice 1`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1137,6 +1170,9 @@ exports[`PaymentTerm monthly option render option with weeklyPrice 2`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1182,6 +1218,9 @@ exports[`PaymentTerm quarterly option render option 1`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1227,6 +1266,9 @@ exports[`PaymentTerm quarterly option render option 2`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1265,7 +1307,7 @@ exports[`PaymentTerm quarterly option render option with discount 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Quarterly
@@ -1275,6 +1317,9 @@ exports[`PaymentTerm quarterly option render option with discount 1`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1313,7 +1358,7 @@ exports[`PaymentTerm quarterly option render option with discount 2`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Quarterly
@@ -1323,6 +1368,9 @@ exports[`PaymentTerm quarterly option render option with discount 2`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1469,6 +1517,9 @@ exports[`PaymentTerm quarterly option render option with selected 1`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1515,6 +1566,9 @@ exports[`PaymentTerm quarterly option render option with selected 2`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1662,6 +1716,9 @@ exports[`PaymentTerm quarterly option render option with weeklyPrice 1`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1707,6 +1764,9 @@ exports[`PaymentTerm quarterly option render option with weeklyPrice 2`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
