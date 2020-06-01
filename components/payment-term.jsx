@@ -13,19 +13,22 @@ export function PaymentTerm ({
 			title: 'Annual',
 			price: price => <React.Fragment>Single <span className="ncf__payment-term__price ncf__strong">{price}</span> payment</React.Fragment>,
 			trialPrice: price => <React.Fragment>Unless you cancel during your trial you will be billed <span className="ncf__payment-term__price">{price}</span> per year after the trial period.</React.Fragment>,
-			weeklyPrice: price => price && <React.Fragment><br />That’s just <span className="ncf__payment-term__weekly-price">{price}</span> per week</React.Fragment>
+			monthlyPrice: price => price && <span className="ncf__payment-term__equivalent-price">That’s equivalent to <span className="ncf__payment-term__monthly-price">{price}</span> per month</span>,
+			renewsText: () => <React.Fragment><p className="ncf__payment-term__renews-text">Renews annually unless cancelled</p></React.Fragment>
 		},
 		quarterly: {
 			title: 'Quarterly',
 			price: price => <React.Fragment><span className="ncf__payment-term__price">{price}</span> per quarter</React.Fragment>,
 			trialPrice: price => <React.Fragment>Unless you cancel during your trial you will be billed <span className="ncf__payment-term__price">{price}</span> per quarter after the trial period.</React.Fragment>,
-			weeklyPrice: () => {}
+			monthlyPrice: () => {},
+			renewsText: () => <React.Fragment><p className="ncf__payment-term__renews-text">Renews quarterly unless cancelled</p></React.Fragment>
 		},
 		monthly: {
 			title: 'Monthly',
 			price: price => <React.Fragment><span className="ncf__payment-term__price">{price}</span> per month</React.Fragment>,
 			trialPrice: price => <React.Fragment>Unless you cancel during your trial you will be billed <span className="ncf__payment-term__price">{price}</span> per month after the trial period.</React.Fragment>,
-			weeklyPrice: () => {}
+			monthlyPrice: () => {},
+			renewsText: () => <React.Fragment><p className="ncf__payment-term__renews-text">Renews monthly unless cancelled</p></React.Fragment>
 		}
 	};
 	const createPaymentTerm = (option) => {
@@ -45,7 +48,7 @@ export function PaymentTerm ({
 		const showTrialCopyInTitle = (option.isTrial && !isPrintOrBundle);
 		const createDiscount = () => {
 			return option.discount && (
-				<span className="ncf__payment-term__discount">Save {option.discount}</span>
+				<span className="ncf__payment-term__discount">Save {option.discount} off RRP</span>
 			);
 		};
 		const createDescription = () => {
@@ -57,8 +60,9 @@ export function PaymentTerm ({
 			) : (
 				<div className="ncf__payment-term__description">
 					{nameMap[option.name].price(option.price)}
-					{nameMap[option.name].weeklyPrice(option.weeklyPrice)}
-					{/* Remove this discount text temporarily in favour of weekly price */}
+					{nameMap[option.name].monthlyPrice(option.monthlyPrice)}
+					{nameMap[option.name].renewsText()}
+					{/* Remove this discount text temporarily in favour of monthly price */}
 					{/* <br />Save up to 25% when you pay annually */}
 				</div>
 			);
