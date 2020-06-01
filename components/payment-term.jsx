@@ -14,21 +14,21 @@ export function PaymentTerm ({
 			price: price => <React.Fragment>Single <span className="ncf__payment-term__price ncf__strong">{price}</span> payment</React.Fragment>,
 			trialPrice: price => <React.Fragment>Unless you cancel during your trial you will be billed <span className="ncf__payment-term__price">{price}</span> per year after the trial period.</React.Fragment>,
 			monthlyPrice: price => price && <span className="ncf__payment-term__equivalent-price">That’s equivalent to <span className="ncf__payment-term__monthly-price">{price}</span> per month</span>,
-			renewsText: () => <React.Fragment><p className="ncf__payment-term__renews-text">Renews annually unless cancelled</p></React.Fragment>
+			renewsText: () => <p className="ncf__payment-term__renews-text">Renews annually unless cancelled</p>
 		},
 		quarterly: {
 			title: 'Quarterly',
 			price: price => <React.Fragment><span className="ncf__payment-term__price">{price}</span> per quarter</React.Fragment>,
 			trialPrice: price => <React.Fragment>Unless you cancel during your trial you will be billed <span className="ncf__payment-term__price">{price}</span> per quarter after the trial period.</React.Fragment>,
 			monthlyPrice: () => {},
-			renewsText: () => <React.Fragment><p className="ncf__payment-term__renews-text">Renews quarterly unless cancelled</p></React.Fragment>
+			renewsText: () => <p className="ncf__payment-term__renews-text">Renews quarterly unless cancelled</p>
 		},
 		monthly: {
 			title: 'Monthly',
 			price: price => <React.Fragment><span className="ncf__payment-term__price">{price}</span> per month</React.Fragment>,
 			trialPrice: price => <React.Fragment>Unless you cancel during your trial you will be billed <span className="ncf__payment-term__price">{price}</span> per month after the trial period.</React.Fragment>,
 			monthlyPrice: () => {},
-			renewsText: () => <React.Fragment><p className="ncf__payment-term__renews-text">Renews monthly unless cancelled</p></React.Fragment>
+			renewsText: () => <p className="ncf__payment-term__renews-text">Renews monthly unless cancelled</p>
 		}
 	};
 	const createPaymentTerm = (option) => {
