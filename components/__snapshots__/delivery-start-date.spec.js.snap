@@ -497,7 +497,7 @@ exports[`DeliveryStartDate renders with appropriate start description example wh
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we&#x27;ll start your deliveries on the following Saturday.
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we’ll start your deliveries on the following Saturday.
   </p>
 </label>
 `;
@@ -535,7 +535,7 @@ exports[`DeliveryStartDate renders with appropriate start description example wh
     </strong>
   </p>
   <p>
-    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we&#x27;ll start your deliveries on the following Saturday.
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we’ll start your deliveries on the following Saturday.
   </p>
 </label>
 `;
