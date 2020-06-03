@@ -46,7 +46,7 @@ describe('payment-term', () => {
 			expect($(DESCRIPTION_SELECTOR).text()).to.contain(price);
 		});
 
-		// Removing in favour of weekly price for the time being
+		// Removing in favour of monthly price for the time being
 		it.skip('should show discount copy if not discounted', () => {
 			const name = 'annual';
 			const $ = context.template({ options: [{
@@ -65,22 +65,22 @@ describe('payment-term', () => {
 			expect($(DESCRIPTION_SELECTOR).text()).to.not.contain('Save up to');
 		});
 
-		it('should not have weekly price text by default', () => {
+		it('should not have monthly price text by default', () => {
 			const name = 'annual';
 			const $ = context.template({ options: [{
 				name
 			}]});
-			expect($('.ncf__payment-term__weekly-price').length).to.equal(0);
+			expect($('.ncf__payment-term__monthly-price').length).to.equal(0);
 		});
 
-		it('should have weekly price text if passed', () => {
+		it('should have monthly price text if passed', () => {
 			const name = 'annual';
-			const weeklyPrice = '£1.00';
+			const monthlyPrice = '£1.00';
 			const $ = context.template({ options: [{
 				name,
-				weeklyPrice
+				monthlyPrice
 			}]});
-			expect($('.ncf__payment-term__weekly-price').length).to.equal(1);
+			expect($('.ncf__payment-term__monthly-price').length).to.equal(1);
 		});
 
 		describe('trial', () => {

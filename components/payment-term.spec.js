@@ -93,13 +93,13 @@ describe('PaymentTerm', () => {
 				expect(PaymentTerm).toRenderAs(context, props);
 			});
 
-			it('render option with weeklyPrice', () => {
+			it('render option with monthlyPrice', () => {
 				const props = {
 					options: [{
 						name: type,
 						value: type,
 						price: '£20.00',
-						weeklyPrice: '0.50p'
+						monthlyPrice: '£1.67'
 					}]
 				};
 

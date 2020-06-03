@@ -19,7 +19,7 @@ const ITEM_CLASS = '.ncf__payment-term__item';
 const VALUE_CLASS = '.ncf__payment-term__item input';
 const PRICE_CLASS = '.ncf__payment-term__price';
 const TRIAL_PRICE_CLASS = '.ncf__payment-term__trial-price';
-const WEEKLY_PRICE_CLASS = '.ncf__payment-term__weekly-price';
+const MONTHLY_PRICE_CLASS = '.ncf__payment-term__monthly-price';
 
 class PaymentTerm {
 	/**
@@ -73,7 +73,7 @@ class PaymentTerm {
 			const value = term.querySelector(VALUE_CLASS).value;
 			const price = term.querySelector(PRICE_CLASS);
 			const trialPrice = term.querySelector(TRIAL_PRICE_CLASS);
-			const weeklyPrice = term.querySelector(WEEKLY_PRICE_CLASS);
+			const monthlyPrice = term.querySelector(MONTHLY_PRICE_CLASS);
 			const update = options.find(option => option.value === value);
 
 			if (!update) {
@@ -87,8 +87,8 @@ class PaymentTerm {
 			if (trialPrice) {
 				trialPrice.innerHTML = update.trialPrice;
 			}
-			if (weeklyPrice) {
-				weeklyPrice.innerHTML = update.weeklyPrice;
+			if (monthlyPrice) {
+				monthlyPrice.innerHTML = update.monthlyPrice;
 			}
 		}
 	}

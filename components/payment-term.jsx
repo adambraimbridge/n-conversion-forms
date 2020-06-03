@@ -111,6 +111,6 @@ PaymentTerm.propTypes = {
 		trialDuration: PropTypes.string,
 		trialPrice: PropTypes.string,
 		value: PropTypes.string.isRequired,
-		weeklyPrice: PropTypes.string
+		monthlyPrice: PropTypes.string
 	}))
 };
