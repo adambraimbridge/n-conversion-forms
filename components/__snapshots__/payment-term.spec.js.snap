@@ -23,6 +23,9 @@ exports[`PaymentTerm annual option render option 1`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -69,6 +72,9 @@ exports[`PaymentTerm annual option render option 2`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -107,7 +113,7 @@ exports[`PaymentTerm annual option render option with discount 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Annual
@@ -118,6 +124,9 @@ exports[`PaymentTerm annual option render option with discount 1`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -156,7 +165,7 @@ exports[`PaymentTerm annual option render option with discount 2`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Annual
@@ -167,6 +176,9 @@ exports[`PaymentTerm annual option render option with discount 2`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -290,6 +302,118 @@ exports[`PaymentTerm annual option render option with isTrial 2`] = `
 </div>
 `;
 
+exports[`PaymentTerm annual option render option with monthlyPrice 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms-input__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+        <span class="ncf__payment-term__equivalent-price">
+          That’s equivalent to
+          <span class="ncf__payment-term__monthly-price">
+            £1.67
+          </span>
+          per month
+        </span>
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with monthlyPrice 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms-input__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+        <span class="ncf__payment-term__equivalent-price">
+          That’s equivalent to
+          <span class="ncf__payment-term__monthly-price">
+            £1.67
+          </span>
+          per month
+        </span>
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
 exports[`PaymentTerm annual option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
@@ -314,6 +438,9 @@ exports[`PaymentTerm annual option render option with selected 1`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -361,6 +488,9 @@ exports[`PaymentTerm annual option render option with selected 2`] = `
           £20.00
         </span>
         payment
+        <p class="ncf__payment-term__renews-text">
+          Renews annually unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -486,110 +616,6 @@ exports[`PaymentTerm annual option render option with trial 2`] = `
 </div>
 `;
 
-exports[`PaymentTerm annual option render option with weeklyPrice 1`] = `
-<div id="paymentTermField"
-     class="o-forms__group ncf__payment-term"
->
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="annual"
-           name="paymentTerm"
-           value="annual"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="annual"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Annual
-      </span>
-      <div class="ncf__payment-term__description">
-        Single
-        <span class="ncf__payment-term__price ncf__strong">
-          £20.00
-        </span>
-        payment
-        <br>
-        That’s just
-        <span class="ncf__payment-term__weekly-price">
-          0.50p
-        </span>
-        per week
-      </div>
-    </label>
-  </div>
-  <div class="ncf__payment-term__legal">
-    <p>
-      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
-    </p>
-    <p>
-      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
-      <a class="ncf__link--external"
-         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
-         title="FT Legal Terms and Conditions help page"
-         target="_blank"
-         rel="noopener noreferrer"
-      >
-        Terms &amp; Conditions
-      </a>
-      .
-    </p>
-  </div>
-</div>
-`;
-
-exports[`PaymentTerm annual option render option with weeklyPrice 2`] = `
-<div id="paymentTermField"
-     class="o-forms__group ncf__payment-term"
->
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="annual"
-           name="paymentTerm"
-           value="annual"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="annual"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Annual
-      </span>
-      <div class="ncf__payment-term__description">
-        Single
-        <span class="ncf__payment-term__price ncf__strong">
-          £20.00
-        </span>
-        payment
-        <br>
-        That’s just
-        <span class="ncf__payment-term__weekly-price">
-          0.50p
-        </span>
-        per week
-      </div>
-    </label>
-  </div>
-  <div class="ncf__payment-term__legal">
-    <p>
-      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
-    </p>
-    <p>
-      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
-      <a class="ncf__link--external"
-         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
-         title="FT Legal Terms and Conditions help page"
-         target="_blank"
-         rel="noopener noreferrer"
-      >
-        Terms &amp; Conditions
-      </a>
-      .
-    </p>
-  </div>
-</div>
-`;
-
 exports[`PaymentTerm monthly option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
@@ -612,6 +638,9 @@ exports[`PaymentTerm monthly option render option 1`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -657,6 +686,9 @@ exports[`PaymentTerm monthly option render option 2`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -695,7 +727,7 @@ exports[`PaymentTerm monthly option render option with discount 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Monthly
@@ -705,6 +737,9 @@ exports[`PaymentTerm monthly option render option with discount 1`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -743,7 +778,7 @@ exports[`PaymentTerm monthly option render option with discount 2`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Monthly
@@ -753,6 +788,9 @@ exports[`PaymentTerm monthly option render option with discount 2`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -876,6 +914,102 @@ exports[`PaymentTerm monthly option render option with isTrial 2`] = `
 </div>
 `;
 
+exports[`PaymentTerm monthly option render option with monthlyPrice 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms-input__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with monthlyPrice 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms-input__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
 exports[`PaymentTerm monthly option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
@@ -899,6 +1033,9 @@ exports[`PaymentTerm monthly option render option with selected 1`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -945,6 +1082,9 @@ exports[`PaymentTerm monthly option render option with selected 2`] = `
           £20.00
         </span>
         per month
+        <p class="ncf__payment-term__renews-text">
+          Renews monthly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1070,96 +1210,6 @@ exports[`PaymentTerm monthly option render option with trial 2`] = `
 </div>
 `;
 
-exports[`PaymentTerm monthly option render option with weeklyPrice 1`] = `
-<div id="paymentTermField"
-     class="o-forms__group ncf__payment-term"
->
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="monthly"
-           name="paymentTerm"
-           value="monthly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="monthly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Monthly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per month
-      </div>
-    </label>
-  </div>
-  <div class="ncf__payment-term__legal">
-    <p>
-      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
-    </p>
-    <p>
-      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
-      <a class="ncf__link--external"
-         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
-         title="FT Legal Terms and Conditions help page"
-         target="_blank"
-         rel="noopener noreferrer"
-      >
-        Terms &amp; Conditions
-      </a>
-      .
-    </p>
-  </div>
-</div>
-`;
-
-exports[`PaymentTerm monthly option render option with weeklyPrice 2`] = `
-<div id="paymentTermField"
-     class="o-forms__group ncf__payment-term"
->
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="monthly"
-           name="paymentTerm"
-           value="monthly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="monthly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Monthly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per month
-      </div>
-    </label>
-  </div>
-  <div class="ncf__payment-term__legal">
-    <p>
-      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
-    </p>
-    <p>
-      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
-      <a class="ncf__link--external"
-         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
-         title="FT Legal Terms and Conditions help page"
-         target="_blank"
-         rel="noopener noreferrer"
-      >
-        Terms &amp; Conditions
-      </a>
-      .
-    </p>
-  </div>
-</div>
-`;
-
 exports[`PaymentTerm quarterly option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
@@ -1182,6 +1232,9 @@ exports[`PaymentTerm quarterly option render option 1`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1227,6 +1280,9 @@ exports[`PaymentTerm quarterly option render option 2`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1265,7 +1321,7 @@ exports[`PaymentTerm quarterly option render option with discount 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Quarterly
@@ -1275,6 +1331,9 @@ exports[`PaymentTerm quarterly option render option with discount 1`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1313,7 +1372,7 @@ exports[`PaymentTerm quarterly option render option with discount 2`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__discount">
-        Save 25% off
+        Save 25% off off RRP
       </span>
       <span class="ncf__payment-term__title">
         Quarterly
@@ -1323,6 +1382,9 @@ exports[`PaymentTerm quarterly option render option with discount 2`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1446,6 +1508,102 @@ exports[`PaymentTerm quarterly option render option with isTrial 2`] = `
 </div>
 `;
 
+exports[`PaymentTerm quarterly option render option with monthlyPrice 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms-input__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with monthlyPrice 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item o-forms-input--radio-round">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms-input__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
 exports[`PaymentTerm quarterly option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
@@ -1469,6 +1627,9 @@ exports[`PaymentTerm quarterly option render option with selected 1`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1515,6 +1676,9 @@ exports[`PaymentTerm quarterly option render option with selected 2`] = `
           £20.00
         </span>
         per quarter
+        <p class="ncf__payment-term__renews-text">
+          Renews quarterly unless cancelled
+        </p>
       </div>
     </label>
   </div>
@@ -1617,96 +1781,6 @@ exports[`PaymentTerm quarterly option render option with trial 2`] = `
           £20.00
         </span>
         per quarter after the trial period.
-      </div>
-    </label>
-  </div>
-  <div class="ncf__payment-term__legal">
-    <p>
-      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
-    </p>
-    <p>
-      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
-      <a class="ncf__link--external"
-         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
-         title="FT Legal Terms and Conditions help page"
-         target="_blank"
-         rel="noopener noreferrer"
-      >
-        Terms &amp; Conditions
-      </a>
-      .
-    </p>
-  </div>
-</div>
-`;
-
-exports[`PaymentTerm quarterly option render option with weeklyPrice 1`] = `
-<div id="paymentTermField"
-     class="o-forms__group ncf__payment-term"
->
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="quarterly"
-           name="paymentTerm"
-           value="quarterly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="quarterly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Quarterly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per quarter
-      </div>
-    </label>
-  </div>
-  <div class="ncf__payment-term__legal">
-    <p>
-      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
-    </p>
-    <p>
-      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
-      <a class="ncf__link--external"
-         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
-         title="FT Legal Terms and Conditions help page"
-         target="_blank"
-         rel="noopener noreferrer"
-      >
-        Terms &amp; Conditions
-      </a>
-      .
-    </p>
-  </div>
-</div>
-`;
-
-exports[`PaymentTerm quarterly option render option with weeklyPrice 2`] = `
-<div id="paymentTermField"
-     class="o-forms__group ncf__payment-term"
->
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="quarterly"
-           name="paymentTerm"
-           value="quarterly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="quarterly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Quarterly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per quarter
       </div>
     </label>
   </div>

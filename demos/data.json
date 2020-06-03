@@ -201,27 +201,7 @@
   "package-change": {
     "params": {
       "changePackageUrl": "/foo",
-      "currentPackage": "Digital",
-      "terms": [
-        {
-          "name": "annual",
-          "price": "£1000",
-          "weeklyPrice": "£4.5"
-        },
-        {
-          "name": "quarterly",
-          "price": "£100"
-        },
-        {
-          "name": "monthly",
-          "price": "£10",
-          "discount": "25%"
-        },
-        {
-          "name": "trial",
-          "trialPrice": "£1"
-        }
-      ]
+      "currentPackage": "Digital"
     }
   },
   "payment-term": {

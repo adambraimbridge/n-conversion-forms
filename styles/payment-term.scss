@@ -36,5 +36,19 @@
 		&__legal {
 			margin: 20px 0;
 		}
+
+		&__equivalent-price {
+			@include oTypographySans($scale: -1, $include-font-family: false);
+			display: block;
+		}
+
+		&__monthly-price {
+			font-weight: oFontsWeight('semibold');
+		}
+
+		&__renews-text {
+			@include oTypographySans($scale: -2, $include-font-family: false);
+			margin-bottom: 0;
+		}
 	}
 }
