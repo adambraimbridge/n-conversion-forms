@@ -10,7 +10,7 @@ export function DeliveryStartDate ({
 	max = null,
 	isDisabled = false,
 	isAddressUpdate = false,
-	addressType = 'primary'
+	isWeekendOnly = false
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -38,7 +38,7 @@ export function DeliveryStartDate ({
 
 	// Primary Address deliveries start on Monday (default) while Weekend Address deliveries start on Saturday.
 	const startDescriptionExample =
-		addressType === 'weekend'
+		isWeekendOnly
 			? 'if you select a Sunday then we’ll start your deliveries on the following Saturday.'
 			: 'if you select a Sunday then we can start your supply on the Monday.';
 
@@ -74,5 +74,5 @@ DeliveryStartDate.propTypes = {
 	max: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isAddressUpdate: PropTypes.bool,
-	addressType: PropTypes.oneOf(['primary', 'weekend']),
+	isWeekendOnly: PropTypes.bool,
 };

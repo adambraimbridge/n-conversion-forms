@@ -60,7 +60,7 @@ describe('DeliveryStartDate', () => {
 	});
 
 	it('renders with appropriate start description example when address type is weekend', () => {
-		const props = { addressType: 'weekend' };
+		const props = { isWeekendOnly: true };
 
 		expect(DeliveryStartDate).toRenderAs(context, props);
 	});

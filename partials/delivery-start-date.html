@@ -18,6 +18,6 @@
 	<p>{{#if isAddressUpdate}}We’ll start delivering to this address from:{{else}}Your print subscription will start from:{{/if}} <strong class="js-start-date-text">{{date}}</strong></p>
 
 	<p>
-		NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. {{#ifEquals addressType 'weekend'}}if you select a Sunday then we’ll start your deliveries on the following Saturday.{{else}}if you select a Sunday then we can start your supply on the Monday.{{/ifEquals}}
+		NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. {{#if isWeekendOnly}}if you select a Sunday then we’ll start your deliveries on the following Saturday.{{else}}if you select a Sunday then we can start your supply on the Monday.{{/if}}
 	</p>
 </label>
