@@ -11,7 +11,9 @@ export function Position ({
 	fieldId = 'positionField',
 	selectId = 'position',
 	selectName = 'position',
-	options = defaultOptions
+	options = defaultOptions,
+	required = true,
+	fieldLabel = 'What’s your job position?'
 }) {
 
 	const inputWrapperClassNames = classNames([
@@ -28,14 +30,14 @@ export function Position ({
 			htmlFor={selectId}
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">What’s your job position?</span>
+				<span className="o-forms-title__main">{fieldLabel}</span>
 			</span>
 			<span className={inputWrapperClassNames}>
 				<select id={selectId}
 					name={selectName}
 					data-trackable="field-position"
 					aria-required="true"
-					required
+					required={required}
 					disabled={isDisabled}
 					defaultValue={value}
 				>
@@ -60,5 +62,7 @@ Position.propTypes = {
 	options: PropTypes.arrayOf(PropTypes.shape({
 		code: PropTypes.string,
 		description: PropTypes.string,
-	}))
+	})),
+	required: PropTypes.bool,
+	fieldLabel: PropTypes.string,
 };

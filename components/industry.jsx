@@ -12,7 +12,8 @@ export function Industry ({
 	selectId = 'industry',
 	selectName = 'industry',
 	options = defaultOptions,
-	fieldLabel = 'In which industry do you work?'
+	fieldLabel = 'In which industry do you work?',
+	required = true
 }) {
 
 	const inpiutWrapperClassName = classNames([
@@ -36,7 +37,7 @@ export function Industry ({
 					name={selectName}
 					data-trackable="field-industry"
 					aria-required="true"
-					required
+					required={required}
 					disabled={isDisabled}
 					defaultValue={value}
 				>
@@ -61,5 +62,6 @@ Industry.propTypes = {
 	options: PropTypes.arrayOf(PropTypes.shape({
 		code: PropTypes.string,
 		description: PropTypes.string,
-	}))
+	})),
+	required: PropTypes.bool,
 };
