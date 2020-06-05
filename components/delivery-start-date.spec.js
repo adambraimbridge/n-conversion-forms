@@ -52,4 +52,17 @@ describe('DeliveryStartDate', () => {
 
 		expect(DeliveryStartDate).toRenderAs(context, props);
 	});
+
+	it('renders with appropriate start message when isAddressUpdate', () => {
+		const props = { isAddressUpdate: true };
+
+		expect(DeliveryStartDate).toRenderAs(context, props);
+	});
+
+	it('renders with appropriate start description example when address type is weekend', () => {
+		const props = { isWeekendOnly: true };
+
+		expect(DeliveryStartDate).toRenderAs(context, props);
+	});
+
 });
