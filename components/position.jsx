@@ -12,7 +12,7 @@ export function Position ({
 	selectId = 'position',
 	selectName = 'position',
 	options = defaultOptions,
-	required = true,
+	isRequired = true,
 	fieldLabel = 'What’s your job position?'
 }) {
 
@@ -26,7 +26,7 @@ export function Position ({
 		<label
 			id={fieldId}
 			className="o-forms-field ncf__validation-error"
-			data-validate="required"
+			data-validate={isRequired ? 'required' : ''}
 			htmlFor={selectId}
 		>
 			<span className="o-forms-title">
@@ -36,8 +36,8 @@ export function Position ({
 				<select id={selectId}
 					name={selectName}
 					data-trackable="field-position"
-					aria-required="true"
-					required={required}
+					aria-required={isRequired}
+					required={isRequired}
 					disabled={isDisabled}
 					defaultValue={value}
 				>
@@ -63,6 +63,6 @@ Position.propTypes = {
 		code: PropTypes.string,
 		description: PropTypes.string,
 	})),
-	required: PropTypes.bool,
+	isRequired: PropTypes.bool,
 	fieldLabel: PropTypes.string,
 };

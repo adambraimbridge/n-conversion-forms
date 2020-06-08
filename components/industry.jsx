@@ -13,7 +13,7 @@ export function Industry ({
 	selectName = 'industry',
 	options = defaultOptions,
 	fieldLabel = 'In which industry do you work?',
-	required = true
+	isRequired = true
 }) {
 
 	const inpiutWrapperClassName = classNames([
@@ -26,7 +26,7 @@ export function Industry ({
 		<label
 			id={fieldId}
 			className="o-forms-field ncf__validation-error"
-			data-validate="required"
+			data-validate={isRequired ? 'required' : ''}
 			htmlFor={selectId}
 		>
 			<span className="o-forms-title">
@@ -36,8 +36,8 @@ export function Industry ({
 				<select id={selectId}
 					name={selectName}
 					data-trackable="field-industry"
-					aria-required="true"
-					required={required}
+					aria-required={isRequired}
+					required={isRequired}
 					disabled={isDisabled}
 					defaultValue={value}
 				>
@@ -63,5 +63,5 @@ Industry.propTypes = {
 		code: PropTypes.string,
 		description: PropTypes.string,
 	})),
-	required: PropTypes.bool,
+	isRequired: PropTypes.bool,
 };
