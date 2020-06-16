@@ -3,7 +3,7 @@ const resolve = require('path').resolve;
 const fs = require('fs');
 const chalk = require('chalk');
 const express = require('@financial-times/n-internal-tool');
-const Handlebars = require('@financial-times/n-handlebars').handlebars;
+const Handlebars = require('../handlebars/nextified-handlebars').handlebars;
 const data = require('./data.json');
 const jsxTemplate = require('./views/jsx');
 
