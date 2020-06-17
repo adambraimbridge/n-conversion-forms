@@ -97,6 +97,7 @@
   },
   "delivery-instructions": {
     "params": {
+      "hasSignupSecurityNote": true,
       "maxlength": "200",
       "rows": "5",
       "value": "Foo bar baz"

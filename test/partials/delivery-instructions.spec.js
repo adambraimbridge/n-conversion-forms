@@ -26,6 +26,22 @@ describe('delivery-instructions template', () => {
 		expect($('textarea').text().trim()).to.equal('');
 	});
 
+	it('should have security note if hasSignupSecurityNote = true', () => {
+		const $ = context.template({
+			hasSignupSecurityNote: true
+		});
+
+		expect($.text()).to.contain('Security Notes section');
+	});
+
+	it('should not have security note if hasSignupSecurityNote = false', () => {
+		const $ = context.template({
+			hasSignupSecurityNote: false
+		});
+
+		expect($.text()).not.to.contain('Security Notes section');
+	});
+
 	it('should populate the correct value', () => {
 		const value = 'ThisIsAValue';
 		const $ = context.template({
