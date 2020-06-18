@@ -22,7 +22,7 @@ function initDemo () {
 			<ncf.DeliveryAddress />
 			<ncf.DeliveryCity />
 			<ncf.DeliveryCounty />
-			<ncf.DeliveryInstructions />
+			<ncf.DeliveryInstructions hasSignupSecurityNote={true} />
 			<ncf.DeliveryOption options={[
 				{
 					value: 'PV',
