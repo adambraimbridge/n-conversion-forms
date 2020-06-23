@@ -28,7 +28,7 @@ const extendedHelperHandlebars = function () {
 
 const expressHbs = function (options) {
 	if (!options || !options.directory) {
-		throw 'nextifyHandlebars requires an options object containing a directory property';
+		throw 'expressHbs requires an options object containing a directory property';
 	}
 
 	const configuredHbs = extendedHelperHandlebars();
