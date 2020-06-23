@@ -23,7 +23,6 @@ const helpers = {
 const extendedHelperHandlebars = function () {
 	const Handlebars = handlebars;
 	Handlebars.registerHelper(helpers);
-	// Handlebars.registerHelper({ helpers, ...options.helpers });
 	return Handlebars;
 };
 

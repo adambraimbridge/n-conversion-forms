@@ -21,14 +21,12 @@
   "dependencies": {
     "@babel/runtime": "7.6.3",
     "classnames": "2.2.6",
-    "denodeify": "^1.2.1",
     "diffable-html": "4.0.0",
     "express-handlebars": "^4.0.4",
     "fetchres": "1.7.2",
     "handlebars": "^4.7.6",
     "lodash.get": "4.4.2",
-    "n-common-static-data": "financial-times/n-common-static-data#v1.6.1",
-    "supertest": "^4.0.2"
+    "n-common-static-data": "financial-times/n-common-static-data#v1.6.1"
   },
   "devDependencies": {
     "@babel/cli": "7.6.4",
