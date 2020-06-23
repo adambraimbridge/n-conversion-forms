@@ -1,9 +1,7 @@
 'use strict';
 
-const Path = require('path');
 const expressHandlebars = require('express-handlebars');
 const handlebars = require('handlebars');
-const loadPartials = require('./load-partials');
 
 const helpers = {
 	ifEquals: function (a, b, options) {
@@ -25,10 +23,11 @@ const helpers = {
 const extendedHelperHandlebars = function () {
 	const Handlebars = handlebars;
 	Handlebars.registerHelper(helpers);
+	// Handlebars.registerHelper({ helpers, ...options.helpers });
 	return Handlebars;
 };
 
-const nextifyHandlebars = function (options) {
+const expressHbs = function (options) {
 	if (!options || !options.directory) {
 		throw 'nextifyHandlebars requires an options object containing a directory property';
 	}
@@ -40,26 +39,15 @@ const nextifyHandlebars = function (options) {
 		extname: options.extname || '.html',
 		helpers: helpers,
 		defaultLayout: options.defaultLayout || false,
-		layoutsDir: options.layoutsDir || undefined
+		layoutsDir: options.layoutsDir || undefined,
+		partialsDir: options.partialsDir
 	});
 
-	const partialsDir = (options.partialsDir || []);
-	const dependencyRoot = Path.join(options.directory, '/bower_components/');
-	const ignoreListInLinkedDeps = ['.git', 'node_modules', 'bower_components', 'demos'];
-	const limitToComponents = (options.limitToComponents || '');
-
-	// look up templates on our own to avoid scanning thousands of files
-	return loadPartials(expressHandlebarsInstance, dependencyRoot, partialsDir, ignoreListInLinkedDeps, limitToComponents)
+	return expressHandlebarsInstance.getPartials()
 		.then(function (partials) {
-			expressHandlebarsInstance.partialsDir = partials;
+			configuredHbs.partials = partials;
 
-			// makes the usePartial helper possible
-			return expressHandlebarsInstance.getPartials()
-				.then(function (partials) {
-					configuredHbs.partials = partials;
-
-					return expressHandlebarsInstance;
-				});
+			return expressHandlebarsInstance;
 		});
 };
 
@@ -68,7 +56,7 @@ const applyToExpress = function (app, options) {
 		throw 'applyToExpress requires an instance of an express app';
 	}
 
-	return nextifyHandlebars(options)
+	return expressHbs(options)
 		.then(function (expressHandlebarsInstance) {
 			app.set('views', options.directory + (options.viewsDirectory || '/views'));
 
@@ -82,4 +70,4 @@ const applyToExpress = function (app, options) {
 
 module.exports = applyToExpress;
 module.exports.handlebars = extendedHelperHandlebars;
-module.exports.standalone = nextifyHandlebars;
+module.exports.standalone = expressHbs;

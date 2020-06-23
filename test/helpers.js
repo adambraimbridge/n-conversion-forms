@@ -2,7 +2,7 @@ const fs = require('fs');
 const cheerio = require('cheerio');
 const expect = require('chai').expect;
 const promisify = require('util').promisify;
-const Handlebars = require('../handlebars/nextified-handlebars').handlebars;
+const Handlebars = require('../handlebars').handlebars;
 
 const readFile = promisify(fs.readFile);
 const PARTIAL_DIR = __dirname + '/../partials/';
