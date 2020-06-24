@@ -50,23 +50,5 @@ const expressHbs = function (options) {
 		});
 };
 
-const applyToExpress = function (app, options) {
-	if (!app) {
-		throw 'applyToExpress requires an instance of an express app';
-	}
-
-	return expressHbs(options)
-		.then(function (expressHandlebarsInstance) {
-			app.set('views', options.directory + (options.viewsDirectory || '/views'));
-
-			app.engine((options.extname || '.html'), expressHandlebarsInstance.engine);
-
-			app.set('view engine', (options.extname || '.html'));
-
-			return expressHandlebarsInstance;
-		});
-};
-
-module.exports = applyToExpress;
 module.exports.handlebars = extendedHelperHandlebars;
 module.exports.standalone = expressHbs;
