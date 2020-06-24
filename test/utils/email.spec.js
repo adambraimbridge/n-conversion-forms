@@ -153,11 +153,11 @@ describe('Email', () => {
 				method: 'POST',
 				credentials: 'include',
 				headers: {
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/json',
+					'CSRF-Token': '1234567890'
 				},
 				body: JSON.stringify({
-					email: 'test@example.com',
-					csrfToken: '1234567890'
+					email: 'test@example.com'
 				})
 			});
 		});
