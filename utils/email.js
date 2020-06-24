@@ -77,11 +77,11 @@ class Email {
 				method: 'POST',
 				credentials: 'include',
 				headers: {
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/json',
+					'CSRF-Token': this.$csrfToken && this.$csrfToken.value,
 				},
 				body: JSON.stringify({
 					email: this.$email.value,
-					csrfToken: this.$csrfToken && this.$csrfToken.value
 				})
 			})
 				.then(fetchres.json)
