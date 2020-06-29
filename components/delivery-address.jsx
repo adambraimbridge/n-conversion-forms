@@ -7,7 +7,7 @@ export function DeliveryAddress ({
 	line1 = '',
 	line2 = '',
 	line3 = '',
-	isDisabled = false
+	isDisabled = false,
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -17,7 +17,7 @@ export function DeliveryAddress ({
 
 	return (
 		<div id="deliveryAddressFields" data-validate="required">
-			<label className="o-forms-field" htmlFor="deliveryAddressLine1">
+			<label className="o-forms-field ncf__validation-error" htmlFor="deliveryAddressLine1">
 				<span className="o-forms-title">
 					<span className="o-forms-title__main">Address line 1</span>
 				</span>
@@ -29,11 +29,13 @@ export function DeliveryAddress ({
 						data-trackable="field-deliveryAddressLine1"
 						autoComplete="address-line1"
 						placeholder="e.g. 10 Elm Street"
+						maxLength={50}
 						aria-required="true"
 						required
 						disabled={isDisabled}
 						defaultValue={line1}
 					/>
+				<span className="o-forms-input__error">Please enter a valid address</span>
 				</span>
 			</label>
 			<label className="o-forms-field o-forms-field--optional" htmlFor="deliveryAddressLine2">
@@ -48,6 +50,7 @@ export function DeliveryAddress ({
 						data-trackable="field-deliveryAddressLine2"
 						autoComplete="address-line2"
 						placeholder="e.g. Apartment 1"
+						maxLength={50}
 						disabled={isDisabled}
 						defaultValue={line2}
 					/>
@@ -65,6 +68,7 @@ export function DeliveryAddress ({
 						data-trackable="field-deliveryAddressLine3"
 						autoComplete="address-line3"
 						placeholder=""
+						maxLength={50}
 						disabled={isDisabled}
 						defaultValue={line3}
 					/>

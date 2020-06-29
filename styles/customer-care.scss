@@ -2,32 +2,6 @@
 
 @mixin ncfCustomerCarePanel() {
 
-	@include oGridRespondTo($until: M) {
-
-		&__customer-care {
-			background: oColorsByName('teal');
-			color: oColorsByName('white');
-		}
-
-		&__customer-care &__icon {
-			background: oColorsByName('white');
-			border-color: oColorsByName('white');
-			&::before {
-				@include oIconsContent(
-					$icon-name: 'phone',
-					$color: oColorsByName('teal'),
-					$size: 40
-				);
-				color: oColorsByName('teal');
-			}
-		}
-
-		&__customer-care &__link {
-			color: oColorsByName('white');
-		}
-
-	}
-
 	&__customer-care {
 		&__phone {
 			margin-bottom: 0;

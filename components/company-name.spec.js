@@ -63,4 +63,21 @@ describe('CompanyName', () => {
 
 		expect(CompanyName).toRenderCorrectly(props);
 	});
+
+	it('renders with default label wording', () => {
+		const props = {};
+
+		const component = mount(CompanyName(props));
+
+		expect(component.find('.o-forms-title__main').text()).toEqual('Company name');
+	});
+
+	it('renders with custom label wording', () => {
+		const props = {fieldLabel : 'Organisation name'};
+
+		const component = mount(CompanyName(props));
+
+		expect(component.find('.o-forms-title__main').text()).toEqual('Organisation name');
+	});
+
 });

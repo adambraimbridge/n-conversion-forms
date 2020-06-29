@@ -8,7 +8,8 @@ export function CompanyName ({
 	inputId = 'companyName',
 	inputName = 'company',
 	value = '',
-	isDisabled = false
+	isDisabled = false,
+	fieldLabel = 'Company name',
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -37,7 +38,7 @@ export function CompanyName ({
 			htmlFor={inputProps.id}
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">Company name</span>
+				<span className="o-forms-title__main">{fieldLabel}</span>
 			</span>
 
 			<span className={inputWrapperClassNames}>

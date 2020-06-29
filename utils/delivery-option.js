@@ -26,8 +26,12 @@ class DeliveryOption {
 	 * @param {Function} callback The callback function to call when a change event occurs.
 	 */
 	handleDeliveryOptionChange (callback) {
-		for (let option of [...this.$form.deliveryOption]) {
-			option.addEventListener('change', callback);
+		if (this.$form.deliveryOption.length === undefined) {
+			this.$form.deliveryOption.addEventListener('change', callback);
+		} else {
+			for (let option of [...this.$form.deliveryOption]) {
+				option.addEventListener('change', callback);
+			}
 		}
 	}
 

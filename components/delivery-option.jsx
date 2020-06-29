@@ -15,7 +15,7 @@ export function DeliveryOption ({
 	const deliveryOptions = {
 		PV: {
 			title: 'Paper vouchers',
-			description: '13-week voucher pack delivered quarterly and redeemable at retailers nationwide.'
+			description: '13-week voucher pack delivered quarterly and redeemable at retailers nationwide. COVID-19 - make sure your preferred newsagent or retailer is open and/or delivering before you select this option.'
 		},
 		HD: {
 			title: 'Home delivery',

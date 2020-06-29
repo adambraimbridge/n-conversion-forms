@@ -4,7 +4,7 @@ exports[`DeliveryAddress renders default props 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field"
+  <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
   >
     <span class="o-forms-title">
@@ -19,10 +19,14 @@ exports[`DeliveryAddress renders default props 1`] = `
              data-trackable="field-deliveryAddressLine1"
              autocomplete="address-line1"
              placeholder="e.g. 10 Elm Street"
+             maxlength="50"
              aria-required="true"
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -40,6 +44,7 @@ exports[`DeliveryAddress renders default props 1`] = `
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
              placeholder="e.g. Apartment 1"
+             maxlength="50"
              value
       >
     </span>
@@ -59,6 +64,7 @@ exports[`DeliveryAddress renders default props 1`] = `
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
              placeholder
+             maxlength="50"
              value
       >
     </span>
@@ -70,7 +76,7 @@ exports[`DeliveryAddress renders with an error 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field"
+  <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
   >
     <span class="o-forms-title">
@@ -85,10 +91,14 @@ exports[`DeliveryAddress renders with an error 1`] = `
              data-trackable="field-deliveryAddressLine1"
              autocomplete="address-line1"
              placeholder="e.g. 10 Elm Street"
+             maxlength="50"
              aria-required="true"
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -106,6 +116,7 @@ exports[`DeliveryAddress renders with an error 1`] = `
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
              placeholder="e.g. Apartment 1"
+             maxlength="50"
              value
       >
     </span>
@@ -125,6 +136,7 @@ exports[`DeliveryAddress renders with an error 1`] = `
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
              placeholder
+             maxlength="50"
              value
       >
     </span>
@@ -136,7 +148,7 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field"
+  <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
   >
     <span class="o-forms-title">
@@ -151,10 +163,14 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
              data-trackable="field-deliveryAddressLine1"
              autocomplete="address-line1"
              placeholder="e.g. 10 Elm Street"
+             maxlength="50"
              aria-required="true"
              required
              value="Line 1 text"
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -172,6 +188,7 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
              placeholder="e.g. Apartment 1"
+             maxlength="50"
              value
       >
     </span>
@@ -191,6 +208,7 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
              placeholder
+             maxlength="50"
              value
       >
     </span>
@@ -202,7 +220,7 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field"
+  <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
   >
     <span class="o-forms-title">
@@ -217,10 +235,14 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
              data-trackable="field-deliveryAddressLine1"
              autocomplete="address-line1"
              placeholder="e.g. 10 Elm Street"
+             maxlength="50"
              aria-required="true"
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -238,6 +260,7 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
              placeholder="e.g. Apartment 1"
+             maxlength="50"
              value="Line 2 text"
       >
     </span>
@@ -257,6 +280,7 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
              placeholder
+             maxlength="50"
              value
       >
     </span>
@@ -268,7 +292,7 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field"
+  <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
   >
     <span class="o-forms-title">
@@ -283,10 +307,14 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
              data-trackable="field-deliveryAddressLine1"
              autocomplete="address-line1"
              placeholder="e.g. 10 Elm Street"
+             maxlength="50"
              aria-required="true"
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -304,6 +332,7 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
              placeholder="e.g. Apartment 1"
+             maxlength="50"
              value
       >
     </span>
@@ -323,6 +352,7 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
              placeholder
+             maxlength="50"
              value="Line 3 text"
       >
     </span>
@@ -334,7 +364,7 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
 >
-  <label class="o-forms-field"
+  <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
   >
     <span class="o-forms-title">
@@ -349,11 +379,15 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
              data-trackable="field-deliveryAddressLine1"
              autocomplete="address-line1"
              placeholder="e.g. 10 Elm Street"
+             maxlength="50"
              aria-required="true"
              required
              disabled
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -371,6 +405,7 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
              placeholder="e.g. Apartment 1"
+             maxlength="50"
              disabled
              value
       >
@@ -391,6 +426,7 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
              placeholder
+             maxlength="50"
              disabled
              value
       >

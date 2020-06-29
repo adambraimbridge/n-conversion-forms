@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Message ({ title, message, additional = [], actions = null, name, isNotice, isError, isSuccess, isInform, isHidden }) {
+export function Message ({ title, message, additional = [], actions = null, name, isNotice, isError, isSuccess, isInform, isStaticMessage, isHidden }) {
 
 	const additionalMessages = additional.map((text, index) => {
-		return <p className="o-message__content--additional" key={index}>{text}</p>;
+		return <p className="o-message__content--additional" key={index} dangerouslySetInnerHTML={{__html: text }}></p>;
 	});
 
 	const oMessageClassNames = classNames({
 		'o-message': true,
-		'o-message--inner': true,
-		'o-message--notice': isNotice,
-		'o-message--alert': !isNotice,
+		'o-message--inner': !isStaticMessage,
+		'o-message--notice': isNotice && !isStaticMessage,
+		'o-message--alert': !isNotice && !isStaticMessage,
 		'o-message--error': isError,
 		'o-message--success': !isError && isSuccess,
 		'o-message--inform': !isError && !isSuccess && isInform,
@@ -39,7 +39,7 @@ export function Message ({ title, message, additional = [], actions = null, name
 					<div className="o-message__content">
 						<p className="o-message__content-main">
 							{title ? <span className="o-message__content-highlight">{title}</span> : null}
-							<span className="o-message__content-detail">{message}</span>
+							<span className="o-message__content-detail" dangerouslySetInnerHTML={{__html: message }}></span>
 						</p>
 						{additionalMessages}
 						{callToActionsList}

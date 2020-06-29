@@ -8,7 +8,7 @@ function initDemo () {
 
 	const element =
 		<React.Fragment>
-			<ncf.AcceptTerms />
+			<ncf.AcceptTerms isSignup={true} isPrintProduct={true} isTrial={true}/>
 			<ncf.AppBanner />
 			<ncf.BillingCountry></ncf.BillingCountry>
 			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
@@ -22,7 +22,7 @@ function initDemo () {
 			<ncf.DeliveryAddress />
 			<ncf.DeliveryCity />
 			<ncf.DeliveryCounty />
-			<ncf.DeliveryInstructions />
+			<ncf.DeliveryInstructions hasSignupSecurityNote={true} />
 			<ncf.DeliveryOption options={[
 				{
 					value: 'PV',

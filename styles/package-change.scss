@@ -12,43 +12,5 @@
 			grid-template-columns: 1fr min-content;
 			align-items: center;
 		}
-
-		&__terms {
-			margin-bottom: 20px;
-		}
-
-		&__term {
-			padding: 4px 0;
-			display: grid;
-			grid-template-columns: max-content 1fr;
-			&--discounted {
-				grid-template-columns: max-content max-content 1fr;
-			}
-		}
-
-		&__title {
-			font-weight: oFontsWeight('semibold');
-			padding-right: 10px;
-		}
-
-		&__description {
-			justify-self: end;
-		}
-
-		&__discount {
-			color: oColorsByName('claret-70');
-		}
-
-		&__weekly-price {
-			justify-self: end;
-			grid-column: span 3;
-			@include oTypographySans($scale: -1, $include-font-family: false);
-			color: oColorsByName('black-60');
-		}
-
-		&__annual-copy {
-			padding-top: 8px;
-			@include oTypographySans($scale: -1, $include-font-family: false);
-		}
 	}
 }

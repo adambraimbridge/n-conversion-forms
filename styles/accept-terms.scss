@@ -1,0 +1,12 @@
+@mixin ncfAcceptTermsList() {
+	// Overwrite the native Origami styles to create a list which is more visually consistent with the previous T&Cs paragraphs.
+	&__accept-terms-list {
+		list-style-type: none;
+		margin: 0 0 oSpacingByName('s3') 0;
+
+		& > li {
+			margin-bottom: oSpacingByName('s2');
+			padding-left: 0;
+		}
+	}
+}

@@ -2,7 +2,7 @@
 
 exports[`Country renders with default props 1`] = `
 <label id="countryField"
-       class="o-forms-field js-unknown-user-field"
+       class="o-forms-field js-unknown-user-field ncf__validation-error"
        data-validate="required"
        for="country"
 >
@@ -797,7 +797,7 @@ exports[`Country renders with default props 1`] = `
 
 exports[`Country renders with hasError 1`] = `
 <label id="countryField"
-       class="o-forms-field js-unknown-user-field"
+       class="o-forms-field js-unknown-user-field ncf__validation-error"
        data-validate="required"
        for="country"
 >
@@ -1592,7 +1592,7 @@ exports[`Country renders with hasError 1`] = `
 
 exports[`Country renders with isB2b 1`] = `
 <label id="countryField"
-       class="o-forms-field js-unknown-user-field"
+       class="o-forms-field js-unknown-user-field ncf__validation-error"
        data-validate="required"
        for="country"
 >
@@ -2387,7 +2387,7 @@ exports[`Country renders with isB2b 1`] = `
 
 exports[`Country renders with isDisabled 1`] = `
 <label id="countryField"
-       class="o-forms-field js-unknown-user-field"
+       class="o-forms-field js-unknown-user-field ncf__validation-error"
        data-validate="required"
        for="country"
 >
@@ -3183,7 +3183,7 @@ exports[`Country renders with isDisabled 1`] = `
 
 exports[`Country renders with large filterList 1`] = `
 <label id="countryField"
-       class="o-forms-field js-unknown-user-field"
+       class="o-forms-field js-unknown-user-field ncf__validation-error"
        data-validate="required"
        for="country"
 >
@@ -3272,7 +3272,7 @@ exports[`Country renders with large filterList 1`] = `
 
 exports[`Country renders with small filterList 1`] = `
 <label id="countryField"
-       class="o-forms-field js-unknown-user-field"
+       class="o-forms-field js-unknown-user-field ncf__validation-error"
        data-validate="required"
        for="country"
 >
@@ -3304,7 +3304,7 @@ exports[`Country renders with small filterList 1`] = `
 
 exports[`Country renders with value 1`] = `
 <label id="countryField"
-       class="o-forms-field js-unknown-user-field"
+       class="o-forms-field js-unknown-user-field ncf__validation-error"
        data-validate="required"
        for="country"
 >

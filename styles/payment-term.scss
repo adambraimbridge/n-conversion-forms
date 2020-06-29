@@ -5,6 +5,10 @@
 	&__payment-term {
 		&__item {
 			position: relative;
+			margin-bottom: oSpacingByName('s3');
+		}
+		&:last-child {
+			margin-bottom: 0;
 		}
 		&__discount {
 			background-color: oColorsByName('claret-60');
@@ -31,6 +35,20 @@
 
 		&__legal {
 			margin: 20px 0;
+		}
+
+		&__equivalent-price {
+			@include oTypographySans($scale: -1, $include-font-family: false);
+			display: block;
+		}
+
+		&__monthly-price {
+			font-weight: oFontsWeight('semibold');
+		}
+
+		&__renews-text {
+			@include oTypographySans($scale: -2, $include-font-family: false);
+			margin-bottom: 0;
 		}
 	}
 }

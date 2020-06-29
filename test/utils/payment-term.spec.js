@@ -113,14 +113,14 @@ describe('PaymentTerm', () => {
 				expect(trialPriceStub.innerHTML).to.equal('£1.01');
 			});
 
-			it('should replace the weekly price with the correct updated weekly price', () => {
-				const weeklyPriceStub = {};
-				elementStub.querySelector.withArgs('.ncf__payment-term__weekly-price').returns(weeklyPriceStub);
+			it('should replace the monthly price with the correct updated monthly price', () => {
+				const monthlyPriceStub = {};
+				elementStub.querySelector.withArgs('.ncf__payment-term__monthly-price').returns(monthlyPriceStub);
 				paymentTerm.updateOptions([{
 					value: 'test',
-					weeklyPrice: '£1.01'
+					monthlyPrice: '£1.01'
 				}]);
-				expect(weeklyPriceStub.innerHTML).to.equal('£1.01');
+				expect(monthlyPriceStub.innerHTML).to.equal('£1.01');
 			});
 		});
 	});

@@ -19,10 +19,10 @@ export function CustomerCare ({
 
 	return (
 		<div className={className}>
-			<div className="ncf__paragraph">
-				<h1 className="ncf__header">{header}</h1>
-				<p id="customer-care-message">{message}</p>
-			</div>
+			{(header || message) && <div className="ncf__paragraph">
+				{header && <h1 className="ncf__header">{header}</h1>}
+				{message && <p id="customer-care-message">{message}</p>}
+			</div>}
 
 			<div className="ncf__paragraph">
 				<div className="ncf__icon ncf__icon--phone ncf__icon--large"></div>

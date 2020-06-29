@@ -2,7 +2,7 @@
 
 exports[`Email with confirmation render a email input for B2B 1`] = `
 <label id="emailField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,email"
        for="email"
 >
@@ -34,7 +34,7 @@ exports[`Email with confirmation render a email input for B2B 1`] = `
 
 exports[`Email with confirmation render a email input with default params 1`] = `
 <label id="emailField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,email"
        for="email"
 >
@@ -66,7 +66,7 @@ exports[`Email with confirmation render a email input with default params 1`] = 
 
 exports[`Email with confirmation render a email input with default value 1`] = `
 <label id="emailField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,email"
        for="email"
 >
@@ -98,7 +98,7 @@ exports[`Email with confirmation render a email input with default value 1`] = `
 
 exports[`Email with confirmation render a email input with disabled fields 1`] = `
 <label id="emailField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,email"
        for="email"
 >
@@ -131,7 +131,7 @@ exports[`Email with confirmation render a email input with disabled fields 1`] =
 
 exports[`Email with confirmation render a email input with email error 1`] = `
 <label id="emailField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,email"
        for="email"
 >
@@ -163,7 +163,7 @@ exports[`Email with confirmation render a email input with email error 1`] = `
 
 exports[`Email with confirmation render a email input with given description 1`] = `
 <label id="emailField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,email"
        for="email"
 >
@@ -195,7 +195,7 @@ exports[`Email with confirmation render a email input with given description 1`]
 
 exports[`Email with confirmation render a email input with read only fields 1`] = `
 <label id="emailField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,email"
        for="email"
 >
@@ -227,7 +227,7 @@ exports[`Email with confirmation render a email input with read only fields 1`] 
 
 exports[`Email with confirmation render default label if B2B and educational licence 1`] = `
 <label id="emailField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,email"
        for="email"
 >

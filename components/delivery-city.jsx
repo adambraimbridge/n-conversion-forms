@@ -16,7 +16,7 @@ export function DeliveryCity ({
 	return (
 		<label
 			id="deliveryCityField"
-			className="o-forms-field"
+			className="o-forms-field ncf__validation-error"
 			data-validate="required"
 			htmlFor="deliveryCity"
 		>
@@ -31,11 +31,13 @@ export function DeliveryCity ({
 					data-trackable="field-deliveryCity"
 					autoComplete="address-level2"
 					placeholder="e.g. Bath"
+					maxLength={40}
 					aria-required="true"
 					required
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
+			<span className="o-forms-input__error">Please enter a valid city or town</span>
 			</span>
 		</label>
 	);
@@ -44,5 +46,6 @@ export function DeliveryCity ({
 DeliveryCity.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
-	isDisabled: PropTypes.bool
+	isDisabled: PropTypes.bool,
+	maxlength: PropTypes.number
 };

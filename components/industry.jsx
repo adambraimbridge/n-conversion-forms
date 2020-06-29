@@ -11,7 +11,9 @@ export function Industry ({
 	fieldId = 'industryField',
 	selectId = 'industry',
 	selectName = 'industry',
-	options = defaultOptions
+	options = defaultOptions,
+	fieldLabel = 'In which industry do you work?',
+	isRequired = true
 }) {
 
 	const inpiutWrapperClassName = classNames([
@@ -23,19 +25,19 @@ export function Industry ({
 	return (
 		<label
 			id={fieldId}
-			className="o-forms-field"
-			data-validate="required"
+			className="o-forms-field ncf__validation-error"
+			data-validate={isRequired ? 'required' : ''}
 			htmlFor={selectId}
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">In which industry do you work?</span>
+				<span className="o-forms-title__main">{fieldLabel}</span>
 			</span>
 			<span className={inpiutWrapperClassName}>
 				<select id={selectId}
 					name={selectName}
 					data-trackable="field-industry"
-					aria-required="true"
-					required
+					aria-required={isRequired}
+					required={isRequired}
 					disabled={isDisabled}
 					defaultValue={value}
 				>
@@ -60,5 +62,6 @@ Industry.propTypes = {
 	options: PropTypes.arrayOf(PropTypes.shape({
 		code: PropTypes.string,
 		description: PropTypes.string,
-	}))
+	})),
+	isRequired: PropTypes.bool,
 };

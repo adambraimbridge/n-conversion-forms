@@ -4,19 +4,21 @@ import PropTypes from 'prop-types';
 export function LicenceConfirmation ({
 	isTrial = false,
 	isEmbedded = false,
-	duration = null
+	duration = null,
+	isEducationalLicence = false,
+	contentId = '',
 }) {
 	const myFtLinkProps = {
 		href: '/myft',
 		className: 'ncf__button ncf__button--submit',
 		...(isEmbedded && { target: '_top' })
-	}
+	};
 
-	const homepageLinkProps = {
-		href: '/',
+	const readingLinkProps = {
+		href: contentId === '' ? '/' : `/content/${contentId}`,
 		className: 'ncf__link',
 		...(isEmbedded && { target: '_top' })
-	}
+	};
 
 	return (
 		<div className="ncf ncf__wrapper">
@@ -26,7 +28,7 @@ export function LicenceConfirmation ({
 					{
 						isTrial
 							? (<h1 className="ncf__header ncf__header--confirmation">Your{ duration ? ` ${duration}` : '' } trial has started</h1>)
-							: (<h1 className="ncf__header ncf__header--confirmation">Great news, you have joined your company licence</h1>)
+							: (<h1 className="ncf__header ncf__header--confirmation">Great news, you have joined your { isEducationalLicence ? 'school' : 'company'} licence</h1>)
 					}
 				</div>
 			</div>
@@ -44,7 +46,7 @@ export function LicenceConfirmation ({
 			</p>
 
 			<p className="ncf__paragraph ncf__center">
-				<a {...homepageLinkProps}>Go to the homepage</a>
+				<a {...readingLinkProps}>Start reading</a>
 			</p>
 		</div>
 	);
@@ -53,5 +55,7 @@ export function LicenceConfirmation ({
 LicenceConfirmation.propTypes = {
 	isTrial: PropTypes.bool,
 	isEmbedded: PropTypes.bool,
-	duration: PropTypes.string
+	duration: PropTypes.string,
+	isEducationalLicence: PropTypes.bool,
+	contentId: PropTypes.string,
 };

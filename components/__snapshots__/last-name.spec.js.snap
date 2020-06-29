@@ -2,7 +2,7 @@
 
 exports[`Last name render a disabled field 1`] = `
 <label id="lastNameField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="lastName"
 >
@@ -32,7 +32,7 @@ exports[`Last name render a disabled field 1`] = `
 
 exports[`Last name render a field with default error 1`] = `
 <label id="lastNameField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="lastName"
 >
@@ -61,7 +61,7 @@ exports[`Last name render a field with default error 1`] = `
 
 exports[`Last name render a field with default settings 1`] = `
 <label id="lastNameField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="lastName"
 >
@@ -90,7 +90,7 @@ exports[`Last name render a field with default settings 1`] = `
 
 exports[`Last name render a field with value 1`] = `
 <label id="lastNameField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="lastName"
 >

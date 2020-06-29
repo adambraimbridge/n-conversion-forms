@@ -2,7 +2,7 @@
 
 exports[`DeliveryCity renders with a custom value 1`] = `
 <label id="deliveryCityField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryCity"
 >
@@ -18,17 +18,21 @@ exports[`DeliveryCity renders with a custom value 1`] = `
            data-trackable="field-deliveryCity"
            autocomplete="address-level2"
            placeholder="e.g. Bath"
+           maxlength="40"
            aria-required="true"
            required
            value="foobar"
     >
+    <span class="o-forms-input__error">
+      Please enter a valid city or town
+    </span>
   </span>
 </label>
 `;
 
 exports[`DeliveryCity renders with a disabled input element 1`] = `
 <label id="deliveryCityField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryCity"
 >
@@ -44,18 +48,22 @@ exports[`DeliveryCity renders with a disabled input element 1`] = `
            data-trackable="field-deliveryCity"
            autocomplete="address-level2"
            placeholder="e.g. Bath"
+           maxlength="40"
            aria-required="true"
            required
            disabled
            value
     >
+    <span class="o-forms-input__error">
+      Please enter a valid city or town
+    </span>
   </span>
 </label>
 `;
 
 exports[`DeliveryCity renders with an error 1`] = `
 <label id="deliveryCityField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryCity"
 >
@@ -71,17 +79,21 @@ exports[`DeliveryCity renders with an error 1`] = `
            data-trackable="field-deliveryCity"
            autocomplete="address-level2"
            placeholder="e.g. Bath"
+           maxlength="40"
            aria-required="true"
            required
            value
     >
+    <span class="o-forms-input__error">
+      Please enter a valid city or town
+    </span>
   </span>
 </label>
 `;
 
 exports[`DeliveryCity renders with default props 1`] = `
 <label id="deliveryCityField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryCity"
 >
@@ -97,10 +109,14 @@ exports[`DeliveryCity renders with default props 1`] = `
            data-trackable="field-deliveryCity"
            autocomplete="address-level2"
            placeholder="e.g. Bath"
+           maxlength="40"
            aria-required="true"
            required
            value
     >
+    <span class="o-forms-input__error">
+      Please enter a valid city or town
+    </span>
   </span>
 </label>
 `;

@@ -30,7 +30,7 @@ exports[`LicenceConfirmation renders if is embedded 1`] = `
        class="ncf__link"
        target="_top"
     >
-      Go to the homepage
+      Start reading
     </a>
   </p>
 </div>
@@ -64,7 +64,7 @@ exports[`LicenceConfirmation renders if is trial 1`] = `
     <a href="/"
        class="ncf__link"
     >
-      Go to the homepage
+      Start reading
     </a>
   </p>
 </div>
@@ -98,7 +98,7 @@ exports[`LicenceConfirmation renders with custom duration value 1`] = `
     <a href="/"
        class="ncf__link"
     >
-      Go to the homepage
+      Start reading
     </a>
   </p>
 </div>
@@ -132,7 +132,7 @@ exports[`LicenceConfirmation renders with default props 1`] = `
     <a href="/"
        class="ncf__link"
     >
-      Go to the homepage
+      Start reading
     </a>
   </p>
 </div>

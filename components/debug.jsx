@@ -48,6 +48,7 @@ export function Debug ({
 	var SYSTEM_CODE = document.documentElement.getAttribute('data-next-app') || 'n-conversion-forms';
 
 	var debugData = {
+		billingCity: 'London',
 		billingCountry: 'GBR',
 		billingPostcode: 'EC4M9BT',
 		country: 'GBR',
