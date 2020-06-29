@@ -30,11 +30,11 @@ describe('LicenceConfirmation', () => {
 
 	it('renders if educational licence', () => {
 		const props = { isEducationalLicence: true };
-		expect(LicenceConfirmation).toRenderAs(context, props);
+		expect(LicenceConfirmation).toRenderCorrectly(props);
 	});
 
 	it('renders if content id', () => {
 		const props = { contentId: 'd19dc7a6-c33b-4931-9a7e-4a74674da29a' };
-		expect(LicenceConfirmation).toRenderAs(context, props);
+		expect(LicenceConfirmation).toRenderCorrectly(props);
 	});
 });
