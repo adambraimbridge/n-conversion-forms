@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const DEFAULT_AGE_RESTRICTION = '16';
 
-export function AcceptTerms({
+export function AcceptTerms ({
 	hasError = false,
 	isSignup = false,
 	isRegister = false,
@@ -49,11 +49,11 @@ export function AcceptTerms({
 			<input {...inputProps} />
 			<span className="o-forms-input__label terms-register">
 				I confirm I am {ageRestriction} years or older and have read and
-				agree to the{" "}
+				agree to the{' '}
 				<a
 					className="ncf__link--external"
 					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-					target={isEmbedded ? "_top" : "_blank"}
+					target={isEmbedded ? '_top' : '_blank'}
 					rel="noopener noreferrer"
 					data-trackable="terms-and-conditions"
 				>
@@ -78,11 +78,11 @@ export function AcceptTerms({
 		<li>
 			<span className="terms-default">
 				I confirm I am {ageRestriction} years or older and have read and
-				agree to the{" "}
+				agree to the{' '}
 				<a
 					className="ncf__link--external"
 					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-					target={isEmbedded ? "_top" : "_blank"}
+					target={isEmbedded ? '_top' : '_blank'}
 					rel="noopener noreferrer"
 					data-trackable="terms-and-conditions"
 				>
@@ -134,7 +134,7 @@ export function AcceptTerms({
 				<span className="terms-transition">
 					I give consent for my chosen payment method to be charged
 					automatically at the end of each subscription term until I
-					cancel it by contacting{" "}
+					cancel it by contacting{' '}
 					<a
 						className="ncf__link--external"
 						href="https://help.ft.com/help/contact-us/"
@@ -146,7 +146,7 @@ export function AcceptTerms({
 					.
 				</span>
 			</li>
-			{transitionType === "immediate" ? (
+			{transitionType === 'immediate' ? (
 				<li>
 					<span className="terms-transition terms-transition--immediate">
 						By placing my order, my subscription will start
@@ -168,7 +168,7 @@ export function AcceptTerms({
 			)}
 			<li>
 				<span className="terms-transition">
-					Find out more about our cancellation policy in our{" "}
+					Find out more about our cancellation policy in our{' '}
 					<a
 						className="ncf__link--external"
 						href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -185,7 +185,7 @@ export function AcceptTerms({
 
 	const printSignupTermText = isTrial ?
 		'Credits for delivery suspension or delivery failure are not available during introductory offer periods.'
-	:
+		:
 		'Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).'
 	;
 
@@ -200,11 +200,11 @@ export function AcceptTerms({
 					</li>
 					<li>
 						<span className="terms-print">
-							Find out more about your delivery start date in our{" "}
+							Find out more about your delivery start date in our{' '}
 							<a
 								className="ncf__link--external"
 								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-								target={isEmbedded ? "_top" : "_blank"}
+								target={isEmbedded ? '_top' : '_blank'}
 								rel="noopener noreferrer"
 							>
 								Terms &amp; Conditions
@@ -219,11 +219,11 @@ export function AcceptTerms({
 						<span className="terms-signup">
 							I give consent for my chosen payment method to be
 							charged automatically at the end of each
-							subscription term until I cancel it by contacting{" "}
+							subscription term until I cancel it by contacting{' '}
 							<a
 								className="ncf__link--external"
 								href="https://help.ft.com/help/contact-us/"
-								target={isEmbedded ? "_top" : "_blank"}
+								target={isEmbedded ? '_top' : '_blank'}
 								rel="noopener noreferrer"
 							>
 								customer care through chat, phone or email
@@ -241,11 +241,11 @@ export function AcceptTerms({
 					</li>
 					<li>
 						<span className="terms-signup">
-							Find out more about our cancellation policy in our{" "}
+							Find out more about our cancellation policy in our{' '}
 							<a
 								className="ncf__link--external"
 								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-								target={isEmbedded ? "_top" : "_blank"}
+								target={isEmbedded ? '_top' : '_blank'}
 								rel="noopener noreferrer"
 							>
 								Terms &amp; Conditions
