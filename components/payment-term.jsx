@@ -102,7 +102,8 @@ PaymentTerm.propTypes = {
 	fieldId: PropTypes.string,
 	inputName: PropTypes.string,
 	isPrintOrBundle: PropTypes.bool,
-	options: PropTypes.string,
+	options: PropTypes.arrayOf(PropTypes.shape({
+		discount: PropTypes.string,
 		isTrial: PropTypes.bool,
 		name: PropTypes.string.isRequired,
 		price: PropTypes.string.isRequired,
